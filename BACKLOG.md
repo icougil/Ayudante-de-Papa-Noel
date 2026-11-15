@@ -1,0 +1,43 @@
+# Backlog
+
+Work that is agreed to be worth doing but not started. Each item is taken one at a time: design
+it, implement it, tick it. An item holds enough context to be picked up without the conversation
+it came from.
+
+## Questions
+
+- [ ] **Do not repeat questions a player has already seen.** Today every game picks 6 questions
+  at random from a bank of 30 (3 per city and 12 general), so a second game already repeats
+  some. At the very least a game must not ask questions from the player's previous games until
+  the bank runs out. Needs deciding: where the seen questions are remembered (the browser's
+  `localStorage` is the only option without a server), and what happens when a city has no
+  unseen question left.
+- [ ] **Grow the question bank a lot, across varied topics.** 30 questions are too few for
+  replaying and for the item above to be of any use. The bank has 8 subjects (`geography`,
+  `history`, `sports`, `culture`, `maths`, `science`, `language`, `english`); new questions
+  should spread over them and may add subjects. The tests in `tests/data.test.js` fix the bank
+  at exactly 3 questions per city and 12 general ones, so they change with this item.
+- [ ] **Get questions from an external source instead of writing them by hand.** So far every
+  question was written during development. Find one or more sources of questions (an open
+  trivia dataset or API, school curriculum material) so the bank is varied and does not depend
+  on hand-writing. Needs deciding: the source and its licence, whether questions are imported
+  once into `js/data-level-1.js` or fetched while playing (the game works offline and from
+  `file://` today), how Spanish text and the 10-to-12 age range are guaranteed, and who reviews
+  what comes in.
+- [ ] **The owner reviews the 30 current questions** in `js/data-level-1.js` for correctness and
+  tone. They have only been checked by the tests (shape and length), not by a person.
+
+## Noted during development
+
+- [ ] **The scoreboard can take three rows on a narrow screen.** At 360 px wide, a long city name
+  (`Santiago de Compostela`) plus five delivered gifts (`🎁🎁🎁🎁🎁`) may wrap the scoreboard to a
+  third row and push the fourth answer below the fold again. Not reproduced yet; the browser
+  tests only cover the first two cities at that size.
+- [ ] **No favicon.** The published site answers 404 for `favicon.ico`, which shows as an error
+  in the browser console.
+- [ ] **Screen text is not ready for translation.** The Spanish text the player reads sits in
+  `index.html` and `js/ui.js`. Extract it into data so other languages can be added.
+- [ ] **The README says the tests run on Node.js 18 or later, but only Node 24 is exercised**
+  (locally and in CI). Either test the oldest supported version in CI or raise the stated
+  minimum.
+- [ ] **No independent code review has been run** on level 1.
