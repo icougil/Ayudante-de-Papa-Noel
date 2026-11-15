@@ -59,9 +59,13 @@ when every test passes.
 
 ## Privacy
 
-The published game counts visits with [Umami](https://umami.is): no cookies, nothing stored on
-the player's device and no personal data, so it needs no cookie banner. It only counts visits on
-`icougil.github.io`; local runs and the browser tests are not counted.
+The published game counts visits with [Umami](https://umami.is). It sets no cookies and stores
+nothing on the player's device, so the game shows no cookie banner. To tell one visit from
+another, Umami's servers use the visitor's IP address and browser details to work out an
+anonymous visit identifier; the IP address itself is not kept in the statistics.
+
+Only visits on `icougil.github.io` are counted. A local run still downloads Umami's script, but
+sends no visit. The browser tests never contact Umami: they replace its script with an empty one.
 
 ## Project layout
 

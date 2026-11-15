@@ -6,7 +6,13 @@ const { expect } = require('@playwright/test');
 
 const GAME_URL = process.env.APN_URL || pathToFileURL(path.join(__dirname, '..', 'index.html')).href;
 
+// The visit counter is an external script the page load would otherwise wait for: answer it with
+// an empty script, so the tests never depend on that service being reachable.
+const ANALYTICS_SCRIPT = 'https://cloud.umami.is/**';
+
 async function startGame(page) {
+  await page.route(ANALYTICS_SCRIPT, (route) =>
+    route.fulfill({ contentType: 'text/javascript', body: '' }));
   await page.goto(GAME_URL);
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
