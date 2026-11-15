@@ -230,6 +230,7 @@
     });
     el.notice.textContent = '';
     el.next.hidden = true;
+    window.scrollTo(0, 0); // a wrong answer may have scrolled down to "Seguir"
     el.options.firstChild.focus({ preventScroll: true });
   }
 
@@ -321,6 +322,8 @@
     ]);
     el.next.hidden = false;
     el.next.focus({ preventScroll: true });
+    // On a short screen the explanation pushes "Seguir" below the fold: bring it into view.
+    el.next.scrollIntoView({ block: 'nearest', behavior: reducedMotion.matches ? 'auto' : 'smooth' });
     phase = 'miss';
   }
 

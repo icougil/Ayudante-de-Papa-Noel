@@ -65,6 +65,8 @@ button { -webkit-user-select: none; user-select: none; }
   box-shadow: 0 4px 0 var(--red-dark);
 }
 
+#button-next { scroll-margin-bottom: 12px; } /* breathing room when scrolled into view */
+
 .button-primary:hover { filter: brightness(1.08); }
 .button-primary:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--red-dark); }
 
@@ -141,7 +143,9 @@ button { -webkit-user-select: none; user-select: none; }
 
 .scene {
   position: relative;
-  height: clamp(210px, 40vh, 380px);
+  /* Short screens give the scene what is left once the question and its four answers fit. */
+  height: clamp(180px, min(40vh, 100vh - 440px), 380px);
+  height: clamp(180px, min(40dvh, 100dvh - 440px), 380px);
   overflow: hidden;
   border-radius: 18px;
   background: linear-gradient(var(--night-high) 0%, var(--night-mid) 55%, var(--night-low) 100%);
@@ -476,6 +480,7 @@ button { -webkit-user-select: none; user-select: none; }
   font-weight: 700;
 }
 
+.notice:empty { display: none; }
 .notice p { margin: 0 0 4px; }
 .notice .notice-good { color: var(--green); font-size: 1.15rem; }
 .notice .notice-turbo { color: #b07b00; }
@@ -486,6 +491,21 @@ button { -webkit-user-select: none; user-select: none; }
 @media (min-width: 600px) {
   .options { grid-template-columns: 1fr 1fr; }
   #app { padding: 18px; }
+  .scene {
+    height: clamp(200px, min(40vh, 100vh - 400px), 380px);
+    height: clamp(200px, min(40dvh, 100dvh - 400px), 380px);
+  }
+  .notice:empty { display: block; }
+}
+
+/* Narrow screens stack the four answers, so everything around them is tighter. */
+@media (max-width: 599px) {
+  #app { padding: 8px; }
+  .panel { padding: 10px; gap: 8px; }
+  .prompt { font-size: 1.1rem; }
+  .options { gap: 6px; }
+  .option { min-height: 44px; padding: 6px 12px; }
+  .notice { min-height: 0; }
 }
 
 /* ---------- Animations ---------- */
