@@ -4,9 +4,9 @@ Date: 2026-11-15 · Status: agreed
 
 ## What it is for
 
-A web game for an 11-year-old girl (last year of primary school in Spain) to play and learn at
-the same time: she helps Santa deliver gifts around the world by answering questions. Later on,
-other children of other ages, and playing with a friend.
+A web game for children aged 10 to 12 (the last years of primary school in Spain) to play and
+learn at the same time: the player helps Santa deliver gifts around the world by answering
+questions. Later on, children of other ages, and playing with a friend.
 
 ## Goals
 
