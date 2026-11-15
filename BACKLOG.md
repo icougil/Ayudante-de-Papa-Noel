@@ -27,6 +27,17 @@ it came from.
 - [ ] **The owner reviews the 30 current questions** in `js/data-level-1.js` for correctness and
   tone. They have only been checked by the tests (shape and length), not by a person.
 
+## Sound
+
+- [ ] **Add music and sound effects, with a way to turn them on and off.** The game is silent
+  and feels flat. Wanted: background music while flying, and sound effects for the events of a
+  game (a right answer and its delivery, an express delivery, turbo, each mishap, arriving at a
+  city, the result screen). The player must be able to switch sound on and off, and the choice
+  should be remembered between games. Needs deciding: whether music and effects have separate
+  switches; where the sounds come from and their licence (recorded files, or generated in the
+  browser with the Web Audio API so there are no assets); and how it starts, since browsers
+  block sound until the player's first tap (the "¡A repartir!" button is the natural moment).
+
 ## Noted during development
 
 - [ ] **The scoreboard can take three rows on a narrow screen.** At 360 px wide, a long city name
