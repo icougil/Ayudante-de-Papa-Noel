@@ -57,6 +57,12 @@ GitHub Actions runs both sets on every push to `main` and on every pull request
 (`.github/workflows/ci.yml`). The game is published to GitHub Pages only from `main`, and only
 when every test passes.
 
+## Privacy
+
+The published game counts visits with [Umami](https://umami.is): no cookies, nothing stored on
+the player's device and no personal data, so it needs no cookie banner. It only counts visits on
+`icougil.github.io`; local runs and the browser tests are not counted.
+
 ## Project layout
 
 | Path | What it holds |
