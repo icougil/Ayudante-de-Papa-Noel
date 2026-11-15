@@ -24,9 +24,18 @@ jobs:
       - name: Run the unit tests
         run: node --test tests/*.test.js
 
+  # One job per Playwright project, so a failure says where the game broke.
   browser:
-    name: Browser tests
+    name: Browser tests (${{ matrix.project }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: desktop
+            browser: chromium
+          - project: phone
+            browser: webkit
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -35,10 +44,10 @@ jobs:
           cache: npm
       - name: Install Playwright
         run: npm ci
-      - name: Install the browsers
-        run: npx playwright install --with-deps chromium webkit
+      - name: Install the browser
+        run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Run the browser tests
-        run: npx playwright test
+        run: npx playwright test --project=${{ matrix.project }}
 
   # The game is published only from main, and only when every test passes.
   deploy:
