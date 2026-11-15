@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayudante de Papá Noel</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main id="app">
+
+    <section id="screen-start" class="screen">
+      <div class="cover">
+        <div class="cover-sleigh" id="cover-sleigh" aria-hidden="true"></div>
+        <h1>Ayudante de Papá Noel</h1>
+        <p class="cover-text">Ayuda a Papá Noel a repartir los regalos por España.</p>
+        <button id="button-start" class="button button-primary" type="button">¡A repartir!</button>
+      </div>
+    </section>
+
+    <section id="screen-trip" class="screen" hidden>
+      <div class="scoreboard">
+        <span id="scoreboard-gifts" class="scoreboard-item"></span>
+        <span id="scoreboard-express" class="scoreboard-item" title="Entregas exprés"></span>
+        <span id="scoreboard-city" class="scoreboard-item scoreboard-city"></span>
+      </div>
+
+      <div id="scene" class="scene" aria-hidden="true">
+        <div class="sky">
+          <div class="moon"></div>
+          <div class="stars"></div>
+        </div>
+        <div id="hills-far" class="hills hills-far"></div>
+        <div id="hills-near" class="hills hills-near"></div>
+        <div class="ground"></div>
+        <div id="world" class="world"></div>
+        <div id="santa" class="santa"></div>
+        <div id="effects" class="effects"></div>
+      </div>
+
+      <div class="distance" aria-hidden="true">
+        <span>🎅</span>
+        <div class="distance-bar"><div id="distance-fill" class="distance-fill"></div></div>
+        <span>🏠</span>
+      </div>
+
+      <div class="panel">
+        <h2 id="prompt" class="prompt"></h2>
+        <div id="options" class="options"></div>
+        <div id="notice" class="notice" aria-live="polite"></div>
+        <button id="button-next" class="button button-primary" type="button" hidden>Seguir</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="screen" hidden>
+      <div class="cover">
+        <h2 id="result-title" class="result-title"></h2>
+        <p id="result-stars" class="result-stars"></p>
+        <p id="result-gifts" class="cover-text"></p>
+        <p id="result-express" class="cover-text"></p>
+        <button id="button-again" class="button button-primary" type="button"></button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data-level-1.js"></script>
+  <script src="js/game-logic.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
