@@ -41,6 +41,15 @@ test.describe('on a small phone (360x640)', () => {
     expect(await pageScrolls(page)).toBe(false);
   });
 
+  test('the empty notice stays rendered, so screen readers announce what is written into it', async ({ page }) => {
+    await startGame(page);
+
+    const notice = page.locator('#notice');
+    await expect(notice).toBeEmpty();
+    await expect(notice).toHaveAttribute('aria-live', 'polite');
+    await expect(notice).not.toHaveCSS('display', 'none');
+  });
+
   test('the longest prompt of the bank still fits without scrolling', async ({ page }) => {
     await startGame(page);
 
