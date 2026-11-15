@@ -24,7 +24,7 @@ Level 1 is Spain: Barcelona, Zaragoza, Madrid, Sevilla, Santiago de Compostela a
 
 ## Run it
 
-There is nothing to build or install: open `index.html` in a browser.
+There is nothing to build or install to play: open `index.html` in a browser.
 
 To serve it over HTTP instead, with Node.js:
 
@@ -43,6 +43,19 @@ with no dependencies:
 node --test tests/*.test.js
 ```
 
+The screens are covered by browser tests that drive the real game in Chromium with
+[Playwright](https://playwright.dev), the only development dependency:
+
+```sh
+npm install
+npx playwright install chromium
+npm run test:e2e
+```
+
+GitHub Actions runs both sets on every push to `main` and on every pull request
+(`.github/workflows/ci.yml`). The game is published to GitHub Pages only from `main`, and only
+when every test passes.
+
 ## Project layout
 
 | Path | What it holds |
@@ -52,7 +65,9 @@ node --test tests/*.test.js
 | `js/data-level-1.js` | Level 1: the cities on the route and the question bank |
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
-| `tests/` | Tests for the data and the rules |
+| `tests/` | Unit tests for the data and the rules |
+| `e2e/` | Browser tests for the screens |
+| `BACKLOG.md` | Work agreed but not started |
 
 ## Adding a question
 
