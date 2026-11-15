@@ -480,7 +480,6 @@ button { -webkit-user-select: none; user-select: none; }
   font-weight: 700;
 }
 
-.notice:empty { display: none; }
 .notice p { margin: 0 0 4px; }
 .notice .notice-good { color: var(--green); font-size: 1.15rem; }
 .notice .notice-turbo { color: #b07b00; }
@@ -495,7 +494,6 @@ button { -webkit-user-select: none; user-select: none; }
     height: clamp(200px, min(40vh, 100vh - 400px), 380px);
     height: clamp(200px, min(40dvh, 100dvh - 400px), 380px);
   }
-  .notice:empty { display: block; }
 }
 
 /* Narrow screens stack the four answers, so everything around them is tighter. */
@@ -505,7 +503,10 @@ button { -webkit-user-select: none; user-select: none; }
   .prompt { font-size: 1.1rem; }
   .options { gap: 6px; }
   .option { min-height: 44px; padding: 6px 12px; }
+  /* An empty notice takes no room, but stays rendered: it is the live region that screen
+     readers listen to, and hiding it would silence the feedback written into it. */
   .notice { min-height: 0; }
+  .notice:empty { margin-top: -8px; } /* cancels the panel's gap */
 }
 
 /* ---------- Animations ---------- */
