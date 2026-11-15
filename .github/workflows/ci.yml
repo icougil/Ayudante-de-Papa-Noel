@@ -35,8 +35,8 @@ jobs:
           cache: npm
       - name: Install Playwright
         run: npm ci
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Install the browsers
+        run: npx playwright install --with-deps chromium webkit
       - name: Run the browser tests
         run: npx playwright test
 

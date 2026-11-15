@@ -43,12 +43,13 @@ with no dependencies:
 node --test tests/*.test.js
 ```
 
-The screens are covered by browser tests that drive the real game in Chromium with
-[Playwright](https://playwright.dev), the only development dependency:
+The screens are covered by browser tests that drive the real game with
+[Playwright](https://playwright.dev), the only development dependency: in desktop Chromium, and
+as an emulated iPhone 13 on WebKit (the engine behind Safari):
 
 ```sh
 npm install
-npx playwright install chromium
+npx playwright install chromium webkit
 npm run test:e2e
 ```
 
