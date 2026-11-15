@@ -1,33 +1,6 @@
-// Drives the real game in a browser. By default it opens index.html straight from disk, the way
-// the README tells players to; set APN_URL to test a served or published copy instead.
-const path = require('node:path');
-const { pathToFileURL } = require('node:url');
+// Drives the real game in desktop Chromium, at the window sizes that used to break the layout.
 const { test, expect } = require('@playwright/test');
-
-const GAME_URL = process.env.APN_URL || pathToFileURL(path.join(__dirname, '..', 'index.html')).href;
-
-async function startGame(page) {
-  await page.goto(GAME_URL);
-  await page.locator('#button-start').click();
-  await expect(page.locator('#options button')).toHaveCount(4);
-}
-
-// Clicks the right answer, or the first wrong one, of the question on screen.
-async function answer(page, right) {
-  const prompt = await page.locator('#prompt').textContent();
-  const correctText = await page.evaluate((text) => {
-    const question = globalThis.APN.QUESTIONS.find((q) => q.prompt === text);
-    return question.options[question.correct];
-  }, prompt);
-  const buttons = page.locator('#options button');
-  const texts = await buttons.allTextContents();
-  const index = right ? texts.indexOf(correctText) : texts.findIndex((text) => text !== correctText);
-  await buttons.nth(index).click();
-}
-
-async function pageScrolls(page) {
-  return page.evaluate(() => document.documentElement.scrollHeight > window.innerHeight);
-}
+const { startGame, answer, pageScrolls } = require('./helpers');
 
 test.describe('on a small phone (360x640)', () => {
   test.use({ viewport: { width: 360, height: 640 } });
