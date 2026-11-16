@@ -72,7 +72,7 @@ Screens: **Start** → **Level map** → **Trip** → **Level result**.
   falls off the sleigh), that gift is not delivered, and the right answer is shown with a
   one-sentence explanation. The scenery keeps moving while the player reads.
 - Later on, a possible "hard mode": answer before arriving or Santa flies past.
-- **End of level:** passed with **4 or more** gifts delivered. Stars: 4 → ⭐, 5 → ⭐⭐, 6 → ⭐⭐⭐.
+- **End of level:** passed with **4 or more** gifts delivered. Stars: 4, 5 or 6 gifts earn 1, 2 or 3 stars. With all 6 delivered, 3 express deliveries earn the fourth star and 6 the fifth (see `2026-11-16-five-stars-design.md`).
   With fewer than 4: "A Papá Noel le han faltado regalos. ¡Inténtalo otra vez!" and the level is
   repeated.
 - **Upgrade:** each level passed adds a reindeer to the sleigh (visible in the scene).
