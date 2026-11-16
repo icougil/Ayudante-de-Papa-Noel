@@ -152,13 +152,13 @@ test('the game ends after the sixth answer', () => {
 });
 
 test('result: stars depend on the gifts delivered and the express deliveries', () => {
-  // [gifts, express, passed, stars]
+  // [gifts, express, passed, stars, missing]
   const expected = [
-    [0, 0, false, 0], [3, 3, false, 0], [4, 0, true, 1], [4, 4, true, 1],
-    [5, 0, true, 2], [5, 5, true, 2], [6, 0, true, 3], [6, 2, true, 3],
-    [6, 3, true, 4], [6, 5, true, 4], [6, 6, true, 5],
+    [0, 0, false, 0, 3], [1, 1, false, 0, 2], [2, 2, false, 0, 1],
+    [3, 0, true, 1, 0], [3, 3, true, 1, 0], [4, 4, true, 2, 0], [5, 5, true, 3, 0],
+    [6, 0, true, 4, 0], [6, 5, true, 4, 0], [6, 6, true, 5, 0],
   ];
-  for (const [gifts, express, passed, stars] of expected) {
+  for (const [gifts, express, passed, stars, missing] of expected) {
     const r = APN.result(play(gifts, express));
     const label = `${gifts} gifts, ${express} express`;
     assert.equal(r.delivered, gifts, label);
@@ -166,6 +166,7 @@ test('result: stars depend on the gifts delivered and the express deliveries', (
     assert.equal(r.total, 6, label);
     assert.equal(r.passed, passed, label);
     assert.equal(r.stars, stars, label);
+    assert.equal(r.missing, missing, label);
     assert.equal(r.maxStars, 5, label);
   }
 });
@@ -183,12 +184,12 @@ test('pickMishap covers all three', () => {
 
 test('the game constants match the design', () => {
   assert.equal(APN.STOPS_PER_LEVEL, 6);
-  assert.equal(APN.MIN_TO_PASS, 4);
+  assert.equal(APN.MIN_TO_PASS, 3);
   assert.equal(APN.TURBO_STREAK, 3);
   assert.equal(APN.FLIGHT_SECONDS, 20);
   assert.equal(APN.TURBO_FLIGHT_SECONDS, 14);
   assert.equal(APN.MAX_STARS, 5);
-  assert.equal(APN.EXPRESS_FOR_FOURTH_STAR, 3);
+  assert.equal(APN.EXPRESS_FOR_FOURTH_STAR, undefined);
   assert.equal(APN.EXPRESS_FOR_FIFTH_STAR, 6);
   assert.equal(stopIds.length, APN.STOPS_PER_LEVEL);
 });
