@@ -86,12 +86,27 @@ test.describe('on a small laptop window (900x645)', () => {
   });
 });
 
+// Advances the fake clock until Santa circles over the city (the waiting notice is shown).
+async function waitForArrival(page) {
+  const waiting = page.locator('#notice .notice-waiting');
+  for (let i = 0; i < 40 && !(await waiting.isVisible()); i++) {
+    await page.clock.runFor(1000);
+  }
+  await expect(waiting).toBeVisible();
+}
+
 // Plays the six cities: a right answer is given at once (an express delivery), a wrong one is
 // followed by "Seguir".
-async function playGame(page, rights) {
+// With `lates` (needs page.clock.install() before the page loads), the answer of a city whose entry
+// is true waits until Santa has reached the city (not an express delivery); the flight is made
+// fast by advancing the fake clock.
+async function playGame(page, rights, lates = []) {
   for (let city = 1; city <= rights.length; city++) {
     await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + city + '/6');
     await expect(page.locator('#options button:enabled')).toHaveCount(4);
+    if (lates[city - 1]) {
+      await waitForArrival(page);
+    }
     await answer(page, rights[city - 1]);
     if (!rights[city - 1]) {
       await page.locator('#button-next').click();
@@ -140,4 +155,34 @@ test('a failed game after a passed one shows no stars and no next-star text', as
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('#result-stars')).toBeHidden();
   await expect(page.locator('#result-next-star')).toBeHidden();
+});
+
+// The late answers need the fake clock, installed before the page loads. The pauses and notices
+// after an answer are fast-forwarded too.
+async function playWithClock(page, rights, lates) {
+  await page.clock.install();
+  await startGame(page);
+  await playGame(page, rights, lates);
+  for (let i = 0; i < 40 && !(await page.locator('#screen-result').isVisible()); i++) {
+    await page.clock.runFor(1000);
+  }
+  await expect(page.locator('#screen-result')).toBeVisible();
+}
+
+test('a full run with no express deliveries ends with three stars and the way to the fourth', async ({ page }) => {
+  await playWithClock(page, SIX_RIGHT, SIX_RIGHT);
+
+  await expect(page.locator('#result-stars')).toHaveText('⭐⭐⭐☆☆');
+  await expect(page.locator('#result-stars')).toHaveAttribute('aria-label', '3 de 5 estrellas');
+  await expect(page.locator('#result-next-star')).toHaveText('Siguiente estrella: 6 regalos y 3 entregas exprés ⚡.');
+  await expect(page.locator('#result-express')).toHaveText('Entregas exprés: 0 ⚡');
+});
+
+test('a full run with three express deliveries ends with four stars and the way to the fifth', async ({ page }) => {
+  await playWithClock(page, SIX_RIGHT, [false, false, false, true, true, true]);
+
+  await expect(page.locator('#result-stars')).toHaveText('⭐⭐⭐⭐☆');
+  await expect(page.locator('#result-stars')).toHaveAttribute('aria-label', '4 de 5 estrellas');
+  await expect(page.locator('#result-next-star')).toHaveText('Última estrella: ¡las 6 entregas exprés ⚡!');
+  await expect(page.locator('#result-express')).toHaveText('Entregas exprés: 3 ⚡');
 });
