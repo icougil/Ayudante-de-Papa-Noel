@@ -4,12 +4,11 @@
   const APN = (globalThis.APN = globalThis.APN || {});
 
   APN.STOPS_PER_LEVEL = 6;
-  APN.MIN_TO_PASS = 4;
+  APN.MIN_TO_PASS = 3;
   APN.TURBO_STREAK = 3;
   APN.FLIGHT_SECONDS = 20;
   APN.TURBO_FLIGHT_SECONDS = 14;
   APN.MAX_STARS = 5;
-  APN.EXPRESS_FOR_FOURTH_STAR = 3;
   APN.EXPRESS_FOR_FIFTH_STAR = 6;
 
   APN.MISHAPS = [
@@ -85,20 +84,17 @@
     };
   };
 
-  // Stars: one for passing, one more per extra gift. With every gift delivered
-  // the level is worth 3, plus one or two for express deliveries.
+  // Stars: one for passing, one more per extra gift. The last one needs every gift delivered
+  // and every delivery express.
   function starsFor(state, passed) {
     if (!passed) {
       return 0;
     }
-    const forGifts = state.delivered - APN.MIN_TO_PASS + 1;
-    if (state.delivered < state.questions.length) {
-      return forGifts;
-    }
-    if (state.express >= APN.EXPRESS_FOR_FIFTH_STAR) {
+    const fullRun = state.delivered === state.questions.length;
+    if (fullRun && state.express >= APN.EXPRESS_FOR_FIFTH_STAR) {
       return APN.MAX_STARS;
     }
-    return state.express >= APN.EXPRESS_FOR_FOURTH_STAR ? forGifts + 1 : forGifts;
+    return state.delivered - APN.MIN_TO_PASS + 1;
   }
 
   APN.result = function (state) {
@@ -110,6 +106,7 @@
       passed,
       stars: starsFor(state, passed),
       maxStars: APN.MAX_STARS,
+      missing: passed ? 0 : APN.MIN_TO_PASS - state.delivered,
     };
   };
 
