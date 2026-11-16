@@ -48,6 +48,20 @@ test.describe('on a small phone (360x640)', () => {
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
     await expect(page.locator('#options button').last()).toBeInViewport({ ratio: 1 });
   });
+
+  test('the five stars fit on one line', async ({ page }) => {
+    await startGame(page);
+    await playGame(page, SIX_RIGHT);
+
+    await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
+    const stars = page.locator('#result-stars');
+    await expect(stars).toHaveText('⭐⭐⭐⭐⭐');
+    const { height, fontSize } = await stars.evaluate((node) => ({
+      height: node.getBoundingClientRect().height,
+      fontSize: parseFloat(getComputedStyle(node).fontSize),
+    }));
+    expect(height).toBeLessThan(2 * fontSize);
+  });
 });
 
 test.describe('on a small laptop window (900x645)', () => {
@@ -62,20 +76,58 @@ test.describe('on a small laptop window (900x645)', () => {
   });
 });
 
-test('a game with six right answers ends with three stars and no script errors', async ({ page }) => {
+// Plays the six cities: a right answer is given at once (an express delivery), a wrong one is
+// followed by "Seguir".
+async function playGame(page, rights) {
+  for (let city = 1; city <= rights.length; city++) {
+    await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + city + '/6');
+    await expect(page.locator('#options button:enabled')).toHaveCount(4);
+    await answer(page, rights[city - 1]);
+    if (!rights[city - 1]) {
+      await page.locator('#button-next').click();
+    }
+  }
+}
+
+const SIX_RIGHT = [true, true, true, true, true, true];
+
+test('a game with six express deliveries ends with five stars and no script errors', async ({ page }) => {
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await startGame(page);
 
-  for (let city = 1; city <= 6; city++) {
-    await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + city + '/6');
-    await expect(page.locator('#options button:enabled')).toHaveCount(4);
-    await answer(page, true);
-  }
+  await playGame(page, SIX_RIGHT);
 
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('#result-title')).toHaveText('¡Nivel superado!');
-  await expect(page.locator('#result-stars')).toHaveText('⭐⭐⭐');
+  await expect(page.locator('#result-stars')).toHaveText('⭐⭐⭐⭐⭐');
+  await expect(page.locator('#result-stars')).toHaveAttribute('aria-label', '5 de 5 estrellas');
+  await expect(page.locator('#result-next-star')).toHaveText('¡Puntuación perfecta!');
   await expect(page.locator('#result-gifts')).toHaveText('Has entregado 6 de 6 regalos.');
   expect(errors).toEqual([]);
+});
+
+test('a game with four gifts ends with one star and the way to the next one', async ({ page }) => {
+  await startGame(page);
+
+  await playGame(page, [false, false, true, true, true, true]);
+
+  await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
+  await expect(page.locator('#result-stars')).toHaveText('⭐☆☆☆☆');
+  await expect(page.locator('#result-stars')).toHaveAttribute('aria-label', '1 de 5 estrellas');
+  await expect(page.locator('#result-next-star')).toHaveText('Siguiente estrella: entrega más regalos.');
+});
+
+test('a failed game after a passed one shows no stars and no next-star text', async ({ page }) => {
+  await startGame(page);
+  await playGame(page, SIX_RIGHT);
+  await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
+  await page.locator('#button-again').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+
+  await playGame(page, [false, false, false, false, false, false]);
+
+  await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
+  await expect(page.locator('#result-stars')).toBeHidden();
+  await expect(page.locator('#result-next-star')).toBeHidden();
 });

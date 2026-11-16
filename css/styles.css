@@ -113,8 +113,9 @@ button { -webkit-user-select: none; user-select: none; }
 
 .result-stars {
   margin: 0;
-  font-size: 3rem;
-  letter-spacing: 0.1em;
+  font-size: clamp(1.8rem, 11vw, 3rem);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
   color: var(--gold);
 }
 
