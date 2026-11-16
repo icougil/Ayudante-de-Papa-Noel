@@ -72,10 +72,9 @@ Screens: **Start** → **Level map** → **Trip** → **Level result**.
   falls off the sleigh), that gift is not delivered, and the right answer is shown with a
   one-sentence explanation. The scenery keeps moving while the player reads.
 - Later on, a possible "hard mode": answer before arriving or Santa flies past.
-- **End of level:** passed with **4 or more** gifts delivered. Stars: 4, 5 or 6 gifts earn 1, 2 or 3
-  stars. With all 6 delivered, 3 express deliveries earn the fourth star and 6 the fifth (see
-  `2026-11-16-five-stars-design.md`).
-  With fewer than 4: "A Papá Noel le han faltado regalos. ¡Inténtalo otra vez!" and the level is
+- **End of level:** passed with **3 or more** gifts delivered. Stars: 3, 4, 5 or 6 gifts earn 1, 2,
+  3 or 4 stars; the fifth needs all 6 deliveries express (see `2026-11-16-five-stars-design.md`).
+  With fewer than 3: "A Papá Noel le han faltado regalos. ¡Inténtalo otra vez!" and the level is
   repeated.
 - **Upgrade:** each level passed adds a reindeer to the sleigh (visible in the scene).
 - Passing a level unlocks the next one. A level already passed can be replayed to improve the
@@ -137,6 +136,6 @@ Each iteration is designed and planned separately; this document details 1 and 2
 
 Everything under "How to play" except the general idea and the non-stop flight with no time
 penalty: 6 cities, 4 options, 20 seconds of flight, the express delivery as the reward for speed,
-the threshold of 4 right answers, stars, turbo at 3 in a row, one reindeer per level, the routes
-of the three levels, the size of the bank, saving progress in the browser, Spanish, and the order
-of the iterations.
+stars, turbo at 3 in a row, one reindeer per level, the routes of the three levels, the size of
+the bank, saving progress in the browser, Spanish, and the order of the iterations. The pass mark
+of 3 gifts and the five stars were decided by the owner (see `2026-11-16-five-stars-design.md`).

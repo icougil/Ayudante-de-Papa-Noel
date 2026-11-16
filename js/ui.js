@@ -146,14 +146,17 @@
   }
 
   // The text under the stars; the star rule itself lives in APN.result, this only picks a text.
-  function nextStarText(r) {
-    if (!r.passed) return '';
-    if (r.stars === r.maxStars) return '¡Puntuación perfecta!';
-    if (r.stars === 4) return 'Última estrella: ¡las ' + APN.EXPRESS_FOR_FIFTH_STAR + ' entregas exprés ⚡!';
-    if (r.stars === 3) {
-      return 'Siguiente estrella: ' + r.total + ' regalos y ' + APN.EXPRESS_FOR_FOURTH_STAR + ' entregas exprés ⚡.';
+  function resultLineText(r) {
+    if (!r.passed) {
+      return r.missing === 1
+        ? '¡Casi! Te ha faltado ' + r.missing + ' regalo.'
+        : 'Te han faltado ' + r.missing + ' regalos.';
     }
-    return 'Siguiente estrella: entrega más regalos.';
+    if (r.stars === r.maxStars) return '¡Puntuación perfecta!';
+    if (r.stars === r.maxStars - 1) {
+      return 'Última estrella: ¡las ' + APN.EXPRESS_FOR_FIFTH_STAR + ' entregas exprés ⚡!';
+    }
+    return 'Siguiente estrella: entrega un regalo más.';
   }
 
   function showResult() {
@@ -163,12 +166,9 @@
       ? '¡Nivel superado!'
       : 'A Papá Noel le han faltado regalos. ¡Inténtalo otra vez!';
     const stars = $('result-stars');
-    stars.hidden = !r.passed;
     stars.textContent = '⭐'.repeat(r.stars) + '☆'.repeat(r.maxStars - r.stars);
     stars.setAttribute('aria-label', r.stars + ' de ' + r.maxStars + ' estrellas');
-    const nextStar = $('result-next-star');
-    nextStar.hidden = !r.passed;
-    nextStar.textContent = nextStarText(r);
+    $('result-next-star').textContent = resultLineText(r);
     $('result-gifts').textContent = 'Has entregado ' + r.delivered + ' de ' + r.total + ' regalos.';
     $('result-express').textContent = 'Entregas exprés: ' + r.express + ' ⚡';
     const button = $('button-again');
