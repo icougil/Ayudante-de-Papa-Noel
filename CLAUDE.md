@@ -6,3 +6,8 @@
   Keep it in data and markup, apart from the logic, so other languages can be added later.
 - Everything written to the repository is in English: commit messages, branch names, pull
   requests and issues.
+
+## Documents
+
+- Design specs go in `docs/specs/` and implementation plans in `docs/plans/` (not
+  `docs/superpowers/`).

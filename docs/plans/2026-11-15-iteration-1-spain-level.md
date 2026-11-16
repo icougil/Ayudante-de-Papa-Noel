@@ -18,7 +18,7 @@ draws the scene and connects the two. Everything hangs off a single global objec
 **Tech Stack:** HTML, CSS and JavaScript with no dependencies or build. Logic and data tests with
 `node --test` (Node 18 or later). Visual check with Playwright on a real browser.
 
-**Spec:** `docs/superpowers/specs/2026-11-15-ayudante-de-papa-noel-design.md`
+**Spec:** `docs/specs/2026-11-15-ayudante-de-papa-noel-design.md`
 
 **Project root:** the repository root (all paths below are relative to it).
 

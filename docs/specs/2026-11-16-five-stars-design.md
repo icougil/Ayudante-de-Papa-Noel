@@ -90,7 +90,7 @@ deliveries.
 - `js/game-logic.js`: the constants, the star calculation and `missing` in `APN.result`.
 - `js/ui.js`: the stars and the line under them are always shown; the texts above.
 - `tests/game-logic.test.js`, `e2e/game.spec.js`: the tables above.
-- `README.md` and `docs/superpowers/specs/2026-11-15-ayudante-de-papa-noel-design.md`: the rule.
+- `README.md` and `docs/specs/2026-11-15-ayudante-de-papa-noel-design.md`: the rule.
 
 ## Left to the builder
 

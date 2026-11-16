@@ -14,9 +14,9 @@ renders the result and picks a Spanish text, it never recomputes the rule. `APN.
 **Tech Stack:** Plain JavaScript with no build step, `node --test` for the logic, Playwright
 (`desktop` on Chromium, `phone` on WebKit) for the screens.
 
-**Spec:** `docs/superpowers/specs/2026-11-16-five-stars-design.md` (sections "Rule", "Result
+**Spec:** `docs/specs/2026-11-16-five-stars-design.md` (sections "Rule", "Result
 screen" and "Revision after play"). It replaces the rule built by
-`docs/superpowers/plans/2026-11-16-five-stars.md`.
+`docs/plans/2026-11-16-five-stars.md`.
 
 ## Global Constraints
 
@@ -54,7 +54,7 @@ screen" and "Revision after play"). It replaces the rule built by
 | `js/ui.js` | Stars and line always shown; the line's texts |
 | `e2e/game.spec.js` | Result-screen tests for the new ladder |
 | `README.md` | The rule under "How to play" |
-| `docs/superpowers/specs/2026-11-15-ayudante-de-papa-noel-design.md` | The rule under "End of level" and the decisions list |
+| `docs/specs/2026-11-15-ayudante-de-papa-noel-design.md` | The rule under "End of level" and the decisions list |
 
 ---
 
@@ -120,7 +120,7 @@ finds nothing.
 **Files:**
 - Modify: `js/ui.js` (`nextStarText` and `showResult`, around lines 148-177)
 - Modify: `README.md` (lines 21-22)
-- Modify: `docs/superpowers/specs/2026-11-15-ayudante-de-papa-noel-design.md` ("End of level"
+- Modify: `docs/specs/2026-11-15-ayudante-de-papa-noel-design.md` ("End of level"
   bullet around lines 75-79, and the decisions list around line 140)
 - Test: `e2e/game.spec.js`
 

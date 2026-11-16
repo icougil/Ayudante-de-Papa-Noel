@@ -1,5 +1,9 @@
 # Five Stars Per Level Implementation Plan
 
+> **Superseded in part:** the rule built by this plan (pass at 4 gifts, the fourth and fifth
+> stars for express deliveries) was replaced by
+> `docs/plans/2026-11-16-five-stars-pass-at-three.md`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** A passed level is rated from 1 to 5 stars, the fourth and fifth earned with express
@@ -12,7 +16,7 @@ Spanish next-star text by star count; it never recomputes the rule.
 **Tech Stack:** Plain JavaScript with no build step, `node --test` for the logic, Playwright
 (`desktop` on Chromium, `phone` on WebKit) for the screens.
 
-**Spec:** `docs/superpowers/specs/2026-11-16-five-stars-design.md`
+**Spec:** `docs/specs/2026-11-16-five-stars-design.md`
 
 ## Global Constraints
 
@@ -80,7 +84,7 @@ All gifts delivered → 3, or 4 when `express >= EXPRESS_FOR_FOURTH_STAR`, or 5 
 - Modify: `index.html` (result section, after `#result-stars`), `js/ui.js` (`showResult`,
   lines 148-163), `css/styles.css` (`.result-stars`, line 114)
 - Modify: `README.md` (line 21),
-  `docs/superpowers/specs/2026-11-15-ayudante-de-papa-noel-design.md` (line 75)
+  `docs/specs/2026-11-15-ayudante-de-papa-noel-design.md` (line 75)
 - Test: `e2e/game.spec.js`
 
 **Interfaces:**
