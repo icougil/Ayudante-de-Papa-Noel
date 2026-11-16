@@ -27,10 +27,10 @@ function answerWrong(state, beforeArrival = true) {
   return APN.answer(state, wrong, beforeArrival);
 }
 
-function play(rightAnswers) {
+function play(rightAnswers, expressAnswers = rightAnswers) {
   let state = APN.createGame(sampleQuestions());
   for (let i = 0; i < 6; i++) {
-    state = (i < rightAnswers ? answerRight(state) : answerWrong(state)).state;
+    state = (i < rightAnswers ? answerRight(state, i < expressAnswers) : answerWrong(state)).state;
   }
   return state;
 }
@@ -151,18 +151,22 @@ test('the game ends after the sixth answer', () => {
   assert.throws(() => APN.answer(state, 0, true), { message: 'The game is already over' });
 });
 
-test('result: stars and passed depend on the gifts delivered', () => {
+test('result: stars depend on the gifts delivered and the express deliveries', () => {
+  // [gifts, express, passed, stars]
   const expected = [
-    [0, false, 0], [1, false, 0], [2, false, 0], [3, false, 0],
-    [4, true, 1], [5, true, 2], [6, true, 3],
+    [0, 0, false, 0], [3, 3, false, 0], [4, 0, true, 1], [4, 4, true, 1],
+    [5, 0, true, 2], [5, 5, true, 2], [6, 0, true, 3], [6, 2, true, 3],
+    [6, 3, true, 4], [6, 5, true, 4], [6, 6, true, 5],
   ];
-  for (const [rightAnswers, passed, stars] of expected) {
-    const r = APN.result(play(rightAnswers));
-    assert.equal(r.delivered, rightAnswers);
-    assert.equal(r.express, rightAnswers);
-    assert.equal(r.total, 6);
-    assert.equal(r.passed, passed, `${rightAnswers} right answers`);
-    assert.equal(r.stars, stars, `${rightAnswers} right answers`);
+  for (const [gifts, express, passed, stars] of expected) {
+    const r = APN.result(play(gifts, express));
+    const label = `${gifts} gifts, ${express} express`;
+    assert.equal(r.delivered, gifts, label);
+    assert.equal(r.express, express, label);
+    assert.equal(r.total, 6, label);
+    assert.equal(r.passed, passed, label);
+    assert.equal(r.stars, stars, label);
+    assert.equal(r.maxStars, 5, label);
   }
 });
 
@@ -183,5 +187,8 @@ test('the game constants match the design', () => {
   assert.equal(APN.TURBO_STREAK, 3);
   assert.equal(APN.FLIGHT_SECONDS, 20);
   assert.equal(APN.TURBO_FLIGHT_SECONDS, 14);
+  assert.equal(APN.MAX_STARS, 5);
+  assert.equal(APN.EXPRESS_FOR_FOURTH_STAR, 3);
+  assert.equal(APN.EXPRESS_FOR_FIFTH_STAR, 6);
   assert.equal(stopIds.length, APN.STOPS_PER_LEVEL);
 });
