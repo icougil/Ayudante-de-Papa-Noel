@@ -149,7 +149,7 @@
   function nextStarText(r) {
     if (!r.passed) return '';
     if (r.stars === r.maxStars) return '¡Puntuación perfecta!';
-    if (r.stars === 4) return 'Última estrella: ¡las ' + r.total + ' entregas exprés ⚡!';
+    if (r.stars === 4) return 'Última estrella: ¡las ' + APN.EXPRESS_FOR_FIFTH_STAR + ' entregas exprés ⚡!';
     if (r.stars === 3) {
       return 'Siguiente estrella: ' + r.total + ' regalos y ' + APN.EXPRESS_FOR_FOURTH_STAR + ' entregas exprés ⚡.';
     }
