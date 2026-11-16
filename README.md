@@ -18,8 +18,8 @@ The code is in English. The game itself (screens, questions, explanations) is in
 - A wrong answer loses the gift to a mishap (a snowstorm, a reindeer with a cold, a gift falling
   off the sleigh) and shows the right answer with a short explanation.
 - Three right answers in a row turn on turbo: the next flight is faster.
-- A level has 6 cities. Delivering 4 gifts passes it; 4, 5 or 6 gifts earn 1, 2 or 3 stars. With all
-  6 delivered, 3 express deliveries earn the fourth star and 6 the fifth.
+- A level has 6 cities. Delivering 3 gifts passes it; 3, 4, 5 or 6 gifts earn 1, 2, 3 or 4 stars.
+  The fifth star needs all 6 gifts delivered as express deliveries.
 
 Level 1 is Spain: Barcelona, Zaragoza, Madrid, Sevilla, Santiago de Compostela and Bilbao.
 
