@@ -56,11 +56,21 @@ test.describe('on a small phone (360x640)', () => {
     await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
     const stars = page.locator('#result-stars');
     await expect(stars).toHaveText('⭐⭐⭐⭐⭐');
-    const { height, fontSize } = await stars.evaluate((node) => ({
-      height: node.getBoundingClientRect().height,
-      fontSize: parseFloat(getComputedStyle(node).fontSize),
-    }));
-    expect(height).toBeLessThan(2 * fontSize);
+    const m = await stars.evaluate((node) => {
+      const box = node.getBoundingClientRect();
+      return {
+        height: box.height,
+        left: box.left,
+        right: box.right,
+        fontSize: parseFloat(getComputedStyle(node).fontSize),
+        scrollWidth: node.scrollWidth,
+        clientWidth: node.clientWidth,
+      };
+    });
+    expect(m.height).toBeLessThan(2 * m.fontSize);
+    expect(m.scrollWidth).toBeLessThanOrEqual(m.clientWidth);
+    expect(m.left).toBeGreaterThanOrEqual(0);
+    expect(m.right).toBeLessThanOrEqual(360);
   });
 });
 
