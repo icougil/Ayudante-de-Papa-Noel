@@ -8,6 +8,9 @@
   APN.TURBO_STREAK = 3;
   APN.FLIGHT_SECONDS = 20;
   APN.TURBO_FLIGHT_SECONDS = 14;
+  APN.MAX_STARS = 5;
+  APN.EXPRESS_FOR_FOURTH_STAR = 3;
+  APN.EXPRESS_FOR_FIFTH_STAR = 6;
 
   APN.MISHAPS = [
     { id: 'storm', emoji: '🌨️', text: '¡Tormenta de nieve! El regalo se ha perdido.' },
@@ -82,6 +85,22 @@
     };
   };
 
+  // Stars: one for passing, one more per extra gift. With every gift delivered
+  // the level is worth 3, plus one or two for express deliveries.
+  function starsFor(state, passed) {
+    if (!passed) {
+      return 0;
+    }
+    const forGifts = state.delivered - APN.MIN_TO_PASS + 1;
+    if (state.delivered < state.questions.length) {
+      return forGifts;
+    }
+    if (state.express >= APN.EXPRESS_FOR_FIFTH_STAR) {
+      return APN.MAX_STARS;
+    }
+    return state.express >= APN.EXPRESS_FOR_FOURTH_STAR ? forGifts + 1 : forGifts;
+  }
+
   APN.result = function (state) {
     const passed = state.delivered >= APN.MIN_TO_PASS;
     return {
@@ -89,7 +108,8 @@
       express: state.express,
       total: state.questions.length,
       passed,
-      stars: passed ? state.delivered - APN.MIN_TO_PASS + 1 : 0,
+      stars: starsFor(state, passed),
+      maxStars: APN.MAX_STARS,
     };
   };
 
