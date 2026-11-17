@@ -37,6 +37,12 @@ it came from.
   switches; where the sounds come from and their licence (recorded files, or generated in the
   browser with the Web Audio API so there are no assets); and how it starts, since browsers
   block sound until the player's first tap (the "¡A repartir!" button is the natural moment).
+- [ ] **Check the sound on a real iPhone.** The sound has been checked by ear only on a computer
+  and an Android phone. On an iPhone, Safari can leave the Web Audio context "interrupted" after
+  the phone is locked and unlocked mid-trip, so the game could stay silent until it is reloaded.
+  To check: start a trip with sound on, lock the phone for a few seconds, unlock it, answer one
+  question; music and effects must play again. If they do not, resume the context on the next
+  tap as well as on `visibilitychange` (see `js/sound.js`).
 
 ## Noted during development
 
