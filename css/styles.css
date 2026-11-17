@@ -76,6 +76,31 @@ button { -webkit-user-select: none; user-select: none; }
   outline-offset: 2px;
 }
 
+/* ---------- Sound switch ---------- */
+
+#screen-start, #screen-result, .scene-wrap { position: relative; }
+
+.sound-toggle {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 0 3px 0 var(--snow-shadow);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sound-toggle:hover { filter: brightness(0.96); }
+.sound-toggle:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--snow-shadow); }
+.sound-toggle:focus-visible { outline: 4px solid var(--gold); outline-offset: 2px; }
+
 /* ---------- Start and result screens ---------- */
 
 .cover {
