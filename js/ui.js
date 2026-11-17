@@ -480,7 +480,6 @@
     for (const button of soundToggles) {
       button.textContent = on ? '🔊' : '🔇';
       button.setAttribute('aria-pressed', String(on));
-      button.setAttribute('aria-label', on ? 'Sonido activado' : 'Sonido desactivado');
     }
   }
 
