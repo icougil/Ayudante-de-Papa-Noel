@@ -315,7 +315,11 @@
         const event = tune.events[music.next];
         const start = eventTime(music, event);
         if (start > horizon) break;
-        scheduleEvent(music, event, Math.max(start, context.currentTime));
+        try {
+          scheduleEvent(music, event, Math.max(start, context.currentTime));
+        } catch (error) {
+          // A failed note is skipped; the music goes on.
+        }
         music.next += 1;
         if (music.next === tune.events.length) {
           music.next = 0;
@@ -323,7 +327,7 @@
         }
       }
     } catch (error) {
-      // A failed note is skipped; the music goes on.
+      // The scheduler waits for the next tick.
     }
   }
 
