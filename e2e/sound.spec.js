@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { openGame, startGame, answer, pageScrolls } = require('./helpers');
+const { openGame, recordSounds, startGame, answer, pageScrolls } = require('./helpers');
 
 // Opens the game, collects page errors and taps the title so the browser allows sound.
 async function openWithSound(page) {
@@ -174,4 +174,161 @@ test.describe('on a small phone (360x640)', () => {
     // 200 px: the height of #scene at 360x640 during a trip before the switch was added.
     expect(scene.height).toBe(200);
   });
+});
+
+// ---------- The sounds of a game ----------
+
+const calls = (page) => page.evaluate(() => window.__soundCalls);
+
+// Opens the game with the sound methods recorded and starts it.
+async function recordedStart(page) {
+  await openGame(page);
+  await recordSounds(page);
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+}
+
+// Answers the question on screen right and waits for the next city.
+async function answerRightAndWaitFor(page, nextCity) {
+  await answer(page, true);
+  await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + nextCity + '/6');
+}
+
+// Plays the six cities, all right or all wrong, until the result screen.
+async function playSix(page, right) {
+  for (let n = 0; n < 6; n++) {
+    await answer(page, right);
+    if (!right) {
+      await page.locator('#button-next').click();
+    }
+    if (n < 5) {
+      await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + (n + 2) + '/6');
+    }
+  }
+  await expect(page.locator('#screen-result')).toBeVisible();
+}
+
+test('starting a game plays the take-off and brings the music in after it', async ({ page }) => {
+  await recordedStart(page);
+  expect((await calls(page)).slice(0, 3)).toEqual([
+    ['play', 'takeOff'],
+    ['startMusic', 1.1],
+    ['setTurbo', false],
+  ]);
+});
+
+test('a right answer before arrival sounds like a tap and then an express delivery', async ({ page }) => {
+  await recordedStart(page);
+  await answer(page, true);
+  await expect(page.locator('#notice')).toContainText('¡Correcto! Entrega exprés ⚡🎁');
+  const recorded = await calls(page);
+  const tap = recorded.findIndex((call) => call[0] === 'play' && call[1] === 'tap');
+  expect(tap).toBeGreaterThan(-1);
+  expect(recorded[tap + 1]).toEqual(['play', 'express']);
+  expect(recorded).not.toContainEqual(['play', 'deliver']);
+});
+
+test('a wrong answer sounds like its mishap, never like a delivery', async ({ page }) => {
+  await recordedStart(page);
+  await answer(page, false);
+  await expect(page.locator('#button-next')).toBeVisible();
+  const mishapTexts = await page.evaluate(() =>
+    Object.fromEntries(globalThis.APN.MISHAPS.map((m) => [m.id, m.text])));
+  const notice = await page.locator('.notice-bad').textContent();
+  const recorded = await calls(page);
+  const mishapCalls = recorded.filter((call) => call[0] === 'play' && call[1] in mishapTexts);
+  expect(mishapCalls).toHaveLength(1);
+  expect(notice).toContain(mishapTexts[mishapCalls[0][1]]);
+  expect(recorded).not.toContainEqual(['play', 'deliver']);
+  expect(recorded).not.toContainEqual(['play', 'express']);
+  const before = recorded.length;
+  await page.locator('#button-next').click();
+  expect((await calls(page)).slice(before)).toContainEqual(['play', 'tap']);
+});
+
+test('three right answers in a row sound the turbo and speed the music up', async ({ page }) => {
+  await recordedStart(page);
+  await answerRightAndWaitFor(page, 2);
+  await answerRightAndWaitFor(page, 3);
+  await answerRightAndWaitFor(page, 4);
+  const recorded = await calls(page);
+  expect(recorded).toContainEqual(['play', 'turbo', 0.5]);
+  expect(recorded.filter((call) => call[0] === 'setTurbo').pop()).toEqual(['setTurbo', true]);
+});
+
+test('reaching the city without answering rings the arrival, and the late answer is a plain delivery', async ({ page }) => {
+  await openGame(page);
+  await page.evaluate(() => { globalThis.APN.FLIGHT_SECONDS = 1; });
+  await recordSounds(page);
+  await page.locator('#button-start').click();
+  await expect(page.locator('#notice')).toContainText('Papá Noel da vueltas sobre');
+  expect((await calls(page)).filter((call) => call[1] === 'arrive')).toEqual([['play', 'arrive']]);
+  await answer(page, true);
+  await expect(page.locator('#notice')).toContainText('¡Correcto! Regalo entregado 🎁');
+  expect(await calls(page)).toContainEqual(['play', 'deliver']);
+});
+
+test('a passed level stops the music and plays the pass sound', async ({ page }) => {
+  await recordedStart(page);
+  await playSix(page, true);
+  expect((await calls(page)).slice(-2)).toEqual([['stopMusic'], ['play', 'pass']]);
+});
+
+test('a level that is not passed stops the music and plays the gentle sound', async ({ page }) => {
+  await recordedStart(page);
+  await playSix(page, false);
+  expect((await calls(page)).slice(-2)).toEqual([['stopMusic'], ['play', 'notPassed']]);
+});
+
+test('playing again takes off again', async ({ page }) => {
+  await recordedStart(page);
+  await playSix(page, true);
+  const before = (await calls(page)).length;
+  await page.locator('#button-again').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+  expect((await calls(page)).slice(before, before + 2)).toEqual([
+    ['play', 'takeOff'],
+    ['startMusic', 1.1],
+  ]);
+});
+
+test('a whole game with sound on raises no page error', async ({ page }) => {
+  const errors = await openWithSound(page);
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+  await playToResult(page);
+  expect(errors).toEqual([]);
+});
+
+test('a whole game with sound switched off raises no page error and never plays music', async ({ page }) => {
+  const errors = await openWithSound(page);
+  await toggle(page).click();
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+  expect((await state(page)).music).toBe(false);
+  for (let n = 0; n < 6; n++) {
+    await answer(page, true);
+    expect((await state(page)).music).toBe(false);
+    if (n < 5) {
+      await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + (n + 2) + '/6');
+    }
+  }
+  await expect(page.locator('#screen-result')).toBeVisible();
+  expect((await state(page)).music).toBe(false);
+  expect(errors).toEqual([]);
+});
+
+test('a whole game without AudioContext raises no page error', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.addInitScript(() => {
+    delete window.AudioContext;
+    delete window.webkitAudioContext;
+  });
+  await openGame(page);
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+  await playToResult(page);
+  expect((await state(page)).context).toBe('none');
+  expect(errors).toEqual([]);
 });
