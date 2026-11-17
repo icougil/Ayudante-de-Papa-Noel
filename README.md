@@ -20,6 +20,9 @@ The code is in English. The game itself (screens, questions, explanations) is in
 - Three right answers in a row turn on turbo: the next flight is faster.
 - A level has 6 cities. Delivering 3 gifts passes it; 3, 4, 5 or 6 gifts earn 1, 2, 3 or 4 stars.
   The fifth star needs all 6 gifts delivered as express deliveries.
+- The game has music and sound effects. The 🔊 button in the top-left corner switches them off,
+  and the choice is remembered. The music is the chorus of Jingle Bells (James Pierpont, 1857),
+  in the public domain; no sound file is used.
 
 Level 1 is Spain: Barcelona, Zaragoza, Madrid, Sevilla, Santiago de Compostela and Bilbao.
 
@@ -78,6 +81,7 @@ sends no visit. The browser tests never contact Umami: they replace its script w
 | `css/styles.css` | All the styles and animations |
 | `js/data-level-1.js` | Level 1: the cities on the route and the question bank |
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
+| `js/sound.js` | The music and the sound effects, generated in the browser, and the sound switch |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
 | `tests/` | Unit tests for the data and the rules |
 | `e2e/` | Browser tests for the screens |

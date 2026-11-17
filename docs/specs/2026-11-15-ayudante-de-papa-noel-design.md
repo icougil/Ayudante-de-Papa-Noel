@@ -22,7 +22,6 @@ questions. Later on, children of other ages, and playing with a friend.
 
 - User accounts, server, database, online play between two devices.
 - The player steering the sleigh (action mini-games): possible later.
-- Sound and music: possible later.
 
 ## What would make the game fail even if it works
 
@@ -45,6 +44,8 @@ questions. Later on, children of other ages, and playing with a friend.
 ## How to play (version 1)
 
 Screens: **Start** → **Level map** → **Trip** → **Level result**.
+
+Music and sound effects: see `2026-11-17-sound-design.md`.
 
 ```
  🌙        ⭐      🎅🦌🦌 ~~~>      ⭐
@@ -119,7 +120,7 @@ Screens: **Start** → **Level map** → **Trip** → **Level result**.
 2. **All three levels**, level map, stars, reindeer and saved progress.
 3. **Choosing the age** at the start, and question banks for other age ranges.
 4. **Two players on the same device**: taking turns, two sleighs racing.
-5. Ideas for later: sound, action mini-games, online play.
+5. Ideas for later: action mini-games, online play.
 
 Each iteration is designed and planned separately; this document details 1 and 2.
 

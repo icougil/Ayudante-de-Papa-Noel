@@ -29,7 +29,7 @@ it came from.
 
 ## Sound
 
-- [ ] **Add music and sound effects, with a way to turn them on and off.** The game is silent
+- [x] **Add music and sound effects, with a way to turn them on and off.** The game is silent
   and feels flat. Wanted: background music while flying, and sound effects for the events of a
   game (a right answer and its delivery, an express delivery, turbo, each mishap, arriving at a
   city, the result screen). The player must be able to switch sound on and off, and the choice
@@ -52,3 +52,7 @@ it came from.
   (locally and in CI). Either test the oldest supported version in CI or raise the stated
   minimum.
 - [ ] **No independent code review has been run** on level 1.
+- [ ] **Revisit the sound of the reindeer mishap.** It is a comic nose-blow (two honks) used
+  as a placeholder: the owner was not convinced by any of the generated sneezes tried during the
+  design. Options: another generated sound, or one short recorded sneeze with a licence that
+  allows it (it would be the game's first asset file).
