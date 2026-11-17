@@ -83,7 +83,7 @@ sends no visit. The browser tests never contact Umami: they replace its script w
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
 | `js/sound.js` | The music and the sound effects, generated in the browser, and the sound switch |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
-| `tests/` | Unit tests for the data and the rules |
+| `tests/` | Unit tests for the data, the rules, the tune and the sound choice |
 | `e2e/` | Browser tests for the screens |
 | `BACKLOG.md` | Work agreed but not started |
 
