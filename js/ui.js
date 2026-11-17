@@ -458,6 +458,27 @@
     requestAnimationFrame(loop);
   }
 
+  // ---------- Sound switch ----------
+
+  const soundToggles = Array.from(document.querySelectorAll('.sound-toggle'));
+
+  function renderSoundToggles() {
+    const on = APN.sound.isOn();
+    for (const button of soundToggles) {
+      button.textContent = on ? '🔊' : '🔇';
+      button.setAttribute('aria-pressed', String(on));
+      button.setAttribute('aria-label', on ? 'Sonido activado' : 'Sonido desactivado');
+    }
+  }
+
+  function onSoundToggle() {
+    const on = APN.sound.toggle();
+    renderSoundToggles();
+    if (on && !$('screen-trip').hidden) {
+      APN.sound.startMusic(0);
+    }
+  }
+
   // ---------- Start-up ----------
 
   $('cover-sleigh').innerHTML = santaHTML();
@@ -465,6 +486,10 @@
   $('button-start').addEventListener('click', startGame);
   $('button-again').addEventListener('click', startGame);
   el.next.addEventListener('click', onNext);
+  for (const button of soundToggles) {
+    button.addEventListener('click', onSoundToggle);
+  }
+  renderSoundToggles();
   window.addEventListener('resize', measure);
   showScreen('screen-start');
 })();

@@ -11,6 +11,7 @@
   <main id="app">
 
     <section id="screen-start" class="screen">
+      <button type="button" class="sound-toggle" aria-pressed="true" aria-label="Sonido activado">🔊</button>
       <div class="cover">
         <div class="cover-sleigh" id="cover-sleigh" aria-hidden="true"></div>
         <h1>Ayudante de Papá Noel</h1>
@@ -26,17 +27,20 @@
         <span id="scoreboard-city" class="scoreboard-item scoreboard-city"></span>
       </div>
 
-      <div id="scene" class="scene" aria-hidden="true">
-        <div class="sky">
-          <div class="moon"></div>
-          <div class="stars"></div>
+      <div class="scene-wrap">
+        <div id="scene" class="scene" aria-hidden="true">
+          <div class="sky">
+            <div class="moon"></div>
+            <div class="stars"></div>
+          </div>
+          <div id="hills-far" class="hills hills-far"></div>
+          <div id="hills-near" class="hills hills-near"></div>
+          <div class="ground"></div>
+          <div id="world" class="world"></div>
+          <div id="santa" class="santa"></div>
+          <div id="effects" class="effects"></div>
         </div>
-        <div id="hills-far" class="hills hills-far"></div>
-        <div id="hills-near" class="hills hills-near"></div>
-        <div class="ground"></div>
-        <div id="world" class="world"></div>
-        <div id="santa" class="santa"></div>
-        <div id="effects" class="effects"></div>
+        <button type="button" class="sound-toggle" aria-pressed="true" aria-label="Sonido activado">🔊</button>
       </div>
 
       <div class="distance" aria-hidden="true">
@@ -54,6 +58,7 @@
     </section>
 
     <section id="screen-result" class="screen" hidden>
+      <button type="button" class="sound-toggle" aria-pressed="true" aria-label="Sonido activado">🔊</button>
       <div class="cover">
         <h2 id="result-title" class="result-title"></h2>
         <p id="result-stars" class="result-stars"></p>
