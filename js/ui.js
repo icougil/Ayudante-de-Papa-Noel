@@ -162,6 +162,8 @@
   function showResult() {
     phase = 'idle';
     const r = APN.result(state);
+    APN.sound.stopMusic();
+    APN.sound.play(r.passed ? 'pass' : 'notPassed');
     $('result-title').textContent = r.passed
       ? '¡Nivel superado!'
       : 'A Papá Noel le han faltado regalos. ¡Inténtalo otra vez!';
@@ -193,6 +195,8 @@
     el.effects.textContent = '';
     showScreen('screen-trip');
     measure();
+    APN.sound.play('takeOff');
+    APN.sound.startMusic(APN.TAKE_OFF_SECONDS);
     startLeg();
     if (!loopRunning) {
       loopRunning = true;
@@ -215,6 +219,7 @@
     city.querySelector('.city-sign span').textContent = stop.name;
     el.world.appendChild(city);
 
+    APN.sound.setTurbo(turboNext);
     el.santa.classList.toggle('turbo', turboNext);
     el.santa.classList.remove('circling', 'sneezing');
     el.effects.textContent = '';
@@ -262,6 +267,7 @@
     if (phase !== 'flying' && phase !== 'circling') {
       return; // already answered: a double click must not count twice
     }
+    APN.sound.play('tap');
     const beforeArrival = phase === 'flying';
     const r = APN.answer(state, i, beforeArrival);
     state = r.state;
@@ -306,6 +312,10 @@
       span.style.setProperty('--fall-from', Math.round(el.scene.clientHeight * 0.55) + 'px');
       el.world.appendChild(span);
     }
+    APN.sound.play(r.express ? 'express' : 'deliver');
+    if (r.turbo) {
+      APN.sound.play('turbo', APN.TURBO_SOUND_DELAY_SECONDS);
+    }
     renderScoreboard();
     const lines = [['notice-good', r.express ? '¡Correcto! Entrega exprés ⚡🎁' : '¡Correcto! Regalo entregado 🎁']];
     if (r.turbo) {
@@ -318,6 +328,7 @@
 
   function fail() {
     const mishap = APN.pickMishap(Math.random);
+    APN.sound.play(mishap.id);
     if (mishap.id === 'storm') {
       for (let n = 0; n < 16; n++) {
         const flake = effect('flake', '❄️');
@@ -362,6 +373,7 @@
     if (phase !== 'miss') {
       return; // a double click on "Seguir" must not skip two cities
     }
+    APN.sound.play('tap');
     phase = 'idle';
     nextStep();
   }
@@ -381,6 +393,7 @@
       if (x >= arrival) {
         x = arrival;
         phase = 'circling';
+        APN.sound.play('arrive');
         el.santa.classList.add('circling');
         notify([[
           'notice-waiting',

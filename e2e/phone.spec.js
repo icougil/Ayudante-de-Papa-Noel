@@ -23,3 +23,23 @@ test('on a phone, the four answers fit and a wrong answer brings "Seguir" into v
   await expect(page.locator('#options button').last()).toBeInViewport({ ratio: 1 });
   expect(errors).toEqual([]);
 });
+
+test('on a phone, the switch can be tapped and a game with sound raises no error', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await startGame(page);
+  const toggle = page.locator('.sound-toggle:visible');
+  await toggle.tap();
+  await expect(toggle).toHaveText('🔇');
+  await toggle.tap();
+  await expect(toggle).toHaveText('🔊');
+  await expect(toggle).toBeInViewport({ ratio: 1 });
+  expect(await pageScrolls(page)).toBe(false);
+
+  await answer(page, true);
+  await expect(page.locator('#scoreboard-city')).toContainText('Ciudad 2/6');
+  await answer(page, false);
+  await expect(page.locator('#button-next')).toBeInViewport({ ratio: 1 });
+
+  expect(errors).toEqual([]);
+});
