@@ -86,17 +86,20 @@ test('under Node the sound object reports sound on, no music and no context', ()
 });
 
 test('under Node every method of the sound object can be called without throwing', () => {
-  assert.doesNotThrow(() => {
-    for (const name of APN.SOUND_NAMES) APN.sound.play(name);
-    APN.sound.play('nope');
-    APN.sound.startMusic(0);
-    APN.sound.setTurbo(true);
-    APN.sound.stopMusic();
-    APN.sound.toggle();
-    APN.sound.toggle();
-  });
-  APN.sound.setTurbo(false);
-  assert.equal(APN.sound.isOn(), true);
+  try {
+    assert.doesNotThrow(() => {
+      for (const name of APN.SOUND_NAMES) APN.sound.play(name);
+      APN.sound.play('nope');
+      APN.sound.startMusic(0);
+      APN.sound.setTurbo(true);
+      APN.sound.stopMusic();
+      APN.sound.toggle();
+      APN.sound.toggle();
+    });
+    assert.equal(APN.sound.isOn(), true);
+  } finally {
+    APN.sound.setTurbo(false);
+  }
 });
 
 test('setTurbo is remembered while no music plays', () => {
@@ -113,4 +116,60 @@ test('saving the sound choice ignores a storage that throws', () => {
     },
   };
   assert.doesNotThrow(() => APN.saveSoundChoice(storage, true));
+});
+
+test('a note that fails to schedule is skipped and the music goes on', async () => {
+  const param = (onSet) => ({
+    value: 0,
+    setValueAtTime: onSet || (() => {}),
+    linearRampToValueAtTime() {},
+    exponentialRampToValueAtTime() {},
+    cancelScheduledValues() {},
+    setTargetAtTime() {},
+  });
+  const node = () => ({ gain: param(), connect() {}, disconnect() {} });
+  let fake = null;
+  const started = [];
+  const firstNote = APN.noteFrequency('E5');
+  class FakeAudioContext {
+    constructor() {
+      fake = this;
+      this.currentTime = 0;
+      this.state = 'running';
+      this.destination = {};
+    }
+    resume() {}
+    createGain() {
+      return node();
+    }
+    createOscillator() {
+      const osc = {
+        frequency: param((frequency, time) => {
+          // The first melody note, at time 0, always fails.
+          if (frequency === firstNote && time === 0) throw new Error('cannot schedule');
+        }),
+        connect() {},
+        stop() {},
+        start: (time) => started.push(time),
+      };
+      return osc;
+    }
+  }
+  const previous = globalThis.AudioContext;
+  globalThis.AudioContext = FakeAudioContext;
+  try {
+    APN.sound.startMusic(0);
+    // Bass and bell at time 0 come right after the failed note.
+    assert.equal(started.filter((time) => time === 0).length, 2);
+    // The clock moves on: the scheduler reaches the notes of the next beat.
+    fake.currentTime = 0.3;
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    assert.ok(started.some((time) => time >= APN.MUSIC_BEAT_SECONDS));
+  } finally {
+    APN.sound.stopMusic();
+    if (previous === undefined) delete globalThis.AudioContext;
+    else globalThis.AudioContext = previous;
+    APN.sound.setTurbo(false);
+    if (!APN.sound.isOn()) APN.sound.toggle();
+  }
 });
