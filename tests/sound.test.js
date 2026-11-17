@@ -81,6 +81,31 @@ test('saving the sound choice writes on or off under apn.sound', () => {
   ]);
 });
 
+test('under Node the sound object reports sound on, no music and no context', () => {
+  assert.deepEqual(APN.sound.state(), { on: true, music: false, turbo: false, context: 'none' });
+});
+
+test('under Node every method of the sound object can be called without throwing', () => {
+  assert.doesNotThrow(() => {
+    for (const name of APN.SOUND_NAMES) APN.sound.play(name);
+    APN.sound.play('nope');
+    APN.sound.startMusic(0);
+    APN.sound.setTurbo(true);
+    APN.sound.stopMusic();
+    APN.sound.toggle();
+    APN.sound.toggle();
+  });
+  APN.sound.setTurbo(false);
+  assert.equal(APN.sound.isOn(), true);
+});
+
+test('setTurbo is remembered while no music plays', () => {
+  APN.sound.setTurbo(true);
+  assert.equal(APN.sound.state().turbo, true);
+  APN.sound.setTurbo(false);
+  assert.equal(APN.sound.state().turbo, false);
+});
+
 test('saving the sound choice ignores a storage that throws', () => {
   const storage = {
     setItem: () => {
