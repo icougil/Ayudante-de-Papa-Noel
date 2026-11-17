@@ -110,13 +110,49 @@ test('tapping the switch turns sound off and says so', async ({ page }) => {
   await button.click();
   await expect(button).toHaveText('🔇');
   await expect(button).toHaveAttribute('aria-pressed', 'false');
-  await expect(button).toHaveAttribute('aria-label', 'Sonido desactivado');
+  await expect(button).toHaveAttribute('aria-label', 'Sonido');
   expect(await page.evaluate(() => globalThis.APN.sound.isOn())).toBe(false);
   await button.click();
   await expect(button).toHaveText('🔊');
   await expect(button).toHaveAttribute('aria-pressed', 'true');
-  await expect(button).toHaveAttribute('aria-label', 'Sonido activado');
+  await expect(button).toHaveAttribute('aria-label', 'Sonido');
   expect(await page.evaluate(() => globalThis.APN.sound.isOn())).toBe(true);
+});
+
+test('the switch is always called "Sonido"', async ({ page }) => {
+  const expectAllNamed = async () => {
+    const labels = await page.locator('.sound-toggle').evaluateAll((buttons) =>
+      buttons.map((button) => button.getAttribute('aria-label')));
+    expect(labels).toHaveLength(3);
+    expect(labels).toEqual(['Sonido', 'Sonido', 'Sonido']);
+  };
+  await openGame(page);
+  await expectAllNamed();
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+  await expectAllNamed();
+  await playToResult(page);
+  await expectAllNamed();
+  await toggle(page).click();
+  await expect(toggle(page)).toHaveText('🔇');
+  await expectAllNamed();
+});
+
+test('on the cover and the result screen the switch is in the top-right corner', async ({ page }) => {
+  const expectCorner = async (section) => {
+    const box = await toggle(page).boundingBox();
+    const screen = await page.locator(section).boundingBox();
+    expect(box.width).toBeGreaterThanOrEqual(44);
+    expect(box.height).toBeGreaterThanOrEqual(44);
+    expect(Math.abs(screen.x + screen.width - (box.x + box.width) - 8)).toBeLessThanOrEqual(1);
+    expect(Math.abs(box.y - screen.y - 8)).toBeLessThanOrEqual(1);
+  };
+  await openGame(page);
+  await expectCorner('#screen-start');
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+  await playToResult(page);
+  await expectCorner('#screen-result');
 });
 
 test('the sound choice survives a reload', async ({ page }) => {
@@ -159,31 +195,57 @@ test('ten quick taps on the switch leave it in the state of the last tap', async
   expect(errors).toEqual([]);
 });
 
+// The trip's switch sits at the right end of the scoreboard, looks like a score pill, keeps a
+// 44x44 tappable area and does not make the scoreboard taller.
+async function expectSwitchInScoreboard(page) {
+  const button = toggle(page);
+  expect(await button.evaluate((node) =>
+    node.parentElement.classList.contains('scoreboard') && node.parentElement.lastElementChild === node)).toBe(true);
+  const box = await button.boundingBox();
+  const scene = await page.locator('#scene').boundingBox();
+  const noOverlap = box.x + box.width <= scene.x || box.x >= scene.x + scene.width ||
+    box.y + box.height <= scene.y || box.y >= scene.y + scene.height;
+  expect(noOverlap).toBe(true);
+  const pill = await page.locator('.scoreboard-item').first().boundingBox();
+  expect(Math.abs(box.height - pill.height)).toBeLessThanOrEqual(1);
+  const viewport = page.viewportSize();
+  const cx = box.x + box.width / 2;
+  const cy = box.y + box.height / 2;
+  for (const [dx, dy] of [[-21, -21], [21, -21], [-21, 21], [21, 21]]) {
+    const x = cx + dx;
+    const y = cy + dy;
+    expect(x >= 0 && x < viewport.width && y >= 0 && y < viewport.height).toBe(true);
+    const hit = await page.evaluate(([px, py]) => {
+      const node = document.elementFromPoint(px, py);
+      return Boolean(node && node.closest('.sound-toggle'));
+    }, [x, y]);
+    expect(hit).toBe(true);
+  }
+  const withSwitch = (await page.locator('.scoreboard').boundingBox()).height;
+  await page.addStyleTag({ content: '.sound-toggle { display: none !important; }' });
+  const withoutSwitch = (await page.locator('.scoreboard').boundingBox()).height;
+  expect(withSwitch).toBe(withoutSwitch);
+}
+
 test.describe('on a small phone (360x640)', () => {
   test.use({ viewport: { width: 360, height: 640 } });
 
-  test('the switch stays inside the scene and the page does not scroll', async ({ page }) => {
+  test('on the trip the switch is at the right end of the scoreboard and the page does not scroll', async ({ page }) => {
     await startGame(page);
-    const button = await toggle(page).boundingBox();
-    const scene = await page.locator('#scene').boundingBox();
-    expect(button.x).toBeGreaterThanOrEqual(scene.x);
-    expect(button.y).toBeGreaterThanOrEqual(scene.y);
-    expect(button.x + button.width).toBeLessThanOrEqual(scene.x + scene.width);
-    expect(button.y + button.height).toBeLessThanOrEqual(scene.y + scene.height);
-    expect(button.width).toBeGreaterThanOrEqual(44);
-    expect(button.height).toBeGreaterThanOrEqual(44);
+    await expectSwitchInScoreboard(page);
     expect(await pageScrolls(page)).toBe(false);
-    // The switch does not make the scoreboard wrap: it is as tall with the switch as without it.
-    const withSwitch = (await page.locator('.scoreboard').boundingBox()).height;
-    await page.addStyleTag({ content: '.sound-toggle { display: none !important; }' });
-    const withoutSwitch = (await page.locator('.scoreboard').boundingBox()).height;
-    expect(withSwitch).toBe(withoutSwitch);
     for (const option of await page.locator('#options button').all()) {
       await expect(option).toBeInViewport({ ratio: 1 });
     }
     // 200 px: the height of #scene at 360x640 during a trip before the switch was added.
-    expect(scene.height).toBe(200);
+    expect((await page.locator('#scene').boundingBox()).height).toBe(200);
   });
+});
+
+test('at 1280x800 the switch does not make the scoreboard taller', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await startGame(page);
+  await expectSwitchInScoreboard(page);
 });
 
 // ---------- The sounds of a game ----------

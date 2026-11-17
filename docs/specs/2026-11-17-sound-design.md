@@ -75,26 +75,29 @@ each needs a usable licence and they add megabytes to a repository that has no a
 ## The switch
 
 ```
- Regalos entregados: 3 🎁🎁🎁   ⚡ 2    Ciudad 4/6: Sevilla
+ Regalos entregados: 3 🎁🎁🎁   ⚡ 2    Ciudad 4/6: Sevilla   [🔊]
  ┌───────────────────────────────────────────────────────┐
- │ [🔊]                                             🌙   │
+ │                                                  🌙   │
  │            🎅🦌🦌 ~~~>                                 │
 ```
 
-- A round button showing `🔊` when sound is on and `🔇` when it is off, at least 44 by 44 CSS
-  pixels. It is on all three screens: on the trip in the top-left corner of the scene (the moon
-  is in the top-right corner), on the cover and the result screen in the top-left corner of the
-  screen **(designer's call)**.
+- A button showing `🔊` when sound is on and `🔇` when it is off, with a tappable area of at
+  least 44 by 44 CSS pixels. It is on all three screens: on the trip at the right end of the
+  scoreboard, shaped like a score pill and as tall as one (its tappable area is extended with a
+  transparent pseudo-element); on the cover and the result screen a round 44 by 44 button in
+  the top-right corner of the screen, 8 pixels from the top and from the right.
 - It is a real `<button>` outside the `aria-hidden` scene, with `aria-pressed` (`true` when sound
-  is on) and `aria-label` `Sonido activado` or `Sonido desactivado`.
+  is on) and a fixed `aria-label` `Sonido`: the state is told by `aria-pressed` only, so a
+  screen reader never hears a name that contradicts the state.
 - Tapping it while sound is on silences music and effects within 0.1 s. Tapping it while sound
   is off turns sound on; on the trip screen the music starts again from the beginning of the
   tune, at the speed of the current leg. On the cover and the result screen nothing plays.
 - The choice is kept in `localStorage` under the key `apn.sound` with the value `on` or `off`. A
   missing or unreadable value means on. If `localStorage` cannot be used (private browsing, some
   browsers on `file://`), the switch still works for the visit and nothing is reported.
-- The button must not make the page scroll or wrap the scoreboard on a 360-pixel-wide phone, and
-  must not cover the scoreboard, the question or the answers.
+- The button must not make the page scroll or make the scoreboard taller on a 360-pixel-wide
+  phone, and must not cover the scoreboard pills, the scene's sleigh, the question or the
+  answers.
 
 ## How it is built
 
@@ -178,12 +181,12 @@ of the effect; `a → b` is a glide in pitch.
   only for `off`; `saveSoundChoice` writes `on` or `off` and swallows a throwing storage;
   requiring `js/sound.js` under Node (no `AudioContext`, no `window`) does not throw, and every
   method of `APN.sound` can be called there without throwing.
-- Browser (Playwright, desktop and phone): the switch is on every screen, toggles `🔊` and `🔇`,
-  `aria-pressed` and `aria-label`; the choice survives a reload; a whole game with the calls to
+- Browser (Playwright, desktop and phone): the switch is on every screen, toggles `🔊` and `🔇`
+  and `aria-pressed` while `aria-label` stays `Sonido`; the choice survives a reload; a whole game with the calls to
   `APN.sound` recorded shows the sounds of the table above for a right answer, an express
   delivery, a wrong answer, an arrival without an answer, turbo and both results; a whole game
   with sound on and one with sound off raise no page error; the page does not scroll and the
-  scoreboard does not wrap because of the switch at 360 pixels wide.
+  scoreboard is no taller because of the switch, at 360 and at 1280 pixels wide.
 - By ear, by the owner, on a computer and on a real phone: no test can tell whether it sounds
   good.
 

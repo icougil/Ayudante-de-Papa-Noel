@@ -73,6 +73,9 @@ may record it in its operational and security logs. See
 Only visits on `icougil.github.io` are counted. A local run still downloads Umami's script, but
 sends no visit. The browser tests never contact Umami: they replace its script with an empty one.
 
+The game keeps one thing in the browser: whether sound is on or off (the `localStorage` key
+`apn.sound`). It keeps nothing about the questions or the answers.
+
 ## Project layout
 
 | Path | What it holds |
