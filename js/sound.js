@@ -91,6 +91,8 @@
   // ---- The sound engine: Web Audio, created on the first tap that needs it. ----
 
   const SCHEDULE_AHEAD_SECONDS = 0.2;
+  // A note whose time passed more than this long ago (after a stall) is skipped, not played late.
+  const LATE_NOTE_SECONDS = 0.05;
   const SCHEDULER_INTERVAL_MS = 25;
   const ATTACK_SECONDS = 0.015;
   const MELODY_SOUNDING = 0.92;
@@ -171,6 +173,15 @@
       }, DISCONNECT_AFTER_MS);
     } catch (error) {
       // Nothing to silence.
+    }
+  }
+
+  // Reports a bug of the engine as a console warning; never throws, and says nothing without a console.
+  function report(error) {
+    try {
+      globalThis.console.warn('APN.sound:', error);
+    } catch (ignored) {
+      // Nowhere to report to.
     }
   }
 
@@ -316,9 +327,12 @@
         const start = eventTime(music, event);
         if (start > horizon) break;
         try {
-          scheduleEvent(music, event, Math.max(start, context.currentTime));
+          if (start >= context.currentTime - LATE_NOTE_SECONDS) {
+            scheduleEvent(music, event, Math.max(start, context.currentTime));
+          }
         } catch (error) {
           // A failed note is skipped; the music goes on.
+          report(error);
         }
         music.next += 1;
         if (music.next === tune.events.length) {
@@ -328,6 +342,7 @@
       }
     } catch (error) {
       // The scheduler waits for the next tick.
+      report(error);
     }
   }
 
@@ -359,6 +374,7 @@
         }
       } catch (error) {
         // The switch still flips for the visit.
+        report(error);
       }
       return on;
     },
@@ -369,6 +385,7 @@
         EFFECTS[name](chain.effects, context.currentTime + delaySeconds);
       } catch (error) {
         // No sound is better than a broken game.
+        report(error);
       }
     },
 
@@ -391,6 +408,7 @@
         tick(music);
       } catch (error) {
         run = null;
+        report(error);
       }
     },
 
@@ -399,6 +417,7 @@
         stopRun();
       } catch (error) {
         run = null;
+        report(error);
       }
     },
 
@@ -415,6 +434,7 @@
         }
       } catch (error) {
         // The speed is still remembered.
+        report(error);
       }
     },
 
