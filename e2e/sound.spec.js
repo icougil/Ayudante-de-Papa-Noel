@@ -34,7 +34,11 @@ test('starting the music twice still stops with one stop', async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-test('every effect plays without a page error', async ({ page }) => {
+test('every effect plays without a page error or a warning', async ({ page }) => {
+  const warnings = [];
+  page.on('console', (message) => {
+    if (message.type() === 'warning') warnings.push(message.text());
+  });
   const errors = await openWithSound(page);
   await page.evaluate(() => {
     const { sound, SOUND_NAMES } = globalThis.APN;
@@ -46,6 +50,7 @@ test('every effect plays without a page error', async ({ page }) => {
   });
   await page.waitForTimeout(500);
   expect(errors).toEqual([]);
+  expect(warnings).toEqual([]);
 });
 
 test('turning sound off stops the music and keeps it off', async ({ page }) => {
@@ -168,6 +173,11 @@ test.describe('on a small phone (360x640)', () => {
     expect(button.width).toBeGreaterThanOrEqual(44);
     expect(button.height).toBeGreaterThanOrEqual(44);
     expect(await pageScrolls(page)).toBe(false);
+    // The switch does not make the scoreboard wrap: it is as tall with the switch as without it.
+    const withSwitch = (await page.locator('.scoreboard').boundingBox()).height;
+    await page.addStyleTag({ content: '.sound-toggle { display: none !important; }' });
+    const withoutSwitch = (await page.locator('.scoreboard').boundingBox()).height;
+    expect(withSwitch).toBe(withoutSwitch);
     for (const option of await page.locator('#options button').all()) {
       await expect(option).toBeInViewport({ ratio: 1 });
     }

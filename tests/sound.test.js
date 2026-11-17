@@ -118,6 +118,7 @@ test('saving the sound choice ignores a storage that throws', () => {
   assert.doesNotThrow(() => APN.saveSoundChoice(storage, true));
 });
 
+// Keep this test last in the file: the engine keeps its first AudioContext for the whole process.
 test('a note that fails to schedule is skipped and the music goes on', async () => {
   const param = (onSet) => ({
     value: 0,
@@ -157,6 +158,9 @@ test('a note that fails to schedule is skipped and the music goes on', async () 
   }
   const previous = globalThis.AudioContext;
   globalThis.AudioContext = FakeAudioContext;
+  const warnings = [];
+  const realWarn = console.warn;
+  console.warn = (...args) => warnings.push(args);
   try {
     APN.sound.startMusic(0);
     // Bass and bell at time 0 come right after the failed note.
@@ -165,7 +169,20 @@ test('a note that fails to schedule is skipped and the music goes on', async () 
     fake.currentTime = 0.3;
     await new Promise((resolve) => setTimeout(resolve, 100));
     assert.ok(started.some((time) => time >= APN.MUSIC_BEAT_SECONDS));
+    // The failed note was reported as a warning, once.
+    assert.equal(warnings.length, 1);
+    assert.equal(warnings[0][0], 'APN.sound:');
+    // A stalled clock: the notes whose time passed long ago are skipped, not played in a burst.
+    const before = started.length;
+    fake.currentTime = 20;
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    const late = started.slice(before);
+    assert.ok(late.length > 0);
+    assert.ok(late.every((time) => time >= 20 - 0.05));
+    // Played late they would all start at 20 at once (187 notes); skipped, only the last beat's few remain.
+    assert.ok(late.length <= 10, 'started ' + late.length + ' notes after the stall');
   } finally {
+    console.warn = realWarn;
     APN.sound.stopMusic();
     if (previous === undefined) delete globalThis.AudioContext;
     else globalThis.AudioContext = previous;
