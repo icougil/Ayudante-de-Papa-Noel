@@ -23,11 +23,36 @@
     return Math.min(length - 1, Math.floor(rng() * length));
   }
 
-  // One question per city, alternating "about the place" and "general".
+  const MAX_CATALAN_PER_GAME = 2;
+
+  // One question per city, alternating "about the place" and "general". Among each turn's
+  // candidates it prefers (1) at most two Catalan questions in the game, (2) a subject not
+  // yet used, (3) no topic shared with a picked question. When no candidate meets every
+  // rule it drops rule 3 first, then rule 2, then rule 1.
   APN.pickQuestions = function (level, bank, age, rng) {
     const valid = bank.filter((q) => q.minAge <= age && age <= q.maxAge);
     const general = valid.filter((q) => q.place === 'general');
     const placeOnEven = rng() < 0.5;
+    const picks = [];
+
+    function narrow(candidates) {
+      const catalan = picks.filter((q) => q.lang === 'ca').length;
+      const subjects = new Set(picks.map((q) => q.subject));
+      const topics = new Set(picks.flatMap((q) => q.topics || []));
+      const rules = [
+        (q) => q.lang !== 'ca' || catalan < MAX_CATALAN_PER_GAME,
+        (q) => !subjects.has(q.subject),
+        (q) => !(q.topics || []).some((t) => topics.has(t)),
+      ];
+      for (let used = rules.length; used >= 0; used--) {
+        const active = rules.slice(0, used);
+        const fitting = candidates.filter((q) => active.every((rule) => rule(q)));
+        if (fitting.length > 0) {
+          return fitting;
+        }
+      }
+      return candidates;
+    }
 
     return level.stops.map((stop, i) => {
       const placeTurn = (i % 2 === 0) === placeOnEven;
@@ -35,10 +60,12 @@
       if (candidates.length === 0) {
         throw new Error(NOT_ENOUGH_MESSAGE);
       }
-      const picked = candidates[randomIndex(candidates.length, rng)];
+      const fitting = narrow(candidates);
+      const picked = fitting[randomIndex(fitting.length, rng)];
       if (!placeTurn) {
         general.splice(general.indexOf(picked), 1);
       }
+      picks.push(picked);
       return picked;
     });
   };
