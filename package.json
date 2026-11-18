@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "build:questions": "node scripts/build-questions.js"
   },
   "devDependencies": {
     "@playwright/test": "1.65.1"
