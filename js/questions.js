@@ -1507,7 +1507,7 @@
         "Uncle"
       ],
       "correct": 0,
-      "explanation": "«Brother» (hermano) is a male sibling; «sister» (hermana) is a female one.",
+      "explanation": "«Brother» (hermano) is a male «sibling» (hermano o hermana); «sister» (hermana) is a female one.",
       "references": [
         "https://en.wikipedia.org/wiki/Sibling"
       ]
@@ -1555,7 +1555,7 @@
         "He not likes milk"
       ],
       "correct": 0,
-      "explanation": "After «doesn't» (no) the verb stays in its base form: «like» (gustar), without -s.",
+      "explanation": "After «doesn't» (no, de «does not») the verb stays in its base form: «like» (gustar), without -s.",
       "references": [
         "https://en.wikipedia.org/wiki/Do-support"
       ]
