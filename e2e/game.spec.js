@@ -1,6 +1,6 @@
 // Drives the real game in desktop Chromium, at the window sizes that used to break the layout.
 const { test, expect } = require('@playwright/test');
-const { startGame, answer, pageScrolls } = require('./helpers');
+const { openGame, startGame, answer, pageScrolls } = require('./helpers');
 
 test.describe('on a small phone (360x640)', () => {
   test.use({ viewport: { width: 360, height: 640 } });
@@ -201,4 +201,29 @@ test('a full run with five express deliveries still ends with four stars', async
   await expect(page.locator('#result-stars')).toHaveText('⭐⭐⭐⭐☆');
   await expect(page.locator('#result-next-star')).toHaveText('Última estrella: ¡las 6 entregas exprés ⚡!');
   await expect(page.locator('#result-express')).toHaveText('Entregas exprés: 5 ⚡');
+});
+
+test('a Catalan question is marked as Catalan, and the Spanish lines around it are not', async ({ page }) => {
+  await openGame(page);
+  // Every question of the bank becomes Catalan, so the game cannot avoid asking Catalan ones.
+  await page.evaluate(() => {
+    for (const q of globalThis.APN.QUESTIONS) {
+      q.lang = 'ca';
+    }
+  });
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+
+  await expect(page.locator('#prompt')).toHaveAttribute('lang', 'ca');
+  await expect(page.locator('#options')).toHaveAttribute('lang', 'ca');
+
+  const prompt = await page.locator('#prompt').textContent();
+  const explanation = await page.evaluate(
+    (text) => globalThis.APN.QUESTIONS.find((q) => q.prompt === text).explanation, prompt);
+  await answer(page, false);
+
+  const notice = page.locator('#notice');
+  await expect(notice.locator('p', { hasText: 'La respuesta correcta era' })).not.toHaveAttribute('lang', /.*/);
+  await expect(notice.locator('p', { hasText: explanation })).toHaveAttribute('lang', 'ca');
+  await expect(notice.locator('p[lang]')).toHaveCount(1);
 });
