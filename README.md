@@ -41,8 +41,8 @@ and visit the address it prints (`http://localhost:3000` by default).
 
 ## Tests
 
-The game logic and the question bank are covered by tests that run on Node.js (18 or later),
-with no dependencies:
+The game logic and the question bank are covered by tests that run on Node.js
+(24 or later, the version CI uses), with no dependencies:
 
 ```sh
 node --test tests/*.test.js

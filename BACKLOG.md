@@ -84,9 +84,10 @@ it came from.
   requested.
 - [ ] **Screen text is not ready for translation.** The Spanish text the player reads sits in
   `index.html` and `js/ui.js`. Extract it into data so other languages can be added.
-- [ ] **The README says the tests run on Node.js 18 or later, but only Node 24 is exercised**
+- [x] **The README says the tests run on Node.js 18 or later, but only Node 24 is exercised**
   (locally and in CI). Either test the oldest supported version in CI or raise the stated
-  minimum.
+  minimum. Raised the stated minimum to 24, the version CI uses: Node 18 and 20 are past
+  end-of-life.
 - [ ] **No independent code review has been run** on level 1.
 - [ ] **Revisit the sound of the reindeer mishap.** It is a comic nose-blow (two honks) used
   as a placeholder: the owner was not convinced by any of the generated sneezes tried during the
