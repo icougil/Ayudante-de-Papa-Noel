@@ -19,7 +19,8 @@ Points the owner did not decide are marked **(designer's call)**.
   the page source, in the browser console and, very discreetly, on the cover.
 - Goal: opening `index.html` from disk keeps working, unchanged.
 - Non-goal: the 10-minute cache on `index.html` itself. GitHub Pages does not allow changing that
-  header; a visitor may still get the previous release, whole and consistent, for a few minutes.
+  header; a visitor may still get the previous release (usually whole and consistent) for a few
+  minutes.
 - Anti-goal: a version text that disturbs the player. It must be tiny and faint.
 - Anti-goal: a release published without its stamp because a reference in `index.html` changed
   and nothing noticed.

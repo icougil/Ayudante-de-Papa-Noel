@@ -68,7 +68,7 @@ test('the real index.html can be stamped and leaves no local reference unstamped
   for (const file of ['css/styles.css', 'js/data-level-1.js', 'js/game-logic.js', 'js/sound.js', 'js/ui.js']) {
     assert.ok(html.includes(`${file}?v=e8db89f"`), `${file} is not stamped`);
   }
-  const unstamped = [...html.matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)].map((m) => m[1]);
+  const unstamped = [...html.matchAll(/(?:src|href)=["']([^"']+\.(?:js|css))["']/g)].map((m) => m[1]);
   assert.deepEqual(unstamped, ['https://cloud.umami.is/script.js']);
   assert.ok(html.includes('<meta name="version" content="2026-11-18 21:47 · e8db89f">'));
 });

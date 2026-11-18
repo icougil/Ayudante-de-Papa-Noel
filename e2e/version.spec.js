@@ -34,6 +34,7 @@ async function openStamped(page) {
 }
 
 test('opened from disk, the cover shows no version and logs none', async ({ page }) => {
+  test.skip(!!process.env.APN_URL, 'checks the unstamped repository copy');
   const messages = [];
   page.on('console', (message) => messages.push(message.text()));
   await openGame(page);
