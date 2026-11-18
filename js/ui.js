@@ -238,6 +238,8 @@
 
   function renderQuestion() {
     el.prompt.textContent = question.prompt;
+    el.prompt.lang = question.lang;
+    el.options.lang = question.lang;
     el.options.textContent = '';
     question.options.forEach((text, i) => {
       const button = document.createElement('button');
@@ -253,11 +255,15 @@
     el.options.firstChild.focus({ preventScroll: true });
   }
 
+  // Each line is [class, text] or [class, text, lang] for text that is not in Spanish.
   function notify(lines) {
     el.notice.textContent = '';
-    for (const [cls, text] of lines) {
+    for (const [cls, text, lang] of lines) {
       const p = document.createElement('p');
       p.className = cls;
+      if (lang) {
+        p.lang = lang;
+      }
       p.textContent = text;
       el.notice.appendChild(p);
     }
@@ -343,7 +349,7 @@
     notify([
       ['notice-bad', mishap.emoji + ' ' + mishap.text],
       ['notice-normal', 'La respuesta correcta era: ' + question.options[question.correct] + '.'],
-      ['notice-normal', question.explanation],
+      ['notice-normal', question.explanation, question.lang],
     ]);
     el.next.hidden = false;
     el.next.focus({ preventScroll: true });
