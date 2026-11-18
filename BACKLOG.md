@@ -56,7 +56,7 @@ it came from.
   and fills the page's version with the date, time (Barcelona) and commit. The version shows
   tiny and faint at the bottom-right of the cover and is logged to the console. Still open:
   `index.html` itself stays cached for up to 10 minutes (GitHub Pages does not allow changing
-  that header), so a visitor may get the previous release, whole, for a few minutes.
+  that header), so a visitor may get the previous release (usually whole) for a few minutes.
 
 ## Noted during development
 
