@@ -881,7 +881,7 @@
         "Cirial"
       ],
       "correct": 0,
-      "explanation": "El botafumeiro es un gran incensario recubierto de plata que cuelga de una cuerda en la catedral de Santiago.",
+      "explanation": "En la catedral de Santiago, el botafumeiro, un enorme recipiente de plata para quemar incienso, oscila colgado de una cuerda.",
       "references": [
         "https://es.wikipedia.org/wiki/Botafumeiro"
       ]
@@ -1073,7 +1073,7 @@
         "55"
       ],
       "correct": 0,
-      "explanation": "El 25 % vol dir 25 de cada 100, és a dir, un de cada quatre: 80 : 4 = 20.",
+      "explanation": "Si reparteixes 80 en quatre parts iguals i te'n quedes una, tens el 25 %: 80 : 4 = 20.",
       "references": [
         "https://ca.wikipedia.org/wiki/Percentatge"
       ]
@@ -1265,7 +1265,7 @@
         "A l'esòfag"
       ],
       "correct": 0,
-      "explanation": "Els alvèols són uns sacs minúsculs del final dels bronquis: allà l'oxigen entra a la sang.",
+      "explanation": "Els alvèols són uns sacs minúsculs del final dels bronquíols: allà l'oxigen entra a la sang.",
       "references": [
         "https://ca.wikipedia.org/wiki/Alvèol_pulmonar"
       ]
