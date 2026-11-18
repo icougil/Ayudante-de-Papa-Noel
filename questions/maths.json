@@ -15,6 +15,10 @@
     {
       "id": "geometria-y-medidas",
       "name": "Geometría y medidas"
+    },
+    {
+      "id": "porcentajes-y-decimales",
+      "name": "Porcentajes y decimales"
     }
   ],
   "questions": [
@@ -108,6 +112,98 @@
       "explanation": "17 solo se puede dividir entre 1 y entre 17; los otros tres se pueden dividir entre 3.",
       "references": [
         "https://es.wikipedia.org/wiki/N%C3%BAmero_primo"
+      ]
+    },
+    {
+      "id": "maths-es-001",
+      "lang": "es",
+      "topics": [
+        "operaciones"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un trineo recorre 45 km cada hora. ¿Cuántos kilómetros recorre en 4 horas?",
+      "options": [
+        "180 km",
+        "90 km",
+        "160 km",
+        "200 km"
+      ],
+      "correct": 0,
+      "explanation": "45 × 4 = 180 km: multiplicar es sumar 45 cuatro veces.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Multiplicación"
+      ]
+    },
+    {
+      "id": "maths-es-002",
+      "lang": "es",
+      "topics": [
+        "geometria-y-medidas"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El perímetro de un cuadrado mide 36 cm. ¿Cuál es su área?",
+      "options": [
+        "81 cm²",
+        "36 cm²",
+        "144 cm²",
+        "9 cm²"
+      ],
+      "correct": 0,
+      "explanation": "Cada lado mide 36 : 4 = 9 cm, y el área es lado por lado: 9 × 9 = 81 cm².",
+      "references": [
+        "https://es.wikipedia.org/wiki/Cuadrado"
+      ]
+    },
+    {
+      "id": "maths-ca-001",
+      "lang": "ca",
+      "topics": [
+        "porcentajes-y-decimales"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin és el 25 % de 80?",
+      "options": [
+        "20",
+        "25",
+        "32",
+        "55"
+      ],
+      "correct": 0,
+      "explanation": "El 25 % és 25/100, la quarta part: 80 : 4 = 20.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Percentatge"
+      ]
+    },
+    {
+      "id": "maths-ca-002",
+      "lang": "ca",
+      "topics": [
+        "divisibilidad-y-primos"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un far s'encén cada 4 segons i un altre cada 6. Si coincideixen ara, quan tornaran a coincidir?",
+      "options": [
+        "D'aquí a 12 segons",
+        "D'aquí a 10 segons",
+        "D'aquí a 24 segons",
+        "D'aquí a 6 segons"
+      ],
+      "correct": 0,
+      "explanation": "Cal el mínim comú múltiple de 4 i 6. Múltiples de 4: 4, 8, 12. De 6: 6, 12. El primer que tenen igual és el 12.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Mínim_comú_múltiple"
       ]
     }
   ]

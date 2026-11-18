@@ -7,6 +7,10 @@
     {
       "id": "deportes-tradicionales",
       "name": "Deportes tradicionales"
+    },
+    {
+      "id": "futbol",
+      "name": "Fútbol"
     }
   ],
   "questions": [
@@ -54,6 +58,29 @@
       "explanation": "En la pelota vasca se golpea la pelota contra la pared del frontón.",
       "references": [
         "https://es.wikipedia.org/wiki/Pelota_vasca"
+      ]
+    },
+    {
+      "id": "sports-es-001",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 1,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué equipo juega como local en el estadio Santiago Bernabéu?",
+      "options": [
+        "Real Madrid",
+        "Atlético de Madrid",
+        "FC Barcelona",
+        "Sevilla FC"
+      ],
+      "correct": 0,
+      "explanation": "El estadio Santiago Bernabéu, en Madrid, es el campo del Real Madrid.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernabéu"
       ]
     }
   ]

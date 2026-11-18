@@ -11,6 +11,10 @@
     {
       "id": "verbos-irregulares-ingles",
       "name": "Verbos irregulares en inglés"
+    },
+    {
+      "id": "gramatica-ingles",
+      "name": "Gramática básica en inglés"
     }
   ],
   "questions": [
@@ -81,6 +85,75 @@
       "explanation": "«Go» es un verbo irregular: su pasado simple es «went».",
       "references": [
         "https://en.wiktionary.org/wiki/go"
+      ]
+    },
+    {
+      "id": "english-en-001",
+      "lang": "en",
+      "topics": [
+        "vocabulario-ingles"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which English word means «hermano»?",
+      "options": [
+        "Brother",
+        "Sister",
+        "Father",
+        "Uncle"
+      ],
+      "correct": 0,
+      "explanation": "«Brother» is a male sibling; «sister» is a female one.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Sibling"
+      ]
+    },
+    {
+      "id": "english-en-002",
+      "lang": "en",
+      "topics": [
+        "verbos-irregulares-ingles"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the past simple of the verb «buy»?",
+      "options": [
+        "Bought",
+        "Buyed",
+        "Boughten",
+        "Buied"
+      ],
+      "correct": 0,
+      "explanation": "«Buy» is an irregular verb: its past simple is «bought», not «buyed».",
+      "references": [
+        "https://en.wikipedia.org/wiki/English_irregular_verbs"
+      ]
+    },
+    {
+      "id": "english-en-003",
+      "lang": "en",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "He doesn't like milk",
+        "He doesn't likes milk",
+        "He don't like milk",
+        "He not likes milk"
+      ],
+      "correct": 0,
+      "explanation": "After «doesn't» the verb stays in its base form: «like», without -s.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Do-support"
       ]
     }
   ]

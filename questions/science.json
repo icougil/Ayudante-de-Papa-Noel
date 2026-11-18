@@ -11,6 +11,14 @@
     {
       "id": "aire-y-respiracion",
       "name": "Aire y respiración"
+    },
+    {
+      "id": "plantas-y-seres-vivos",
+      "name": "Plantas y seres vivos"
+    },
+    {
+      "id": "materia-y-estados",
+      "name": "Materia y estados"
     }
   ],
   "questions": [
@@ -81,6 +89,121 @@
       "explanation": "El corazón es un músculo que impulsa la sangre por todo el cuerpo.",
       "references": [
         "https://es.wikipedia.org/wiki/Coraz%C3%B3n"
+      ]
+    },
+    {
+      "id": "science-es-001",
+      "lang": "es",
+      "topics": [
+        "plantas-y-seres-vivos"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el proceso con el que las plantas fabrican su alimento usando la luz del sol?",
+      "options": [
+        "Fotosíntesis",
+        "Respiración",
+        "Digestión",
+        "Germinación"
+      ],
+      "correct": 0,
+      "explanation": "En la fotosíntesis las plantas aprovechan la luz solar para fabricar su alimento.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Fotosíntesis"
+      ]
+    },
+    {
+      "id": "science-es-002",
+      "lang": "es",
+      "topics": [
+        "sistema-solar"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué causa las estaciones del año en la Tierra?",
+      "options": [
+        "La inclinación del eje de la Tierra",
+        "La distancia de la Tierra al Sol",
+        "Las fases de la Luna",
+        "La velocidad del viento"
+      ],
+      "correct": 0,
+      "explanation": "Las estaciones se deben a la inclinación del eje terrestre mientras la Tierra gira alrededor del Sol, no a que esté más cerca o más lejos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estación_del_año"
+      ]
+    },
+    {
+      "id": "science-es-003",
+      "lang": "es",
+      "topics": [
+        "cuerpo-humano"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuántos huesos tiene aproximadamente el esqueleto de una persona adulta?",
+      "options": [
+        "206",
+        "106",
+        "306",
+        "406"
+      ],
+      "correct": 0,
+      "explanation": "El esqueleto de una persona adulta tiene 206 huesos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Esqueleto_humano"
+      ]
+    },
+    {
+      "id": "science-ca-001",
+      "lang": "ca",
+      "topics": [
+        "aire-y-respiracion"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En quina part dels pulmons passa l'oxigen de l'aire a la sang?",
+      "options": [
+        "Als alvèols",
+        "A la tràquea",
+        "Al diafragma",
+        "A l'esòfag"
+      ],
+      "correct": 0,
+      "explanation": "Als alvèols pulmonars l'oxigen de l'aire passa a la sang i el diòxid de carboni en surt cap a l'aire.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Alvèol_pulmonar"
+      ]
+    },
+    {
+      "id": "science-ca-002",
+      "lang": "ca",
+      "topics": [
+        "materia-y-estados"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Com es diu el canvi d'estat de gas a líquid?",
+      "options": [
+        "Condensació",
+        "Evaporació",
+        "Solidificació",
+        "Fusió"
+      ],
+      "correct": 0,
+      "explanation": "La condensació és el canvi d'una substància de gas o vapor a líquid.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Condensació"
       ]
     }
   ]

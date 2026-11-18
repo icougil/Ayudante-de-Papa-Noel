@@ -11,6 +11,10 @@
     {
       "id": "comunidades-autonomas",
       "name": "Comunidades autónomas y capitales"
+    },
+    {
+      "id": "montanas-y-relieve",
+      "name": "Montañas y relieve"
     }
   ],
   "questions": [
@@ -196,6 +200,75 @@
       "explanation": "El mar Cantábrico baña toda la costa norte de España.",
       "references": [
         "https://es.wikipedia.org/wiki/Mar_Cant%C3%A1brico"
+      ]
+    },
+    {
+      "id": "geography-ca-001",
+      "lang": "ca",
+      "topics": [
+        "montanas-y-relieve"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina serra separa Barcelona del Vallès i té el Tibidabo al cim?",
+      "options": [
+        "Collserola",
+        "Montseny",
+        "Montserrat",
+        "Garraf"
+      ],
+      "correct": 0,
+      "explanation": "La serra de Collserola queda entre Barcelona i el Vallès; el seu cim més alt és el Tibidabo, de 516 m.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Serra_de_Collserola"
+      ]
+    },
+    {
+      "id": "geography-es-001",
+      "lang": "es",
+      "topics": [
+        "montanas-y-relieve"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué sierra separa la Comunidad de Madrid de Castilla y León?",
+      "options": [
+        "Sierra de Guadarrama",
+        "Sierra Nevada",
+        "Sierra Morena",
+        "Picos de Europa"
+      ],
+      "correct": 0,
+      "explanation": "La sierra de Guadarrama, al norte de Madrid, marca el límite entre la Comunidad de Madrid y Castilla y León.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Sierra_de_Guadarrama"
+      ]
+    },
+    {
+      "id": "geography-es-002",
+      "lang": "es",
+      "topics": [
+        "rios-de-espana"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué río, junto con el Ibaizábal, forma la ría de Bilbao?",
+      "options": [
+        "Nervión",
+        "Ebro",
+        "Duero",
+        "Miño"
+      ],
+      "correct": 0,
+      "explanation": "La ría de Bilbao se forma donde se juntan los ríos Nervión e Ibaizábal.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Ría_de_Bilbao"
       ]
     }
   ]
