@@ -1,0 +1,168 @@
+{
+  "topics": [
+    {
+      "id": "arte-y-arquitectura",
+      "name": "Arte y arquitectura"
+    },
+    {
+      "id": "museos-y-pintura",
+      "name": "Museos y pintura"
+    },
+    {
+      "id": "tradiciones-y-fiestas",
+      "name": "Tradiciones y fiestas"
+    },
+    {
+      "id": "lenguas-de-espana",
+      "name": "Lenguas de España"
+    },
+    {
+      "id": "simbolos-y-escudos",
+      "name": "Símbolos y escudos"
+    },
+    {
+      "id": "rutas-y-patrimonio",
+      "name": "Rutas y patrimonio"
+    }
+  ],
+  "questions": [
+    {
+      "id": "barcelona-2",
+      "lang": "es",
+      "topics": [
+        "arte-y-arquitectura"
+      ],
+      "difficulty": 1,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué arquitecto diseñó la Sagrada Família?",
+      "options": [
+        "Pablo Picasso",
+        "Salvador Dalí",
+        "Antoni Gaudí",
+        "Joan Miró"
+      ],
+      "correct": 2,
+      "explanation": "Antoni Gaudí dedicó más de 40 años de su vida a la Sagrada Família.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Sagrada_Familia"
+      ]
+    },
+    {
+      "id": "madrid-2",
+      "lang": "es",
+      "topics": [
+        "museos-y-pintura"
+      ],
+      "difficulty": 1,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estos museos está en Madrid?",
+      "options": [
+        "Museo del Louvre",
+        "Museo Británico",
+        "Museo Guggenheim",
+        "Museo del Prado"
+      ],
+      "correct": 3,
+      "explanation": "El Museo del Prado guarda cuadros de Velázquez, Goya y muchos otros pintores.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Museo_del_Prado"
+      ]
+    },
+    {
+      "id": "madrid-3",
+      "lang": "es",
+      "topics": [
+        "simbolos-y-escudos"
+      ],
+      "difficulty": 1,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué animal aparece junto a un madroño en el escudo de Madrid?",
+      "options": [
+        "Un oso",
+        "Un león",
+        "Un águila",
+        "Un toro"
+      ],
+      "correct": 0,
+      "explanation": "El oso y el madroño son el símbolo de Madrid y tienen una estatua en la Puerta del Sol.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Escudo_de_Madrid"
+      ]
+    },
+    {
+      "id": "santiago-1",
+      "lang": "es",
+      "topics": [
+        "rutas-y-patrimonio"
+      ],
+      "difficulty": 1,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama la ruta que siguen los peregrinos hasta Santiago de Compostela?",
+      "options": [
+        "El Camino de Santiago",
+        "La Ruta de la Seda",
+        "La Senda del Oso",
+        "El Camino del Inca"
+      ],
+      "correct": 0,
+      "explanation": "El Camino de Santiago lo recorren cada año miles de peregrinos a pie o en bicicleta.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Camino_de_Santiago"
+      ]
+    },
+    {
+      "id": "santiago-3",
+      "lang": "es",
+      "topics": [
+        "lenguas-de-espana"
+      ],
+      "difficulty": 1,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Además del castellano, ¿qué lengua es oficial en Galicia?",
+      "options": [
+        "Euskera",
+        "Gallego",
+        "Catalán",
+        "Aranés"
+      ],
+      "correct": 1,
+      "explanation": "En Galicia son oficiales el gallego y el castellano.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Idioma_gallego"
+      ]
+    },
+    {
+      "id": "bilbao-2",
+      "lang": "es",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En el País Vasco, ¿qué personaje trae los regalos en Navidad?",
+      "options": [
+        "El Olentzero",
+        "El Apalpador",
+        "El Tió de Nadal",
+        "La Befana"
+      ],
+      "correct": 0,
+      "explanation": "El Olentzero es un carbonero que baja del monte en Nochebuena para repartir regalos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Olentzero"
+      ]
+    }
+  ]
+}

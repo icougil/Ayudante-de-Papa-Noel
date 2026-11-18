@@ -1,0 +1,60 @@
+{
+  "topics": [
+    {
+      "id": "juegos-olimpicos",
+      "name": "Juegos Olímpicos"
+    },
+    {
+      "id": "deportes-tradicionales",
+      "name": "Deportes tradicionales"
+    }
+  ],
+  "questions": [
+    {
+      "id": "barcelona-3",
+      "lang": "es",
+      "topics": [
+        "juegos-olimpicos"
+      ],
+      "difficulty": 1,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué año se celebraron los Juegos Olímpicos de Barcelona?",
+      "options": [
+        "1992",
+        "1982",
+        "1996",
+        "2000"
+      ],
+      "correct": 0,
+      "explanation": "Barcelona fue la sede de los Juegos Olímpicos de verano de 1992.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_Barcelona_1992"
+      ]
+    },
+    {
+      "id": "bilbao-3",
+      "lang": "es",
+      "topics": [
+        "deportes-tradicionales"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué deporte tradicional vasco se juega lanzando una pelota contra un frontón?",
+      "options": [
+        "Petanca",
+        "Bádminton",
+        "Pelota vasca",
+        "Críquet"
+      ],
+      "correct": 2,
+      "explanation": "En la pelota vasca se golpea la pelota contra la pared del frontón.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Pelota_vasca"
+      ]
+    }
+  ]
+}

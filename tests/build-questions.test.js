@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
+const vm = require('node:vm');
 const {
   validateBank,
   renderQuestionsJs,
@@ -264,4 +265,26 @@ test('buildQuestions renders a valid directory', () => {
   assert.deepEqual(result.problems, []);
   assert.equal(typeof result.output, 'string');
   fs.rmSync(dir, { recursive: true });
+});
+
+test('the committed js/questions.js matches the JSON files', () => {
+  const root = path.join(__dirname, '..');
+  require(path.join(root, 'js', 'data-level-1.js'));
+  const APN = globalThis.APN;
+  const real = { subjects: APN.SUBJECTS, stopIds: APN.LEVELS[0].stops.map((s) => s.id) };
+  const { problems, output } = buildQuestions(path.join(root, 'questions'), real);
+  assert.deepEqual(problems, []);
+  assert.equal(output, fs.readFileSync(path.join(root, 'js', 'questions.js'), 'utf8'));
+});
+
+test('accented text survives the build', () => {
+  const text = "à ç l·l « » ñ '";
+  const bank = validBank();
+  bank[0].data.questions = [question({ prompt: text, explanation: text })];
+  const output = renderQuestionsJs(bank, SUBJECTS);
+  const sandbox = { globalThis: {} };
+  sandbox.globalThis = sandbox;
+  vm.runInNewContext(output, sandbox);
+  assert.equal(sandbox.APN.QUESTIONS[0].prompt, text);
+  assert.equal(sandbox.APN.QUESTIONS[0].explanation, text);
 });

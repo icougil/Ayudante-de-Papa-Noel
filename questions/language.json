@@ -1,0 +1,60 @@
+{
+  "topics": [
+    {
+      "id": "categorias-gramaticales",
+      "name": "Categorías gramaticales"
+    },
+    {
+      "id": "acentuacion",
+      "name": "Acentuación"
+    }
+  ],
+  "questions": [
+    {
+      "id": "general-8",
+      "lang": "es",
+      "topics": [
+        "categorias-gramaticales"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué tipo de palabra es «rápidamente»?",
+      "options": [
+        "Adjetivo",
+        "Sustantivo",
+        "Adverbio",
+        "Verbo"
+      ],
+      "correct": 2,
+      "explanation": "Es un adverbio de modo: dice cómo se hace la acción.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Adverbio"
+      ]
+    },
+    {
+      "id": "general-9",
+      "lang": "es",
+      "topics": [
+        "acentuacion"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas palabras es esdrújula?",
+      "options": [
+        "Camión",
+        "Música",
+        "Árbol",
+        "Reloj"
+      ],
+      "correct": 1,
+      "explanation": "«Música» lleva la sílaba tónica en la antepenúltima sílaba: MÚ-si-ca.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Palabra_esdr%C3%BAjula"
+      ]
+    }
+  ]
+}

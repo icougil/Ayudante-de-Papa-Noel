@@ -1,0 +1,87 @@
+{
+  "topics": [
+    {
+      "id": "sistema-solar",
+      "name": "Sistema solar"
+    },
+    {
+      "id": "cuerpo-humano",
+      "name": "Cuerpo humano"
+    },
+    {
+      "id": "aire-y-respiracion",
+      "name": "Aire y respiración"
+    }
+  ],
+  "questions": [
+    {
+      "id": "general-5",
+      "lang": "es",
+      "topics": [
+        "sistema-solar"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué planeta se conoce como el planeta rojo?",
+      "options": [
+        "Venus",
+        "Marte",
+        "Júpiter",
+        "Saturno"
+      ],
+      "correct": 1,
+      "explanation": "Marte se ve rojizo porque su suelo tiene mucho óxido de hierro.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Marte_(planeta)"
+      ]
+    },
+    {
+      "id": "general-6",
+      "lang": "es",
+      "topics": [
+        "aire-y-respiracion"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué gas del aire necesitamos respirar para vivir?",
+      "options": [
+        "Helio",
+        "Dióxido de carbono",
+        "Hidrógeno",
+        "Oxígeno"
+      ],
+      "correct": 3,
+      "explanation": "Al respirar tomamos oxígeno del aire y expulsamos dióxido de carbono.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Ox%C3%ADgeno"
+      ]
+    },
+    {
+      "id": "general-7",
+      "lang": "es",
+      "topics": [
+        "cuerpo-humano"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué órgano bombea la sangre por todo el cuerpo?",
+      "options": [
+        "El corazón",
+        "Los pulmones",
+        "El hígado",
+        "El estómago"
+      ],
+      "correct": 0,
+      "explanation": "El corazón es un músculo que impulsa la sangre por todo el cuerpo.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Coraz%C3%B3n"
+      ]
+    }
+  ]
+}

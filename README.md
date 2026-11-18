@@ -85,7 +85,10 @@ The game keeps one thing in the browser: whether sound is on or off (the `localS
 |---|---|
 | `index.html` | The three screens: start, trip and result |
 | `css/styles.css` | All the styles and animations |
-| `js/data-level-1.js` | Level 1: the cities on the route and the question bank |
+| `js/data-level-1.js` | Level 1: the subjects and the cities on the route |
+| `questions/` | The question bank, one JSON file per subject: its topics and its questions |
+| `js/questions.js` | The questions and topics the game loads. Generated, do not edit |
+| `scripts/build-questions.js` | Checks `questions/*.json` and generates `js/questions.js` |
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
 | `js/sound.js` | The music and the sound effects, generated in the browser, and the sound switch |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
@@ -96,22 +99,32 @@ The game keeps one thing in the browser: whether sound is on or off (the `localS
 
 ## Adding a question
 
-Questions live in `APN.QUESTIONS` in `js/data-level-1.js`. Copy an existing one and change its
-fields, in this order:
+Questions live in the file of their subject, `questions/<subject>.json` (`geography`, `history`,
+`sports`, `culture`, `maths`, `science`, `language`, `english`, `catalan`). Each file has a `topics`
+list (`id` in kebab-case, `name` in Spanish) and a `questions` list. Copy an existing question and
+change its fields, in this order:
 
 | Field | Meaning |
 |---|---|
-| `id` | Unique, e.g. `madrid-4` or `general-13` |
-| `subject` | One of `geography`, `history`, `sports`, `culture`, `maths`, `science`, `language`, `english` |
-| `place` | The id of a city on the route, or `general` |
+| `id` | Unique across all files, e.g. `madrid-4` or `general-13` |
+| `lang` | `es`, `ca` or `en`: `english` is `en`, `catalan` is `ca`, `language` is `es`, the others `es` or `ca` |
+| `topics` | 1 to 3 different topic ids from the `topics` list of the same file |
+| `difficulty` | 1 (taught in 5è), 2 (a 6è topic) or 3 |
+| `place` | The id of a city on the route, or `general`. A city only for geography, history, sports and culture |
+| `minAge` | 10 |
+| `maxAge` | 12 |
 | `prompt` | The question, 120 characters at most |
 | `options` | Exactly 4 different answers, 40 characters each at most |
 | `correct` | Position of the right answer in `options`, from 0 to 3 |
 | `explanation` | Shown after a wrong answer, 160 characters at most |
+| `references` | At least one `https://` page where the fact can be checked |
 
-Options are shuffled in every game, so the position of the right answer does not matter. Run the
-tests afterwards: they check the shape and length limits of every question, and how many
-questions each city and subject has.
+Write every question in your own words. Sources such as XTEC are for checking facts, not for
+copying text; put the page where the fact can be checked in `references`.
+
+After editing, run `npm run build:questions`: it checks every file, prints each problem and
+regenerates `js/questions.js`. The tests fail if the build was forgotten. Options are shuffled in
+every game, so the position of the right answer does not matter.
 
 ## License
 

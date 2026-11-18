@@ -89,7 +89,7 @@ test('the guard flags local references with single quotes, no quotes or a query 
 test('the real index.html can be stamped and leaves no local reference unstamped', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
   const html = stampRelease(source, COMMIT, WINTER);
-  for (const file of ['css/styles.css', 'js/data-level-1.js', 'js/game-logic.js', 'js/sound.js', 'js/ui.js']) {
+  for (const file of ['css/styles.css', 'js/data-level-1.js', 'js/questions.js', 'js/game-logic.js', 'js/sound.js', 'js/ui.js']) {
     assert.ok(html.includes(`${file}?v=e8db89f"`), `${file} is not stamped`);
   }
   assert.deepEqual(unstampedLocalAssets(html), []);
