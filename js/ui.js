@@ -264,7 +264,21 @@
       if (lang) {
         p.lang = lang;
       }
-      p.textContent = text;
+      if (Array.isArray(text)) {
+        // Parts are plain strings or [text, lang] pairs, so one line can mix languages.
+        for (const part of text) {
+          if (Array.isArray(part)) {
+            const span = document.createElement('span');
+            span.lang = part[1];
+            span.textContent = part[0];
+            p.appendChild(span);
+          } else {
+            p.append(part);
+          }
+        }
+      } else {
+        p.textContent = text;
+      }
       el.notice.appendChild(p);
     }
   }
@@ -348,7 +362,7 @@
     }
     notify([
       ['notice-bad', mishap.emoji + ' ' + mishap.text],
-      ['notice-normal', 'La respuesta correcta era: ' + question.options[question.correct] + '.'],
+      ['notice-normal', ['La respuesta correcta era: ', [question.options[question.correct], question.lang], '.']],
       ['notice-normal', question.explanation, question.lang],
     ]);
     el.next.hidden = false;

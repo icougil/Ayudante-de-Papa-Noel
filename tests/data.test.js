@@ -64,7 +64,7 @@ test('every stop has at least 3 questions and there are at least 12 general ones
 });
 
 test('every stop has at least 3 non-Catalan questions and there are at least 9 non-Catalan general ones', () => {
-  const notCatalan = APN.QUESTIONS.filter((q) => q.subject !== 'catalan');
+  const notCatalan = APN.QUESTIONS.filter((q) => q.lang !== 'ca');
   for (const id of stopIds) {
     assert.ok(notCatalan.filter((q) => q.place === id).length >= 3, id);
   }

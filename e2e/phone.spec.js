@@ -67,4 +67,5 @@ test('a Catalan question is marked as Catalan, and the Spanish lines around it a
   await expect(notice.locator('p', { hasText: 'La respuesta correcta era' })).not.toHaveAttribute('lang', /.*/);
   await expect(notice.locator('p', { hasText: explanation })).toHaveAttribute('lang', 'ca');
   await expect(notice.locator('p[lang]')).toHaveCount(1);
+  await expect(notice.locator('p', { hasText: 'La respuesta correcta era' }).locator('span')).toHaveAttribute('lang', 'ca');
 });

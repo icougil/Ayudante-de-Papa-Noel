@@ -138,15 +138,51 @@ test('a language that does not match the subject is reported', () => {
   ]);
 });
 
-test('english needs en, catalan needs ca and language needs es', () => {
+function withSubjectQuestion(subject, lang) {
   const bank = validBank();
-  const english = bank.find((f) => f.file === 'english.json');
-  english.data.questions = [question({ id: 'e-1', lang: 'es', place: 'general', topics: ['t-english'] })];
-  assert.deepEqual(validateBank(bank, context), [
-    'english.json: e-1: language "es" does not match subject "english"'
+  const file = bank.find((f) => f.file === `${subject}.json`);
+  file.data.questions = [question({ id: 'x-1', lang, place: 'general', topics: [`t-${subject}`] })];
+  return validateBank(bank, context);
+}
+
+test('english needs en', () => {
+  assert.deepEqual(withSubjectQuestion('english', 'es'), [
+    'english.json: x-1: language "es" does not match subject "english"'
   ]);
-  english.data.questions[0].lang = 'en';
-  assert.deepEqual(validateBank(bank, context), []);
+  assert.deepEqual(withSubjectQuestion('english', 'en'), []);
+});
+
+test('catalan needs ca', () => {
+  assert.deepEqual(withSubjectQuestion('catalan', 'es'), [
+    'catalan.json: x-1: language "es" does not match subject "catalan"'
+  ]);
+  assert.deepEqual(withSubjectQuestion('catalan', 'ca'), []);
+});
+
+test('language needs es', () => {
+  assert.deepEqual(withSubjectQuestion('language', 'ca'), [
+    'language.json: x-1: language "ca" does not match subject "language"'
+  ]);
+  assert.deepEqual(withSubjectQuestion('language', 'es'), []);
+});
+
+test('a blank or non-string prompt is reported', () => {
+  assert.deepEqual(withQuestion({ prompt: '   ' }), ['geography.json: q-1: prompt must be non-blank text']);
+  assert.deepEqual(withQuestion({ prompt: 5 }), ['geography.json: q-1: prompt must be non-blank text']);
+});
+
+test('a blank or non-string explanation is reported', () => {
+  assert.deepEqual(withQuestion({ explanation: '' }), ['geography.json: q-1: explanation must be non-blank text']);
+  assert.deepEqual(withQuestion({ explanation: null }), ['geography.json: q-1: explanation must be non-blank text']);
+});
+
+test('a topic without a usable name is reported', () => {
+  for (const name of [undefined, 3, '  ']) {
+    const problems = withGeography((data) => {
+      data.topics.push({ id: 'nameless', name });
+    });
+    assert.deepEqual(problems, ['geography.json: -: topic "nameless" needs a non-blank name']);
+  }
 });
 
 test('a fourth topic is reported', () => {
