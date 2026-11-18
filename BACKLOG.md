@@ -44,6 +44,18 @@ it came from.
   question; music and effects must play again. If they do not, resume the context on the next
   tap as well as on `visibilitychange` (see `js/sound.js`).
 
+## Publishing
+
+- [ ] **Stamp a version into each published release.** After the sound was merged, the owner
+  heard no sound on the published site: GitHub Pages sends `cache-control: max-age=600`, so a
+  visit within 10 minutes of a release can mix old and new files from the browser cache. Wanted:
+  the CI deploy job (`.github/workflows/ci.yml`, step `upload-pages-artifact`) stamps a version
+  (date and commit) into the published copy, so each release loads fresh scripts and styles and
+  the player or the owner can see which version is live. Opening `index.html` from disk must keep
+  working. Needs deciding: how the stamp reaches the file references (a query string such as
+  `?v=<commit>` added at deploy time, or something else) and where, if anywhere, the version is
+  shown on screen.
+
 ## Noted during development
 
 - [ ] **The scoreboard can take three rows on a narrow screen.** At 360 px wide, a long city name
