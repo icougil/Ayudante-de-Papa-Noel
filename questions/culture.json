@@ -46,7 +46,7 @@
       "correct": 2,
       "explanation": "Antoni Gaudí dedicó más de 40 años de su vida a la Sagrada Família.",
       "references": [
-        "https://es.wikipedia.org/wiki/Sagrada_Familia"
+        "https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia"
       ]
     },
     {
@@ -92,7 +92,8 @@
       "correct": 0,
       "explanation": "El oso y el madroño son el símbolo de Madrid y tienen una estatua en la Puerta del Sol.",
       "references": [
-        "https://es.wikipedia.org/wiki/Escudo_de_Madrid"
+        "https://es.wikipedia.org/wiki/Escudo_de_Madrid",
+        "https://es.wikipedia.org/wiki/Estatua_del_Oso_y_el_Madroño"
       ]
     },
     {
@@ -113,7 +114,7 @@
         "El Camino del Inca"
       ],
       "correct": 0,
-      "explanation": "El Camino de Santiago lo recorren cada año miles de peregrinos a pie o en bicicleta.",
+      "explanation": "Cada año recorren el Camino de Santiago muchísimos peregrinos que llegan a pie hasta la tumba del apóstol.",
       "references": [
         "https://es.wikipedia.org/wiki/Camino_de_Santiago"
       ]
@@ -182,7 +183,7 @@
         "La Diada"
       ],
       "correct": 0,
-      "explanation": "La Mercè és la festa major de Barcelona i se celebra cap al 24 de setembre, dia de la Mare de Déu de la Mercè.",
+      "explanation": "La Mercè és la gran festa de la ciutat; se celebra a finals de setembre en honor de la Mare de Déu de la Mercè, amb castells, gegants i correfoc.",
       "references": [
         "https://ca.wikipedia.org/wiki/La_Mercè"
       ]
@@ -251,7 +252,7 @@
         "Cirial"
       ],
       "correct": 0,
-      "explanation": "El botafumeiro es un incensario enorme bañado en plata y uno de los símbolos más conocidos de la catedral.",
+      "explanation": "El botafumeiro es un gran incensario recubierto de plata que cuelga de una cuerda en la catedral de Santiago.",
       "references": [
         "https://es.wikipedia.org/wiki/Botafumeiro"
       ]
@@ -274,7 +275,7 @@
         "Norman Foster"
       ],
       "correct": 0,
-      "explanation": "El Guggenheim de Bilbao lo diseñó el arquitecto canadiense Frank Gehry y se construyó entre 1992 y 1997.",
+      "explanation": "El museo es obra del arquitecto Frank Gehry; se abrió al público en 1997.",
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]

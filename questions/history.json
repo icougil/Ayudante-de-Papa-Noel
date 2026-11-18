@@ -11,6 +11,10 @@
     {
       "id": "historia-reciente",
       "name": "Historia reciente de España"
+    },
+    {
+      "id": "religion-y-peregrinaciones",
+      "name": "Religión y peregrinaciones"
     }
   ],
   "questions": [
@@ -70,7 +74,7 @@
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿En qué siglo se construyó la Aljafería, palacio de los reyes de la taifa de Saraqusta?",
+      "prompt": "¿En qué siglo se construyó la Aljafería de Zaragoza, un palacio musulmán?",
       "options": [
         "Siglo XI",
         "Siglo VIII",
@@ -78,7 +82,7 @@
         "Siglo XV"
       ],
       "correct": 0,
-      "explanation": "La Aljafería fue el palacio de los reyes de la taifa de Saraqusta (Zaragoza) en el siglo XI; después lo usaron los reyes de Aragón.",
+      "explanation": "La Aljafería se levantó en el siglo XI, cuando Zaragoza era un reino musulmán; siglos después la usaron los reyes cristianos de Aragón.",
       "references": [
         "https://es.wikipedia.org/wiki/Palacio_de_la_Aljafería"
       ]
@@ -110,7 +114,7 @@
       "id": "history-es-003",
       "lang": "es",
       "topics": [
-        "al-andalus"
+        "religion-y-peregrinaciones"
       ],
       "difficulty": 1,
       "place": "santiago",
@@ -124,7 +128,7 @@
         "San Juan"
       ],
       "correct": 0,
-      "explanation": "La tradición dice que en la catedral está el sepulcro del apóstol Santiago, por eso llegan peregrinos de todas partes.",
+      "explanation": "Según una antigua creencia, la catedral guarda los restos del apóstol Santiago, y por eso llegan peregrinos de muchos lugares.",
       "references": [
         "https://es.wikipedia.org/wiki/Catedral_de_Santiago_de_Compostela"
       ]

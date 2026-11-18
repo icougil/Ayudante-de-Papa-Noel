@@ -101,9 +101,10 @@
         "Haser"
       ],
       "correct": 0,
-      "explanation": "Se escribe «hacer»: con h al principio y con c delante de la e.",
+      "explanation": "Se escribe «hacer»: empieza por una h que no suena y sigue con c.",
       "references": [
-        "https://es.wiktionary.org/wiki/hacer"
+        "https://es.wiktionary.org/wiki/hacer",
+        "https://es.wikipedia.org/wiki/H"
       ]
     },
     {

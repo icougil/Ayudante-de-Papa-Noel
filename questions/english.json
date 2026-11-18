@@ -36,7 +36,7 @@
         "Hot"
       ],
       "correct": 3,
-      "explanation": "«Cold» significa frío y su contrario es «hot», caliente.",
+      "explanation": "«Hot» is the opposite of «cold»: one means a high temperature and the other a low one.",
       "references": [
         "https://en.wiktionary.org/wiki/cold"
       ]
@@ -59,9 +59,10 @@
         "September"
       ],
       "correct": 0,
-      "explanation": "Después de «November» (noviembre) viene «December» (diciembre).",
+      "explanation": "«December» comes right after «November», the eleventh month of the year.",
       "references": [
-        "https://en.wikipedia.org/wiki/November"
+        "https://en.wikipedia.org/wiki/November",
+        "https://en.wikipedia.org/wiki/December"
       ]
     },
     {
@@ -82,7 +83,7 @@
         "Going"
       ],
       "correct": 2,
-      "explanation": "«Go» es un verbo irregular: su pasado simple es «went».",
+      "explanation": "«Go» is an irregular verb, so its past simple is «went», not «goed».",
       "references": [
         "https://en.wiktionary.org/wiki/go"
       ]
@@ -139,7 +140,7 @@
       "topics": [
         "gramatica-ingles"
       ],
-      "difficulty": 3,
+      "difficulty": 2,
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
