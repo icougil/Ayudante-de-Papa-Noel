@@ -58,9 +58,7 @@ function validateQuestion(q, subject, topicIds, stopIds, report) {
       report('a question about a place must be geography, history, sports or culture');
     }
   }
-  if ((has('minAge') || has('maxAge')) && (q.minAge !== 10 || q.maxAge !== 12)) {
-    if ((has('minAge') && q.minAge !== 10) || (has('maxAge') && q.maxAge !== 12)) report('ages must be 10 to 12');
-  }
+  if ((has('minAge') && q.minAge !== 10) || (has('maxAge') && q.maxAge !== 12)) report('ages must be 10 to 12');
   if (has('options')) {
     const options = q.options;
     const good = Array.isArray(options) && options.length === 4 &&
@@ -74,11 +72,13 @@ function validateQuestion(q, subject, topicIds, stopIds, report) {
   if (has('correct') && !(Number.isInteger(q.correct) && q.correct >= 0 && q.correct <= 3)) {
     report('correct must be 0 to 3');
   }
-  if (has('prompt') && isText(q.prompt) && q.prompt.length > MAX_PROMPT) {
-    report(`prompt longer than ${MAX_PROMPT} characters`);
+  if (has('prompt')) {
+    if (!isText(q.prompt) || q.prompt.trim() === '') report('prompt must be non-blank text');
+    else if (q.prompt.length > MAX_PROMPT) report(`prompt longer than ${MAX_PROMPT} characters`);
   }
-  if (has('explanation') && isText(q.explanation) && q.explanation.length > MAX_EXPLANATION) {
-    report(`explanation longer than ${MAX_EXPLANATION} characters`);
+  if (has('explanation')) {
+    if (!isText(q.explanation) || q.explanation.trim() === '') report('explanation must be non-blank text');
+    else if (q.explanation.length > MAX_EXPLANATION) report(`explanation longer than ${MAX_EXPLANATION} characters`);
   }
   if (has('references')) {
     const refs = q.references;
@@ -122,6 +122,9 @@ function validateBank(files, context) {
       } else {
         seenTopics.add(id);
         topicIds.add(id);
+        if (!isText(topic.name) || topic.name.trim() === '') {
+          problems.push(`${file}: -: topic "${id}" needs a non-blank name`);
+        }
       }
     }
 
@@ -201,7 +204,8 @@ function main() {
     : { problems: context.subjects.map((s) => `${s}.json: -: missing file`), output: null };
   if (output === null) {
     console.error(problems.join('\n'));
-    process.exit(1);
+    process.exitCode = 1;
+    return;
   }
   fs.writeFileSync(path.join(root, 'js', 'questions.js'), output);
   console.log('Wrote js/questions.js');

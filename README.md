@@ -106,17 +106,17 @@ change its fields, in this order:
 
 | Field | Meaning |
 |---|---|
-| `id` | Unique across all files, e.g. `madrid-4` or `general-13` |
+| `id` | Unique across all files, `<subject>-<lang>-<nnn>`, e.g. `geography-es-007` or `catalan-ca-004` |
 | `lang` | `es`, `ca` or `en`: `english` is `en`, `catalan` is `ca`, `language` is `es`, the others `es` or `ca` |
 | `topics` | 1 to 3 different topic ids from the `topics` list of the same file |
-| `difficulty` | 1 (taught in 5è), 2 (a 6è topic) or 3 |
+| `difficulty` | 1 (taught in 5è), 2 (a 6è topic) or 3 (a 6è topic with a harder twist: two steps or a less obvious fact) |
 | `place` | The id of a city on the route, or `general`. A city only for geography, history, sports and culture |
 | `minAge` | 10 |
 | `maxAge` | 12 |
 | `prompt` | The question, 120 characters at most |
 | `options` | Exactly 4 different answers, 40 characters each at most |
 | `correct` | Position of the right answer in `options`, from 0 to 3 |
-| `explanation` | Shown after a wrong answer, 160 characters at most |
+| `explanation` | Shown after a wrong answer, 160 characters at most. In an English question it glosses each key English word in Spanish in brackets, e.g. «hot» (caliente) |
 | `references` | At least one `https://` page where the fact can be checked |
 
 Write every question in your own words. Sources such as XTEC are for checking facts, not for
