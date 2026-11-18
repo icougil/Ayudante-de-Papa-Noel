@@ -46,15 +46,17 @@ it came from.
 
 ## Publishing
 
-- [ ] **Stamp a version into each published release.** After the sound was merged, the owner
+- [x] **Stamp a version into each published release.** After the sound was merged, the owner
   heard no sound on the published site: GitHub Pages sends `cache-control: max-age=600`, so a
   visit within 10 minutes of a release can mix old and new files from the browser cache. Wanted:
   the CI deploy job (`.github/workflows/ci.yml`, step `upload-pages-artifact`) stamps a version
   (date and commit) into the published copy, so each release loads fresh scripts and styles and
   the player or the owner can see which version is live. Opening `index.html` from disk must keep
-  working. Needs deciding: how the stamp reaches the file references (a query string such as
-  `?v=<commit>` added at deploy time, or something else) and where, if anywhere, the version is
-  shown on screen.
+  working. Decided: the deploy adds `?v=<commit>` to the local script and stylesheet references
+  and fills the page's version with the date, time (Barcelona) and commit. The version shows
+  tiny and faint at the bottom-right of the cover and is logged to the console. Still open:
+  `index.html` itself stays cached for up to 10 minutes (GitHub Pages does not allow changing
+  that header), so a visitor may get the previous release, whole, for a few minutes.
 
 ## Noted during development
 
