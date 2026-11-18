@@ -493,6 +493,17 @@
 
   // ---------- Start-up ----------
 
+  // The deploy job writes "YYYY-MM-DD HH:MM · commit" into the version meta tag; opened from the
+  // repository it is empty and nothing is shown.
+  function showVersion() {
+    const meta = document.querySelector('meta[name="version"]');
+    const version = meta ? meta.content.trim() : '';
+    if (!version) return;
+    console.info('Ayudante de Papá Noel · versión ' + version);
+    $('version').textContent = version.replace(/ \d{2}:\d{2}/, '');
+    $('version').hidden = false;
+  }
+
   $('cover-sleigh').innerHTML = santaHTML();
   el.santa.innerHTML = santaHTML();
   $('button-start').addEventListener('click', startGame);
@@ -502,6 +513,7 @@
     button.addEventListener('click', onSoundToggle);
   }
   renderSoundToggles();
+  showVersion();
   window.addEventListener('resize', measure);
   showScreen('screen-start');
 })();

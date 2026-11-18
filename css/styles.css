@@ -630,3 +630,15 @@ button { -webkit-user-select: none; user-select: none; }
   .gift-delivered, .gift-lost, .spark, .flake { display: none; }
   .santa-bubble { opacity: 0; }
 }
+
+/* The release stamp on the cover: there for whoever looks, never in the player's way. */
+.version {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  margin: 0;
+  font-size: 10px;
+  color: #fff;
+  opacity: 0.5;
+  pointer-events: none;
+}
