@@ -7,6 +7,10 @@
     {
       "id": "acentuacion",
       "name": "Acentuación"
+    },
+    {
+      "id": "ortografia",
+      "name": "Ortografía"
     }
   ],
   "questions": [
@@ -54,6 +58,75 @@
       "explanation": "«Música» lleva la sílaba tónica en la antepenúltima sílaba: MÚ-si-ca.",
       "references": [
         "https://es.wikipedia.org/wiki/Palabra_esdr%C3%BAjula"
+      ]
+    },
+    {
+      "id": "language-es-001",
+      "lang": "es",
+      "topics": [
+        "categorias-gramaticales"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En «un cielo azul», ¿qué tipo de palabra es «azul»?",
+      "options": [
+        "Adjetivo",
+        "Verbo",
+        "Sustantivo",
+        "Adverbio"
+      ],
+      "correct": 0,
+      "explanation": "«Azul» es un adjetivo: dice cómo es el cielo, que es el sustantivo al que acompaña.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Adjetivo"
+      ]
+    },
+    {
+      "id": "language-es-002",
+      "lang": "es",
+      "topics": [
+        "ortografia"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas palabras está bien escrita?",
+      "options": [
+        "Hacer",
+        "Acer",
+        "Hazer",
+        "Haser"
+      ],
+      "correct": 0,
+      "explanation": "Se escribe «hacer»: con h al principio y con c delante de la e.",
+      "references": [
+        "https://es.wiktionary.org/wiki/hacer"
+      ]
+    },
+    {
+      "id": "language-es-003",
+      "lang": "es",
+      "topics": [
+        "acentuacion"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué frase está bien escrita?",
+      "options": [
+        "Me gusta el té con limón",
+        "Me gusta el te con limón",
+        "Me gusta él té con limón",
+        "Me gusta el tè con limón"
+      ],
+      "correct": 0,
+      "explanation": "«Té», la bebida, lleva tilde diacrítica; «te» sin tilde es otra palabra, como en «te llamo».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Tilde_diacrítica"
       ]
     }
   ]

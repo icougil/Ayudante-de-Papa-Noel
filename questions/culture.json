@@ -163,6 +163,121 @@
       "references": [
         "https://es.wikipedia.org/wiki/Olentzero"
       ]
+    },
+    {
+      "id": "culture-ca-001",
+      "lang": "ca",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina és la festa major de Barcelona, que se celebra cap al 24 de setembre?",
+      "options": [
+        "La Mercè",
+        "Sant Joan",
+        "Sant Jordi",
+        "La Diada"
+      ],
+      "correct": 0,
+      "explanation": "La Mercè és la festa major de Barcelona i se celebra cap al 24 de setembre, dia de la Mare de Déu de la Mercè.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/La_Mercè"
+      ]
+    },
+    {
+      "id": "culture-ca-002",
+      "lang": "ca",
+      "topics": [
+        "museos-y-pintura"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin pintor va néixer a Fuendetodos, un poble de la província de Saragossa?",
+      "options": [
+        "Goya",
+        "Velázquez",
+        "Picasso",
+        "Dalí"
+      ],
+      "correct": 0,
+      "explanation": "Francisco de Goya va néixer el 1746 a Fuendetodos, a la província de Saragossa.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Francisco_de_Goya"
+      ]
+    },
+    {
+      "id": "culture-es-001",
+      "lang": "es",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En la Feria de Abril de Sevilla, ¿qué baile típico se baila en las casetas?",
+      "options": [
+        "Sevillanas",
+        "Jota",
+        "Sardana",
+        "Muñeira"
+      ],
+      "correct": 0,
+      "explanation": "En las casetas de la Feria de Abril se bailan sevillanas.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Feria_de_Abril"
+      ]
+    },
+    {
+      "id": "culture-es-002",
+      "lang": "es",
+      "topics": [
+        "rutas-y-patrimonio"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el enorme incensario que se balancea en la catedral de Santiago?",
+      "options": [
+        "Botafumeiro",
+        "Relicario",
+        "Pebetero",
+        "Cirial"
+      ],
+      "correct": 0,
+      "explanation": "El botafumeiro es un incensario enorme bañado en plata y uno de los símbolos más conocidos de la catedral.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Botafumeiro"
+      ]
+    },
+    {
+      "id": "culture-es-003",
+      "lang": "es",
+      "topics": [
+        "arte-y-arquitectura"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué arquitecto diseñó el Museo Guggenheim de Bilbao?",
+      "options": [
+        "Frank Gehry",
+        "Antoni Gaudí",
+        "Santiago Calatrava",
+        "Norman Foster"
+      ],
+      "correct": 0,
+      "explanation": "El Guggenheim de Bilbao lo diseñó el arquitecto canadiense Frank Gehry y se construyó entre 1992 y 1997.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
+      ]
     }
   ]
 }

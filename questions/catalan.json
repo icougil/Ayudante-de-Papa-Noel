@@ -13,5 +13,75 @@
       "name": "Vocabulario catalán"
     }
   ],
-  "questions": []
+  "questions": [
+    {
+      "id": "catalan-ca-001",
+      "lang": "ca",
+      "topics": [
+        "ortografia-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina paraula està ben escrita?",
+      "options": [
+        "Col·legi",
+        "Col.legi",
+        "Collegi",
+        "Col-legi"
+      ],
+      "correct": 0,
+      "explanation": "La «l·l» porta un punt volat entre les dues eles: col·legi.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/L·l"
+      ]
+    },
+    {
+      "id": "catalan-ca-002",
+      "lang": "ca",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Si canviem «les cireres» per un pronom a «Menjo les cireres», quina frase és correcta?",
+      "options": [
+        "Les menjo",
+        "Els menjo",
+        "Li menjo",
+        "Hi menjo"
+      ],
+      "correct": 0,
+      "explanation": "El complement directe femení plural se substitueix per «les»: Les menjo.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Pronom_feble"
+      ]
+    },
+    {
+      "id": "catalan-ca-003",
+      "lang": "ca",
+      "topics": [
+        "vocabulario-catalan"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Com es diu en català l'estri de taula amb pues per punxar el menjar?",
+      "options": [
+        "Forquilla",
+        "Cullera",
+        "Ganivet",
+        "Cassola"
+      ],
+      "correct": 0,
+      "explanation": "La forquilla és l'estri amb pues que serveix per punxar el menjar i portar-lo a la boca.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Forquilla"
+      ]
+    }
+  ]
 }

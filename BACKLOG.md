@@ -6,26 +6,25 @@ it came from.
 
 ## Questions
 
-- [ ] **Do not repeat questions a player has already seen.** Today every game picks 6 questions
-  at random from a bank of 30 (3 per city and 12 general), so a second game already repeats
-  some. At the very least a game must not ask questions from the player's previous games until
-  the bank runs out. Needs deciding: where the seen questions are remembered (the browser's
-  `localStorage` is the only option without a server), and what happens when a city has no
-  unseen question left.
-- [ ] **Grow the question bank a lot, across varied topics.** 30 questions are too few for
-  replaying and for the item above to be of any use. The bank has 8 subjects (`geography`,
-  `history`, `sports`, `culture`, `maths`, `science`, `language`, `english`); new questions
-  should spread over them and may add subjects. The tests in `tests/data.test.js` fix the bank
-  at exactly 3 questions per city and 12 general ones, so they change with this item.
-- [ ] **Get questions from an external source instead of writing them by hand.** So far every
-  question was written during development. Find one or more sources of questions (an open
-  trivia dataset or API, school curriculum material) so the bank is varied and does not depend
-  on hand-writing. Needs deciding: the source and its licence, whether questions are imported
-  once into `js/data-level-1.js` or fetched while playing (the game works offline and from
-  `file://` today), how Spanish text and the 10-to-12 age range are guaranteed, and who reviews
-  what comes in.
-- [ ] **The owner reviews the 30 current questions** in `js/data-level-1.js` for correctness and
-  tone. They have only been checked by the tests (shape and length), not by a person.
+- [ ] **Do not repeat questions a player has already seen.** Part 3 of the question-bank plan
+  (remembering the player), see `docs/specs/2026-11-18-question-bank-design.md`. A game picks 6
+  questions at random from a bank of 60, so a second game can still repeat some. At the very least
+  a game must not ask questions from the player's previous games until the bank runs out. Needs
+  deciding: where the seen questions are remembered (the browser's `localStorage` is the only
+  option without a server), and what happens when a city has no unseen question left.
+- [ ] **Grow the question bank a lot, across varied topics.** Part 1 is done: the questions live
+  in one file per subject (`questions/*.json`), each with a language label, topics, difficulty and
+  references, and the bank holds about 60 questions. Still to do: part 2 (a scheduled job that
+  adds questions) and part 3 (remembering the player); see
+  `docs/specs/2026-11-18-question-bank-design.md`.
+- [ ] **Get questions from an external source instead of writing them by hand.** Part 1 is done
+  (subject files, labels, about 60 questions written from the reading list in the spec, each with a
+  reference). Parts 2 (scheduled job) and 3 (remembering the player) remain, with the open
+  decisions on the source, its licence and who reviews what comes in; see
+  `docs/specs/2026-11-18-question-bank-design.md`.
+- [ ] **The owner reviews the 60 current questions** in `questions/*.json` for correctness and
+  tone. They have only been checked by the tests (shape and length), not by a person; each now has
+  a reference to check the fact against.
 
 ## Sound
 

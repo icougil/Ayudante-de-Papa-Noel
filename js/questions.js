@@ -18,6 +18,11 @@
       "name": "Comunidades autónomas y capitales"
     },
     {
+      "id": "montanas-y-relieve",
+      "subject": "geography",
+      "name": "Montañas y relieve"
+    },
+    {
       "id": "hispania-romana",
       "subject": "history",
       "name": "Hispania romana"
@@ -28,6 +33,11 @@
       "name": "Al-Ándalus y la Edad Media"
     },
     {
+      "id": "historia-reciente",
+      "subject": "history",
+      "name": "Historia reciente de España"
+    },
+    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -36,6 +46,11 @@
       "id": "deportes-tradicionales",
       "subject": "sports",
       "name": "Deportes tradicionales"
+    },
+    {
+      "id": "futbol",
+      "subject": "sports",
+      "name": "Fútbol"
     },
     {
       "id": "arte-y-arquitectura",
@@ -88,6 +103,11 @@
       "name": "Geometría y medidas"
     },
     {
+      "id": "porcentajes-y-decimales",
+      "subject": "maths",
+      "name": "Porcentajes y decimales"
+    },
+    {
       "id": "sistema-solar",
       "subject": "science",
       "name": "Sistema solar"
@@ -103,6 +123,16 @@
       "name": "Aire y respiración"
     },
     {
+      "id": "plantas-y-seres-vivos",
+      "subject": "science",
+      "name": "Plantas y seres vivos"
+    },
+    {
+      "id": "materia-y-estados",
+      "subject": "science",
+      "name": "Materia y estados"
+    },
+    {
       "id": "categorias-gramaticales",
       "subject": "language",
       "name": "Categorías gramaticales"
@@ -111,6 +141,11 @@
       "id": "acentuacion",
       "subject": "language",
       "name": "Acentuación"
+    },
+    {
+      "id": "ortografia",
+      "subject": "language",
+      "name": "Ortografía"
     },
     {
       "id": "vocabulario-ingles",
@@ -126,6 +161,11 @@
       "id": "verbos-irregulares-ingles",
       "subject": "english",
       "name": "Verbos irregulares en inglés"
+    },
+    {
+      "id": "gramatica-ingles",
+      "subject": "english",
+      "name": "Gramática básica en inglés"
     },
     {
       "id": "ortografia-catalana",
@@ -337,6 +377,78 @@
       ]
     },
     {
+      "id": "geography-ca-001",
+      "lang": "ca",
+      "subject": "geography",
+      "topics": [
+        "montanas-y-relieve"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina serra separa Barcelona del Vallès i té el Tibidabo al cim?",
+      "options": [
+        "Collserola",
+        "Montseny",
+        "Montserrat",
+        "Garraf"
+      ],
+      "correct": 0,
+      "explanation": "La serra de Collserola queda entre Barcelona i el Vallès; el seu cim més alt és el Tibidabo, de 516 m.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Serra_de_Collserola"
+      ]
+    },
+    {
+      "id": "geography-es-001",
+      "lang": "es",
+      "subject": "geography",
+      "topics": [
+        "montanas-y-relieve"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué sierra separa la Comunidad de Madrid de Castilla y León?",
+      "options": [
+        "Sierra de Guadarrama",
+        "Sierra Nevada",
+        "Sierra Morena",
+        "Picos de Europa"
+      ],
+      "correct": 0,
+      "explanation": "La sierra de Guadarrama, al norte de Madrid, marca el límite entre la Comunidad de Madrid y Castilla y León.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Sierra_de_Guadarrama"
+      ]
+    },
+    {
+      "id": "geography-es-002",
+      "lang": "es",
+      "subject": "geography",
+      "topics": [
+        "rios-de-espana"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué río, junto con el Ibaizábal, forma la ría de Bilbao?",
+      "options": [
+        "Nervión",
+        "Ebro",
+        "Duero",
+        "Miño"
+      ],
+      "correct": 0,
+      "explanation": "La ría de Bilbao se forma donde se juntan los ríos Nervión e Ibaizábal.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Ría_de_Bilbao"
+      ]
+    },
+    {
       "id": "zaragoza-3",
       "lang": "es",
       "subject": "history",
@@ -385,6 +497,78 @@
       ]
     },
     {
+      "id": "history-es-001",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "al-andalus"
+      ],
+      "difficulty": 3,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué siglo se construyó la Aljafería, palacio de los reyes de la taifa de Saraqusta?",
+      "options": [
+        "Siglo XI",
+        "Siglo VIII",
+        "Siglo XIII",
+        "Siglo XV"
+      ],
+      "correct": 0,
+      "explanation": "La Aljafería fue el palacio de los reyes de la taifa de Saraqusta (Zaragoza) en el siglo XI; después lo usaron los reyes de Aragón.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Palacio_de_la_Aljafería"
+      ]
+    },
+    {
+      "id": "history-es-002",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué año se celebró la Exposición Universal de Sevilla?",
+      "options": [
+        "1992",
+        "1975",
+        "1982",
+        "2000"
+      ],
+      "correct": 0,
+      "explanation": "La Expo de 1992 tuvo en Sevilla el tema de la Era de los Descubrimientos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Exposición_Universal_de_Sevilla_de_1992"
+      ]
+    },
+    {
+      "id": "history-es-003",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "al-andalus"
+      ],
+      "difficulty": 1,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Según la tradición, ¿qué apóstol está enterrado en la catedral de Santiago de Compostela?",
+      "options": [
+        "Santiago",
+        "San Pedro",
+        "San Pablo",
+        "San Juan"
+      ],
+      "correct": 0,
+      "explanation": "La tradición dice que en la catedral está el sepulcro del apóstol Santiago, por eso llegan peregrinos de todas partes.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Catedral_de_Santiago_de_Compostela"
+      ]
+    },
+    {
       "id": "barcelona-3",
       "lang": "es",
       "subject": "sports",
@@ -430,6 +614,30 @@
       "explanation": "En la pelota vasca se golpea la pelota contra la pared del frontón.",
       "references": [
         "https://es.wikipedia.org/wiki/Pelota_vasca"
+      ]
+    },
+    {
+      "id": "sports-es-001",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 1,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué equipo juega como local en el estadio Santiago Bernabéu?",
+      "options": [
+        "Real Madrid",
+        "Atlético de Madrid",
+        "FC Barcelona",
+        "Sevilla FC"
+      ],
+      "correct": 0,
+      "explanation": "El estadio Santiago Bernabéu, en Madrid, es el campo del Real Madrid.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernabéu"
       ]
     },
     {
@@ -577,6 +785,126 @@
       ]
     },
     {
+      "id": "culture-ca-001",
+      "lang": "ca",
+      "subject": "culture",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina és la festa major de Barcelona, que se celebra cap al 24 de setembre?",
+      "options": [
+        "La Mercè",
+        "Sant Joan",
+        "Sant Jordi",
+        "La Diada"
+      ],
+      "correct": 0,
+      "explanation": "La Mercè és la festa major de Barcelona i se celebra cap al 24 de setembre, dia de la Mare de Déu de la Mercè.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/La_Mercè"
+      ]
+    },
+    {
+      "id": "culture-ca-002",
+      "lang": "ca",
+      "subject": "culture",
+      "topics": [
+        "museos-y-pintura"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin pintor va néixer a Fuendetodos, un poble de la província de Saragossa?",
+      "options": [
+        "Goya",
+        "Velázquez",
+        "Picasso",
+        "Dalí"
+      ],
+      "correct": 0,
+      "explanation": "Francisco de Goya va néixer el 1746 a Fuendetodos, a la província de Saragossa.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Francisco_de_Goya"
+      ]
+    },
+    {
+      "id": "culture-es-001",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En la Feria de Abril de Sevilla, ¿qué baile típico se baila en las casetas?",
+      "options": [
+        "Sevillanas",
+        "Jota",
+        "Sardana",
+        "Muñeira"
+      ],
+      "correct": 0,
+      "explanation": "En las casetas de la Feria de Abril se bailan sevillanas.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Feria_de_Abril"
+      ]
+    },
+    {
+      "id": "culture-es-002",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "rutas-y-patrimonio"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el enorme incensario que se balancea en la catedral de Santiago?",
+      "options": [
+        "Botafumeiro",
+        "Relicario",
+        "Pebetero",
+        "Cirial"
+      ],
+      "correct": 0,
+      "explanation": "El botafumeiro es un incensario enorme bañado en plata y uno de los símbolos más conocidos de la catedral.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Botafumeiro"
+      ]
+    },
+    {
+      "id": "culture-es-003",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "arte-y-arquitectura"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué arquitecto diseñó el Museo Guggenheim de Bilbao?",
+      "options": [
+        "Frank Gehry",
+        "Antoni Gaudí",
+        "Santiago Calatrava",
+        "Norman Foster"
+      ],
+      "correct": 0,
+      "explanation": "El Guggenheim de Bilbao lo diseñó el arquitecto canadiense Frank Gehry y se construyó entre 1992 y 1997.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
+      ]
+    },
+    {
       "id": "general-1",
       "lang": "es",
       "subject": "maths",
@@ -673,6 +1001,102 @@
       ]
     },
     {
+      "id": "maths-es-001",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "operaciones"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un trineo recorre 45 km cada hora. ¿Cuántos kilómetros recorre en 4 horas?",
+      "options": [
+        "180 km",
+        "90 km",
+        "160 km",
+        "200 km"
+      ],
+      "correct": 0,
+      "explanation": "45 × 4 = 180 km: multiplicar es sumar 45 cuatro veces.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Multiplicación"
+      ]
+    },
+    {
+      "id": "maths-es-002",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "geometria-y-medidas"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El perímetro de un cuadrado mide 36 cm. ¿Cuál es su área?",
+      "options": [
+        "81 cm²",
+        "36 cm²",
+        "144 cm²",
+        "9 cm²"
+      ],
+      "correct": 0,
+      "explanation": "Cada lado mide 36 : 4 = 9 cm, y el área es lado por lado: 9 × 9 = 81 cm².",
+      "references": [
+        "https://es.wikipedia.org/wiki/Cuadrado"
+      ]
+    },
+    {
+      "id": "maths-ca-001",
+      "lang": "ca",
+      "subject": "maths",
+      "topics": [
+        "porcentajes-y-decimales"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin és el 25 % de 80?",
+      "options": [
+        "20",
+        "25",
+        "32",
+        "55"
+      ],
+      "correct": 0,
+      "explanation": "El 25 % és 25/100, la quarta part: 80 : 4 = 20.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Percentatge"
+      ]
+    },
+    {
+      "id": "maths-ca-002",
+      "lang": "ca",
+      "subject": "maths",
+      "topics": [
+        "divisibilidad-y-primos"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un far s'encén cada 4 segons i un altre cada 6. Si coincideixen ara, quan tornaran a coincidir?",
+      "options": [
+        "D'aquí a 12 segons",
+        "D'aquí a 10 segons",
+        "D'aquí a 24 segons",
+        "D'aquí a 6 segons"
+      ],
+      "correct": 0,
+      "explanation": "Cal el mínim comú múltiple de 4 i 6. Múltiples de 4: 4, 8, 12. De 6: 6, 12. El primer que tenen igual és el 12.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Mínim_comú_múltiple"
+      ]
+    },
+    {
       "id": "general-5",
       "lang": "es",
       "subject": "science",
@@ -745,6 +1169,126 @@
       ]
     },
     {
+      "id": "science-es-001",
+      "lang": "es",
+      "subject": "science",
+      "topics": [
+        "plantas-y-seres-vivos"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el proceso con el que las plantas fabrican su alimento usando la luz del sol?",
+      "options": [
+        "Fotosíntesis",
+        "Respiración",
+        "Digestión",
+        "Germinación"
+      ],
+      "correct": 0,
+      "explanation": "En la fotosíntesis las plantas aprovechan la luz solar para fabricar su alimento.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Fotosíntesis"
+      ]
+    },
+    {
+      "id": "science-es-002",
+      "lang": "es",
+      "subject": "science",
+      "topics": [
+        "sistema-solar"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué causa las estaciones del año en la Tierra?",
+      "options": [
+        "La inclinación del eje de la Tierra",
+        "La distancia de la Tierra al Sol",
+        "Las fases de la Luna",
+        "La velocidad del viento"
+      ],
+      "correct": 0,
+      "explanation": "Las estaciones se deben a la inclinación del eje terrestre mientras la Tierra gira alrededor del Sol, no a que esté más cerca o más lejos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estación_del_año"
+      ]
+    },
+    {
+      "id": "science-es-003",
+      "lang": "es",
+      "subject": "science",
+      "topics": [
+        "cuerpo-humano"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuántos huesos tiene aproximadamente el esqueleto de una persona adulta?",
+      "options": [
+        "206",
+        "106",
+        "306",
+        "406"
+      ],
+      "correct": 0,
+      "explanation": "El esqueleto de una persona adulta tiene 206 huesos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Esqueleto_humano"
+      ]
+    },
+    {
+      "id": "science-ca-001",
+      "lang": "ca",
+      "subject": "science",
+      "topics": [
+        "aire-y-respiracion"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En quina part dels pulmons passa l'oxigen de l'aire a la sang?",
+      "options": [
+        "Als alvèols",
+        "A la tràquea",
+        "Al diafragma",
+        "A l'esòfag"
+      ],
+      "correct": 0,
+      "explanation": "Als alvèols pulmonars l'oxigen de l'aire passa a la sang i el diòxid de carboni en surt cap a l'aire.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Alvèol_pulmonar"
+      ]
+    },
+    {
+      "id": "science-ca-002",
+      "lang": "ca",
+      "subject": "science",
+      "topics": [
+        "materia-y-estados"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Com es diu el canvi d'estat de gas a líquid?",
+      "options": [
+        "Condensació",
+        "Evaporació",
+        "Solidificació",
+        "Fusió"
+      ],
+      "correct": 0,
+      "explanation": "La condensació és el canvi d'una substància de gas o vapor a líquid.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Condensació"
+      ]
+    },
+    {
       "id": "general-8",
       "lang": "es",
       "subject": "language",
@@ -790,6 +1334,78 @@
       "explanation": "«Música» lleva la sílaba tónica en la antepenúltima sílaba: MÚ-si-ca.",
       "references": [
         "https://es.wikipedia.org/wiki/Palabra_esdr%C3%BAjula"
+      ]
+    },
+    {
+      "id": "language-es-001",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "categorias-gramaticales"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En «un cielo azul», ¿qué tipo de palabra es «azul»?",
+      "options": [
+        "Adjetivo",
+        "Verbo",
+        "Sustantivo",
+        "Adverbio"
+      ],
+      "correct": 0,
+      "explanation": "«Azul» es un adjetivo: dice cómo es el cielo, que es el sustantivo al que acompaña.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Adjetivo"
+      ]
+    },
+    {
+      "id": "language-es-002",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "ortografia"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas palabras está bien escrita?",
+      "options": [
+        "Hacer",
+        "Acer",
+        "Hazer",
+        "Haser"
+      ],
+      "correct": 0,
+      "explanation": "Se escribe «hacer»: con h al principio y con c delante de la e.",
+      "references": [
+        "https://es.wiktionary.org/wiki/hacer"
+      ]
+    },
+    {
+      "id": "language-es-003",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "acentuacion"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué frase está bien escrita?",
+      "options": [
+        "Me gusta el té con limón",
+        "Me gusta el te con limón",
+        "Me gusta él té con limón",
+        "Me gusta el tè con limón"
+      ],
+      "correct": 0,
+      "explanation": "«Té», la bebida, lleva tilde diacrítica; «te» sin tilde es otra palabra, como en «te llamo».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Tilde_diacrítica"
       ]
     },
     {
@@ -862,6 +1478,150 @@
       "explanation": "«Go» es un verbo irregular: su pasado simple es «went».",
       "references": [
         "https://en.wiktionary.org/wiki/go"
+      ]
+    },
+    {
+      "id": "english-en-001",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "vocabulario-ingles"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which English word means «hermano»?",
+      "options": [
+        "Brother",
+        "Sister",
+        "Father",
+        "Uncle"
+      ],
+      "correct": 0,
+      "explanation": "«Brother» is a male sibling; «sister» is a female one.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Sibling"
+      ]
+    },
+    {
+      "id": "english-en-002",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "verbos-irregulares-ingles"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the past simple of the verb «buy»?",
+      "options": [
+        "Bought",
+        "Buyed",
+        "Boughten",
+        "Buied"
+      ],
+      "correct": 0,
+      "explanation": "«Buy» is an irregular verb: its past simple is «bought», not «buyed».",
+      "references": [
+        "https://en.wikipedia.org/wiki/English_irregular_verbs"
+      ]
+    },
+    {
+      "id": "english-en-003",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "He doesn't like milk",
+        "He doesn't likes milk",
+        "He don't like milk",
+        "He not likes milk"
+      ],
+      "correct": 0,
+      "explanation": "After «doesn't» the verb stays in its base form: «like», without -s.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Do-support"
+      ]
+    },
+    {
+      "id": "catalan-ca-001",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "ortografia-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina paraula està ben escrita?",
+      "options": [
+        "Col·legi",
+        "Col.legi",
+        "Collegi",
+        "Col-legi"
+      ],
+      "correct": 0,
+      "explanation": "La «l·l» porta un punt volat entre les dues eles: col·legi.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/L·l"
+      ]
+    },
+    {
+      "id": "catalan-ca-002",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Si canviem «les cireres» per un pronom a «Menjo les cireres», quina frase és correcta?",
+      "options": [
+        "Les menjo",
+        "Els menjo",
+        "Li menjo",
+        "Hi menjo"
+      ],
+      "correct": 0,
+      "explanation": "El complement directe femení plural se substitueix per «les»: Les menjo.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Pronom_feble"
+      ]
+    },
+    {
+      "id": "catalan-ca-003",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "vocabulario-catalan"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Com es diu en català l'estri de taula amb pues per punxar el menjar?",
+      "options": [
+        "Forquilla",
+        "Cullera",
+        "Ganivet",
+        "Cassola"
+      ],
+      "correct": 0,
+      "explanation": "La forquilla és l'estri amb pues que serveix per punxar el menjar i portar-lo a la boca.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Forquilla"
       ]
     }
   ];

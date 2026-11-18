@@ -7,6 +7,10 @@
     {
       "id": "al-andalus",
       "name": "Al-Ándalus y la Edad Media"
+    },
+    {
+      "id": "historia-reciente",
+      "name": "Historia reciente de España"
     }
   ],
   "questions": [
@@ -54,6 +58,75 @@
       "explanation": "La levantaron los musulmanes en el siglo XII; después se convirtió en el campanario de la catedral.",
       "references": [
         "https://es.wikipedia.org/wiki/Giralda"
+      ]
+    },
+    {
+      "id": "history-es-001",
+      "lang": "es",
+      "topics": [
+        "al-andalus"
+      ],
+      "difficulty": 3,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué siglo se construyó la Aljafería, palacio de los reyes de la taifa de Saraqusta?",
+      "options": [
+        "Siglo XI",
+        "Siglo VIII",
+        "Siglo XIII",
+        "Siglo XV"
+      ],
+      "correct": 0,
+      "explanation": "La Aljafería fue el palacio de los reyes de la taifa de Saraqusta (Zaragoza) en el siglo XI; después lo usaron los reyes de Aragón.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Palacio_de_la_Aljafería"
+      ]
+    },
+    {
+      "id": "history-es-002",
+      "lang": "es",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué año se celebró la Exposición Universal de Sevilla?",
+      "options": [
+        "1992",
+        "1975",
+        "1982",
+        "2000"
+      ],
+      "correct": 0,
+      "explanation": "La Expo de 1992 tuvo en Sevilla el tema de la Era de los Descubrimientos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Exposición_Universal_de_Sevilla_de_1992"
+      ]
+    },
+    {
+      "id": "history-es-003",
+      "lang": "es",
+      "topics": [
+        "al-andalus"
+      ],
+      "difficulty": 1,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Según la tradición, ¿qué apóstol está enterrado en la catedral de Santiago de Compostela?",
+      "options": [
+        "Santiago",
+        "San Pedro",
+        "San Pablo",
+        "San Juan"
+      ],
+      "correct": 0,
+      "explanation": "La tradición dice que en la catedral está el sepulcro del apóstol Santiago, por eso llegan peregrinos de todas partes.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Catedral_de_Santiago_de_Compostela"
       ]
     }
   ]
