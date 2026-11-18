@@ -64,8 +64,9 @@ it came from.
   (`Santiago de Compostela`) plus five delivered gifts (`🎁🎁🎁🎁🎁`) may wrap the scoreboard to a
   third row and push the fourth answer below the fold again. Not reproduced yet; the browser
   tests only cover the first two cities at that size.
-- [ ] **No favicon.** The published site answers 404 for `favicon.ico`, which shows as an error
-  in the browser console.
+- [x] **No favicon.** The published site answers 404 for `favicon.ico`, which shows as an error
+  in the browser console. Fixed with an inline 🎅 SVG icon in `index.html`, so no icon file is
+  requested.
 - [ ] **Screen text is not ready for translation.** The Spanish text the player reads sits in
   `index.html` and `js/ui.js`. Extract it into data so other languages can be added.
 - [ ] **The README says the tests run on Node.js 18 or later, but only Node 24 is exercised**
