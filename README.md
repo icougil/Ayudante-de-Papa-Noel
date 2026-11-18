@@ -60,7 +60,9 @@ npm run test:e2e
 
 GitHub Actions runs both sets on every push to `main` and on every pull request
 (`.github/workflows/ci.yml`). The game is published to GitHub Pages only from `main`, and only
-when every test passes.
+when every test passes. The deploy stamps the published copy with its date, time (Barcelona) and
+commit, so browsers load fresh files. The version shows faintly at the bottom of the cover and in
+the console. Opened from disk, no version is shown.
 
 ## Privacy
 
@@ -87,7 +89,8 @@ The game keeps one thing in the browser: whether sound is on or off (the `localS
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
 | `js/sound.js` | The music and the sound effects, generated in the browser, and the sound switch |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
-| `tests/` | Unit tests for the data, the rules, the tune and the sound choice |
+| `tests/` | Unit tests for the data, the rules, the tune, the sound choice and the version stamp |
+| `scripts/` | Release tooling run by CI (the version stamp) |
 | `e2e/` | Browser tests for the screens |
 | `BACKLOG.md` | Work agreed but not started |
 
