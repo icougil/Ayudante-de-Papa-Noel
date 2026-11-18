@@ -98,6 +98,9 @@ Rules, enforced by the build and by `tests/data.test.js`:
 - `id`: unique across all files, lowercase letters, digits and hyphens. The 30 existing ids keep
   their value (`barcelona-1`, `general-7`…). New ids are free-form but unique **(designer's call)**.
 - `lang`: `es`, `ca` or `en`. The prompt, options and explanation are all in that language.
+- An `en` question's explanation glosses each key English word with its Spanish meaning in
+  brackets, e.g. «hot» (caliente), so a learner reads the meaning too; it still counts towards
+  the 160-character limit.
 - The subject comes from the file (here `science.json`). `APN.SUBJECTS` gains `catalan`
   (questions about the Catalan language). Language and subject must agree: `english` ⇔ `en`; `catalan` ⇒ `ca`; `language` (the Spanish
   language) ⇒ `es`. Other subjects are `es` or `ca`.

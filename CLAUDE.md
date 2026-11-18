@@ -2,7 +2,11 @@
 
 - Code is in English: identifiers, file names, CSS classes, HTML ids, comments, test names,
   developer-facing error messages and the README.
-- Everything the player reads is in Spanish (screen text, questions, explanations, city names).
+- Spanish is the game's main language: everything the player reads is in Spanish (screen text,
+  questions, explanations, city names), except the questions written in Catalan or English, whose
+  prompt, options and explanation are in their own language.
+  An English question's explanation glosses each key English word with its Spanish meaning in
+  brackets, e.g. «hot» (caliente).
   Keep it in data and markup, apart from the logic, so other languages can be added later.
 - Everything written to the repository is in English: commit messages, branch names, pull
   requests and issues.

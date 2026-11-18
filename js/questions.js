@@ -1434,7 +1434,7 @@
         "Hot"
       ],
       "correct": 3,
-      "explanation": "«Hot» is the opposite of «cold»: one means a high temperature and the other a low one.",
+      "explanation": "«Hot» (caliente) is the opposite of «cold» (frío): one is a high temperature, the other a low one.",
       "references": [
         "https://en.wiktionary.org/wiki/cold"
       ]
@@ -1458,7 +1458,7 @@
         "September"
       ],
       "correct": 0,
-      "explanation": "«December» comes right after «November», the eleventh month of the year.",
+      "explanation": "«December» (diciembre) comes right after «November» (noviembre), the eleventh month of the year.",
       "references": [
         "https://en.wikipedia.org/wiki/November",
         "https://en.wikipedia.org/wiki/December"
@@ -1483,7 +1483,7 @@
         "Going"
       ],
       "correct": 2,
-      "explanation": "«Go» is an irregular verb, so its past simple is «went», not «goed».",
+      "explanation": "«Go» (ir) is an irregular verb, so its past simple is «went» (fue), not «goed».",
       "references": [
         "https://en.wiktionary.org/wiki/go"
       ]
@@ -1507,7 +1507,7 @@
         "Uncle"
       ],
       "correct": 0,
-      "explanation": "«Brother» is a male sibling; «sister» is a female one.",
+      "explanation": "«Brother» (hermano) is a male sibling; «sister» (hermana) is a female one.",
       "references": [
         "https://en.wikipedia.org/wiki/Sibling"
       ]
@@ -1531,7 +1531,7 @@
         "Buied"
       ],
       "correct": 0,
-      "explanation": "«Buy» is an irregular verb: its past simple is «bought», not «buyed».",
+      "explanation": "«Buy» (comprar) is an irregular verb: its past simple is «bought» (compró), not «buyed».",
       "references": [
         "https://en.wikipedia.org/wiki/English_irregular_verbs"
       ]
@@ -1555,7 +1555,7 @@
         "He not likes milk"
       ],
       "correct": 0,
-      "explanation": "After «doesn't» the verb stays in its base form: «like», without -s.",
+      "explanation": "After «doesn't» (no) the verb stays in its base form: «like» (gustar), without -s.",
       "references": [
         "https://en.wikipedia.org/wiki/Do-support"
       ]
