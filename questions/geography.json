@@ -1,0 +1,202 @@
+{
+  "topics": [
+    {
+      "id": "rios-de-espana",
+      "name": "Ríos de España"
+    },
+    {
+      "id": "mares-y-costas",
+      "name": "Mares y costas de España"
+    },
+    {
+      "id": "comunidades-autonomas",
+      "name": "Comunidades autónomas y capitales"
+    }
+  ],
+  "questions": [
+    {
+      "id": "barcelona-1",
+      "lang": "es",
+      "topics": [
+        "mares-y-costas"
+      ],
+      "difficulty": 1,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué mar baña la costa de Barcelona?",
+      "options": [
+        "Mar Cantábrico",
+        "Mar Mediterráneo",
+        "Océano Atlántico",
+        "Mar Negro"
+      ],
+      "correct": 1,
+      "explanation": "Barcelona está a orillas del mar Mediterráneo.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Barcelona"
+      ]
+    },
+    {
+      "id": "zaragoza-1",
+      "lang": "es",
+      "topics": [
+        "rios-de-espana"
+      ],
+      "difficulty": 1,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué río pasa por la ciudad de Zaragoza?",
+      "options": [
+        "Tajo",
+        "Duero",
+        "Guadalquivir",
+        "Ebro"
+      ],
+      "correct": 3,
+      "explanation": "El Ebro cruza Zaragoza y pasa junto a la Basílica del Pilar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Zaragoza"
+      ]
+    },
+    {
+      "id": "zaragoza-2",
+      "lang": "es",
+      "topics": [
+        "comunidades-autonomas"
+      ],
+      "difficulty": 1,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿De qué comunidad autónoma es capital Zaragoza?",
+      "options": [
+        "Aragón",
+        "Navarra",
+        "La Rioja",
+        "Castilla y León"
+      ],
+      "correct": 0,
+      "explanation": "Zaragoza es la capital de Aragón.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Zaragoza"
+      ]
+    },
+    {
+      "id": "madrid-1",
+      "lang": "es",
+      "topics": [
+        "rios-de-espana"
+      ],
+      "difficulty": 1,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué río pasa por Madrid?",
+      "options": [
+        "Ebro",
+        "Júcar",
+        "Manzanares",
+        "Miño"
+      ],
+      "correct": 2,
+      "explanation": "El Manzanares es el río que atraviesa la ciudad de Madrid.",
+      "references": [
+        "https://es.wikipedia.org/wiki/R%C3%ADo_Manzanares"
+      ]
+    },
+    {
+      "id": "sevilla-1",
+      "lang": "es",
+      "topics": [
+        "rios-de-espana"
+      ],
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué río pasa por Sevilla?",
+      "options": [
+        "Guadiana",
+        "Guadalquivir",
+        "Tajo",
+        "Segura"
+      ],
+      "correct": 1,
+      "explanation": "El Guadalquivir pasa por Sevilla, junto a la Torre del Oro.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Guadalquivir"
+      ]
+    },
+    {
+      "id": "sevilla-2",
+      "lang": "es",
+      "topics": [
+        "comunidades-autonomas"
+      ],
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿De qué comunidad autónoma es capital Sevilla?",
+      "options": [
+        "Extremadura",
+        "Región de Murcia",
+        "Andalucía",
+        "Castilla-La Mancha"
+      ],
+      "correct": 2,
+      "explanation": "Sevilla es la capital de Andalucía.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Sevilla"
+      ]
+    },
+    {
+      "id": "santiago-2",
+      "lang": "es",
+      "topics": [
+        "comunidades-autonomas"
+      ],
+      "difficulty": 1,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué comunidad autónoma está Santiago de Compostela?",
+      "options": [
+        "Asturias",
+        "Cantabria",
+        "Galicia",
+        "País Vasco"
+      ],
+      "correct": 2,
+      "explanation": "Santiago de Compostela es la capital de Galicia.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Santiago_de_Compostela"
+      ]
+    },
+    {
+      "id": "bilbao-1",
+      "lang": "es",
+      "topics": [
+        "mares-y-costas"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué mar baña la costa del País Vasco?",
+      "options": [
+        "Mar Mediterráneo",
+        "Mar del Norte",
+        "Mar Báltico",
+        "Mar Cantábrico"
+      ],
+      "correct": 3,
+      "explanation": "El mar Cantábrico baña toda la costa norte de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Mar_Cant%C3%A1brico"
+      ]
+    }
+  ]
+}

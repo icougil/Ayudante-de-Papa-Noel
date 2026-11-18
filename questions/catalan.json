@@ -1,0 +1,17 @@
+{
+  "topics": [
+    {
+      "id": "ortografia-catalana",
+      "name": "Ortografía catalana"
+    },
+    {
+      "id": "gramatica-catalana",
+      "name": "Gramática catalana"
+    },
+    {
+      "id": "vocabulario-catalan",
+      "name": "Vocabulario catalán"
+    }
+  ],
+  "questions": []
+}

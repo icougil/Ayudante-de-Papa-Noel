@@ -1,0 +1,114 @@
+{
+  "topics": [
+    {
+      "id": "operaciones",
+      "name": "Operaciones"
+    },
+    {
+      "id": "divisibilidad-y-primos",
+      "name": "Divisibilidad y números primos"
+    },
+    {
+      "id": "fracciones",
+      "name": "Fracciones"
+    },
+    {
+      "id": "geometria-y-medidas",
+      "name": "Geometría y medidas"
+    }
+  ],
+  "questions": [
+    {
+      "id": "general-1",
+      "lang": "es",
+      "topics": [
+        "operaciones"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Papá Noel reparte 240 regalos a partes iguales entre 6 trineos. ¿Cuántos lleva cada uno?",
+      "options": [
+        "30",
+        "40",
+        "46",
+        "60"
+      ],
+      "correct": 1,
+      "explanation": "240 entre 6 son 40, porque 6 × 40 = 240.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Divisi%C3%B3n_(matem%C3%A1tica)"
+      ]
+    },
+    {
+      "id": "general-2",
+      "lang": "es",
+      "topics": [
+        "fracciones"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuánto son tres cuartos (3/4) de 100?",
+      "options": [
+        "25",
+        "34",
+        "70",
+        "75"
+      ],
+      "correct": 3,
+      "explanation": "Un cuarto de 100 es 25, así que tres cuartos son 3 × 25 = 75.",
+      "references": [
+        "https://es.wikipedia.org/wiki/N%C3%BAmero_fraccionario"
+      ]
+    },
+    {
+      "id": "general-3",
+      "lang": "es",
+      "topics": [
+        "geometria-y-medidas"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un rectángulo mide 8 cm de largo y 5 cm de ancho. ¿Cuál es su área?",
+      "options": [
+        "40 cm²",
+        "26 cm²",
+        "13 cm²",
+        "45 cm²"
+      ],
+      "correct": 0,
+      "explanation": "El área de un rectángulo es largo por ancho: 8 × 5 = 40 cm².",
+      "references": [
+        "https://es.wikipedia.org/wiki/Rect%C3%A1ngulo"
+      ]
+    },
+    {
+      "id": "general-4",
+      "lang": "es",
+      "topics": [
+        "divisibilidad-y-primos"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estos números es primo?",
+      "options": [
+        "15",
+        "21",
+        "17",
+        "27"
+      ],
+      "correct": 2,
+      "explanation": "17 solo se puede dividir entre 1 y entre 17; los otros tres se pueden dividir entre 3.",
+      "references": [
+        "https://es.wikipedia.org/wiki/N%C3%BAmero_primo"
+      ]
+    }
+  ]
+}

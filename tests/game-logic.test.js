@@ -1,6 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 require('../js/data-level-1.js');
+require('../js/questions.js');
 const APN = require('../js/game-logic.js');
 
 const level = APN.LEVELS[0];

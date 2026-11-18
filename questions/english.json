@@ -1,0 +1,87 @@
+{
+  "topics": [
+    {
+      "id": "vocabulario-ingles",
+      "name": "Vocabulario básico en inglés"
+    },
+    {
+      "id": "calendario-ingles",
+      "name": "Meses y calendario en inglés"
+    },
+    {
+      "id": "verbos-irregulares-ingles",
+      "name": "Verbos irregulares en inglés"
+    }
+  ],
+  "questions": [
+    {
+      "id": "general-10",
+      "lang": "en",
+      "topics": [
+        "vocabulario-ingles"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the opposite of «cold»?",
+      "options": [
+        "Big",
+        "Slow",
+        "Wet",
+        "Hot"
+      ],
+      "correct": 3,
+      "explanation": "«Cold» significa frío y su contrario es «hot», caliente.",
+      "references": [
+        "https://en.wiktionary.org/wiki/cold"
+      ]
+    },
+    {
+      "id": "general-11",
+      "lang": "en",
+      "topics": [
+        "calendario-ingles"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which month comes after November?",
+      "options": [
+        "December",
+        "October",
+        "January",
+        "September"
+      ],
+      "correct": 0,
+      "explanation": "Después de «November» (noviembre) viene «December» (diciembre).",
+      "references": [
+        "https://en.wikipedia.org/wiki/November"
+      ]
+    },
+    {
+      "id": "general-12",
+      "lang": "en",
+      "topics": [
+        "verbos-irregulares-ingles"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the past simple of the verb «go»?",
+      "options": [
+        "Goed",
+        "Gone",
+        "Went",
+        "Going"
+      ],
+      "correct": 2,
+      "explanation": "«Go» es un verbo irregular: su pasado simple es «went».",
+      "references": [
+        "https://en.wiktionary.org/wiki/go"
+      ]
+    }
+  ]
+}

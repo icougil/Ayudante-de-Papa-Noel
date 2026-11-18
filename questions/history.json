@@ -1,0 +1,60 @@
+{
+  "topics": [
+    {
+      "id": "hispania-romana",
+      "name": "Hispania romana"
+    },
+    {
+      "id": "al-andalus",
+      "name": "Al-Ándalus y la Edad Media"
+    }
+  ],
+  "questions": [
+    {
+      "id": "zaragoza-3",
+      "lang": "es",
+      "topics": [
+        "hispania-romana"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Zaragoza se llamó Caesaraugusta. ¿Qué pueblo le puso ese nombre?",
+      "options": [
+        "Los griegos",
+        "Los romanos",
+        "Los visigodos",
+        "Los fenicios"
+      ],
+      "correct": 1,
+      "explanation": "Los romanos la llamaron así en honor al emperador César Augusto.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Caesaraugusta"
+      ]
+    },
+    {
+      "id": "sevilla-3",
+      "lang": "es",
+      "topics": [
+        "al-andalus"
+      ],
+      "difficulty": 2,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La Giralda se construyó como torre de una mezquita. ¿Quiénes la levantaron?",
+      "options": [
+        "Los romanos",
+        "Los vikingos",
+        "Los griegos",
+        "Los musulmanes"
+      ],
+      "correct": 3,
+      "explanation": "La levantaron los musulmanes en el siglo XII; después se convirtió en el campanario de la catedral.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Giralda"
+      ]
+    }
+  ]
+}
