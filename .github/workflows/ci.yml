@@ -67,6 +67,11 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html css js _site/
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Stamp the release with its version
+        run: node scripts/stamp-release.js _site/index.html
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
