@@ -38,6 +38,11 @@
       "name": "Historia reciente de España"
     },
     {
+      "id": "religion-y-peregrinaciones",
+      "subject": "history",
+      "name": "Religión y peregrinaciones"
+    },
+    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -395,7 +400,7 @@
         "Garraf"
       ],
       "correct": 0,
-      "explanation": "La serra de Collserola queda entre Barcelona i el Vallès; el seu cim més alt és el Tibidabo, de 516 m.",
+      "explanation": "La serra de Collserola s'alça entre la ciutat de Barcelona i el Vallès; el Tibidabo n'és el punt més alt.",
       "references": [
         "https://ca.wikipedia.org/wiki/Serra_de_Collserola"
       ]
@@ -419,7 +424,7 @@
         "Picos de Europa"
       ],
       "correct": 0,
-      "explanation": "La sierra de Guadarrama, al norte de Madrid, marca el límite entre la Comunidad de Madrid y Castilla y León.",
+      "explanation": "La sierra de Guadarrama queda al noroeste de la ciudad de Madrid y sirve de frontera natural entre las dos comunidades.",
       "references": [
         "https://es.wikipedia.org/wiki/Sierra_de_Guadarrama"
       ]
@@ -443,7 +448,7 @@
         "Miño"
       ],
       "correct": 0,
-      "explanation": "La ría de Bilbao se forma donde se juntan los ríos Nervión e Ibaizábal.",
+      "explanation": "La ría de Bilbao nace cuando el Nervión y el Ibaizábal unen sus aguas, y desemboca en el mar Cantábrico.",
       "references": [
         "https://es.wikipedia.org/wiki/Ría_de_Bilbao"
       ]
@@ -507,7 +512,7 @@
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿En qué siglo se construyó la Aljafería, palacio de los reyes de la taifa de Saraqusta?",
+      "prompt": "¿En qué siglo se construyó la Aljafería de Zaragoza, un palacio musulmán?",
       "options": [
         "Siglo XI",
         "Siglo VIII",
@@ -515,7 +520,7 @@
         "Siglo XV"
       ],
       "correct": 0,
-      "explanation": "La Aljafería fue el palacio de los reyes de la taifa de Saraqusta (Zaragoza) en el siglo XI; después lo usaron los reyes de Aragón.",
+      "explanation": "La Aljafería se levantó en el siglo XI, cuando Zaragoza era un reino musulmán; siglos después la usaron los reyes cristianos de Aragón.",
       "references": [
         "https://es.wikipedia.org/wiki/Palacio_de_la_Aljafería"
       ]
@@ -549,7 +554,7 @@
       "lang": "es",
       "subject": "history",
       "topics": [
-        "al-andalus"
+        "religion-y-peregrinaciones"
       ],
       "difficulty": 1,
       "place": "santiago",
@@ -563,7 +568,7 @@
         "San Juan"
       ],
       "correct": 0,
-      "explanation": "La tradición dice que en la catedral está el sepulcro del apóstol Santiago, por eso llegan peregrinos de todas partes.",
+      "explanation": "Según una antigua creencia, la catedral guarda los restos del apóstol Santiago, y por eso llegan peregrinos de muchos lugares.",
       "references": [
         "https://es.wikipedia.org/wiki/Catedral_de_Santiago_de_Compostela"
       ]
@@ -661,7 +666,7 @@
       "correct": 2,
       "explanation": "Antoni Gaudí dedicó más de 40 años de su vida a la Sagrada Família.",
       "references": [
-        "https://es.wikipedia.org/wiki/Sagrada_Familia"
+        "https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia"
       ]
     },
     {
@@ -709,7 +714,8 @@
       "correct": 0,
       "explanation": "El oso y el madroño son el símbolo de Madrid y tienen una estatua en la Puerta del Sol.",
       "references": [
-        "https://es.wikipedia.org/wiki/Escudo_de_Madrid"
+        "https://es.wikipedia.org/wiki/Escudo_de_Madrid",
+        "https://es.wikipedia.org/wiki/Estatua_del_Oso_y_el_Madroño"
       ]
     },
     {
@@ -731,7 +737,7 @@
         "El Camino del Inca"
       ],
       "correct": 0,
-      "explanation": "El Camino de Santiago lo recorren cada año miles de peregrinos a pie o en bicicleta.",
+      "explanation": "Cada año recorren el Camino de Santiago muchísimos peregrinos que llegan a pie hasta la tumba del apóstol.",
       "references": [
         "https://es.wikipedia.org/wiki/Camino_de_Santiago"
       ]
@@ -803,7 +809,7 @@
         "La Diada"
       ],
       "correct": 0,
-      "explanation": "La Mercè és la festa major de Barcelona i se celebra cap al 24 de setembre, dia de la Mare de Déu de la Mercè.",
+      "explanation": "La Mercè és la gran festa de la ciutat; se celebra a finals de setembre en honor de la Mare de Déu de la Mercè, amb castells, gegants i correfoc.",
       "references": [
         "https://ca.wikipedia.org/wiki/La_Mercè"
       ]
@@ -875,7 +881,7 @@
         "Cirial"
       ],
       "correct": 0,
-      "explanation": "El botafumeiro es un incensario enorme bañado en plata y uno de los símbolos más conocidos de la catedral.",
+      "explanation": "El botafumeiro es un gran incensario recubierto de plata que cuelga de una cuerda en la catedral de Santiago.",
       "references": [
         "https://es.wikipedia.org/wiki/Botafumeiro"
       ]
@@ -899,7 +905,7 @@
         "Norman Foster"
       ],
       "correct": 0,
-      "explanation": "El Guggenheim de Bilbao lo diseñó el arquitecto canadiense Frank Gehry y se construyó entre 1992 y 1997.",
+      "explanation": "El museo es obra del arquitecto Frank Gehry; se abrió al público en 1997.",
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]
@@ -1067,7 +1073,7 @@
         "55"
       ],
       "correct": 0,
-      "explanation": "El 25 % és 25/100, la quarta part: 80 : 4 = 20.",
+      "explanation": "El 25 % vol dir 25 de cada 100, és a dir, un de cada quatre: 80 : 4 = 20.",
       "references": [
         "https://ca.wikipedia.org/wiki/Percentatge"
       ]
@@ -1259,7 +1265,7 @@
         "A l'esòfag"
       ],
       "correct": 0,
-      "explanation": "Als alvèols pulmonars l'oxigen de l'aire passa a la sang i el diòxid de carboni en surt cap a l'aire.",
+      "explanation": "Els alvèols són uns sacs minúsculs del final dels bronquis: allà l'oxigen entra a la sang.",
       "references": [
         "https://ca.wikipedia.org/wiki/Alvèol_pulmonar"
       ]
@@ -1283,7 +1289,7 @@
         "Fusió"
       ],
       "correct": 0,
-      "explanation": "La condensació és el canvi d'una substància de gas o vapor a líquid.",
+      "explanation": "Quan un gas es refreda i es torna líquid hi ha condensació; per exemple, el vapor d'aigua que es converteix en gotes sobre un vidre fred.",
       "references": [
         "https://ca.wikipedia.org/wiki/Condensació"
       ]
@@ -1379,9 +1385,10 @@
         "Haser"
       ],
       "correct": 0,
-      "explanation": "Se escribe «hacer»: con h al principio y con c delante de la e.",
+      "explanation": "Se escribe «hacer»: empieza por una h que no suena y sigue con c.",
       "references": [
-        "https://es.wiktionary.org/wiki/hacer"
+        "https://es.wiktionary.org/wiki/hacer",
+        "https://es.wikipedia.org/wiki/H"
       ]
     },
     {
@@ -1427,7 +1434,7 @@
         "Hot"
       ],
       "correct": 3,
-      "explanation": "«Cold» significa frío y su contrario es «hot», caliente.",
+      "explanation": "«Hot» is the opposite of «cold»: one means a high temperature and the other a low one.",
       "references": [
         "https://en.wiktionary.org/wiki/cold"
       ]
@@ -1451,9 +1458,10 @@
         "September"
       ],
       "correct": 0,
-      "explanation": "Después de «November» (noviembre) viene «December» (diciembre).",
+      "explanation": "«December» comes right after «November», the eleventh month of the year.",
       "references": [
-        "https://en.wikipedia.org/wiki/November"
+        "https://en.wikipedia.org/wiki/November",
+        "https://en.wikipedia.org/wiki/December"
       ]
     },
     {
@@ -1475,7 +1483,7 @@
         "Going"
       ],
       "correct": 2,
-      "explanation": "«Go» es un verbo irregular: su pasado simple es «went».",
+      "explanation": "«Go» is an irregular verb, so its past simple is «went», not «goed».",
       "references": [
         "https://en.wiktionary.org/wiki/go"
       ]
@@ -1535,7 +1543,7 @@
       "topics": [
         "gramatica-ingles"
       ],
-      "difficulty": 3,
+      "difficulty": 2,
       "place": "general",
       "minAge": 10,
       "maxAge": 12,

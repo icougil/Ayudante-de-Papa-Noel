@@ -220,7 +220,7 @@
         "Garraf"
       ],
       "correct": 0,
-      "explanation": "La serra de Collserola queda entre Barcelona i el Vallès; el seu cim més alt és el Tibidabo, de 516 m.",
+      "explanation": "La serra de Collserola s'alça entre la ciutat de Barcelona i el Vallès; el Tibidabo n'és el punt més alt.",
       "references": [
         "https://ca.wikipedia.org/wiki/Serra_de_Collserola"
       ]
@@ -243,7 +243,7 @@
         "Picos de Europa"
       ],
       "correct": 0,
-      "explanation": "La sierra de Guadarrama, al norte de Madrid, marca el límite entre la Comunidad de Madrid y Castilla y León.",
+      "explanation": "La sierra de Guadarrama queda al noroeste de la ciudad de Madrid y sirve de frontera natural entre las dos comunidades.",
       "references": [
         "https://es.wikipedia.org/wiki/Sierra_de_Guadarrama"
       ]
@@ -266,7 +266,7 @@
         "Miño"
       ],
       "correct": 0,
-      "explanation": "La ría de Bilbao se forma donde se juntan los ríos Nervión e Ibaizábal.",
+      "explanation": "La ría de Bilbao nace cuando el Nervión y el Ibaizábal unen sus aguas, y desemboca en el mar Cantábrico.",
       "references": [
         "https://es.wikipedia.org/wiki/Ría_de_Bilbao"
       ]
