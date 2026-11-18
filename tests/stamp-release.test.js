@@ -62,13 +62,36 @@ test('stampRelease rejects a page without local references', () => {
   });
 });
 
+// Every local script or stylesheet reference, whatever its quotes or query string, that does not
+// carry the commit key: the guard that keeps a new reference from slipping past the stamp.
+function unstampedLocalAssets(html) {
+  const values = [...html.matchAll(/\b(?:src|href)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g)]
+    .map((m) => m[1] ?? m[2] ?? m[3]);
+  return values.filter((value) =>
+    !/^(?:[a-z][a-z0-9+.-]*:|\/|#)/i.test(value) &&
+    /\.(?:js|css)$/i.test(value.split(/[?#]/)[0]) &&
+    !/[?&]v=e8db89f(?:[&#]|$)/.test(value));
+}
+
+test('the guard flags local references with single quotes, no quotes or a query string', () => {
+  const html = [
+    `<script src='js/a.js'></script>`,
+    '<script src=js/b.js></script>',
+    '<script src="js/c.js?mode=1"></script>',
+    '<link href="css/d.css#x">',
+    '<script src="js/e.js?v=e8db89f"></script>',
+    '<script src="https://example.com/f.js"></script>',
+    '<link href="/g.css">'
+  ].join('\n');
+  assert.deepEqual(unstampedLocalAssets(html), ['js/a.js', 'js/b.js', 'js/c.js?mode=1', 'css/d.css#x']);
+});
+
 test('the real index.html can be stamped and leaves no local reference unstamped', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
   const html = stampRelease(source, COMMIT, WINTER);
   for (const file of ['css/styles.css', 'js/data-level-1.js', 'js/game-logic.js', 'js/sound.js', 'js/ui.js']) {
     assert.ok(html.includes(`${file}?v=e8db89f"`), `${file} is not stamped`);
   }
-  const unstamped = [...html.matchAll(/(?:src|href)=["']([^"']+\.(?:js|css))["']/g)].map((m) => m[1]);
-  assert.deepEqual(unstamped, ['https://cloud.umami.is/script.js']);
+  assert.deepEqual(unstampedLocalAssets(html), []);
   assert.ok(html.includes('<meta name="version" content="2026-11-18 21:47 · e8db89f">'));
 });
