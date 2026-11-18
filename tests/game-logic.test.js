@@ -194,3 +194,84 @@ test('the game constants match the design', () => {
   assert.equal(APN.EXPRESS_FOR_FIFTH_STAR, 6);
   assert.equal(stopIds.length, APN.STOPS_PER_LEVEL);
 });
+
+// Seeded rng (mulberry32) so many-seed tests are repeatable.
+function seededRng(seed) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+// `count` questions for every stop plus `count` general ones; `describe(j)` gives the
+// subject, topics and lang of the j-th question of each group.
+function spreadBank(count, describe) {
+  const bank = [];
+  for (const place of [...stopIds, 'general']) {
+    for (let j = 0; j < count; j++) {
+      bank.push({
+        id: `${place}-${j}`,
+        place,
+        minAge: 10,
+        maxAge: 12,
+        ...describe(j),
+      });
+    }
+  }
+  return bank;
+}
+
+const mixedBank = spreadBank(60, (j) => ({
+  lang: j % 5 === 0 ? 'es' : 'ca',
+  subject: `s${j % 6}`,
+  topics: [`t${j % 10}`],
+}));
+
+function gamesOver(bank, seeds = 200) {
+  return Array.from({ length: seeds }, (_, seed) =>
+    APN.pickQuestions(level, bank, 11, seededRng(seed + 1)),
+  );
+}
+
+test('a game never has more than two Catalan questions', () => {
+  for (const game of gamesOver(mixedBank)) {
+    assert.ok(game.filter((q) => q.lang === 'ca').length <= 2);
+  }
+});
+
+test('a game spreads subjects when the bank allows it', () => {
+  for (const game of gamesOver(mixedBank)) {
+    assert.equal(new Set(game.map((q) => q.subject)).size, 6);
+  }
+});
+
+test('a game avoids shared topics when the bank allows it', () => {
+  const spanishBank = spreadBank(60, (j) => ({ lang: 'es', subject: `s${j % 6}`, topics: [`t${j % 10}`] }));
+  for (const game of gamesOver(spanishBank)) {
+    const topics = game.flatMap((q) => q.topics);
+    assert.equal(new Set(topics).size, topics.length);
+  }
+});
+
+test('the Catalan cap outlasts the subject and topic rules', () => {
+  const sameKind = { subject: 'math', topics: ['x'] };
+  const bank = spreadBank(4, (j) => ({ ...sameKind, lang: j === 0 ? 'es' : 'ca' }));
+  // Three more Spanish general questions so a general turn is never forced into Catalan.
+  for (let j = 0; j < 3; j++) {
+    bank.push({ id: `general-es-${j}`, place: 'general', minAge: 10, maxAge: 12, lang: 'es', ...sameKind });
+  }
+  for (const game of gamesOver(bank)) {
+    assert.ok(game.filter((q) => q.lang === 'ca').length <= 2);
+  }
+});
+
+test('the rules are relaxed rather than failing', () => {
+  const bank = spreadBank(4, () => ({ lang: 'ca', subject: 'math', topics: ['x'] }));
+  for (const game of gamesOver(bank, 20)) {
+    assert.equal(game.length, 6);
+  }
+});
