@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const APN = require('../js/data-level-1.js');
 require('../js/questions.js');
+require('../js/game-logic.js');
 
 const level = APN.LEVELS[0];
 const stopIds = level.stops.map((s) => s.id);
@@ -35,11 +36,12 @@ test('every question has the right shape', () => {
   }
 });
 
+// The braces that mark Spanish words are not shown, so they do not count, as in the build.
 test('every question respects the length limits', () => {
   for (const q of APN.QUESTIONS) {
-    assert.ok(q.prompt.length <= 120, `${q.id} prompt`);
+    assert.ok(APN.plainText(q.prompt).length <= 120, `${q.id} prompt`);
     assert.ok(q.options.every((o) => o.length <= 40), `${q.id} options`);
-    assert.ok(q.explanation.length <= 160, `${q.id} explanation`);
+    assert.ok(APN.plainText(q.explanation).length <= 160, `${q.id} explanation`);
   }
 });
 
