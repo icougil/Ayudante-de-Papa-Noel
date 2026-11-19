@@ -42,12 +42,12 @@ Points the owner did not decide are marked **(designer's call)**.
 - The link points at the branch, not a commit, so one link stays valid across pushes
   **(designer's call)**. After a push, wait a few minutes or reload if the change is not there yet.
 - Every pull request description has, right after its summary, the line
-  `Play this branch: <link>` **(designer's call)**. The agent opening the PR adds it; no workflow
-  posts it **(designer's call: no hand-written workflow, and the link never needs updating)**.
+  `[Play this branch](<link>)`, so only the words show (the owner's choice). The agent opening
+  the PR adds it; no workflow posts it **(designer's call: no hand-written workflow, and the link never needs updating)**.
 - The rule lives in the project's `CLAUDE.md`, new section `## Pull requests`:
-  `- Every pull request description has, right after its summary, the line`
-  `` `Play this branch: https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html` ``
-  `  so the branch can be played on a phone before merging.`
+  `- Every pull request description has, right after its summary, the Markdown link`
+  `` `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html)` ``
+  `  so the branch can be played on a phone before merging; only the words show, not the address.`
 - `README.md`, section `## Tests`, after the paragraph on publishing: a short paragraph saying a
   pull request can be played before merging through the `Play this branch` link in its
   description, built with htmlpreview.github.io, without the version stamp, and that GitHub may
