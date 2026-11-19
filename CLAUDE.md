@@ -19,6 +19,6 @@
 
 ## Pull requests
 
-- Every pull request description has, right after its summary, the line
-  `Play this branch: https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html`
-  so the branch can be played on a phone before merging.
+- Every pull request description has, right after its summary, the Markdown link
+  `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html)`
+  so the branch can be played on a phone before merging; only the words show, not the address.

@@ -17,7 +17,7 @@ code, workflow or Pages setting changes.
 - Everything written to the repository is in English.
 - Link format, verbatim:
   `https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html`
-- PR line, verbatim: `Play this branch: <link>`, right after the PR summary.
+- PR line, verbatim: `[Play this branch](<link>)` (a Markdown link: only the words show), right after the PR summary.
 - `.github/workflows/ci.yml`, `index.html`, `js/`, `css/` and the Pages settings are not touched.
 
 ## Review Focus
