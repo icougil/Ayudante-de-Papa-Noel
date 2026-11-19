@@ -116,8 +116,14 @@ change its fields, in this order:
 | `prompt` | The question, 120 characters at most |
 | `options` | Exactly 4 different answers, 40 characters each at most |
 | `correct` | Position of the right answer in `options`, from 0 to 3 |
-| `explanation` | Shown after a wrong answer, 160 characters at most. In an English question it glosses each key English word in Spanish in brackets, e.g. «hot» (caliente) |
+| `explanation` | Shown after a wrong answer, 160 characters at most. In an English question it glosses each key English word in Spanish in brackets, e.g. «Hot» ({caliente}) |
 | `references` | At least one `https://` page where the fact can be checked |
+
+Spanish words inside a Catalan or English prompt or explanation go in braces, e.g.
+`Which English word means «{hermano}»?`. The braces are not shown, and the game reads the word
+as Spanish for screen readers. They do not count towards the length limits. In an English
+question, everything in brackets is a Spanish gloss, so it must be inside braces. A Spanish
+question and the options never use them.
 
 Write every question in your own words. Sources such as XTEC are for checking facts, not for
 copying text; put the page where the fact can be checked in `references`.

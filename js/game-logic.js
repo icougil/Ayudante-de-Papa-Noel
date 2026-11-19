@@ -11,6 +11,18 @@
   APN.MAX_STARS = 5;
   APN.EXPRESS_FOR_FIFTH_STAR = 6;
 
+  // Spanish words inside a Catalan or English text are wrapped in braces, e.g. «Hot» ({caliente}).
+  // Returns the text as plain strings and [text, 'es'] pairs, without the braces.
+  APN.splitSpanish = function (text) {
+    return text.split(/\{([^}]*)\}/)
+      .map((part, i) => (i % 2 === 1 ? [part, 'es'] : part))
+      .filter((part) => part !== '');
+  };
+
+  APN.plainText = function (text) {
+    return text.replace(/[{}]/g, '');
+  };
+
   APN.MISHAPS = [
     { id: 'storm', emoji: '🌨️', text: '¡Tormenta de nieve! El regalo se ha perdido.' },
     { id: 'reindeer', emoji: '🤧', text: '¡Un reno se ha resfriado! El regalo no llega a tiempo.' },

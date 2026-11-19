@@ -27,7 +27,7 @@ test.describe('on a small phone (360x640)', () => {
     await startGame(page);
 
     await page.evaluate(() => {
-      const prompts = globalThis.APN.QUESTIONS.map((q) => q.prompt);
+      const prompts = globalThis.APN.QUESTIONS.map((q) => globalThis.APN.plainText(q.prompt));
       const longest = prompts.reduce((a, b) => (b.length > a.length ? b : a));
       document.getElementById('prompt').textContent = longest;
     });
@@ -219,7 +219,8 @@ test('a Catalan question is marked as Catalan, and the Spanish lines around it a
 
   const prompt = await page.locator('#prompt').textContent();
   const explanation = await page.evaluate(
-    (text) => globalThis.APN.QUESTIONS.find((q) => q.prompt === text).explanation, prompt);
+    (text) => globalThis.APN.plainText(
+      globalThis.APN.QUESTIONS.find((q) => globalThis.APN.plainText(q.prompt) === text).explanation), prompt);
   await answer(page, false);
 
   const notice = page.locator('#notice');
@@ -227,4 +228,30 @@ test('a Catalan question is marked as Catalan, and the Spanish lines around it a
   await expect(notice.locator('p', { hasText: explanation })).toHaveAttribute('lang', 'ca');
   await expect(notice.locator('p[lang]')).toHaveCount(1);
   await expect(notice.locator('p', { hasText: 'La respuesta correcta era' }).locator('span')).toHaveAttribute('lang', 'ca');
+});
+
+test('the Spanish words inside an English question are marked as Spanish', async ({ page }) => {
+  await openGame(page);
+  // Every question becomes the same English one, with a Spanish word in the prompt and a gloss.
+  await page.evaluate(() => {
+    for (const q of globalThis.APN.QUESTIONS) {
+      q.lang = 'en';
+      q.prompt = 'Which English word means «{hermano}»?';
+      q.explanation = '«Brother» ({hermano}) is a male «sibling».';
+      q.options = ['brother', 'sister', 'cousin', 'uncle'];
+      q.correct = 0;
+    }
+  });
+  await page.locator('#button-start').click();
+  await expect(page.locator('#options button')).toHaveCount(4);
+
+  await expect(page.locator('#prompt')).toHaveText('Which English word means «hermano»?');
+  await expect(page.locator('#prompt')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('#prompt span[lang="es"]')).toHaveText('hermano');
+
+  await answer(page, false);
+  const explanation = page.locator('#notice p', { hasText: 'is a male «sibling»' });
+  await expect(explanation).toHaveText('«Brother» (hermano) is a male «sibling».');
+  await expect(explanation).toHaveAttribute('lang', 'en');
+  await expect(explanation.locator('span[lang="es"]')).toHaveText('hermano');
 });

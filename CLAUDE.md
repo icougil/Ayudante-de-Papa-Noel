@@ -6,7 +6,8 @@
   questions, explanations, city names), except the questions written in Catalan or English, whose
   prompt, options and explanation are in their own language.
   An English question's explanation glosses each key English word with its Spanish meaning in
-  brackets, e.g. «hot» (caliente).
+  brackets, e.g. «Hot» ({caliente}). Braces mark Spanish words inside a Catalan or English
+  prompt or explanation, so they are read as Spanish.
   Keep it in data and markup, apart from the logic, so other languages can be added later.
 - Everything written to the repository is in English: commit messages, branch names, pull
   requests and issues.

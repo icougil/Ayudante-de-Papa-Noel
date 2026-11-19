@@ -42,7 +42,7 @@ async function startGame(page) {
 async function answer(page, right) {
   const prompt = await page.locator('#prompt').textContent();
   const correctText = await page.evaluate((text) => {
-    const question = globalThis.APN.QUESTIONS.find((q) => q.prompt === text);
+    const question = globalThis.APN.QUESTIONS.find((q) => globalThis.APN.plainText(q.prompt) === text);
     return question.options[question.correct];
   }, prompt);
   const buttons = page.locator('#options button');
