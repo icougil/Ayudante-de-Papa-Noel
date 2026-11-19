@@ -61,8 +61,9 @@ it came from.
   phone (see "Check the sound on a real iPhone") and a child trying a change both wait for the
   merge. Wanted: every pull request gets a link that plays its branch; the live site keeps
   working and keeps its version stamp. Decided: each pull request description carries a
-  `Play this branch` link to htmlpreview.github.io, which loads the branch's files from GitHub
-  (rule in `CLAUDE.md`); nothing changes in the deploy or the Pages settings. The preview has no
+  `Play this branch` link to htmlpreview.github.io, which loads the pull request's last push
+  from GitHub through `refs/pull/<number>/head`, so it stays playable after the merge (rule in
+  `CLAUDE.md`); nothing changes in the deploy or the Pages settings. The preview has no
   version stamp, and Umami does not count it. Not adopted: previews from a `gh-pages` branch
   with `rossjrw/pr-preview-action`, which would move the live deploy to that branch; kept as the
   fallback if htmlpreview.github.io goes away; if it is ever used, pin third-party actions to a

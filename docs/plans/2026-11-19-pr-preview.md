@@ -16,14 +16,14 @@ code, workflow or Pages setting changes.
 
 - Everything written to the repository is in English.
 - Link format, verbatim:
-  `https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html`
+  `https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html`
 - PR line, verbatim: `[Play this branch](<link>)` (a Markdown link: only the words show), right after the PR summary.
 - `.github/workflows/ci.yml`, `index.html`, `js/`, `css/` and the Pages settings are not touched.
 
 ## Review Focus
 
-- A branch name with a slash (e.g. `feature/pr-preview`): the link keeps the slash as is and should
-  still load. Not exercised: this change's branch, `pr-preview-link`, has no slash.
+- A merged pull request whose branch was deleted: its link still plays its last push (tried on
+  PR #7).
 - A push followed by an immediate reload: may show the previous version for a few minutes; the
   README says so.
 - Existing tests stay green (no code changed): `node --test tests/*.test.js`.
@@ -42,9 +42,11 @@ code, workflow or Pages setting changes.
 ```markdown
 ## Pull requests
 
-- Every pull request description has, right after its summary, the line
-  `Play this branch: https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html`
-  so the branch can be played on a phone before merging.
+- Every pull request description has, right after its summary, the Markdown link
+  `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html)`
+  so the branch can be played on a phone before merging, and its last version stays playable
+  after the merge; only the words show, not the address. Add it right after creating the PR,
+  once its number is known.
 ```
 
 - [ ] **Step 2: Add the README paragraph.** It says: a pull request can be played before merging
