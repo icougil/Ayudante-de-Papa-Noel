@@ -64,6 +64,11 @@ when every test passes. The deploy stamps the published copy with its date, time
 commit, so browsers load fresh files. The version shows faintly at the bottom of the cover and in
 the console. Opened from disk, no version is shown.
 
+A pull request can be played before merging, on a phone too, through the `Play this branch` link
+in its description. The link uses [htmlpreview.github.io](https://htmlpreview.github.io), which
+loads the branch's files from GitHub, so that copy has no version stamp. After a push, GitHub may
+take a few minutes to serve the new files.
+
 ## Privacy
 
 The published game counts visits with [Umami](https://umami.is). It sets no cookies, so the game
@@ -73,8 +78,8 @@ derive an approximate location. The IP address itself is not kept in the statist
 may record it in its operational and security logs. See
 [Umami's privacy policy](https://umami.is/privacy).
 
-Only visits on `icougil.github.io` are counted. A local run still downloads Umami's script, but
-sends no visit. The browser tests never contact Umami: they replace its script with an empty one.
+Only visits on `icougil.github.io` are counted. A local run or a pull request preview still downloads Umami's
+script, but sends no visit. The browser tests never contact Umami: they replace its script with an empty one.
 
 The game keeps one thing in the browser: whether sound is on or off (the `localStorage` key
 `apn.sound`). It keeps nothing about the questions or the answers.
