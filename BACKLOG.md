@@ -56,21 +56,19 @@ it came from.
   tiny and faint at the bottom-right of the cover and is logged to the console. Still open:
   `index.html` itself stays cached for up to 10 minutes (GitHub Pages does not allow changing
   that header), so a visitor may get the previous release (usually whole) for a few minutes.
-- [ ] **Publish a playable preview of each pull request.** Today a change can only be played
+- [x] **Publish a playable preview of each pull request.** Today a change can only be played
   from a local checkout (`index.html` on the computer) or after merging, so checks on a real
   phone (see "Check the sound on a real iPhone") and a child trying a change both wait for the
-  merge. Wanted: every pull request gets its own link on the same GitHub Pages site, posted as a
-  PR comment, updated on each push and removed when the PR closes; the live site at the root
-  keeps working and keeps its version stamp. Stay on GitHub Pages: no Netlify or Cloudflare
-  account. Prefer a widely used, maintained option over a hand-written workflow. Candidates
-  found so far: `rossjrw/pr-preview-action` (the most used; previews at
-  `/pr-preview/pr-<number>/`), `access-nri/pr-preview-action`, or `peaceiris/actions-gh-pages`
-  plus a comment step. GitHub's own preview input on `actions/deploy-pages` is an alpha not open
-  to the public. Needs deciding: these actions publish from a `gh-pages` branch, while the site
-  is now published from an uploaded artifact (the `deploy` job in `.github/workflows/ci.yml`),
-  so the live deploy must move to that branch with the stamp step kept, or another way found;
-  pin third-party actions to a commit; previews of PRs from forks are not supported and not
-  needed; previews are public like the repository.
+  merge. Wanted: every pull request gets a link that plays its branch; the live site keeps
+  working and keeps its version stamp. Decided: each pull request description carries a
+  `Play this branch` link to htmlpreview.github.io, which loads the branch's files from GitHub
+  (rule in `CLAUDE.md`); nothing changes in the deploy or the Pages settings. The preview has no
+  version stamp, and Umami does not count it. Not adopted: previews from a `gh-pages` branch
+  with `rossjrw/pr-preview-action`, which would move the live deploy to that branch; kept as the
+  fallback if htmlpreview.github.io goes away; if it is ever used, pin third-party actions to a
+  commit; other candidates were `access-nri/pr-preview-action` and `peaceiris/actions-gh-pages`
+  plus a comment step; previews of PRs from forks are not needed; previews are public like the
+  repository.
 
 ## Noted during development
 

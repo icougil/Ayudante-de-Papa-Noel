@@ -16,3 +16,9 @@
 
 - Design specs go in `docs/specs/` and implementation plans in `docs/plans/` (not
   `docs/superpowers/`).
+
+## Pull requests
+
+- Every pull request description has, right after its summary, the line
+  `Play this branch: https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html`
+  so the branch can be played on a phone before merging.
