@@ -66,7 +66,8 @@ the console. Opened from disk, no version is shown.
 
 A pull request can be played before merging, on a phone too, through the `Play this branch` link
 in its description. The link uses [htmlpreview.github.io](https://htmlpreview.github.io), which
-loads the branch's files from GitHub, so that copy has no version stamp. After a push, GitHub may
+loads the pull request's last push from GitHub, so that copy has no version stamp. The link keeps
+working after the merge, so earlier pull requests can still be played. After a push, GitHub may
 take a few minutes to serve the new files.
 
 ## Privacy

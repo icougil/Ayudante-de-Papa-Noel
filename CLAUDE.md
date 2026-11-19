@@ -20,5 +20,7 @@
 ## Pull requests
 
 - Every pull request description has, right after its summary, the Markdown link
-  `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html)`
-  so the branch can be played on a phone before merging; only the words show, not the address.
+  `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html)`
+  so the branch can be played on a phone before merging, and its last version stays playable
+  after the merge; only the words show, not the address. Add it right after creating the PR,
+  once its number is known.

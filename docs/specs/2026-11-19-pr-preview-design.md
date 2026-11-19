@@ -37,17 +37,28 @@ Points the owner did not decide are marked **(designer's call)**.
 
 ## Design
 
-- Link format, with the branch name as is (slashes included):
-  `https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html`
-- The link points at the branch, not a commit, so one link stays valid across pushes
-  **(designer's call)**. After a push, wait a few minutes or reload if the change is not there yet.
+- Link format, with the pull request's number:
+  `https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html`
+- The link points at `refs/pull/<number>/head`, the reference GitHub keeps for every pull
+  request's last push, not at the branch: the repository deletes a branch when its PR is merged,
+  and a branch link would break then. One link follows each push while the PR is open and stays
+  playable after the merge, so earlier previews can be replayed (the owner's choice; tried on
+  PR #7 after its branch was deleted). It plays the PR's last push, not the merged `main`.
+  After a push, wait a few minutes or reload if the change is not there yet.
 - Every pull request description has, right after its summary, the line
   `[Play this branch](<link>)`, so only the words show (the owner's choice). The agent opening
-  the PR adds it; no workflow posts it **(designer's call: no hand-written workflow, and the link never needs updating)**.
-- The rule lives in the project's `CLAUDE.md`, new section `## Pull requests`:
-  `- Every pull request description has, right after its summary, the Markdown link`
-  `` `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/<branch>/index.html)` ``
-  `  so the branch can be played on a phone before merging; only the words show, not the address.`
+  the PR adds it right after creating the PR, once its number is known; no workflow posts it
+  **(designer's call: no hand-written workflow, and the link never needs updating)**.
+- The rule lives in the project's `CLAUDE.md`, new section `## Pull requests`, verbatim:
+
+  ```markdown
+  - Every pull request description has, right after its summary, the Markdown link
+    `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html)`
+    so the branch can be played on a phone before merging, and its last version stays playable
+    after the merge; only the words show, not the address. Add it right after creating the PR,
+    once its number is known.
+  ```
+
 - `README.md`, section `## Tests`, after the paragraph on publishing: a short paragraph saying a
   pull request can be played before merging through the `Play this branch` link in its
   description, built with htmlpreview.github.io, without the version stamp, and that GitHub may
