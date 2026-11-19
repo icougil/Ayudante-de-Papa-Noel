@@ -237,7 +237,8 @@
   }
 
   function renderQuestion() {
-    el.prompt.textContent = question.prompt;
+    el.prompt.textContent = '';
+    appendParts(el.prompt, APN.splitSpanish(question.prompt));
     el.prompt.lang = question.lang;
     el.options.lang = question.lang;
     el.options.textContent = '';
@@ -255,7 +256,22 @@
     el.options.firstChild.focus({ preventScroll: true });
   }
 
-  // Each line is [class, text] or [class, text, lang] for text that is not in Spanish.
+  // Parts are plain strings or [text, lang] pairs, so one element can mix languages.
+  function appendParts(parent, parts) {
+    for (const part of parts) {
+      if (Array.isArray(part)) {
+        const span = document.createElement('span');
+        span.lang = part[1];
+        span.textContent = part[0];
+        parent.appendChild(span);
+      } else {
+        parent.append(part);
+      }
+    }
+  }
+
+  // Each line is [class, text] or [class, text, lang] for text that is not in Spanish;
+  // text is a string or a list of parts (see appendParts).
   function notify(lines) {
     el.notice.textContent = '';
     for (const [cls, text, lang] of lines) {
@@ -265,17 +281,7 @@
         p.lang = lang;
       }
       if (Array.isArray(text)) {
-        // Parts are plain strings or [text, lang] pairs, so one line can mix languages.
-        for (const part of text) {
-          if (Array.isArray(part)) {
-            const span = document.createElement('span');
-            span.lang = part[1];
-            span.textContent = part[0];
-            p.appendChild(span);
-          } else {
-            p.append(part);
-          }
-        }
+        appendParts(p, text);
       } else {
         p.textContent = text;
       }
@@ -363,7 +369,7 @@
     notify([
       ['notice-bad', mishap.emoji + ' ' + mishap.text],
       ['notice-normal', ['La respuesta correcta era: ', [question.options[question.correct], question.lang], '.']],
-      ['notice-normal', question.explanation, question.lang],
+      ['notice-normal', APN.splitSpanish(question.explanation), question.lang],
     ]);
     el.next.hidden = false;
     el.next.focus({ preventScroll: true });

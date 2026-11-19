@@ -275,3 +275,13 @@ test('the rules are relaxed rather than failing', () => {
     assert.equal(game.length, 6);
   }
 });
+
+test('splitSpanish turns braces into Spanish parts and drops them from the text', () => {
+  assert.deepEqual(APN.splitSpanish('«Hot» ({caliente}) is warm.'), ['«Hot» (', ['caliente', 'es'], ') is warm.']);
+  assert.deepEqual(APN.splitSpanish('{hermano} first'), [['hermano', 'es'], ' first']);
+  assert.deepEqual(APN.splitSpanish('No marks here.'), ['No marks here.']);
+});
+
+test('plainText drops the braces', () => {
+  assert.equal(APN.plainText('«Hot» ({caliente}) is warm.'), '«Hot» (caliente) is warm.');
+});

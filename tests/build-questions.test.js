@@ -324,3 +324,64 @@ test('accented text survives the build', () => {
   assert.equal(sandbox.APN.QUESTIONS[0].prompt, text);
   assert.equal(sandbox.APN.QUESTIONS[0].explanation, text);
 });
+
+function withEnglishQuestion(overrides) {
+  const bank = validBank();
+  const file = bank.find((f) => f.file === 'english.json');
+  file.data.questions = [question({
+    id: 'x-1', lang: 'en', place: 'general', topics: ['t-english'],
+    prompt: 'What is the opposite of «cold»?',
+    explanation: '«Hot» ({caliente}) is the opposite of «cold» ({frío}).',
+    ...overrides
+  })];
+  return validateBank(bank, context);
+}
+
+test('Spanish marked with braces in an English question is accepted', () => {
+  assert.deepEqual(withEnglishQuestion({ prompt: 'Which English word means «{hermano}»?' }), []);
+});
+
+test('an unclosed, stray or nested brace is reported', () => {
+  assert.deepEqual(withEnglishQuestion({ prompt: 'Which word means {hermano?' }), [
+    'english.json: x-1: prompt has an unclosed, stray or nested { }'
+  ]);
+  assert.deepEqual(withEnglishQuestion({ explanation: '«Hot» (caliente}) is warm.' }), [
+    'english.json: x-1: explanation has an unclosed, stray or nested { }'
+  ]);
+  assert.deepEqual(withEnglishQuestion({ explanation: '«Hot» ({cal{ien}te}) is warm.' }), [
+    'english.json: x-1: explanation has an unclosed, stray or nested { }'
+  ]);
+});
+
+test('an empty brace pair is reported', () => {
+  assert.deepEqual(withEnglishQuestion({ prompt: 'Which word means { }?' }), [
+    'english.json: x-1: prompt has an empty { }'
+  ]);
+});
+
+test('a gloss in brackets that is not marked as Spanish is reported', () => {
+  assert.deepEqual(withEnglishQuestion({ explanation: '«Hot» (caliente) is the opposite of «cold».' }), [
+    'english.json: x-1: explanation has a gloss in brackets not marked as Spanish'
+  ]);
+  assert.deepEqual(withEnglishQuestion({ prompt: 'What does «hot» mean ({caliente} or not)?' }), [
+    'english.json: x-1: prompt has a gloss in brackets not marked as Spanish'
+  ]);
+});
+
+test('braces in a Spanish question are reported', () => {
+  assert.deepEqual(withGeography((d) => { d.questions[0].explanation = 'Barcelona es la {capital}.'; }), [
+    'geography.json: q-1: explanation marks Spanish in a Spanish question'
+  ]);
+});
+
+test('a brace in an option is reported', () => {
+  assert.deepEqual(withEnglishQuestion({ options: ['{hot}', 'warm', 'cool', 'cold'] }), [
+    'english.json: x-1: an option has a { }'
+  ]);
+});
+
+test('the braces do not count towards the length limits', () => {
+  const explanation = '{' + 'a'.repeat(158) + '} b';
+  assert.equal(explanation.length, 162);
+  assert.deepEqual(withEnglishQuestion({ explanation }), []);
+});

@@ -99,7 +99,7 @@ Rules, enforced by the build and by `tests/data.test.js`:
   their value (`barcelona-1`, `general-7`…). New ids are free-form but unique **(designer's call)**.
 - `lang`: `es`, `ca` or `en`. The prompt, options and explanation are all in that language.
 - An `en` question's explanation glosses each key English word with its Spanish meaning in
-  brackets, e.g. «hot» (caliente), so a learner reads the meaning too; it still counts towards
+  brackets, e.g. «Hot» ({caliente}), so a learner reads the meaning too; it still counts towards
   the 160-character limit.
 - The subject comes from the file (here `science.json`). `APN.SUBJECTS` gains `catalan`
   (questions about the Catalan language). Language and subject must agree: `english` ⇔ `en`; `catalan` ⇒ `ca`; `language` (the Spanish
@@ -150,7 +150,8 @@ uses Node's standard library only.
 **What the build checks (designer's call):** every per-question rule above, including an unknown
 field (an error, so a typo such as `"refrences"` cannot pass silently); unique ids across files;
 unique topic ids across files; every topic of a question existing in the same file; every file
-name being a subject and every subject having a file; `place` being a stop id or `general`. It gets `APN.SUBJECTS` and the stop ids by requiring `js/data-level-1.js`, so the lists
+name being a subject and every subject having a file; `place` being a stop id or `general`;
+the Spanish marks (see *Marking the language on screen*). It gets `APN.SUBJECTS` and the stop ids by requiring `js/data-level-1.js`, so the lists
 live in one place. Counts over the whole bank (at least 3 per stop, at least 12 general) stay in
 `tests/data.test.js` only: they describe the bank, not a single file.
 
@@ -188,6 +189,18 @@ prompt, the options and the explanation to the question's `lang` (`ca`, `en` or 
 readers and hyphenation use the right language. The game's own texts around them stay Spanish
 **(designer's call: one attribute, and it also fixes the English questions today)**. Covered by a
 browser test `a Catalan question is marked as Catalan`.
+
+Spanish words inside a Catalan or English prompt or explanation (the glosses, or «{hermano}» in
+"Which English word means «{hermano}»?") are written in braces. `APN.splitSpanish` turns them
+into `<span lang="es">` without the braces, and the length limits count the text without them.
+The build reports, for the prompt and the explanation:
+- `<field> has an unclosed, stray or nested { }`
+- `<field> has an empty { }`
+- `<field> marks Spanish in a Spanish question`
+- `<field> has a gloss in brackets not marked as Spanish` (English only: everything in brackets
+  must be inside braces)
+and, for the options, `an option has a { }`. Covered by the browser test `the Spanish words
+inside an English question are marked as Spanish`.
 
 ### Sources and licence
 

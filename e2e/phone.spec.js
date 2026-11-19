@@ -60,7 +60,8 @@ test('a Catalan question is marked as Catalan, and the Spanish lines around it a
 
   const prompt = await page.locator('#prompt').textContent();
   const explanation = await page.evaluate(
-    (text) => globalThis.APN.QUESTIONS.find((q) => q.prompt === text).explanation, prompt);
+    (text) => globalThis.APN.plainText(
+      globalThis.APN.QUESTIONS.find((q) => globalThis.APN.plainText(q.prompt) === text).explanation), prompt);
   await answer(page, false);
 
   const notice = page.locator('#notice');
