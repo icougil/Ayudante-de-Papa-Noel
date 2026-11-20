@@ -263,19 +263,19 @@
       "topics": [
         "arte-y-arquitectura"
       ],
-      "difficulty": 2,
+      "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué arquitecto diseñó el Museo Guggenheim de Bilbao?",
+      "prompt": "¿Qué figura gigante cubierta de flores hay a la entrada del Museo Guggenheim de Bilbao?",
       "options": [
-        "Frank Gehry",
-        "Antoni Gaudí",
-        "Santiago Calatrava",
-        "Norman Foster"
+        "Un perro",
+        "Un gato",
+        "Un oso",
+        "Un caballo"
       ],
       "correct": 0,
-      "explanation": "El museo es obra del arquitecto Frank Gehry; se abrió al público en 1997.",
+      "explanation": "Es «Puppy», un perro de más de 12 metros cubierto de miles de flores de verdad, obra del artista Jeff Koons.",
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]

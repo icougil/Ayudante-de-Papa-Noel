@@ -22,9 +22,22 @@ it came from.
   reference). Parts 2 (scheduled job) and 3 (remembering the player) remain, with the open
   decisions on the source, its licence and who reviews what comes in; see
   `docs/specs/2026-11-18-question-bank-design.md`.
-- [ ] **The owner reviews the 60 current questions** in `questions/*.json` for correctness and
-  tone. They have only been checked by the tests (shape and length), not by a person; each now has
-  a reference to check the fact against.
+- [x] **The owner reviews the 60 current questions** in `questions/*.json` for correctness and
+  tone. Done: four city questions were too specialised for ages 10 to 12 (the Guggenheim's
+  architect, the sierra between Madrid and Castilla y León, the river that forms the ría de Bilbao
+  with the Ibaizábal, the Aljafería's century) and were replaced by easier ones on the same city
+  and subject. The tests cannot judge whether a question suits the age, so a person must keep
+  checking that for every new batch.
+- [ ] **Ask general questions about Catalonia, not only at the Barcelona stop.** The players are
+  in Catalonia (cicle superior), yet Catalan places, history and traditions only come up at the
+  Barcelona stop (5 questions, one per game), plus 3 Catalan-language questions. Geography,
+  history and culture questions are always tied to one of the 6 cities, and the picker's general
+  turns only draw maths, science, language, english and catalan (see *The picker* in
+  `docs/specs/2026-11-18-question-bank-design.md`). Wanted: questions about Catalonia (e.g.
+  Montserrat, the Pyrenees, the Ebre delta, castells, Sant Jordi, caga tió) that can come up on a
+  general turn, in Spanish or Catalan, suited to ages 10 to 12. Needs a design step first:
+  how they are marked (a new place like `catalunya`, or a topic), how often a game may ask them,
+  and how they fit the picker's rules and the two-`ca`-questions cap.
 
 ## Sound
 
