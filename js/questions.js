@@ -416,17 +416,17 @@
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué sierra separa la Comunidad de Madrid de Castilla y León?",
+      "prompt": "¿Qué gran sistema montañoso cruza el centro de España, al norte de Madrid?",
       "options": [
-        "Sierra de Guadarrama",
-        "Sierra Nevada",
-        "Sierra Morena",
-        "Picos de Europa"
+        "Sistema Central",
+        "Pirineos",
+        "Sistema Ibérico",
+        "Cordillera Bética"
       ],
       "correct": 0,
-      "explanation": "La sierra de Guadarrama queda al noroeste de la ciudad de Madrid y sirve de frontera natural entre las dos comunidades.",
+      "explanation": "El Sistema Central cruza el centro de la península; la sierra de Guadarrama, al norte de Madrid, es una de sus partes.",
       "references": [
-        "https://es.wikipedia.org/wiki/Sierra_de_Guadarrama"
+        "https://es.wikipedia.org/wiki/Sistema_Central"
       ]
     },
     {
@@ -434,21 +434,21 @@
       "lang": "es",
       "subject": "geography",
       "topics": [
-        "rios-de-espana"
+        "mares-y-costas"
       ],
-      "difficulty": 2,
+      "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué río, junto con el Ibaizábal, forma la ría de Bilbao?",
+      "prompt": "¿En qué mar desemboca la ría de Bilbao?",
       "options": [
-        "Nervión",
-        "Ebro",
-        "Duero",
-        "Miño"
+        "Mar Cantábrico",
+        "Mar Mediterráneo",
+        "Mar del Norte",
+        "Mar Negro"
       ],
       "correct": 0,
-      "explanation": "La ría de Bilbao nace cuando el Nervión y el Ibaizábal unen sus aguas, y desemboca en el mar Cantábrico.",
+      "explanation": "La ría de Bilbao desemboca en el mar Cantábrico, el mar que baña toda la costa norte de España.",
       "references": [
         "https://es.wikipedia.org/wiki/Ría_de_Bilbao"
       ]
@@ -508,19 +508,19 @@
       "topics": [
         "al-andalus"
       ],
-      "difficulty": 3,
+      "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿En qué siglo se construyó la Aljafería de Zaragoza, un palacio musulmán?",
+      "prompt": "¿Quién construyó el palacio de la Aljafería de Zaragoza?",
       "options": [
-        "Siglo XI",
-        "Siglo VIII",
-        "Siglo XIII",
-        "Siglo XV"
+        "Los musulmanes de al-Ándalus",
+        "Los romanos",
+        "Los vikingos",
+        "Los egipcios"
       ],
       "correct": 0,
-      "explanation": "La Aljafería se levantó en el siglo XI, cuando Zaragoza era un reino musulmán; siglos después la usaron los reyes cristianos de Aragón.",
+      "explanation": "La construyeron los musulmanes cuando Zaragoza formaba parte de al-Ándalus; después la usaron los reyes cristianos de Aragón.",
       "references": [
         "https://es.wikipedia.org/wiki/Palacio_de_la_Aljafería"
       ]
@@ -893,19 +893,19 @@
       "topics": [
         "arte-y-arquitectura"
       ],
-      "difficulty": 2,
+      "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué arquitecto diseñó el Museo Guggenheim de Bilbao?",
+      "prompt": "¿Qué figura gigante cubierta de flores hay a la entrada del Museo Guggenheim de Bilbao?",
       "options": [
-        "Frank Gehry",
-        "Antoni Gaudí",
-        "Santiago Calatrava",
-        "Norman Foster"
+        "Un perro",
+        "Un gato",
+        "Un oso",
+        "Un caballo"
       ],
       "correct": 0,
-      "explanation": "El museo es obra del arquitecto Frank Gehry; se abrió al público en 1997.",
+      "explanation": "Es «Puppy», un perro de más de 12 metros cubierto de miles de flores de verdad, obra del artista Jeff Koons.",
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]

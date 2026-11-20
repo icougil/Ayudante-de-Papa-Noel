@@ -70,19 +70,19 @@
       "topics": [
         "al-andalus"
       ],
-      "difficulty": 3,
+      "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿En qué siglo se construyó la Aljafería de Zaragoza, un palacio musulmán?",
+      "prompt": "¿Quién construyó el palacio de la Aljafería de Zaragoza?",
       "options": [
-        "Siglo XI",
-        "Siglo VIII",
-        "Siglo XIII",
-        "Siglo XV"
+        "Los musulmanes de al-Ándalus",
+        "Los romanos",
+        "Los vikingos",
+        "Los egipcios"
       ],
       "correct": 0,
-      "explanation": "La Aljafería se levantó en el siglo XI, cuando Zaragoza era un reino musulmán; siglos después la usaron los reyes cristianos de Aragón.",
+      "explanation": "La construyeron los musulmanes cuando Zaragoza formaba parte de al-Ándalus; después la usaron los reyes cristianos de Aragón.",
       "references": [
         "https://es.wikipedia.org/wiki/Palacio_de_la_Aljafería"
       ]

@@ -235,38 +235,38 @@
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué sierra separa la Comunidad de Madrid de Castilla y León?",
+      "prompt": "¿Qué gran sistema montañoso cruza el centro de España, al norte de Madrid?",
       "options": [
-        "Sierra de Guadarrama",
-        "Sierra Nevada",
-        "Sierra Morena",
-        "Picos de Europa"
+        "Sistema Central",
+        "Pirineos",
+        "Sistema Ibérico",
+        "Cordillera Bética"
       ],
       "correct": 0,
-      "explanation": "La sierra de Guadarrama queda al noroeste de la ciudad de Madrid y sirve de frontera natural entre las dos comunidades.",
+      "explanation": "El Sistema Central cruza el centro de la península; la sierra de Guadarrama, al norte de Madrid, es una de sus partes.",
       "references": [
-        "https://es.wikipedia.org/wiki/Sierra_de_Guadarrama"
+        "https://es.wikipedia.org/wiki/Sistema_Central"
       ]
     },
     {
       "id": "geography-es-002",
       "lang": "es",
       "topics": [
-        "rios-de-espana"
+        "mares-y-costas"
       ],
-      "difficulty": 2,
+      "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué río, junto con el Ibaizábal, forma la ría de Bilbao?",
+      "prompt": "¿En qué mar desemboca la ría de Bilbao?",
       "options": [
-        "Nervión",
-        "Ebro",
-        "Duero",
-        "Miño"
+        "Mar Cantábrico",
+        "Mar Mediterráneo",
+        "Mar del Norte",
+        "Mar Negro"
       ],
       "correct": 0,
-      "explanation": "La ría de Bilbao nace cuando el Nervión y el Ibaizábal unen sus aguas, y desemboca en el mar Cantábrico.",
+      "explanation": "La ría de Bilbao desemboca en el mar Cantábrico, el mar que baña toda la costa norte de España.",
       "references": [
         "https://es.wikipedia.org/wiki/Ría_de_Bilbao"
       ]
