@@ -63,6 +63,11 @@
       "name": "Fútbol"
     },
     {
+      "id": "baloncesto",
+      "subject": "sports",
+      "name": "Baloncesto"
+    },
+    {
       "id": "arte-y-arquitectura",
       "subject": "culture",
       "name": "Arte y arquitectura"
@@ -585,21 +590,21 @@
       "topics": [
         "monarquia-y-capitales"
       ],
-      "difficulty": 2,
+      "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué rey decidió en 1561 que la corte se instalara en Madrid?",
+      "prompt": "¿Cómo se llama el gran palacio de Madrid que fue la casa de los reyes de España?",
       "options": [
-        "Felipe II",
-        "Carlos III",
-        "Felipe V",
-        "Fernando VII"
+        "Palacio Real",
+        "La Alhambra",
+        "La Aljafería",
+        "Catedral de la Almudena"
       ],
       "correct": 0,
-      "explanation": "Felipe II llevó la corte a Madrid en 1561, y desde entonces la ciudad ha sido la capital de España.",
+      "explanation": "El Palacio Real de Madrid es un enorme palacio donde vivieron los reyes de España. Hoy se usa para actos oficiales y se puede visitar.",
       "references": [
-        "https://es.wikipedia.org/wiki/Capitalidad_de_Madrid"
+        "https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid"
       ]
     },
     {
@@ -679,23 +684,23 @@
       "lang": "es",
       "subject": "sports",
       "topics": [
-        "futbol"
+        "baloncesto"
       ],
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué equipo gallego de fútbol juega en el estadio de Balaídos, en Vigo?",
+      "prompt": "¿En qué deporte juega en la liga ACB el Obradoiro, el equipo de Santiago de Compostela?",
       "options": [
-        "Celta de Vigo",
-        "Deportivo de La Coruña",
-        "Racing de Ferrol",
-        "CD Lugo"
+        "Baloncesto",
+        "Balonmano",
+        "Voleibol",
+        "Hockey sobre patines"
       ],
       "correct": 0,
-      "explanation": "El Celta de Vigo juega en Balaídos, su estadio, y es uno de los equipos más conocidos de Galicia.",
+      "explanation": "El Obradoiro es el equipo de baloncesto de Santiago de Compostela y juega en la liga ACB, la máxima categoría de España.",
       "references": [
-        "https://es.wikipedia.org/wiki/Estadio_Municipal_de_Bala%C3%ADdos"
+        "https://es.wikipedia.org/wiki/Obradoiro_CAB"
       ]
     },
     {
@@ -1571,21 +1576,21 @@
       "topics": [
         "ortografia"
       ],
-      "difficulty": 3,
+      "difficulty": 2,
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué frase usa bien «ahí», «hay» y «ay»?",
+      "prompt": "Completa: «¡___, qué daño me he hecho!»",
       "options": [
-        "Ahí hay un gato",
-        "Ay hay un gato",
-        "Ahí ay un gato",
-        "Hay ahí ay gato"
+        "Ay",
+        "Ahí",
+        "Hay",
+        "Ahy"
       ],
       "correct": 0,
-      "explanation": "«Ahí» señala un lugar, «hay» es del verbo haber y «ay» expresa dolor o sorpresa.",
+      "explanation": "«Ay» expresa dolor o sorpresa. «Ahí» señala un lugar y «hay» es del verbo haber.",
       "references": [
-        "https://www.rae.es/dpd/ay"
+        "https://es.wikipedia.org/wiki/Interjecci%C3%B3n"
       ]
     },
     {
