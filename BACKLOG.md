@@ -8,18 +8,19 @@ it came from.
 
 - [ ] **Grow the question bank a lot, across varied topics.** Part 1 is done: the questions live
   in one file per subject (`questions/*.json`), each with a language label, topics, difficulty and
-  references, and the bank holds about 60 questions. Still to do: part 2 (a scheduled job that
-  adds questions) and part 3 (remembering the player); see
+  references, and the bank holds about 60 questions. Part 2 is built (a scheduled job that adds
+  10 questions every 3 days as a pull request, see `docs/specs/2026-11-24-question-batch-job-design.md`);
+  it is done once the first batch is merged. Still to do: the rest of part 3 (remembering the player); see
   `docs/specs/2026-11-18-question-bank-design.md`. Targets for the job: at least 15 questions in
   every pool (each of the six cities and each general subject: maths, science, language, english,
-  catalan), about 4 batches of 30. Fill the pools furthest below 15 first: general catalan (3),
+  catalan), about 11 batches of 10. Fill the pools furthest below 15 first: general catalan (3),
   language (5), english (6), and every city (5). Cities also lack subjects: sports in Santiago,
   Sevilla and Zaragoza (1 each in Barcelona, Bilbao and Madrid), history in Barcelona, Bilbao and
   Madrid. City questions are almost all difficulty 1, so add harder ones too.
 - [ ] **Get questions from an external source instead of writing them by hand.** Part 1 is done
   (subject files, labels, about 60 questions written from the reading list in the spec, each with a
-  reference). Parts 2 (scheduled job) and 3 (remembering the player) remain, with the open
-  decisions on the source, its licence and who reviews what comes in; see
+  reference). Part 2 (a scheduled job writing the questions itself, reviewed by the owner in a pull
+  request) is built and part 3 (remembering the player) remains; see
   `docs/specs/2026-11-18-question-bank-design.md`.
 - [x] **The owner reviews the 60 current questions** in `questions/*.json` for correctness and
   tone. Done: four city questions were too specialised for ages 10 to 12 (the Guggenheim's

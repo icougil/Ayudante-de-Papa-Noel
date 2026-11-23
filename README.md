@@ -100,6 +100,8 @@ so the memory only works when the game is served over http(s).
 | `questions/` | The question bank, one JSON file per subject: its topics and its questions |
 | `js/questions.js` | The questions and topics the game loads. Generated, do not edit |
 | `scripts/build-questions.js` | Checks `questions/*.json` and generates `js/questions.js` |
+| `scripts/question-pools.js` | Counts the questions of each pool (`npm run pools`) |
+| `.claude/skills/write-question-batch/` | The instructions of the scheduled job that adds questions |
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
 | `js/sound.js` | The music and the sound effects, generated in the browser, and the sound switch |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
@@ -142,6 +144,20 @@ copying text; put the page where the fact can be checked in `references`.
 After editing, run `npm run build:questions`: it checks every file, prints each problem and
 regenerates `js/questions.js`. The tests fail if the build was forgotten. Options are shuffled in
 every game, so the position of the right answer does not matter.
+
+## Question batches
+
+A Claude routine called `question-batch` runs about every 3 days. It writes 10 new questions for the
+pools with the fewest (each of the six cities, and the general maths, science, language, english
+and catalan), checks them, and opens a pull request that lists only the new questions with their
+answer, explanation, reference and any doubts. The owner reads the table, plays the branch and
+merges. Nothing reaches the game without that merge, and the routine does nothing while a
+`question-batch/` pull request is still open, so batches never pile up. The target is 15
+questions in every pool; `npm run pools` shows where each pool stands.
+
+Its instructions are `.claude/skills/write-question-batch/SKILL.md`, so changing how it writes is
+a pull request. To run it now, use "Run now" on the routine at claude.ai, or ask Claude Code to use
+that skill. To pause it, turn the routine off there.
 
 ## License
 
