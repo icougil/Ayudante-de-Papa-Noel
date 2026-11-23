@@ -16,14 +16,17 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
 ## 1. Guards (stop here if one applies)
 
 - An open batch: run
-  `gh pr list --state open --json headRefName --jq '[.[] | select(.headRefName | startswith("question-batch/"))] | length'`.
+  `gh api 'repos/icougil/Ayudante-de-Papa-Noel/pulls?state=open&per_page=100' --jq '[.[] | select(.head.ref | startswith("question-batch/"))] | length'`.
+  (Not `gh pr list`: the scheduled cloud session blocks GitHub's GraphQL API, which it uses.)
   If it prints more than 0, stop and say "a batch is still open for review".
   If the command fails (for example `gh` is missing or not signed in), stop too and say "the guard could not be checked": never go on without it.
 - Nothing to add: run `npm run pools`. If its last line says `Pools below 15: none`, stop and say so.
 
 ## 2. Choose the 10 slots
 
-- Read the output of `npm run pools`. Give the 10 slots to the pools furthest below 15, **at most 3
+- Read the output of `npm run pools`. Each line is `pool  <questions it has now>  below|ok  ...`:
+  the number is how many questions the pool **already has**, so the lowest numbers are the thinnest
+  pools (15 is the target). Give the 10 slots to the pools furthest below 15, **at most 3
   per pool**, so a batch covers at least 4 pools.
 - Near the end, fewer than 10 questions may be needed to bring every pool to 15. Then write only
   that many (N), never push a pool above 15, and use "Add N questions: <pools>" in step 6. The
@@ -52,6 +55,9 @@ Fix or replace any question that fails, then check again:
   that forms the ría de Bilbao with the Ibaizábal, the century of the Aljafería. Those four were
   replaced in an earlier review.
 - **Fact:** re-read the fact against its reference. A fact you cannot confirm there is dropped.
+  The scheduled cloud session usually cannot open web pages (its proxy answers 403). Then use the
+  stable, well-known page you are sure of (a Wikipedia article under its exact title), and in the
+  doubts say that none of the references could be opened.
 - **Repeat:** read all the existing questions first. Do not ask the same fact, or nearly the same
   prompt, as one already in the bank.
 - **Wrong options:** the three wrong options are plausible and clearly wrong, never a trick.
