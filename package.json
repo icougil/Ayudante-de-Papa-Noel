@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --test tests/*.test.js",
     "test:e2e": "playwright test",
-    "build:questions": "node scripts/build-questions.js"
+    "build:questions": "node scripts/build-questions.js",
+    "pools": "node scripts/question-pools.js"
   },
   "devDependencies": {
     "@playwright/test": "1.65.1"
