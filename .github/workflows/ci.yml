@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -49,18 +50,14 @@ jobs:
       - name: Run the browser tests
         run: npx playwright test --project=${{ matrix.project }}
 
-  # The game is published only from main, and only when every test passes.
-  deploy:
-    name: Publish to GitHub Pages
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  # The game is published only from main, and only when every test passes. Uploading and
+  # deploying are separate jobs on purpose: in one job, deploy-pages looks the artifact up a
+  # fraction of a second after the upload and sometimes finds none (actions/deploy-pages#451).
+  pages-artifact:
+    name: Prepare the Pages files
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: [unit, browser]
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
       - name: Collect the game files
@@ -75,5 +72,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+
+  deploy:
+    name: Publish to GitHub Pages
+    needs: pages-artifact
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v5

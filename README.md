@@ -62,7 +62,9 @@ GitHub Actions runs both sets on every push to `main` and on every pull request
 (`.github/workflows/ci.yml`). The game is published to GitHub Pages only from `main`, and only
 when every test passes. The deploy stamps the published copy with its date, time (Barcelona) and
 commit, so browsers load fresh files. The version shows faintly at the bottom of the cover and in
-the console. Opened from disk, no version is shown.
+the console. Opened from disk, no version is shown. If a deploy fails, re-run the whole workflow
+(or start it from the Actions tab, `Run workflow` on `main`), never only the failed job: that
+uploads a second `github-pages` artifact and every further retry fails.
 
 A pull request can be played before merging, on a phone too, through the `Play this branch` link
 in its description. The link uses [htmlpreview.github.io](https://htmlpreview.github.io), which
