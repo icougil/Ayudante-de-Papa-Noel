@@ -182,21 +182,21 @@
       "topics": [
         "ortografia"
       ],
-      "difficulty": 3,
+      "difficulty": 2,
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué frase usa bien «ahí», «hay» y «ay»?",
+      "prompt": "Completa: «¡___, qué daño me he hecho!»",
       "options": [
-        "Ahí hay un gato",
-        "Ay hay un gato",
-        "Ahí ay un gato",
-        "Hay ahí ay gato"
+        "Ay",
+        "Ahí",
+        "Hay",
+        "Ahy"
       ],
       "correct": 0,
-      "explanation": "«Ahí» señala un lugar, «hay» es del verbo haber y «ay» expresa dolor o sorpresa.",
+      "explanation": "«Ay» expresa dolor o sorpresa. «Ahí» señala un lugar y «hay» es del verbo haber.",
       "references": [
-        "https://www.rae.es/dpd/ay"
+        "https://es.wikipedia.org/wiki/Interjecci%C3%B3n"
       ]
     }
   ]

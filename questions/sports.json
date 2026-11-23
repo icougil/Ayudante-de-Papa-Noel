@@ -11,6 +11,10 @@
     {
       "id": "futbol",
       "name": "Fútbol"
+    },
+    {
+      "id": "baloncesto",
+      "name": "Baloncesto"
     }
   ],
   "questions": [
@@ -87,23 +91,23 @@
       "id": "sports-es-002",
       "lang": "es",
       "topics": [
-        "futbol"
+        "baloncesto"
       ],
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué equipo gallego de fútbol juega en el estadio de Balaídos, en Vigo?",
+      "prompt": "¿En qué deporte juega en la liga ACB el Obradoiro, el equipo de Santiago de Compostela?",
       "options": [
-        "Celta de Vigo",
-        "Deportivo de La Coruña",
-        "Racing de Ferrol",
-        "CD Lugo"
+        "Baloncesto",
+        "Balonmano",
+        "Voleibol",
+        "Hockey sobre patines"
       ],
       "correct": 0,
-      "explanation": "El Celta de Vigo juega en Balaídos, su estadio, y es uno de los equipos más conocidos de Galicia.",
+      "explanation": "El Obradoiro es el equipo de baloncesto de Santiago de Compostela y juega en la liga ACB, la máxima categoría de España.",
       "references": [
-        "https://es.wikipedia.org/wiki/Estadio_Municipal_de_Bala%C3%ADdos"
+        "https://es.wikipedia.org/wiki/Obradoiro_CAB"
       ]
     },
     {
