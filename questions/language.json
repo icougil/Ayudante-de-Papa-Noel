@@ -129,6 +129,75 @@
       "references": [
         "https://es.wikipedia.org/wiki/Tilde_diacrítica"
       ]
+    },
+    {
+      "id": "language-es-004",
+      "lang": "es",
+      "topics": [
+        "categorias-gramaticales"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué tipo de palabra es «correr»?",
+      "options": [
+        "Verbo",
+        "Sustantivo",
+        "Adjetivo",
+        "Adverbio"
+      ],
+      "correct": 0,
+      "explanation": "«Correr» dice una acción y está en infinitivo, así que es un verbo.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Verbo"
+      ]
+    },
+    {
+      "id": "language-es-005",
+      "lang": "es",
+      "topics": [
+        "acentuacion"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas palabras es aguda?",
+      "options": [
+        "Canción",
+        "Árbol",
+        "Mesa",
+        "Teléfono"
+      ],
+      "correct": 0,
+      "explanation": "«Canción» tiene la fuerza en la última sílaba (can-CIÓN), por eso es aguda.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Acento_ortogr%C3%A1fico"
+      ]
+    },
+    {
+      "id": "language-es-006",
+      "lang": "es",
+      "topics": [
+        "ortografia"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué frase usa bien «ahí», «hay» y «ay»?",
+      "options": [
+        "Ahí hay un gato",
+        "Ay hay un gato",
+        "Ahí ay un gato",
+        "Hay ahí ay gato"
+      ],
+      "correct": 0,
+      "explanation": "«Ahí» señala un lugar, «hay» es del verbo haber y «ay» expresa dolor o sorpresa.",
+      "references": [
+        "https://www.rae.es/dpd/ay"
+      ]
     }
   ]
 }
