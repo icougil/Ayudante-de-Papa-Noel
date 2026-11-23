@@ -3,7 +3,7 @@
 *Santa's Helper*: a small browser quiz game for children aged 10 to 12. Santa flies across Spain
 and the player helps him deliver a gift in each city by answering a question.
 
-**Play it:** <https://icougil.github.io/Ayudante-de-Papa-Noel/>
+**Play it:** <https://tiny.cc/ayudante-de-papa-noel/>
 
 ![Santa flying over Barcelona while the player answers a question](docs/screenshot.png)
 
