@@ -18,12 +18,16 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
 - An open batch: run
   `gh pr list --state open --json headRefName --jq '[.[] | select(.headRefName | startswith("question-batch/"))] | length'`.
   If it prints more than 0, stop and say "a batch is still open for review".
+  If the command fails (for example `gh` is missing or not signed in), stop too and say "the guard could not be checked": never go on without it.
 - Nothing to add: run `npm run pools`. If its last line says `Pools below 15: none`, stop and say so.
 
 ## 2. Choose the 10 slots
 
 - Read the output of `npm run pools`. Give the 10 slots to the pools furthest below 15, **at most 3
   per pool**, so a batch covers at least 4 pools.
+- Near the end, fewer than 10 questions may be needed to bring every pool to 15. Then write only
+  that many (N), never push a pool above 15, and use "Add N questions: <pools>" in step 6. The
+  4-pool rule applies only when you write 10.
 - For a city, fill its missing subjects first: sports in Santiago, Sevilla and Zaragoza; history in
   Barcelona, Bilbao and Madrid. City questions are almost all difficulty 1: add difficulty 2 and 3.
 - Spread the difficulties inside a pool; look at what `npm run pools` shows for it.
@@ -60,7 +64,8 @@ attempts, stop without opening a pull request and say what failed.
 ## 6. Open the pull request
 
 - Branch `question-batch/YYYY-MM-DD` (today's date). One commit, "Add 10 questions: <pools>", also
-  the PR title. Only `questions/*.json` and `js/questions.js` change.
+  the PR title (N instead of 10 when fewer are needed). Push the branch and open the PR with
+  `gh pr create --base main`. Only `questions/*.json` and `js/questions.js` change.
 - Commit messages and the PR are in English and never contain the owner's name; write "the owner".
 - The description has, in this order: a one-line summary; the line
   `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html)`

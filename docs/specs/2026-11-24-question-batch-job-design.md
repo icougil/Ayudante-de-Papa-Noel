@@ -61,13 +61,15 @@ game. The job's aim is to make that review quick, not to replace it.
 
 ### What one run does (the skill)
 
-1. **Guards.** If a pull request whose branch starts with `question-batch/` is still open, stop
+1. **Guards.** If a guard command fails (for example `gh` is unavailable), the job stops: a guard that cannot be checked counts as not passed. If a pull request whose branch starts with `question-batch/` is still open, stop
    without doing anything (the owner has not reviewed the last batch; two open batches would also
    conflict, since they edit the same files). If every pool already has at least 15 questions,
    stop too. Either way the run's log says why.
 2. **Choose the slots.** Run `node scripts/question-pools.js`, which prints each pool with its
    count and the subjects and difficulties already in it. Give the 10 slots to the pools furthest
-   below 15, at most 3 per pool, so a batch covers at least 4 pools **(designer's call)**. Within
+   below 15, at most 3 per pool, so a batch covers at least 4 pools **(designer's call)**. Near the end, when fewer than 10 questions bring
+   every pool to 15, the job writes only that many, never pushes a pool above 15, and the commit and
+   title say "Add N questions" (found in review). Within
    a city, fill the missing subjects first (sports in Santiago, Sevilla and Zaragoza; history in
    Barcelona, Bilbao and Madrid) and add difficulty 2 and 3, since city questions are almost all
    difficulty 1 (backlog).
