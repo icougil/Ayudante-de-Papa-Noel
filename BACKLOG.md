@@ -90,6 +90,14 @@ it came from.
   commit; other candidates were `access-nri/pr-preview-action` and `peaceiris/actions-gh-pages`
   plus a comment step; previews of PRs from forks are not needed; previews are public like the
   repository.
+- [ ] **Let the owner redeploy `main` by hand from the Actions tab.** On 2026-11-23 the deploy of
+  the merged PR failed: `deploy-pages` found 0 artifacts (a GitHub-side glitch), and re-running
+  only the failed job then uploaded a second `github-pages` artifact, so every further retry failed
+  with "Multiple artifacts named github-pages". It was fixed by deleting the two artifacts and
+  re-running the job. Wanted: a `workflow_dispatch` trigger in `.github/workflows/ci.yml` (the
+  deploy job already runs only on `main`, so it must also allow that event on `main`), so a failed
+  deploy is fixed by starting a fresh run. Note in the README or here that after a failed deploy
+  the whole workflow is re-run, not only the failed job.
 
 ## Noted during development
 
