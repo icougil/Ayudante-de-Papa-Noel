@@ -83,14 +83,16 @@ it came from.
   commit; other candidates were `access-nri/pr-preview-action` and `peaceiris/actions-gh-pages`
   plus a comment step; previews of PRs from forks are not needed; previews are public like the
   repository.
-- [ ] **Let the owner redeploy `main` by hand from the Actions tab.** On 2026-11-23 the deploy of
-  the merged PR failed: `deploy-pages` found 0 artifacts (a GitHub-side glitch), and re-running
-  only the failed job then uploaded a second `github-pages` artifact, so every further retry failed
-  with "Multiple artifacts named github-pages". It was fixed by deleting the two artifacts and
-  re-running the job. Wanted: a `workflow_dispatch` trigger in `.github/workflows/ci.yml` (the
-  deploy job already runs only on `main`, so it must also allow that event on `main`), so a failed
-  deploy is fixed by starting a fresh run. Note in the README or here that after a failed deploy
-  the whole workflow is re-run, not only the failed job.
+- [x] **Let the owner redeploy `main` by hand from the Actions tab.** On 2026-11-23 the deploy of
+  the merged PR failed three times in a row: `deploy-pages` found 0 artifacts right after a
+  successful upload (open GitHub bug actions/deploy-pages#451, worse in the last days), and
+  re-running only the failed job uploaded a second `github-pages` artifact, so retries then failed
+  with "Multiple artifacts named github-pages". Done: the upload now runs in its own job, before
+  the deploy job (the layout of GitHub's other Pages starters, which the bug does not hit), and
+  the workflow has a `workflow_dispatch` trigger that deploys `main`. The README says to re-run
+  the whole workflow after a failed deploy. Check after the first merge to `main`; if the bug
+  still hits, retry the lookup in a step or deploy by artifact id once actions/deploy-pages#399
+  is merged.
 
 ## Noted during development
 
