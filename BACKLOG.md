@@ -38,6 +38,12 @@ it came from.
   general turn, in Spanish or Catalan, suited to ages 10 to 12. Needs a design step first:
   how they are marked (a new place like `catalunya`, or a topic), how often a game may ask them,
   and how they fit the picker's rules and the two-`ca`-questions cap.
+- [ ] **Let the first stop (Barcelona) have more than 5 questions without breaking a test.** The
+  test `pickQuestions repeats the least recently seen city question when city and general are all
+  seen` in `tests/game-logic.test.js` assumes the first stop has exactly 5 questions, so it fails
+  when the Barcelona pool grows to 6. The first batch (PR #17) had to drop its Barcelona question
+  because of it, so Barcelona stays at 5 while the other pools grow. Fix the test so it does not
+  depend on the pool size, then let the batch job fill Barcelona too.
 
 ## Sound
 
