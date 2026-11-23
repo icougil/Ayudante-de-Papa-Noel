@@ -16,7 +16,8 @@ document covers part 1 of three:
    a pull request the owner reviews.
 3. **Remembering the player** (later design): the browser keeps past games, to avoid repeated
    questions, to raise the difficulty as the player does well, and later to bring back topics
-   answered wrongly.
+   answered wrongly. The first slice, not repeating seen questions, is done: see
+   `2026-11-23-seen-questions-design.md`.
 
 Points the owner did not decide are marked **(designer's call)**.
 

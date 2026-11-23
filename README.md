@@ -82,8 +82,11 @@ may record it in its operational and security logs. See
 Only visits on `icougil.github.io` are counted. A local run or a pull request preview still downloads Umami's
 script, but sends no visit. The browser tests never contact Umami: they replace its script with an empty one.
 
-The game keeps one thing in the browser: whether sound is on or off (the `localStorage` key
-`apn.sound`). It keeps nothing about the questions or the answers.
+The game keeps two things in the browser: whether sound is on or off (the `localStorage` key
+`apn.sound`) and the ids of the questions already seen (`apn.seenQuestions`), so a new game prefers
+questions the player has not met. It keeps no answers. If the browser blocks storage, the game
+plays the same, just without remembering. Some browsers do this for a page opened straight from disk,
+so the memory only works when the game is served over http(s).
 
 ## Project layout
 

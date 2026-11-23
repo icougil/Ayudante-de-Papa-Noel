@@ -57,6 +57,85 @@ test('pickQuestions never repeats a question', () => {
   }
 });
 
+// ---- seen questions ----
+
+const idsAt = (place) => bank.filter((q) => q.place === place).map((q) => q.id);
+const generalIds = idsAt('general');
+const allIds = bank.map((q) => q.id);
+
+test('pickQuestions without seenIds behaves as with an empty list', () => {
+  const without = APN.pickQuestions(level, bank, 11, rngOf(0.1, 0.3, 0.6)).map((q) => q.id);
+  const withEmpty = APN.pickQuestions(level, bank, 11, rngOf(0.1, 0.3, 0.6), []).map((q) => q.id);
+  assert.deepEqual(withEmpty, without);
+});
+
+test('pickQuestions prefers an unseen question of the city', () => {
+  const city = idsAt(stopIds[0]);
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), city.slice(0, 4));
+  assert.equal(picked[0].id, city[4]);
+});
+
+test('pickQuestions takes an unseen general question at a place stop when the city has none unseen', () => {
+  const city = idsAt(stopIds[0]);
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), city);
+  assert.equal(picked[0].place, 'general');
+  assert.ok(!city.includes(picked[0].id));
+});
+
+test('pickQuestions repeats the least recently seen city question when city and general are all seen', () => {
+  const [c0, c1, c2, c3, c4] = idsAt(stopIds[0]);
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), [...generalIds, c3, c1, c4, c0, c2]);
+  assert.equal(picked[0].id, c3);
+});
+
+test("pickQuestions never uses another city's question", () => {
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), allIds);
+  picked.forEach((q, i) => assert.equal(q.place, i % 2 === 0 ? stopIds[i] : 'general'));
+});
+
+test('pickQuestions keeps at most two Catalan questions even when the only unseen candidate is Catalan', () => {
+  const template = bank[0];
+  const fake = (id, place, lang) => ({ ...template, id, place, lang, subject: id, topics: [], minAge: 10, maxAge: 12 });
+  const synthetic = [
+    fake('c0', stopIds[0], 'ca'),
+    fake('c2', stopIds[2], 'ca'),
+    fake('A', stopIds[4], 'ca'),
+    fake('B', stopIds[4], 'es'),
+    fake('g1', 'general', 'es'),
+    fake('g2', 'general', 'es'),
+    fake('g3', 'general', 'es'),
+  ];
+  const picked = APN.pickQuestions(level, synthetic, 11, rngOf(0.1), ['B', 'g1', 'g2', 'g3']);
+  assert.equal(picked[4].id, 'B');
+});
+
+test('pickQuestions does not borrow a general question that a later general stop needs', () => {
+  const template = bank[0];
+  const fake = (id, place) => ({ ...template, id, place, lang: 'es', subject: id, topics: [], minAge: 10, maxAge: 12 });
+  const synthetic = [
+    fake('c0', stopIds[0]), fake('c2', stopIds[2]), fake('c4', stopIds[4]),
+    fake('g1', 'general'), fake('g2', 'general'), fake('g3', 'general'),
+  ];
+  let picked;
+  assert.doesNotThrow(() => { picked = APN.pickQuestions(level, synthetic, 11, rngOf(0.1), ['c0']); });
+  assert.deepEqual(picked.map((q) => q.id).filter((id, i) => i % 2 === 0), ['c0', 'c2', 'c4']);
+});
+
+test('pickQuestions picks the least recently seen general question when all are seen', () => {
+  const seen = [...allIds].reverse();
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), seen);
+  const sharesTopic = (q) => (q.topics || []).some((t) => (picked[0].topics || []).includes(t));
+  const expected = seen.find((id) => {
+    const q = bank.find((b) => b.id === id);
+    return q.place === 'general' && !sharesTopic(q);
+  });
+  assert.equal(picked[1].id, expected);
+});
+
+test('pickQuestions still returns six questions when every question was seen', () => {
+  assert.equal(APN.pickQuestions(level, bank, 11, rngOf(0.1), allIds).length, 6);
+});
+
 test('pickQuestions filters by age', () => {
   assert.throws(() => APN.pickQuestions(level, bank, 8, Math.random), { message: NOT_ENOUGH_MESSAGE });
 });

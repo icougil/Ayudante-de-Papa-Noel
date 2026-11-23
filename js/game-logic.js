@@ -41,21 +41,38 @@
   // candidates it prefers (1) at most two Catalan questions in the game, (2) a subject not
   // yet used, (3) no topic shared with a picked question. When no candidate meets every
   // rule it drops rule 3 first, then rule 2, then rule 1.
-  APN.pickQuestions = function (level, bank, age, rng) {
+  // `seenIds`: ids of questions the player has already seen, least recently seen first.
+  APN.pickQuestions = function (level, bank, age, rng, seenIds = []) {
     const valid = bank.filter((q) => q.minAge <= age && age <= q.maxAge);
     const general = valid.filter((q) => q.place === 'general');
     const placeOnEven = rng() < 0.5;
     const picks = [];
+    const seen = new Set(seenIds);
+    const seenOrder = new Map(seenIds.map((id, i) => [id, i]));
+
+    function catalanCount() {
+      return picks.filter((q) => q.lang === 'ca').length;
+    }
+
+    // True when some question of the list is unseen and does not break the Catalan cap.
+    function hasFreshOne(candidates) {
+      const catalan = catalanCount();
+      return candidates.some((q) => !seen.has(q.id) && (q.lang !== 'ca' || catalan < MAX_CATALAN_PER_GAME));
+    }
 
     function narrow(candidates) {
-      const catalan = picks.filter((q) => q.lang === 'ca').length;
+      const catalan = catalanCount();
       const subjects = new Set(picks.map((q) => q.subject));
       const topics = new Set(picks.flatMap((q) => q.topics || []));
-      const rules = [
-        (q) => q.lang !== 'ca' || catalan < MAX_CATALAN_PER_GAME,
+      const rules = [(q) => q.lang !== 'ca' || catalan < MAX_CATALAN_PER_GAME];
+      // With nothing unseen to prefer, the rule would empty the list and drop the spread rules too.
+      if (hasFreshOne(candidates)) {
+        rules.push((q) => !seen.has(q.id));
+      }
+      rules.push(
         (q) => !subjects.has(q.subject),
         (q) => !(q.topics || []).some((t) => topics.has(t)),
-      ];
+      );
       for (let used = rules.length; used >= 0; used--) {
         const active = rules.slice(0, used);
         const fitting = candidates.filter((q) => active.every((rule) => rule(q)));
@@ -68,18 +85,54 @@
 
     return level.stops.map((stop, i) => {
       const placeTurn = (i % 2 === 0) === placeOnEven;
-      const candidates = placeTurn ? valid.filter((q) => q.place === stop.id) : general;
+      let candidates = placeTurn ? valid.filter((q) => q.place === stop.id) : general;
       if (candidates.length === 0) {
         throw new Error(NOT_ENOUGH_MESSAGE);
       }
+      // A city out of unseen questions borrows an unseen general one, never another city's.
+      // ...but only while the general turns still to come keep enough questions.
+      const generalTurnsAfter = level.stops.filter((_, j) => j > i && (j % 2 === 0) !== placeOnEven).length;
+      if (placeTurn && !hasFreshOne(candidates) && hasFreshOne(general) && general.length > generalTurnsAfter) {
+        candidates = general;
+      }
       const fitting = narrow(candidates);
-      const picked = fitting[randomIndex(fitting.length, rng)];
-      if (!placeTurn) {
+      const allSeen = fitting.every((q) => seen.has(q.id));
+      const picked = allSeen
+        ? fitting.reduce((oldest, q) => (seenOrder.get(q.id) < seenOrder.get(oldest.id) ? q : oldest))
+        : fitting[randomIndex(fitting.length, rng)];
+      if (picked.place === 'general') {
         general.splice(general.indexOf(picked), 1);
       }
       picks.push(picked);
       return picked;
     });
+  };
+
+  APN.SEEN_KEY = 'apn.seenQuestions';
+
+  // The stored list: strings only, least recently seen first. Any problem reads as an empty list.
+  function readSeen(storage) {
+    try {
+      const list = JSON.parse(storage.getItem(APN.SEEN_KEY));
+      return Array.isArray(list) ? list.filter((id) => typeof id === 'string') : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  // The ids the player has seen, without those no longer in the bank.
+  APN.loadSeen = function (storage, bank) {
+    const known = new Set(bank.map((q) => q.id));
+    return readSeen(storage).filter((id) => known.has(id));
+  };
+
+  // Records an id as the most recently seen one. A blocked storage only means nothing is remembered.
+  APN.recordSeen = function (storage, id) {
+    try {
+      storage.setItem(APN.SEEN_KEY, JSON.stringify([...readSeen(storage).filter((x) => x !== id), id]));
+    } catch (error) {
+      // Not remembered.
+    }
   };
 
   // A copy of the question with its options in a different order.

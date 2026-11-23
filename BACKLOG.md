@@ -6,17 +6,16 @@ it came from.
 
 ## Questions
 
-- [ ] **Do not repeat questions a player has already seen.** Part 3 of the question-bank plan
-  (remembering the player), see `docs/specs/2026-11-18-question-bank-design.md`. A game picks 6
-  questions at random from a bank of 60, so a second game can still repeat some. At the very least
-  a game must not ask questions from the player's previous games until the bank runs out. Needs
-  deciding: where the seen questions are remembered (the browser's `localStorage` is the only
-  option without a server), and what happens when a city has no unseen question left.
 - [ ] **Grow the question bank a lot, across varied topics.** Part 1 is done: the questions live
   in one file per subject (`questions/*.json`), each with a language label, topics, difficulty and
   references, and the bank holds about 60 questions. Still to do: part 2 (a scheduled job that
   adds questions) and part 3 (remembering the player); see
-  `docs/specs/2026-11-18-question-bank-design.md`.
+  `docs/specs/2026-11-18-question-bank-design.md`. Targets for the job: at least 15 questions in
+  every pool (each of the six cities and each general subject: maths, science, language, english,
+  catalan), about 4 batches of 30. Fill the pools furthest below 15 first: general catalan (3),
+  language (5), english (6), and every city (5). Cities also lack subjects: sports in Santiago,
+  Sevilla and Zaragoza (1 each in Barcelona, Bilbao and Madrid), history in Barcelona, Bilbao and
+  Madrid. City questions are almost all difficulty 1, so add harder ones too.
 - [ ] **Get questions from an external source instead of writing them by hand.** Part 1 is done
   (subject files, labels, about 60 questions written from the reading list in the spec, each with a
   reference). Parts 2 (scheduled job) and 3 (remembering the player) remain, with the open
@@ -84,6 +83,14 @@ it came from.
   commit; other candidates were `access-nri/pr-preview-action` and `peaceiris/actions-gh-pages`
   plus a comment step; previews of PRs from forks are not needed; previews are public like the
   repository.
+- [ ] **Let the owner redeploy `main` by hand from the Actions tab.** On 2026-11-23 the deploy of
+  the merged PR failed: `deploy-pages` found 0 artifacts (a GitHub-side glitch), and re-running
+  only the failed job then uploaded a second `github-pages` artifact, so every further retry failed
+  with "Multiple artifacts named github-pages". It was fixed by deleting the two artifacts and
+  re-running the job. Wanted: a `workflow_dispatch` trigger in `.github/workflows/ci.yml` (the
+  deploy job already runs only on `main`, so it must also allow that event on `main`), so a failed
+  deploy is fixed by starting a fresh run. Note in the README or here that after a failed deploy
+  the whole workflow is re-run, not only the failed job.
 
 ## Noted during development
 
