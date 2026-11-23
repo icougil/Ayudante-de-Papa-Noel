@@ -181,9 +181,19 @@
 
   // ---------- Game ----------
 
+  // The browser's storage, or null when it is blocked: the game then just remembers nothing.
+  function storage() {
+    try {
+      return typeof localStorage !== 'undefined' ? localStorage : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
   function startGame() {
     // Options are shuffled when the game is created, so the logic and the screen share one order.
-    const picked = APN.pickQuestions(level, APN.QUESTIONS, AGE, Math.random);
+    const seenIds = APN.loadSeen(storage(), APN.QUESTIONS);
+    const picked = APN.pickQuestions(level, APN.QUESTIONS, AGE, Math.random, seenIds);
     state = APN.createGame(picked.map((q) => APN.shuffleOptions(q, Math.random)));
     leg = 0;
     turboNext = false;
@@ -225,6 +235,7 @@
     el.effects.textContent = '';
 
     question = state.questions[leg];
+    APN.recordSeen(storage(), question.id);
     renderQuestion();
     renderScoreboard();
     phase = 'flying';

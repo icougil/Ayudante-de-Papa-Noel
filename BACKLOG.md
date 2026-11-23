@@ -6,13 +6,6 @@ it came from.
 
 ## Questions
 
-- [ ] **Do not repeat questions a player has already seen.** Part 3 of the question-bank plan
-  (remembering the player), see `docs/specs/2026-11-18-question-bank-design.md`. A game picks 6
-  questions at random from a bank of 60, so a second game can still repeat some. At the very least
-  a game must not ask questions from the player's previous games until the bank runs out. Needs
-  deciding: where the seen questions are remembered (the browser's `localStorage` is the only
-  option without a server), and what happens when a city has no unseen question left.
-  Designed in `docs/specs/2026-11-23-seen-questions-design.md`; implementation pending.
 - [ ] **Grow the question bank a lot, across varied topics.** Part 1 is done: the questions live
   in one file per subject (`questions/*.json`), each with a language label, topics, difficulty and
   references, and the bank holds about 60 questions. Still to do: part 2 (a scheduled job that
