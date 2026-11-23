@@ -82,6 +82,75 @@
       "references": [
         "https://ca.wikipedia.org/wiki/Forquilla"
       ]
+    },
+    {
+      "id": "catalan-ca-004",
+      "lang": "ca",
+      "topics": [
+        "vocabulario-catalan"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Com es diu en català «{manzana}»?",
+      "options": [
+        "Poma",
+        "Pera",
+        "Taronja",
+        "Maduixa"
+      ],
+      "correct": 0,
+      "explanation": "La fruita que en castellà es diu «{manzana}» és la «poma» en català.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Poma"
+      ]
+    },
+    {
+      "id": "catalan-ca-005",
+      "lang": "ca",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Completa: «Ahir jo ___ al parc.»",
+      "options": [
+        "vaig anar",
+        "vaig anat",
+        "vaig ir",
+        "anaré"
+      ],
+      "correct": 0,
+      "explanation": "El passat amb «vaig» porta el verb en infinitiu: «vaig anar». «Anaré» és futur.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Passat_perifr%C3%A0stic"
+      ]
+    },
+    {
+      "id": "catalan-ca-006",
+      "lang": "ca",
+      "topics": [
+        "ortografia-catalana"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina frase és correcta?",
+      "options": [
+        "Sé que vindràs demà",
+        "Se que vindràs demà",
+        "Sé què vindràs demà",
+        "Sè que vindràs demà"
+      ],
+      "correct": 0,
+      "explanation": "El verb «saber» en primera persona porta accent: «sé». La conjunció «que» no en porta.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Accent_diacr%C3%ADtic"
+      ]
     }
   ]
 }

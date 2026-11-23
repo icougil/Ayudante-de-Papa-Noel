@@ -43,6 +43,11 @@
       "name": "Religión y peregrinaciones"
     },
     {
+      "id": "monarquia-y-capitales",
+      "subject": "history",
+      "name": "Monarquía y capitales"
+    },
+    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -574,6 +579,30 @@
       ]
     },
     {
+      "id": "history-es-004",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "monarquia-y-capitales"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué rey decidió en 1561 que la corte se instalara en Madrid?",
+      "options": [
+        "Felipe II",
+        "Carlos III",
+        "Felipe V",
+        "Fernando VII"
+      ],
+      "correct": 0,
+      "explanation": "Felipe II llevó la corte a Madrid en 1561, y desde entonces la ciudad ha sido la capital de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Capitalidad_de_Madrid"
+      ]
+    },
+    {
       "id": "barcelona-3",
       "lang": "es",
       "subject": "sports",
@@ -643,6 +672,78 @@
       "explanation": "El estadio Santiago Bernabéu, en Madrid, es el campo del Real Madrid.",
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernabéu"
+      ]
+    },
+    {
+      "id": "sports-es-002",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué equipo gallego de fútbol juega en el estadio de Balaídos, en Vigo?",
+      "options": [
+        "Celta de Vigo",
+        "Deportivo de La Coruña",
+        "Racing de Ferrol",
+        "CD Lugo"
+      ],
+      "correct": 0,
+      "explanation": "El Celta de Vigo juega en Balaídos, su estadio, y es uno de los equipos más conocidos de Galicia.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_Municipal_de_Bala%C3%ADdos"
+      ]
+    },
+    {
+      "id": "sports-es-003",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El derbi de Sevilla enfrenta al Sevilla FC con otro equipo de la ciudad. ¿Cuál?",
+      "options": [
+        "Real Betis",
+        "Real Sociedad",
+        "Valencia CF",
+        "Cádiz CF"
+      ],
+      "correct": 0,
+      "explanation": "El derbi sevillano se juega entre el Sevilla FC y el Real Betis, los dos equipos de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Derbi_sevillano"
+      ]
+    },
+    {
+      "id": "sports-es-004",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué estadio juega como local el Real Zaragoza?",
+      "options": [
+        "La Romareda",
+        "La Rosaleda",
+        "El Sadar",
+        "Mestalla"
+      ],
+      "correct": 0,
+      "explanation": "El Real Zaragoza juega en La Romareda, el estadio de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_de_La_Romareda"
       ]
     },
     {
@@ -1416,6 +1517,78 @@
       ]
     },
     {
+      "id": "language-es-004",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "categorias-gramaticales"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué tipo de palabra es «correr»?",
+      "options": [
+        "Verbo",
+        "Sustantivo",
+        "Adjetivo",
+        "Adverbio"
+      ],
+      "correct": 0,
+      "explanation": "«Correr» dice una acción y está en infinitivo, así que es un verbo.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Verbo"
+      ]
+    },
+    {
+      "id": "language-es-005",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "acentuacion"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas palabras es aguda?",
+      "options": [
+        "Canción",
+        "Árbol",
+        "Mesa",
+        "Teléfono"
+      ],
+      "correct": 0,
+      "explanation": "«Canción» tiene la fuerza en la última sílaba (can-CIÓN), por eso es aguda.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Acento_ortogr%C3%A1fico"
+      ]
+    },
+    {
+      "id": "language-es-006",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "ortografia"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué frase usa bien «ahí», «hay» y «ay»?",
+      "options": [
+        "Ahí hay un gato",
+        "Ay hay un gato",
+        "Ahí ay un gato",
+        "Hay ahí ay gato"
+      ],
+      "correct": 0,
+      "explanation": "«Ahí» señala un lugar, «hay» es del verbo haber y «ay» expresa dolor o sorpresa.",
+      "references": [
+        "https://www.rae.es/dpd/ay"
+      ]
+    },
+    {
       "id": "general-10",
       "lang": "en",
       "subject": "english",
@@ -1630,6 +1803,78 @@
       "explanation": "La forquilla és l'estri amb pues que serveix per punxar el menjar i portar-lo a la boca.",
       "references": [
         "https://ca.wikipedia.org/wiki/Forquilla"
+      ]
+    },
+    {
+      "id": "catalan-ca-004",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "vocabulario-catalan"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Com es diu en català «{manzana}»?",
+      "options": [
+        "Poma",
+        "Pera",
+        "Taronja",
+        "Maduixa"
+      ],
+      "correct": 0,
+      "explanation": "La fruita que en castellà es diu «{manzana}» és la «poma» en català.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Poma"
+      ]
+    },
+    {
+      "id": "catalan-ca-005",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Completa: «Ahir jo ___ al parc.»",
+      "options": [
+        "vaig anar",
+        "vaig anat",
+        "vaig ir",
+        "anaré"
+      ],
+      "correct": 0,
+      "explanation": "El passat amb «vaig» porta el verb en infinitiu: «vaig anar». «Anaré» és futur.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Passat_perifr%C3%A0stic"
+      ]
+    },
+    {
+      "id": "catalan-ca-006",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "ortografia-catalana"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina frase és correcta?",
+      "options": [
+        "Sé que vindràs demà",
+        "Se que vindràs demà",
+        "Sé què vindràs demà",
+        "Sè que vindràs demà"
+      ],
+      "correct": 0,
+      "explanation": "El verb «saber» en primera persona porta accent: «sé». La conjunció «que» no en porta.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Accent_diacr%C3%ADtic"
       ]
     }
   ];

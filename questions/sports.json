@@ -82,6 +82,75 @@
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernabéu"
       ]
+    },
+    {
+      "id": "sports-es-002",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué equipo gallego de fútbol juega en el estadio de Balaídos, en Vigo?",
+      "options": [
+        "Celta de Vigo",
+        "Deportivo de La Coruña",
+        "Racing de Ferrol",
+        "CD Lugo"
+      ],
+      "correct": 0,
+      "explanation": "El Celta de Vigo juega en Balaídos, su estadio, y es uno de los equipos más conocidos de Galicia.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_Municipal_de_Bala%C3%ADdos"
+      ]
+    },
+    {
+      "id": "sports-es-003",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El derbi de Sevilla enfrenta al Sevilla FC con otro equipo de la ciudad. ¿Cuál?",
+      "options": [
+        "Real Betis",
+        "Real Sociedad",
+        "Valencia CF",
+        "Cádiz CF"
+      ],
+      "correct": 0,
+      "explanation": "El derbi sevillano se juega entre el Sevilla FC y el Real Betis, los dos equipos de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Derbi_sevillano"
+      ]
+    },
+    {
+      "id": "sports-es-004",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué estadio juega como local el Real Zaragoza?",
+      "options": [
+        "La Romareda",
+        "La Rosaleda",
+        "El Sadar",
+        "Mestalla"
+      ],
+      "correct": 0,
+      "explanation": "El Real Zaragoza juega en La Romareda, el estadio de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_de_La_Romareda"
+      ]
     }
   ]
 }

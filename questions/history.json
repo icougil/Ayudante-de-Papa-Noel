@@ -15,6 +15,10 @@
     {
       "id": "religion-y-peregrinaciones",
       "name": "Religión y peregrinaciones"
+    },
+    {
+      "id": "monarquia-y-capitales",
+      "name": "Monarquía y capitales"
     }
   ],
   "questions": [
@@ -131,6 +135,29 @@
       "explanation": "Según una antigua creencia, la catedral guarda los restos del apóstol Santiago, y por eso llegan peregrinos de muchos lugares.",
       "references": [
         "https://es.wikipedia.org/wiki/Catedral_de_Santiago_de_Compostela"
+      ]
+    },
+    {
+      "id": "history-es-004",
+      "lang": "es",
+      "topics": [
+        "monarquia-y-capitales"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué rey decidió en 1561 que la corte se instalara en Madrid?",
+      "options": [
+        "Felipe II",
+        "Carlos III",
+        "Felipe V",
+        "Fernando VII"
+      ],
+      "correct": 0,
+      "explanation": "Felipe II llevó la corte a Madrid en 1561, y desde entonces la ciudad ha sido la capital de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Capitalidad_de_Madrid"
       ]
     }
   ]
