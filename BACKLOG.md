@@ -57,11 +57,15 @@ it came from.
   around. Depends on the item "Let the first stop (Barcelona) have more than 5 questions".
   Proposed, to settle in the design step:
   - Pool: the 6 current cities plus Valencia (Ciudad de las Artes y las Ciencias), Granada
-    (Alhambra), Palma (La Seu) and, last and optional, Málaga (Alcazaba; it would be the third
-    city in Andalusia, so A Coruña, Salamanca or Toledo are alternatives).
+    (Alhambra), Tenerife (El Teide; chosen by the owner over Palma for its volcanic geography
+    and the Teide national park) and, last and optional, Málaga (Alcazaba; it would be the
+    third city in Andalusia, so A Coruña, Salamanca or Toledo are alternatives). The stop is
+    named `Tenerife`, not `Santa Cruz de Tenerife`: its questions cover the whole island, and a
+    long name risks the narrow-screen scoreboard wrap noted below.
   - Route: Barcelona is always first. The other 5 are drawn at random and sorted by a fixed
     ring order around the peninsula (Barcelona, Zaragoza, Bilbao, Santiago, Madrid, Sevilla,
-    Málaga, Granada, Valencia, Palma), so every route makes sense on a map. A new pure
+    Málaga, Granada, Valencia, Tenerife), so every route makes sense on a map. Tenerife is off
+    the mainland, so it is last in the ring and always the last stop when drawn. A new pure
     `APN.pickRoute(level, rng)` feeds `pickQuestions` a route in place of the level.
   - Each new city needs a landmark SVG in `js/ui.js` and at least 6 questions (geography,
     history, sports and culture, difficulty 1 and 2) before it joins the pool. The question
