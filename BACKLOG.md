@@ -45,6 +45,31 @@ it came from.
   because of it, so Barcelona stays at 5 while the other pools grow. Fix the test so it does not
   depend on the pool size, then let the batch job fill Barcelona too.
 
+## Cities
+
+- [ ] **Rotate the cities: a pool of about 10, 6 per trip.** Agreed with the owner on 2026-11-24
+  instead of adding a 7th stop. A 7th stop was turned down because the stars are built around 6
+  (3 gifts to pass, 6 express for the fifth star), it makes the game about 15% longer, and
+  "longer games" is an anti-goal in `docs/specs/2026-11-16-five-stars-design.md`. A trip keeps
+  6 stops, the "Ciudad N/6" scoreboard and the stars. Each game takes its stops from a larger
+  pool, so repeat players see new places. Wait until the 6 current city pools reach about 10
+  questions each (they are at 5 or 6). Before that, rotating would only spread the repeats
+  around. Depends on the item "Let the first stop (Barcelona) have more than 5 questions".
+  Proposed, to settle in the design step:
+  - Pool: the 6 current cities plus Valencia (Ciudad de las Artes y las Ciencias), Granada
+    (Alhambra), Palma (La Seu) and, last and optional, Málaga (Alcazaba; it would be the third
+    city in Andalusia, so A Coruña, Salamanca or Toledo are alternatives).
+  - Route: Barcelona is always first. The other 5 are drawn at random and sorted by a fixed
+    ring order around the peninsula (Barcelona, Zaragoza, Bilbao, Santiago, Madrid, Sevilla,
+    Málaga, Granada, Valencia, Palma), so every route makes sense on a map. A new pure
+    `APN.pickRoute(level, rng)` feeds `pickQuestions` a route in place of the level.
+  - Each new city needs a landmark SVG in `js/ui.js` and at least 6 questions (geography,
+    history, sports and culture, difficulty 1 and 2) before it joins the pool. The question
+    build checks that minimum. The city's pull request can hold those questions, then the
+    batch job grows its pool.
+  - Order: the test fix above, then the current city pools to about 10, then the rotation code
+    with the current 6 cities (same game, ring order), then one pull request per new city.
+
 ## Sound
 
 - [x] **Add music and sound effects, with a way to turn them on and off.** The game is silent
