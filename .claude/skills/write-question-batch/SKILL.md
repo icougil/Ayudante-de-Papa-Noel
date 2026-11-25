@@ -42,6 +42,9 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
   subject's file if one is missing), `difficulty`, `place`, the length limits, language and subject
   agreeing, Spanish words in braces inside Catalan and English texts.
 - Add each question at the end of its subject's file in `questions/`. Never edit existing questions.
+- Balance topics: before choosing a topic for a question, count how many questions of its subject use
+  each topic (`questions/<subject>.json`), and prefer the least used one, so no topic (football in
+  sports, for example) grows far ahead of the others. Add a new topic if none fits.
 - A pool's Catalan share stays at or below a third, except the `catalan` pool, which is all Catalan.
 - Place questions are only geography, history, sports or culture. General turns are maths, science,
   language, english and catalan.
