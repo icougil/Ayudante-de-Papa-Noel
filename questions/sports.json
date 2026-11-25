@@ -15,6 +15,10 @@
     {
       "id": "baloncesto",
       "name": "Baloncesto"
+    },
+    {
+      "id": "tenis",
+      "name": "Tenis"
     }
   ],
   "questions": [
@@ -154,6 +158,75 @@
       "explanation": "El Real Zaragoza juega en La Romareda, el estadio de la ciudad.",
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_de_La_Romareda"
+      ]
+    },
+    {
+      "id": "sports-es-005",
+      "lang": "es",
+      "topics": [
+        "deportes-tradicionales"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En los deportes rurales vascos, ¿qué hace un aizkolari?",
+      "options": [
+        "Corta troncos de madera con un hacha",
+        "Levanta una piedra enorme",
+        "Rema en una trainera",
+        "Tira de una cuerda en equipo"
+      ],
+      "correct": 0,
+      "explanation": "El aizkolari compite cortando troncos con un hacha, lo más rápido posible. Es uno de los deportes rurales más típicos del País Vasco.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Aizkolari"
+      ]
+    },
+    {
+      "id": "sports-es-006",
+      "lang": "es",
+      "topics": [
+        "juegos-olimpicos"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué montaña de Barcelona está el Estadio Olímpico de los Juegos de 1992?",
+      "options": [
+        "Montjuïc",
+        "Tibidabo",
+        "Montserrat",
+        "El Carmel"
+      ],
+      "correct": 0,
+      "explanation": "El Estadio Olímpico y el anillo olímpico de 1992 están en la montaña de Montjuïc, con vistas a toda la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Montjuïc"
+      ]
+    },
+    {
+      "id": "sports-es-007",
+      "lang": "es",
+      "topics": [
+        "tenis"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué torneo de tenis se juega cada año en la Caja Mágica de Madrid?",
+      "options": [
+        "El Madrid Open",
+        "Roland Garros",
+        "Wimbledon",
+        "El US Open"
+      ],
+      "correct": 0,
+      "explanation": "El Madrid Open es uno de los grandes torneos de tenis del año. Rafa Nadal, el tenista español más famoso, lo ha ganado varias veces.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Masters_de_Madrid"
       ]
     }
   ]

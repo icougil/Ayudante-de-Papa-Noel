@@ -151,6 +151,29 @@
       "references": [
         "https://ca.wikipedia.org/wiki/Accent_diacr%C3%ADtic"
       ]
+    },
+    {
+      "id": "catalan-ca-007",
+      "lang": "ca",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin és el plural de «llapis»?",
+      "options": [
+        "Llapis",
+        "Llapisos",
+        "Llapises",
+        "Llapissos"
+      ],
+      "correct": 0,
+      "explanation": "Les paraules acabades en -s tòniques com «llapis» no canvien al plural: «el llapis», «els llapis».",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Plural_(gram%C3%A0tica)"
+      ]
     }
   ]
 }

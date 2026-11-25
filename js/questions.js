@@ -68,6 +68,11 @@
       "name": "Baloncesto"
     },
     {
+      "id": "tenis",
+      "subject": "sports",
+      "name": "Tenis"
+    },
+    {
       "id": "arte-y-arquitectura",
       "subject": "culture",
       "name": "Arte y arquitectura"
@@ -608,6 +613,54 @@
       ]
     },
     {
+      "id": "history-es-007",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué año se aprobó la Constitución española, que establece que Madrid es la capital?",
+      "options": [
+        "1978",
+        "1936",
+        "1992",
+        "1812"
+      ],
+      "correct": 0,
+      "explanation": "La Constitución se aprobó en 1978. El Día de la Constitución se celebra cada 6 de diciembre.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Constitución_española_de_1978"
+      ]
+    },
+    {
+      "id": "history-es-009",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "hispania-romana"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llamaba Barcelona en tiempos de los romanos?",
+      "options": [
+        "Barcino",
+        "Tarraco",
+        "Gerunda",
+        "Emporiae"
+      ],
+      "correct": 0,
+      "explanation": "Los romanos fundaron una ciudad llamada Barcino hace más de dos mil años. Es el origen de la Barcelona actual.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Barcino"
+      ]
+    },
+    {
       "id": "barcelona-3",
       "lang": "es",
       "subject": "sports",
@@ -749,6 +802,78 @@
       "explanation": "El Real Zaragoza juega en La Romareda, el estadio de la ciudad.",
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_de_La_Romareda"
+      ]
+    },
+    {
+      "id": "sports-es-005",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "deportes-tradicionales"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En los deportes rurales vascos, ¿qué hace un aizkolari?",
+      "options": [
+        "Corta troncos de madera con un hacha",
+        "Levanta una piedra enorme",
+        "Rema en una trainera",
+        "Tira de una cuerda en equipo"
+      ],
+      "correct": 0,
+      "explanation": "El aizkolari compite cortando troncos con un hacha, lo más rápido posible. Es uno de los deportes rurales más típicos del País Vasco.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Aizkolari"
+      ]
+    },
+    {
+      "id": "sports-es-006",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "juegos-olimpicos"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué montaña de Barcelona está el Estadio Olímpico de los Juegos de 1992?",
+      "options": [
+        "Montjuïc",
+        "Tibidabo",
+        "Montserrat",
+        "El Carmel"
+      ],
+      "correct": 0,
+      "explanation": "El Estadio Olímpico y el anillo olímpico de 1992 están en la montaña de Montjuïc, con vistas a toda la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Montjuïc"
+      ]
+    },
+    {
+      "id": "sports-es-007",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "tenis"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué torneo de tenis se juega cada año en la Caja Mágica de Madrid?",
+      "options": [
+        "El Madrid Open",
+        "Roland Garros",
+        "Wimbledon",
+        "El US Open"
+      ],
+      "correct": 0,
+      "explanation": "El Madrid Open es uno de los grandes torneos de tenis del año. Rafa Nadal, el tenista español más famoso, lo ha ganado varias veces.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Masters_de_Madrid"
       ]
     },
     {
@@ -1014,6 +1139,54 @@
       "explanation": "Es «Puppy», un perro de más de 12 metros cubierto de miles de flores de verdad, obra del artista Jeff Koons.",
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
+      ]
+    },
+    {
+      "id": "culture-es-005",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué día de octubre se celebra la fiesta grande de Zaragoza, en honor a la Virgen del Pilar?",
+      "options": [
+        "El 12",
+        "El 1",
+        "El 24",
+        "El 31"
+      ],
+      "correct": 0,
+      "explanation": "Las Fiestas del Pilar de Zaragoza se celebran en torno al 12 de octubre, día de la Virgen del Pilar, patrona de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Fiestas_del_Pilar"
+      ]
+    },
+    {
+      "id": "culture-es-006",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "arte-y-arquitectura"
+      ],
+      "difficulty": 3,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué arco se levantó en Barcelona para la Exposición Universal de 1888?",
+      "options": [
+        "El Arco de Triunfo",
+        "La Puerta de Alcalá",
+        "El Arco de Santa María",
+        "El Arco de la Rosa"
+      ],
+      "correct": 0,
+      "explanation": "El Arco de Triunfo de Barcelona fue la entrada a la Exposición Universal de 1888 y es de ladrillo rojo.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Arco_de_Triunfo_(Barcelona)"
       ]
     },
     {
@@ -1739,6 +1912,54 @@
       ]
     },
     {
+      "id": "english-en-004",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the plural of «child»?",
+      "options": [
+        "Children",
+        "Childs",
+        "Childes",
+        "Childrens"
+      ],
+      "correct": 0,
+      "explanation": "«Child» ({niño}) has an irregular plural: «children» ({niños}). We do not add -s to it.",
+      "references": [
+        "https://en.wikipedia.org/wiki/English_plurals"
+      ]
+    },
+    {
+      "id": "english-en-005",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the comparative of «good»?",
+      "options": [
+        "Better",
+        "Gooder",
+        "More good",
+        "Best"
+      ],
+      "correct": 0,
+      "explanation": "«Good» ({bueno}) is irregular: its comparative is «better» ({mejor}). «Best» ({el mejor}) is the superlative.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Comparison_(grammar)"
+      ]
+    },
+    {
       "id": "catalan-ca-001",
       "lang": "ca",
       "subject": "catalan",
@@ -1880,6 +2101,30 @@
       "explanation": "El verb «saber» en primera persona porta accent: «sé». La conjunció «que» no en porta.",
       "references": [
         "https://ca.wikipedia.org/wiki/Accent_diacr%C3%ADtic"
+      ]
+    },
+    {
+      "id": "catalan-ca-007",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin és el plural de «llapis»?",
+      "options": [
+        "Llapis",
+        "Llapisos",
+        "Llapises",
+        "Llapissos"
+      ],
+      "correct": 0,
+      "explanation": "Les paraules acabades en -s tòniques com «llapis» no canvien al plural: «el llapis», «els llapis».",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Plural_(gram%C3%A0tica)"
       ]
     }
   ];

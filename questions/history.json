@@ -159,6 +159,52 @@
       "references": [
         "https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid"
       ]
+    },
+    {
+      "id": "history-es-007",
+      "lang": "es",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué año se aprobó la Constitución española, que establece que Madrid es la capital?",
+      "options": [
+        "1978",
+        "1936",
+        "1992",
+        "1812"
+      ],
+      "correct": 0,
+      "explanation": "La Constitución se aprobó en 1978. El Día de la Constitución se celebra cada 6 de diciembre.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Constitución_española_de_1978"
+      ]
+    },
+    {
+      "id": "history-es-009",
+      "lang": "es",
+      "topics": [
+        "hispania-romana"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llamaba Barcelona en tiempos de los romanos?",
+      "options": [
+        "Barcino",
+        "Tarraco",
+        "Gerunda",
+        "Emporiae"
+      ],
+      "correct": 0,
+      "explanation": "Los romanos fundaron una ciudad llamada Barcino hace más de dos mil años. Es el origen de la Barcelona actual.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Barcino"
+      ]
     }
   ]
 }

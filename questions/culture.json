@@ -279,6 +279,52 @@
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]
+    },
+    {
+      "id": "culture-es-005",
+      "lang": "es",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué día de octubre se celebra la fiesta grande de Zaragoza, en honor a la Virgen del Pilar?",
+      "options": [
+        "El 12",
+        "El 1",
+        "El 24",
+        "El 31"
+      ],
+      "correct": 0,
+      "explanation": "Las Fiestas del Pilar de Zaragoza se celebran en torno al 12 de octubre, día de la Virgen del Pilar, patrona de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Fiestas_del_Pilar"
+      ]
+    },
+    {
+      "id": "culture-es-006",
+      "lang": "es",
+      "topics": [
+        "arte-y-arquitectura"
+      ],
+      "difficulty": 3,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué arco se levantó en Barcelona para la Exposición Universal de 1888?",
+      "options": [
+        "El Arco de Triunfo",
+        "La Puerta de Alcalá",
+        "El Arco de Santa María",
+        "El Arco de la Rosa"
+      ],
+      "correct": 0,
+      "explanation": "El Arco de Triunfo de Barcelona fue la entrada a la Exposición Universal de 1888 y es de ladrillo rojo.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Arco_de_Triunfo_(Barcelona)"
+      ]
     }
   ]
 }
