@@ -178,6 +178,29 @@
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_de_San_Mamés"
       ]
+    },
+    {
+      "id": "sports-es-006",
+      "lang": "es",
+      "topics": [
+        "juegos-olimpicos"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué montaña de Barcelona está el Estadio Olímpico de los Juegos de 1992?",
+      "options": [
+        "Montjuïc",
+        "Tibidabo",
+        "Montserrat",
+        "El Carmel"
+      ],
+      "correct": 0,
+      "explanation": "El Estadio Olímpico y el anillo olímpico de 1992 están en la montaña de Montjuïc, con vistas a toda la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Montjuïc"
+      ]
     }
   ]
 }

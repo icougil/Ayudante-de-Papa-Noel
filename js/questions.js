@@ -48,11 +48,6 @@
       "name": "Monarquía y capitales"
     },
     {
-      "id": "america-y-descubrimientos",
-      "subject": "history",
-      "name": "América y los descubrimientos"
-    },
-    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -469,30 +464,6 @@
       ]
     },
     {
-      "id": "geography-es-003",
-      "lang": "es",
-      "subject": "geography",
-      "topics": [
-        "montanas-y-relieve"
-      ],
-      "difficulty": 2,
-      "place": "zaragoza",
-      "minAge": 10,
-      "maxAge": 12,
-      "prompt": "¿Qué cordillera separa Aragón de Francia, al norte de Zaragoza?",
-      "options": [
-        "Los Pirineos",
-        "Los Picos de Europa",
-        "Sierra Nevada",
-        "Los Alpes"
-      ],
-      "correct": 0,
-      "explanation": "Los Pirineos forman la frontera natural entre España y Francia, y Aragón tiene en ellos las montañas más altas.",
-      "references": [
-        "https://es.wikipedia.org/wiki/Pirineos"
-      ]
-    },
-    {
       "id": "zaragoza-3",
       "lang": "es",
       "subject": "history",
@@ -647,17 +618,17 @@
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué industria hizo crecer Bilbao a finales del siglo XIX, con minas de hierro y altos hornos?",
+      "prompt": "¿En qué año se inauguró el Museo Guggenheim de Bilbao?",
       "options": [
-        "La siderurgia",
-        "La industria del juguete",
-        "La producción de vino",
-        "El turismo de playa"
+        "1997",
+        "1975",
+        "1982",
+        "2008"
       ],
       "correct": 0,
-      "explanation": "Bilbao creció gracias al hierro de sus minas y a los altos hornos que lo convertían en acero: la siderurgia.",
+      "explanation": "El Museo Guggenheim abrió en 1997 y cambió la imagen de Bilbao: de ciudad industrial a ciudad de arte.",
       "references": [
-        "https://es.wikipedia.org/wiki/Historia_de_Bilbao"
+        "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]
     },
     {
@@ -665,47 +636,47 @@
       "lang": "es",
       "subject": "history",
       "topics": [
-        "monarquia-y-capitales"
+        "historia-reciente"
       ],
-      "difficulty": 3,
+      "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué rey fijó la capital de España en Madrid en 1561?",
+      "prompt": "¿En qué año se aprobó la Constitución española, que establece que Madrid es la capital?",
       "options": [
-        "Felipe II",
-        "Carlos III",
-        "Felipe V",
-        "Fernando el Católico"
+        "1978",
+        "1936",
+        "1992",
+        "1812"
       ],
       "correct": 0,
-      "explanation": "Felipe II trasladó la corte a Madrid en 1561. Desde entonces, salvo breves épocas, Madrid ha sido la capital de España.",
+      "explanation": "La Constitución se aprobó en 1978. El Día de la Constitución se celebra cada 6 de diciembre.",
       "references": [
-        "https://es.wikipedia.org/wiki/Historia_de_Madrid"
+        "https://es.wikipedia.org/wiki/Constitución_española_de_1978"
       ]
     },
     {
-      "id": "history-es-008",
+      "id": "history-es-009",
       "lang": "es",
       "subject": "history",
       "topics": [
-        "america-y-descubrimientos"
+        "hispania-romana"
       ],
-      "difficulty": 3,
-      "place": "sevilla",
+      "difficulty": 2,
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué edificio de Sevilla guarda los documentos de la administración de la América española?",
+      "prompt": "¿Cómo se llamaba Barcelona en tiempos de los romanos?",
       "options": [
-        "Archivo General de Indias",
-        "Torre del Oro",
-        "Real Alcázar",
-        "Hospital de la Caridad"
+        "Barcino",
+        "Tarraco",
+        "Gerunda",
+        "Emporiae"
       ],
       "correct": 0,
-      "explanation": "El Archivo General de Indias conserva millones de documentos sobre América y Filipinas en tiempos de España.",
+      "explanation": "Los romanos fundaron una ciudad llamada Barcino hace más de dos mil años. Es el origen de la Barcelona actual.",
       "references": [
-        "https://es.wikipedia.org/wiki/Archivo_General_de_Indias"
+        "https://es.wikipedia.org/wiki/Barcino"
       ]
     },
     {
@@ -874,6 +845,30 @@
       "explanation": "El Athletic Club juega en San Mamés, un estadio moderno que sustituyó al viejo, llamado «La Catedral».",
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_de_San_Mamés"
+      ]
+    },
+    {
+      "id": "sports-es-006",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "juegos-olimpicos"
+      ],
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué montaña de Barcelona está el Estadio Olímpico de los Juegos de 1992?",
+      "options": [
+        "Montjuïc",
+        "Tibidabo",
+        "Montserrat",
+        "El Carmel"
+      ],
+      "correct": 0,
+      "explanation": "El Estadio Olímpico y el anillo olímpico de 1992 están en la montaña de Montjuïc, con vistas a toda la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Montjuïc"
       ]
     },
     {
@@ -1166,27 +1161,27 @@
       ]
     },
     {
-      "id": "culture-es-004",
+      "id": "culture-es-006",
       "lang": "es",
       "subject": "culture",
       "topics": [
-        "rutas-y-patrimonio"
+        "arte-y-arquitectura"
       ],
-      "difficulty": 2,
-      "place": "santiago",
+      "difficulty": 3,
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué concha es el símbolo de los peregrinos del Camino de Santiago?",
+      "prompt": "¿Qué arco se levantó en Barcelona para la Exposición Universal de 1888?",
       "options": [
-        "La vieira",
-        "El mejillón",
-        "La almeja",
-        "El berberecho"
+        "El Arco de Triunfo",
+        "La Puerta de Alcalá",
+        "El Arco de Santa María",
+        "El Arco de la Rosa"
       ],
       "correct": 0,
-      "explanation": "La vieira es el símbolo del Camino de Santiago: los peregrinos la llevan colgada de la mochila o la ropa.",
+      "explanation": "El Arco de Triunfo de Barcelona fue la entrada a la Exposición Universal de 1888 y es de ladrillo rojo.",
       "references": [
-        "https://es.wikipedia.org/wiki/Vieira_(concha)"
+        "https://es.wikipedia.org/wiki/Arco_de_Triunfo_(Barcelona)"
       ]
     },
     {

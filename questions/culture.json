@@ -304,26 +304,26 @@
       ]
     },
     {
-      "id": "culture-es-004",
+      "id": "culture-es-006",
       "lang": "es",
       "topics": [
-        "rutas-y-patrimonio"
+        "arte-y-arquitectura"
       ],
-      "difficulty": 2,
-      "place": "santiago",
+      "difficulty": 3,
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué concha es el símbolo de los peregrinos del Camino de Santiago?",
+      "prompt": "¿Qué arco se levantó en Barcelona para la Exposición Universal de 1888?",
       "options": [
-        "La vieira",
-        "El mejillón",
-        "La almeja",
-        "El berberecho"
+        "El Arco de Triunfo",
+        "La Puerta de Alcalá",
+        "El Arco de Santa María",
+        "El Arco de la Rosa"
       ],
       "correct": 0,
-      "explanation": "La vieira es el símbolo del Camino de Santiago: los peregrinos la llevan colgada de la mochila o la ropa.",
+      "explanation": "El Arco de Triunfo de Barcelona fue la entrada a la Exposición Universal de 1888 y es de ladrillo rojo.",
       "references": [
-        "https://es.wikipedia.org/wiki/Vieira_(concha)"
+        "https://es.wikipedia.org/wiki/Arco_de_Triunfo_(Barcelona)"
       ]
     }
   ]

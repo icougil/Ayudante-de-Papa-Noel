@@ -19,10 +19,6 @@
     {
       "id": "monarquia-y-capitales",
       "name": "Monarquía y capitales"
-    },
-    {
-      "id": "america-y-descubrimientos",
-      "name": "América y los descubrimientos"
     }
   ],
   "questions": [
@@ -174,63 +170,63 @@
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué industria hizo crecer Bilbao a finales del siglo XIX, con minas de hierro y altos hornos?",
+      "prompt": "¿En qué año se inauguró el Museo Guggenheim de Bilbao?",
       "options": [
-        "La siderurgia",
-        "La industria del juguete",
-        "La producción de vino",
-        "El turismo de playa"
+        "1997",
+        "1975",
+        "1982",
+        "2008"
       ],
       "correct": 0,
-      "explanation": "Bilbao creció gracias al hierro de sus minas y a los altos hornos que lo convertían en acero: la siderurgia.",
+      "explanation": "El Museo Guggenheim abrió en 1997 y cambió la imagen de Bilbao: de ciudad industrial a ciudad de arte.",
       "references": [
-        "https://es.wikipedia.org/wiki/Historia_de_Bilbao"
+        "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]
     },
     {
       "id": "history-es-007",
       "lang": "es",
       "topics": [
-        "monarquia-y-capitales"
+        "historia-reciente"
       ],
-      "difficulty": 3,
+      "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué rey fijó la capital de España en Madrid en 1561?",
+      "prompt": "¿En qué año se aprobó la Constitución española, que establece que Madrid es la capital?",
       "options": [
-        "Felipe II",
-        "Carlos III",
-        "Felipe V",
-        "Fernando el Católico"
+        "1978",
+        "1936",
+        "1992",
+        "1812"
       ],
       "correct": 0,
-      "explanation": "Felipe II trasladó la corte a Madrid en 1561. Desde entonces, salvo breves épocas, Madrid ha sido la capital de España.",
+      "explanation": "La Constitución se aprobó en 1978. El Día de la Constitución se celebra cada 6 de diciembre.",
       "references": [
-        "https://es.wikipedia.org/wiki/Historia_de_Madrid"
+        "https://es.wikipedia.org/wiki/Constitución_española_de_1978"
       ]
     },
     {
-      "id": "history-es-008",
+      "id": "history-es-009",
       "lang": "es",
       "topics": [
-        "america-y-descubrimientos"
+        "hispania-romana"
       ],
-      "difficulty": 3,
-      "place": "sevilla",
+      "difficulty": 2,
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué edificio de Sevilla guarda los documentos de la administración de la América española?",
+      "prompt": "¿Cómo se llamaba Barcelona en tiempos de los romanos?",
       "options": [
-        "Archivo General de Indias",
-        "Torre del Oro",
-        "Real Alcázar",
-        "Hospital de la Caridad"
+        "Barcino",
+        "Tarraco",
+        "Gerunda",
+        "Emporiae"
       ],
       "correct": 0,
-      "explanation": "El Archivo General de Indias conserva millones de documentos sobre América y Filipinas en tiempos de España.",
+      "explanation": "Los romanos fundaron una ciudad llamada Barcino hace más de dos mil años. Es el origen de la Barcelona actual.",
       "references": [
-        "https://es.wikipedia.org/wiki/Archivo_General_de_Indias"
+        "https://es.wikipedia.org/wiki/Barcino"
       ]
     }
   ]
