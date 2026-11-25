@@ -103,6 +103,15 @@ test('every question has a difficulty from 1 to 3', () => {
   for (const q of APN.QUESTIONS) assert.ok([1, 2, 3].includes(q.difficulty), q.id);
 });
 
+test('every question has a curriculum area and block', () => {
+  const { AREAS } = require('../scripts/curriculum.js');
+  for (const q of APN.QUESTIONS) {
+    assert.ok(q.curriculum && typeof q.curriculum.area === 'string', q.id);
+    assert.ok(Array.isArray(AREAS[q.curriculum.area]), q.id);
+    assert.ok(AREAS[q.curriculum.area].includes(q.curriculum.block), q.id);
+  }
+});
+
 test('every question has at least one https reference', () => {
   for (const q of APN.QUESTIONS) {
     assert.ok(q.references.some((r) => r.startsWith('https://')), q.id);

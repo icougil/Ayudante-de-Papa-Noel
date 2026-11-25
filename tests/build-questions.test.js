@@ -10,16 +10,33 @@ const {
   buildQuestions,
   INVALID_JSON
 } = require('../scripts/build-questions.js');
+const { AREAS } = require('../scripts/curriculum.js');
 
-const SUBJECTS = ['geography', 'history', 'sports', 'culture', 'maths', 'science', 'language', 'english', 'catalan'];
+const SUBJECTS = [
+  'geography', 'history', 'sports', 'culture', 'maths', 'science', 'language', 'english',
+  'catalan', 'citizenship'
+];
 const LANG = { english: 'en', catalan: 'ca', language: 'es' };
 const context = { subjects: SUBJECTS, stopIds: ['barcelona', 'paris'] };
+const CURRICULUM = {
+  geography: { area: 'medi', block: 'societats-i-territoris' },
+  history: { area: 'medi', block: 'societats-i-territoris' },
+  sports: { area: 'educacio-fisica', block: 'activitats-ludiques-culturals-i-expressives' },
+  culture: { area: 'educacio-artistica', block: 'plastica-i-visual' },
+  maths: { area: 'matematiques', block: 'sentit-numeric' },
+  science: { area: 'medi', block: 'cultura-cientifica' },
+  language: { area: 'llengua-castellana', block: 'reflexio-sobre-la-llengua' },
+  english: { area: 'llengua-estrangera', block: 'reflexio-sobre-la-llengua' },
+  catalan: { area: 'llengua-catalana', block: 'reflexio-sobre-la-llengua' },
+  citizenship: { area: 'valors-civics', block: 'societat-justicia-i-democracia' }
+};
 
 function question(overrides = {}) {
   return {
     id: 'q-1',
     lang: 'es',
     topics: ['t-geography'],
+    curriculum: CURRICULUM.geography,
     difficulty: 1,
     place: 'barcelona',
     minAge: 10,
@@ -132,6 +149,65 @@ test('an unknown field is reported', () => {
   assert.deepEqual(withQuestion({ refrences: [] }), ['geography.json: q-1: unknown field "refrences"']);
 });
 
+test('a missing curriculum is reported', () => {
+  const q = question();
+  delete q.curriculum;
+  const problems = withGeography((data) => { data.questions = [q]; });
+  assert.deepEqual(problems, ['geography.json: q-1: missing field "curriculum"']);
+});
+
+test('a curriculum that is not an object is reported', () => {
+  assert.deepEqual(withQuestion({ curriculum: 'medi' }), [
+    'geography.json: q-1: curriculum must be an object with "area" and "block"'
+  ]);
+});
+
+test('a curriculum without area or block is reported', () => {
+  assert.deepEqual(withQuestion({ curriculum: { area: 'medi' } }), [
+    'geography.json: q-1: curriculum must have "area" and "block"'
+  ]);
+  assert.deepEqual(withQuestion({ curriculum: {} }), [
+    'geography.json: q-1: curriculum must have "area" and "block"'
+  ]);
+});
+
+test('an unknown curriculum area is reported', () => {
+  assert.deepEqual(withQuestion({ curriculum: { area: 'foo', block: 'bar' } }), [
+    'geography.json: q-1: unknown curriculum area "foo"'
+  ]);
+  assert.deepEqual(withQuestion({ curriculum: { area: 'constructor', block: 'bar' } }), [
+    'geography.json: q-1: unknown curriculum area "constructor"'
+  ]);
+});
+
+test('a block that does not belong to the area is reported', () => {
+  assert.deepEqual(withQuestion({ curriculum: { area: 'medi', block: 'foo' } }), [
+    'geography.json: q-1: unknown curriculum block "foo" for area "medi"'
+  ]);
+});
+
+test('a curriculum area that does not match the subject is reported', () => {
+  assert.deepEqual(withQuestion({ curriculum: { area: 'matematiques', block: 'sentit-numeric' } }), [
+    'geography.json: q-1: curriculum area "matematiques" does not match subject "geography"'
+  ]);
+});
+
+test('an unknown curriculum field is reported', () => {
+  assert.deepEqual(withQuestion({
+    curriculum: { area: 'medi', block: 'societats-i-territoris', review: true }
+  }), ['geography.json: q-1: curriculum has unknown field "review"']);
+});
+
+test('every curriculum id is documented', () => {
+  const doc = fs.readFileSync(
+    path.join(__dirname, '..', 'docs', 'curriculum', 'cicle-superior.md'), 'utf8'
+  );
+  for (const [area, blocks] of Object.entries(AREAS)) {
+    assert.ok(doc.includes(`\`${area}\``), area);
+    for (const block of blocks) assert.ok(doc.includes(`\`${block}\``), block);
+  }
+});
+
 test('a language that does not match the subject is reported', () => {
   assert.deepEqual(withQuestion({ lang: 'en' }), [
     'geography.json: q-1: language "en" does not match subject "geography"'
@@ -141,7 +217,9 @@ test('a language that does not match the subject is reported', () => {
 function withSubjectQuestion(subject, lang) {
   const bank = validBank();
   const file = bank.find((f) => f.file === `${subject}.json`);
-  file.data.questions = [question({ id: 'x-1', lang, place: 'general', topics: [`t-${subject}`] })];
+  file.data.questions = [question({
+    id: 'x-1', lang, place: 'general', topics: [`t-${subject}`], curriculum: CURRICULUM[subject]
+  })];
   return validateBank(bank, context);
 }
 
@@ -164,6 +242,22 @@ test('language needs es', () => {
     'language.json: x-1: language "ca" does not match subject "language"'
   ]);
   assert.deepEqual(withSubjectQuestion('language', 'es'), []);
+});
+
+test('citizenship accepts Spanish or Catalan and valors-civics', () => {
+  assert.deepEqual(withSubjectQuestion('citizenship', 'es'), []);
+  assert.deepEqual(withSubjectQuestion('citizenship', 'ca'), []);
+});
+
+test('a citizenship question cannot use another area', () => {
+  const bank = validBank();
+  const file = bank.find((f) => f.file === 'citizenship.json');
+  file.data.questions = [question({
+    id: 'c-1', place: 'general', topics: ['t-citizenship'], curriculum: CURRICULUM.maths
+  })];
+  assert.deepEqual(validateBank(bank, context), [
+    'citizenship.json: c-1: curriculum area "matematiques" does not match subject "citizenship"'
+  ]);
 });
 
 test('a blank or non-string prompt is reported', () => {
@@ -214,7 +308,7 @@ test('an unknown place is reported', () => {
 test('a place question outside the place subjects is reported', () => {
   const bank = validBank();
   bank.find((f) => f.file === 'maths.json').data.questions = [
-    question({ id: 'm-1', topics: ['t-maths'], place: 'paris' })
+    question({ id: 'm-1', topics: ['t-maths'], place: 'paris', curriculum: CURRICULUM.maths })
   ];
   assert.deepEqual(validateBank(bank, context), [
     'maths.json: m-1: a question about a place must be geography, history, sports or culture'
@@ -270,7 +364,7 @@ test('the output puts subject after lang and keeps file order', () => {
   const loaded = new Function('globalThis', `${output}; return globalThis.APN;`)({});
   assert.deepEqual(loaded.QUESTIONS.map((q) => q.id), ['g-2', 'g-1', 'h-1']);
   assert.deepEqual(Object.keys(loaded.QUESTIONS[0]), [
-    'id', 'lang', 'subject', 'topics', 'difficulty', 'place', 'minAge', 'maxAge',
+    'id', 'lang', 'subject', 'topics', 'curriculum', 'difficulty', 'place', 'minAge', 'maxAge',
     'prompt', 'options', 'correct', 'explanation', 'references'
   ]);
   assert.deepEqual(Object.keys(loaded.TOPICS[0]), ['id', 'subject', 'name']);
@@ -330,6 +424,7 @@ function withEnglishQuestion(overrides) {
   const file = bank.find((f) => f.file === 'english.json');
   file.data.questions = [question({
     id: 'x-1', lang: 'en', place: 'general', topics: ['t-english'],
+    curriculum: CURRICULUM.english,
     prompt: 'What is the opposite of «cold»?',
     explanation: '«Hot» ({caliente}) is the opposite of «cold» ({frío}).',
     ...overrides

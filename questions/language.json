@@ -20,6 +20,10 @@
       "topics": [
         "categorias-gramaticales"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -43,6 +47,10 @@
       "topics": [
         "acentuacion"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -66,6 +74,10 @@
       "topics": [
         "categorias-gramaticales"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -89,6 +101,10 @@
       "topics": [
         "ortografia"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -113,6 +129,10 @@
       "topics": [
         "acentuacion"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -136,6 +156,10 @@
       "topics": [
         "categorias-gramaticales"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -159,6 +183,10 @@
       "topics": [
         "acentuacion"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -182,6 +210,10 @@
       "topics": [
         "ortografia"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -205,6 +237,10 @@
       "topics": [
         "ortografia"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,

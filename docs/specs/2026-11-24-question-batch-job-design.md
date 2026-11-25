@@ -19,7 +19,8 @@ game. The job's aim is to make that review quick, not to replace it.
 
 - Goal: every 3 days, a pull request that adds 10 new questions to `questions/*.json` (and the
   regenerated `js/questions.js`), with nothing else changed.
-- Goal: each batch goes where the bank is thinnest, until every pool has at least 15 questions.
+- Goal: each batch goes where the bank is thinnest, and the job keeps going after every pool has
+  15 questions and every curriculum block 3; those are minimums, not a stop.
   A pool is each of the six cities (by `place`) and each general subject: maths, science,
   language, english, catalan. Today: cities 5 each, maths 8, science 8, language 5, english 6,
   catalan 3.
@@ -63,25 +64,31 @@ game. The job's aim is to make that review quick, not to replace it.
 
 1. **Guards.** If a guard command fails (for example `gh` is unavailable), the job stops: a guard that cannot be checked counts as not passed. If a pull request whose branch starts with `question-batch/` is still open, stop
    without doing anything (the owner has not reviewed the last batch; two open batches would also
-   conflict, since they edit the same files). If every pool already has at least 15 questions,
-   stop too. Either way the run's log says why.
-2. **Choose the slots.** Run `node scripts/question-pools.js`, which prints each pool with its
-   count and the subjects and difficulties already in it. Give the 10 slots to the pools furthest
-   below 15, at most 3 per pool, so a batch covers at least 4 pools **(designer's call)**. Near the end, when fewer than 10 questions bring
-   every pool to 15, the job writes only that many, never pushes a pool above 15, and the commit and
-   title say "Add N questions" (found in review). Within
-   a city, fill the missing subjects first (sports in Santiago, Sevilla and Zaragoza; history in
+   conflict, since they edit the same files). The job always writes a batch; it does not stop when
+   the targets are met. The run's log says why it stopped only when a guard applies.
+2. **Choose the slots.** Run `node scripts/question-pools.js` and `node scripts/curriculum-pools.js`.
+   The first prints each pool with its count and the subjects and difficulties already in it; the
+   second prints each curriculum block with its count, floor (3) and status. Give the 10 slots to
+   the pools with the fewest questions (15 is a minimum, not a stop), at most 3 per pool, so a
+   batch covers at least 4 pools **(designer's call)**. For each slot, choose a block that fits the
+   pool's subject and place: first a `below` block, then the block with the fewest questions; avoid
+   a `high` block (above 9) while another block fits. Aim for at least 6 different blocks and never
+   more than 2 questions from the same block. The job always writes 10. A pool may go above 15 when
+   a block below 3 has no other fitting pool: the block floor wins over the pool minimum. Within a
+   city, fill the missing subjects first (sports in Santiago, Sevilla and Zaragoza; history in
    Barcelona, Bilbao and Madrid) and add difficulty 2 and 3, since city questions are almost all
    difficulty 1 (backlog).
 3. **Write the questions** following part 1's data format and rules: own words, a real checkable
-   `https` reference for each, labels (`lang`, `topics`, `difficulty`), the length limits, the
-   language and subject agreement, and the Spanish marks in braces. A pool's Catalan share stays
-   at or below a third, except the `catalan` pool, which is all Catalan **(designer's call)**. A
-   topic that does not exist yet is added to its subject's file.
+   `https` reference for each, labels (`lang`, `topics`, `curriculum`, `difficulty`), the length
+   limits, the language and subject agreement, and the Spanish marks in braces. A pool's Catalan
+   share stays at or below a third, except the `catalan` pool, which is all Catalan **(designer's
+   call)**. A topic that does not exist yet is added to its subject's file.
 4. **Check its own work**, and drop and replace any question that fails:
-   - *Age:* "would a child in 5è or 6è know this from class or daily life?" The four questions
-     replaced in the owner's review (too specialised) are the examples of a failure; the skill
-     lists them.
+   - *Curriculum:* the question has a valid `curriculum` area and block from
+     `docs/curriculum/cicle-superior.md` and applies that saber. A fact on the document's amber list
+     is allowed only as the batch's one review question, marked in the PR. The four questions
+     replaced in the owner's review (too specialised) are the examples of a failure inside a valid
+     saber; the skill lists them.
    - *Fact:* the fact is re-read against its reference; a fact the job cannot confirm is dropped.
    - *Repeat:* the new question does not ask the same fact, or nearly the same prompt, as one
      already in the bank (the job reads all questions first).
@@ -92,12 +99,14 @@ game. The job's aim is to make that review quick, not to replace it.
    "Add 10 questions: <pools>" and a title the same. Only `questions/*.json` and `js/questions.js`
    change. The description (in English, rule of `CLAUDE.md`) has, in this order: a one-line summary;
    the `Play this branch` link (added once the number is known); the pool counts before and after;
-   the review table; the doubts.
+   the curriculum counts before and after for the blocks the batch touches; the review table; the
+   doubts.
 
 ### The review table
 
-Only the 10 new questions, never the existing ones. One row each: id, language, pool, difficulty,
-prompt, the four options with the right one marked, the explanation, the reference as a link. The
+Only the 10 new questions, never the existing ones. One row each: id, language, pool, curriculum
+(`area/block`), difficulty, prompt, the four options with the right one marked, the explanation, the
+reference as a link. The
 job adds a ⚠️ line under any question it is less sure about (an age doubt, a reference that only
 partly confirms the fact) saying why. The owner reads the table, plays the branch if wanted, and
 merges or comments; a comment on a question is fixed by hand or by a session, not by the routine.
@@ -107,7 +116,7 @@ merges or comments; a comment on a question is fixed by hand or by a session, no
 `scripts/question-pools.js` exports `countPools(questions)` and prints, for each pool, its count,
 the subjects and the difficulties present, and whether it is below 15. A pool is the question's
 `place` when it is a city and `general:<subject>` otherwise. The job calls it so it does not count
-by hand, and a test fixes the rule. The target 15 is a constant in that script.
+by hand, and a test fixes the rule. The minimum 15 is a constant in that script.
 
 ## Tests
 
@@ -116,7 +125,7 @@ by hand, and a test fixes the rule. The target 15 is a constant in that script.
 - `a city question counts in its city's pool`.
 - `a general question counts in its subject's pool`.
 - `a pool below 15 is reported as below the target and one at 15 is not`.
-- `the pools of the current bank are the six cities and the five general subjects`.
+- `the current bank has the twelve pools` (six cities and six general subjects).
 
 The routine itself cannot be tested in CI. Checked by hand once, before relying on the schedule:
 run the routine now with `run`, read its log and its pull request, then review the table.

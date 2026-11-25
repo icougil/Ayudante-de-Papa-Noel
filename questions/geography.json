@@ -24,6 +24,10 @@
       "topics": [
         "mares-y-costas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "barcelona",
       "minAge": 10,
@@ -47,6 +51,10 @@
       "topics": [
         "rios-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -70,6 +78,10 @@
       "topics": [
         "comunidades-autonomas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -93,6 +105,10 @@
       "topics": [
         "rios-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -116,6 +132,10 @@
       "topics": [
         "rios-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -139,6 +159,10 @@
       "topics": [
         "comunidades-autonomas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -162,6 +186,10 @@
       "topics": [
         "comunidades-autonomas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -185,6 +213,10 @@
       "topics": [
         "mares-y-costas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -208,6 +240,10 @@
       "topics": [
         "montanas-y-relieve"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -231,6 +267,10 @@
       "topics": [
         "montanas-y-relieve"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
@@ -254,6 +294,10 @@
       "topics": [
         "mares-y-costas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,

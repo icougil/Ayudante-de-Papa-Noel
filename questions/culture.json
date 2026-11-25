@@ -36,6 +36,10 @@
       "topics": [
         "arte-y-arquitectura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 1,
       "place": "barcelona",
       "minAge": 10,
@@ -59,6 +63,10 @@
       "topics": [
         "museos-y-pintura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -82,6 +90,10 @@
       "topics": [
         "simbolos-y-escudos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -106,6 +118,10 @@
       "topics": [
         "rutas-y-patrimonio"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -129,6 +145,10 @@
       "topics": [
         "lenguas-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -152,6 +172,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -175,6 +199,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -198,6 +226,10 @@
       "topics": [
         "museos-y-pintura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -221,6 +253,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -244,6 +280,10 @@
       "topics": [
         "rutas-y-patrimonio"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -267,6 +307,10 @@
       "topics": [
         "arte-y-arquitectura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -290,6 +334,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -313,6 +361,10 @@
       "topics": [
         "arte-y-arquitectura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 3,
       "place": "barcelona",
       "minAge": 10,
@@ -336,6 +388,10 @@
       "topics": [
         "gastronomia"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -359,6 +415,10 @@
       "topics": [
         "gastronomia"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,

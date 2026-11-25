@@ -1,16 +1,17 @@
 // Validates questions/*.json (one file per subject) and generates js/questions.js.
 const fs = require('node:fs');
 const path = require('node:path');
+const { AREAS, SUBJECT_AREAS } = require('./curriculum.js');
 
 const INVALID_JSON = Symbol('invalid json');
 
 const ID_FORMAT = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const FIELDS = [
-  'id', 'lang', 'topics', 'difficulty', 'place', 'minAge', 'maxAge',
+  'id', 'lang', 'topics', 'curriculum', 'difficulty', 'place', 'minAge', 'maxAge',
   'prompt', 'options', 'correct', 'explanation', 'references'
 ];
 const OUTPUT_FIELDS = [
-  'id', 'lang', 'subject', 'topics', 'difficulty', 'place', 'minAge', 'maxAge',
+  'id', 'lang', 'subject', 'topics', 'curriculum', 'difficulty', 'place', 'minAge', 'maxAge',
   'prompt', 'options', 'correct', 'explanation', 'references'
 ];
 const LANGUAGES = ['es', 'ca', 'en'];
@@ -76,6 +77,31 @@ function validateQuestion(q, subject, topicIds, stopIds, report) {
     } else {
       for (const t of topics) {
         if (!topicIds.has(t)) report(`unknown topic "${t}"`);
+      }
+    }
+  }
+  if (has('curriculum')) {
+    const c = q.curriculum;
+    if (!isObject(c)) {
+      report('curriculum must be an object with "area" and "block"');
+    } else {
+      for (const field of Object.keys(c)) {
+        if (field !== 'area' && field !== 'block') {
+          report(`curriculum has unknown field "${field}"`);
+        }
+      }
+      if (!('area' in c) || !('block' in c)) {
+        report('curriculum must have "area" and "block"');
+      } else {
+        const blocks = Object.hasOwn(AREAS, c.area) ? AREAS[c.area] : null;
+        const allowed = SUBJECT_AREAS[subject] || [];
+        if (!blocks) {
+          report(`unknown curriculum area "${c.area}"`);
+        } else if (!blocks.includes(c.block)) {
+          report(`unknown curriculum block "${c.block}" for area "${c.area}"`);
+        } else if (!allowed.includes(c.area)) {
+          report(`curriculum area "${c.area}" does not match subject "${subject}"`);
+        }
       }
     }
   }

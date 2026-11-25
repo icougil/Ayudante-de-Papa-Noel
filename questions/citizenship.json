@@ -1,0 +1,21 @@
+{
+  "topics": [
+    {
+      "id": "drets-i-democracia",
+      "name": "Derechos y democracia"
+    },
+    {
+      "id": "sostenibilidad",
+      "name": "Sostenibilidad"
+    },
+    {
+      "id": "emociones-y-relaciones",
+      "name": "Emociones y relaciones"
+    },
+    {
+      "id": "identidad-y-autonomia",
+      "name": "Identidad y autonomía"
+    }
+  ],
+  "questions": []
+}
