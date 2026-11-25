@@ -98,14 +98,14 @@
       "name": "Piragüismo"
     },
     {
-      "id": "atletismo",
-      "subject": "sports",
-      "name": "Atletismo"
-    },
-    {
       "id": "remo",
       "subject": "sports",
       "name": "Remo"
+    },
+    {
+      "id": "motociclismo",
+      "subject": "sports",
+      "name": "Motociclismo"
     },
     {
       "id": "arte-y-arquitectura",
@@ -1401,27 +1401,27 @@
       "lang": "es",
       "subject": "sports",
       "topics": [
-        "atletismo"
+        "motociclismo"
       ],
       "curriculum": {
         "area": "educacio-fisica",
         "block": "activitats-ludiques-culturals-i-expressives"
       },
       "difficulty": 2,
-      "place": "santiago",
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "La gallega Ana Peleteiro es medallista olímpica de atletismo. ¿En qué prueba?",
+      "prompt": "Marc Márquez, nacido en Cervera, es campeón del mundo. ¿En qué deporte compite?",
       "options": [
-        "Triple salto",
-        "Lanzamiento de jabalina",
-        "100 metros vallas",
-        "Salto con pértiga"
+        "Motociclismo",
+        "Fórmula 1",
+        "Ciclismo",
+        "Tenis"
       ],
       "correct": 0,
-      "explanation": "Ana Peleteiro, de Ribeira (Galicia), ganó medalla olímpica en el triple salto: tres saltos seguidos.",
+      "explanation": "Marc Márquez compite en motociclismo y ha ganado varios campeonatos del mundo de MotoGP.",
       "references": [
-        "https://es.wikipedia.org/wiki/Ana_Peleteiro"
+        "https://es.wikipedia.org/wiki/Marc_M%C3%A1rquez"
       ]
     },
     {
@@ -2168,15 +2168,15 @@
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "Cuatro amigos consiguen 6, 7, 8 y 9 puntos. ¿Cuál es la media?",
+      "prompt": "Cuatro amigos consiguen 6, 8, 10 y 12 puntos. ¿Cuál es la media?",
       "options": [
-        "7,5",
-        "7",
+        "9",
         "8",
-        "6,5"
+        "10",
+        "11"
       ],
       "correct": 0,
-      "explanation": "La media se calcula sumando 6 + 7 + 8 + 9 = 30 y dividiendo entre 4: 30 ÷ 4 = 7,5.",
+      "explanation": "La media se calcula sumando 6 + 8 + 10 + 12 = 36 y dividiendo entre 4: 36 ÷ 4 = 9.",
       "references": [
         "https://es.wikipedia.org/wiki/Media_aritm%C3%A9tica"
       ]
