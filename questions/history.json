@@ -19,6 +19,14 @@
     {
       "id": "monarquia-y-capitales",
       "name": "Monarquía y capitales"
+    },
+    {
+      "id": "descubrimientos",
+      "name": "Descubrimientos y exploradores"
+    },
+    {
+      "id": "guerras-y-batallas",
+      "name": "Guerras y batallas"
     }
   ],
   "questions": [
@@ -204,6 +212,75 @@
       "explanation": "Los romanos fundaron una ciudad llamada Barcino hace más de dos mil años. Es el origen de la Barcelona actual.",
       "references": [
         "https://es.wikipedia.org/wiki/Barcino"
+      ]
+    },
+    {
+      "id": "history-es-010",
+      "lang": "es",
+      "topics": [
+        "descubrimientos"
+      ],
+      "difficulty": 3,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Quién completó la primera vuelta al mundo, que terminó en 1522 con la llegada de la expedición a Sevilla?",
+      "options": [
+        "Juan Sebastián Elcano",
+        "Cristóbal Colón",
+        "Hernán Cortés",
+        "Vasco da Gama"
+      ],
+      "correct": 0,
+      "explanation": "Magallanes murió en el viaje. Elcano tomó el mando y regresó a España con la nave Victoria, tres años después de salir de Sevilla.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Elcano"
+      ]
+    },
+    {
+      "id": "history-es-011",
+      "lang": "es",
+      "topics": [
+        "religion-y-peregrinaciones"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el año especial en que la catedral de Santiago abre su Puerta Santa a los peregrinos?",
+      "options": [
+        "Año Santo Xacobeo",
+        "Año Bisiesto",
+        "Año Mariano",
+        "Año Olímpico"
+      ],
+      "correct": 0,
+      "explanation": "Es el Año Santo Xacobeo, que se celebra cuando el 25 de julio, día de Santiago, cae en domingo. Muchos peregrinos viajan ese año.",
+      "references": [
+        "https://es.wikipedia.org/wiki/A%C3%B1o_Santo_Compostelano"
+      ]
+    },
+    {
+      "id": "history-es-012",
+      "lang": "es",
+      "topics": [
+        "guerras-y-batallas"
+      ],
+      "difficulty": 3,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En 1808 y 1809 Zaragoza resistió dos asedios, los Sitios. ¿Contra qué ejército luchó?",
+      "options": [
+        "El ejército francés de Napoleón",
+        "El ejército inglés",
+        "El ejército romano",
+        "El ejército musulmán"
+      ],
+      "correct": 0,
+      "explanation": "Los zaragozanos defendieron la ciudad contra las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Sitios_de_Zaragoza"
       ]
     }
   ]

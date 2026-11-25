@@ -19,6 +19,10 @@
     {
       "id": "tenis",
       "name": "Tenis"
+    },
+    {
+      "id": "deportes-de-invierno",
+      "name": "Deportes de invierno"
     }
   ],
   "questions": [
@@ -227,6 +231,75 @@
       "explanation": "El Madrid Open es uno de los grandes torneos de tenis del año. Rafa Nadal, el tenista español más famoso, lo ha ganado varias veces.",
       "references": [
         "https://es.wikipedia.org/wiki/Masters_de_Madrid"
+      ]
+    },
+    {
+      "id": "sports-es-008",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿De qué colores es la camiseta del Real Betis, uno de los equipos de Sevilla?",
+      "options": [
+        "Verde y blanca",
+        "Roja y blanca",
+        "Azul y amarilla",
+        "Negra y naranja"
+      ],
+      "correct": 0,
+      "explanation": "El Real Betis viste de verde y blanco, por eso a sus aficionados se les llama «verdiblancos». Juega en el estadio Benito Villamarín.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Real_Betis_Balompi%C3%A9"
+      ]
+    },
+    {
+      "id": "sports-es-009",
+      "lang": "es",
+      "topics": [
+        "baloncesto"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué deporte compite el Bilbao Basket, un equipo de la liga ACB?",
+      "options": [
+        "Baloncesto",
+        "Balonmano",
+        "Voleibol",
+        "Rugby"
+      ],
+      "correct": 0,
+      "explanation": "El Bilbao Basket es un club de baloncesto de Bilbao que juega en la liga ACB, la máxima categoría del baloncesto español.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Bilbao_Basket"
+      ]
+    },
+    {
+      "id": "sports-es-010",
+      "lang": "es",
+      "topics": [
+        "deportes-de-invierno"
+      ],
+      "difficulty": 1,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En Formigal, una estación de los Pirineos de Aragón, ¿qué deporte se practica en invierno?",
+      "options": [
+        "Esquí",
+        "Surf",
+        "Remo",
+        "Waterpolo"
+      ],
+      "correct": 0,
+      "explanation": "En Formigal y otras estaciones de los Pirineos aragoneses se esquía sobre la nieve durante el invierno.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Formigal"
       ]
     }
   ]

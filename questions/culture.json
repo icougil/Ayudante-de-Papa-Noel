@@ -23,6 +23,10 @@
     {
       "id": "rutas-y-patrimonio",
       "name": "Rutas y patrimonio"
+    },
+    {
+      "id": "gastronomia",
+      "name": "Gastronomía"
     }
   ],
   "questions": [
@@ -324,6 +328,52 @@
       "explanation": "El Arco de Triunfo de Barcelona fue la entrada a la Exposición Universal de 1888 y es de ladrillo rojo.",
       "references": [
         "https://es.wikipedia.org/wiki/Arco_de_Triunfo_(Barcelona)"
+      ]
+    },
+    {
+      "id": "culture-es-007",
+      "lang": "es",
+      "topics": [
+        "gastronomia"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué plato típico gallego se cocina con tentáculos y se sirve en una fuente de madera, con pimentón y aceite?",
+      "options": [
+        "El pulpo a feira",
+        "La paella",
+        "El gazpacho",
+        "El cocido madrileño"
+      ],
+      "correct": 0,
+      "explanation": "El pulpo a feira es muy típico de Galicia: se cuece, se corta en rodajas y se sirve con sal, pimentón y aceite de oliva.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Pulpo_a_feira"
+      ]
+    },
+    {
+      "id": "culture-es-008",
+      "lang": "es",
+      "topics": [
+        "gastronomia"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llaman los pequeños bocados que se comen en los bares del País Vasco, a menudo pinchados con un palillo?",
+      "options": [
+        "Pintxos",
+        "Churros",
+        "Croquetas",
+        "Empanadillas"
+      ],
+      "correct": 0,
+      "explanation": "Los pintxos son bocados típicos del País Vasco. En Bilbao es muy habitual ir de bar en bar probando pintxos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Pintxo"
       ]
     }
   ]
