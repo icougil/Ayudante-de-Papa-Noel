@@ -70,10 +70,11 @@ game. The job's aim is to make that review quick, not to replace it.
    The first prints each pool with its count and the subjects and difficulties already in it; the
    second prints each curriculum block with its count, floor (3) and status. Give the 10 slots to
    the pools with the fewest questions (15 is a minimum, not a stop), at most 3 per pool, so a
-   batch covers at least 4 pools **(designer's call)**. For each slot, choose a block that fits the
-   pool's subject and place: first a `below` block, then the block with the fewest questions; avoid
-   a `high` block (above 9) while another block fits. Aim for at least 6 different blocks and never
-   more than 2 questions from the same block. The job always writes 10. A pool may go above 15 when
+   batch covers at least 4 pools **(designer's call)**. Break ties at random. For each slot, choose
+   a block that fits the pool's subject and place: first a `below` block, then the block with the
+   fewest questions; avoid a `high` block (above 9) while another block fits. Break ties at random
+   too. Aim for at least 6 different blocks and never more than 2 questions from the same block.
+   The job always writes 10. A pool may go above 15 when
    a block below 3 has no other fitting pool: the block floor wins over the pool minimum. Within a
    city, fill the missing subjects first (sports in Santiago, Sevilla and Zaragoza; history in
    Barcelona, Bilbao and Madrid) and add difficulty 2 and 3, since city questions are almost all

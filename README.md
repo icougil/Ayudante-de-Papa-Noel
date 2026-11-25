@@ -163,7 +163,7 @@ pools with the fewest (each of the six cities, and the general maths, science, l
 catalan and citizenship), checks them, and opens a pull request that lists only the new questions
 with their curriculum anchor (area and block), answer, explanation, reference and any doubts. It
 also runs `npm run curriculum` and spreads the batch over the thinnest curriculum blocks, avoiding
-the over-represented ones. Every question must apply a cicle superior saber from
+the over-represented ones and breaking ties at random. Every question must apply a cicle superior saber from
 `docs/curriculum/cicle-superior.md`, except the batch's one review/general-culture question. The
 owner reads the table, plays the branch and merges. Nothing reaches the game without that merge, and the routine
 does nothing while a `question-batch/` pull request is still open, so batches never pile up. The
