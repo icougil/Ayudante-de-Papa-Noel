@@ -51,6 +51,11 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
   Choose the sports, events and sportspeople best known to Spanish children (for example Rafa Nadal,
   the Gasol brothers, Fernando Alonso, Miguel Induráin, Marc Márquez, Alexia Putellas, Carolina Marín,
   Mireia Belmonte, the national football team), not specialised ones.
+- Maths has topics the bank barely covers. When the maths pool gets a slot, add and use these topics
+  (each in `maths.json`) before the existing ones: `mcm-y-mcd` (least common multiple and greatest
+  common divisor, with at least one gcd question), `estadistica-y-probabilidad` (mean, mode, charts,
+  simple chance), `proporcionalidad` (rule of three, scales), `numeros-enteros` (negative numbers) and
+  `medidas` (units, time, angles). Drop an item from this list once its topic has 2 questions.
 - A pool's Catalan share stays at or below a third, except the `catalan` pool, which is all Catalan.
 - Place questions are only geography, history, sports or culture. General turns are maths, science,
   language, english and catalan.
