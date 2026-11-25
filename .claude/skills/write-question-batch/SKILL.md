@@ -86,6 +86,8 @@ attempts, stop without opening a pull request and say what failed.
   the PR title (N instead of 10 when fewer are needed). Push the branch and open the PR with
   `gh pr create --base main`. Only `questions/*.json` and `js/questions.js` change.
 - Commit messages and the PR are in English and never contain the owner's name; write "the owner".
+  They never contain a Claude session link (`claude.ai/code/session_…`) or a `Claude-Session:` line: the
+  repository is public.
 - The description has, in this order: a one-line summary; the line
   `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html)`
   added right after creating the PR, once its number is known; the pool counts before and after;
