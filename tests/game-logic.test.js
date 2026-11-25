@@ -71,8 +71,8 @@ test('pickQuestions without seenIds behaves as with an empty list', () => {
 
 test('pickQuestions prefers an unseen question of the city', () => {
   const city = idsAt(stopIds[0]);
-  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), city.slice(0, -1));
-  assert.equal(picked[0].id, city[city.length - 1]);
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), city.slice(0, 4));
+  assert.equal(picked[0].id, city[4]);
 });
 
 test('pickQuestions takes an unseen general question at a place stop when the city has none unseen', () => {
@@ -83,10 +83,9 @@ test('pickQuestions takes an unseen general question at a place stop when the ci
 });
 
 test('pickQuestions repeats the least recently seen city question when city and general are all seen', () => {
-  const city = idsAt(stopIds[0]);
-  const seenOrder = [...city.slice(3), ...city.slice(0, 3)];
-  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), [...generalIds, ...seenOrder]);
-  assert.equal(picked[0].id, seenOrder[0]);
+  const [c0, c1, c2, c3, c4] = idsAt(stopIds[0]);
+  const picked = APN.pickQuestions(level, bank, 11, rngOf(0.1), [...generalIds, c3, c1, c4, c0, c2]);
+  assert.equal(picked[0].id, c3);
 });
 
 test("pickQuestions never uses another city's question", () => {
