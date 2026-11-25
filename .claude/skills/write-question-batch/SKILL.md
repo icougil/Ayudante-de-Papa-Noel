@@ -7,11 +7,15 @@ description: Use when a scheduled routine or the owner asks for a batch of 10 ne
 
 You add 10 new questions to the game's bank and open a pull request. The owner reads every
 question before it reaches the game, so your job is to write good questions and make that review
-fast. You never merge and never push to `main`.
+fast. You never merge and never push to `main`. The job runs every 3 days and does not stop when
+the targets are met: 15 questions per pool and 3 per curriculum block are **minimums**, not a
+finish line. Once they are met, keep adding to the pools and blocks with the fewest questions.
 
-The questions are for children aged 10 to 12 (5è and 6è of primary school in Catalonia). The data
-format and rules are in `docs/specs/2026-11-18-question-bank-design.md` and `README.md` ("Adding a
-question"). Read both first. The design of this job is `docs/specs/2026-11-24-question-batch-job-design.md`.
+The questions are for children aged 10 to 12 (5è and 6è of primary school in Catalonia, the cicle
+superior). The data format and rules are in `docs/specs/2026-11-18-question-bank-design.md` and
+`README.md` ("Adding a question"). The curriculum is `docs/curriculum/cicle-superior.md`: it says
+which sabers of the cicle superior can become questions and which facts are out. Read all three
+first. The design of this job is `docs/specs/2026-11-24-question-batch-job-design.md`.
 
 ## 1. Guards (stop here if one applies)
 
@@ -20,20 +24,29 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
   (Not `gh pr list`: the scheduled cloud session blocks GitHub's GraphQL API, which it uses.)
   If it prints more than 0, stop and say "a batch is still open for review".
   If the command fails (for example `gh` is missing or not signed in), stop too and say "the guard could not be checked": never go on without it.
-- Nothing to add: run `npm run pools`. If its last line says `Pools below 15: none`, stop and say so.
 
 ## 2. Choose the 10 slots
 
-- Read the output of `npm run pools`. Each line is `pool  <questions it has now>  below|ok  ...`:
-  the number is how many questions the pool **already has**, so the lowest numbers are the thinnest
-  pools (15 is the target). Give the 10 slots to the pools furthest below 15, **at most 3
-  per pool**, so a batch covers at least 4 pools.
-- Near the end, fewer than 10 questions may be needed to bring every pool to 15. Then write only
-  that many (N), never push a pool above 15, and use "Add N questions: <pools>" in step 6. The
-  4-pool rule applies only when you write 10.
+- Run `npm run pools` and `npm run curriculum`. In the first, each line is
+  `pool  <questions it has now>  below|ok  ...`: the number is how many questions the pool **already
+  has**, so the lowest numbers are the thinnest pools (15 is the minimum, not a stop). Give the 10
+  slots to the pools with the fewest questions, **at most 3 per pool**, so a batch covers at least
+  4 pools. In the second, each line is `area/block  have  floor  missing  status`: use it to choose
+  the curriculum block for each question.
+- The job always writes 10 questions. A pool may go above 15 when a block below 3 has no other
+  fitting pool: the block floor wins over the pool minimum.
 - For a city, fill its missing subjects first: sports in Santiago, Sevilla and Zaragoza; history in
   Barcelona, Bilbao and Madrid. City questions are almost all difficulty 1: add difficulty 2 and 3.
-- Spread the difficulties inside a pool; look at what `npm run pools` shows for it.
+- A city's sports slot is normally an Educació Física or heritage question (a traditional game, a
+  local woman athlete); a club fact is at most the batch's one amber review question. A city's
+  history slot is medieval, modern or contemporary; Ancient History is at most that one review
+  question.
+- For each slot, choose a block that fits the pool's subject and place: first a `below` block
+  (fewer than 3 questions), then the block with the fewest questions. Avoid a `high` block (more
+  than 9) while another block fits. Aim for at least 6 different blocks and never more than 2
+  questions from the same block.
+- Spread the difficulties inside a pool: 1 is a direct recall, 2 applies or relates two sabers, 3
+  is two steps or a less obvious application.
 
 ## 3. Write the questions
 
@@ -41,6 +54,10 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
   a real, checkable `https` reference for each question, `lang`, `topics` (add a topic to its
   subject's file if one is missing), `difficulty`, `place`, the length limits, language and subject
   agreeing, Spanish words in braces inside Catalan and English texts.
+- Anchor every question with the `curriculum` field: `{ "area": "...", "block": "..." }` from
+  `docs/curriculum/cicle-superior.md`, and make the fact a canonical example or a direct
+  application of that saber. The document's amber list is allowed only as the batch's one review
+  question (see step 4).
 - Add each question at the end of its subject's file in `questions/`. Never edit existing questions.
 - Balance topics: before choosing a topic for a question, count how many questions of its subject use
   each topic (`questions/<subject>.json`), and prefer the least used one, so no topic (football in
@@ -54,20 +71,27 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
 - Maths has topics the bank barely covers. When the maths pool gets a slot, add and use these topics
   (each in `maths.json`) before the existing ones: `mcm-y-mcd` (least common multiple and greatest
   common divisor, with at least one gcd question), `estadistica-y-probabilidad` (mean, mode, charts,
-  simple chance), `proporcionalidad` (rule of three, scales), `numeros-enteros` (negative numbers) and
-  `medidas` (units, time, angles). Drop an item from this list once its topic has 2 questions.
+  simple chance), `proporcionalidad` (rule of three, scales) and `medidas` (units, time, angles).
+  Drop an item from this list once its topic has 2 questions. Negative numbers are not a cicle
+  superior saber: do not add `numeros-enteros` as a target.
 - A pool's Catalan share stays at or below a third, except the `catalan` pool, which is all Catalan.
 - Place questions are only geography, history, sports or culture. General turns are maths, science,
-  language, english and catalan.
+  language, english, catalan and citizenship.
 
 ## 4. Check your own work
 
 Fix or replace any question that fails, then check again:
 
-- **Age:** would a child in 5è or 6è know this from class or daily life? Too specialised, for
-  example: the architect of the Guggenheim, the sierra between Madrid and Castilla y León, the river
-  that forms the ría de Bilbao with the Ibaizábal, the century of the Aljafería. Those four were
-  replaced in an earlier review.
+- **Curriculum:** the question must have a valid `curriculum` area and block from
+  `docs/curriculum/cicle-superior.md`, and apply that saber. Name it in the review table. "A child
+  could know it from daily life" is not enough. A fact on the document's amber list (prehistory or
+  Ancient History, the solar system or seasons, club sport, heraldry, artist biographies,
+  irregular-verb lists) is allowed only as the batch's **one** review question, marked in the PR as
+  review/general culture. The rest of the batch must be anchored, and no `high` block from
+  `npm run curriculum` grows while another block fits. Too specialised inside a valid saber is also
+  out, for example: the architect of the Guggenheim, the river that forms the ría de
+  Bilbao with the Ibaizábal, the century of the Aljafería, a sierra named only by the provinces it
+  separates. Facts like those were replaced in earlier reviews.
 - **Fact:** re-read the fact against its reference. A fact you cannot confirm there is dropped.
   The scheduled cloud session usually cannot open web pages (its proxy answers 403). Then use the
   stable, well-known page you are sure of (a Wikipedia article under its exact title), and in the
@@ -88,24 +112,28 @@ attempts, stop without opening a pull request and say what failed.
 ## 6. Open the pull request
 
 - Branch `question-batch/YYYY-MM-DD` (today's date). One commit, "Add 10 questions: <pools>", also
-  the PR title (N instead of 10 when fewer are needed). Push the branch and open the PR with
-  `gh pr create --base main`. Only `questions/*.json` and `js/questions.js` change.
+  the PR title. Push the branch and open the PR with `gh pr create --base main`. Only
+  `questions/*.json` and `js/questions.js` change.
 - Commit messages and the PR are in English and never contain the owner's name; write "the owner".
   They never contain a Claude session link (`claude.ai/code/session_…`) or a `Claude-Session:` line: the
   repository is public.
 - The description has, in this order: a one-line summary; the line
   `[Play this branch](https://htmlpreview.github.io/?https://github.com/icougil/Ayudante-de-Papa-Noel/blob/refs/pull/<number>/head/index.html)`
   added right after creating the PR, once its number is known; the pool counts before and after;
-  the review table; the doubts.
+  the curriculum counts before and after for the blocks the batch touches; the review table; the
+  doubts.
 - **Review table:** only the 10 new questions, never the existing ones. One row each, with the columns
-  id, language, pool, difficulty, prompt, the four options with the right one marked, explanation,
-  reference as a link.
+  id, language, pool, curriculum (`area/block`), difficulty, prompt, the four options with the right
+  one marked, explanation, reference as a link. A row without a curriculum anchor is not ready.
 - **Doubts:** under any question you are less sure about (an age doubt, a reference that only partly
   confirms the fact) add a line starting with ⚠️ saying why.
 
 ## Never
 
 - Copy text from a source.
+- Write a question without the `curriculum` field from `docs/curriculum/cicle-superior.md`.
+- Include more than one question from the document's amber list in a batch, or include one without
+  saying in the PR that it is the review/general-culture question.
 - Touch any file other than `questions/*.json` and `js/questions.js`. A batch never edits a test: if
   a new question makes `npm test` fail for a reason other than the question itself being invalid,
   stop without opening a pull request and say which test failed, so the owner can fix the test first.

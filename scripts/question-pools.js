@@ -1,7 +1,7 @@
 // Counts the questions of each pool, so a batch of new questions can go where the bank is thinnest.
 // A pool is a city (the question's place) or a general subject (a question with place "general").
 const TARGET = 15;
-const GENERAL_SUBJECTS = ['maths', 'science', 'language', 'english', 'catalan'];
+const GENERAL_SUBJECTS = ['maths', 'science', 'language', 'english', 'catalan', 'citizenship'];
 
 function countPools(questions, stopIds, target = TARGET) {
   const names = [...stopIds, ...GENERAL_SUBJECTS.map((subject) => `general:${subject}`)];

@@ -3,7 +3,10 @@ const assert = require('node:assert/strict');
 const { countPools, TARGET, GENERAL_SUBJECTS } = require('../scripts/question-pools.js');
 
 const STOPS = ['barcelona', 'zaragoza', 'madrid'];
-const GENERAL = ['general:maths', 'general:science', 'general:language', 'general:english', 'general:catalan'];
+const GENERAL = [
+  'general:maths', 'general:science', 'general:language', 'general:english', 'general:catalan',
+  'general:citizenship'
+];
 
 const q = (id, place, subject, difficulty = 1) => ({ id, place, subject, difficulty });
 const poolOf = (pools, name) => pools.find((p) => p.pool === name);
@@ -35,7 +38,9 @@ test('a pool at the target is not below it and one under it is', () => {
 test('the pools come in route order, then the general subjects', () => {
   const pools = countPools([], STOPS);
   assert.deepEqual(pools.map((p) => p.pool), [...STOPS, ...GENERAL]);
-  assert.deepEqual(GENERAL_SUBJECTS, ['maths', 'science', 'language', 'english', 'catalan']);
+  assert.deepEqual(GENERAL_SUBJECTS, [
+    'maths', 'science', 'language', 'english', 'catalan', 'citizenship'
+  ]);
 });
 
 test('a place question outside the level is an error', () => {
@@ -62,11 +67,11 @@ test('the difficulties and subjects of a pool are listed', () => {
   assert.deepEqual(madrid.difficulties, { 1: 1, 2: 0, 3: 1 });
 });
 
-test('the current bank has the eleven pools', () => {
+test('the current bank has the twelve pools', () => {
   const APN = require('../js/data-level-1.js');
   require('../js/questions.js');
   const stopIds = APN.LEVELS[0].stops.map((s) => s.id);
   const pools = countPools(APN.QUESTIONS, stopIds);
-  assert.equal(pools.length, 11);
+  assert.equal(pools.length, 12);
   assert.equal(pools.reduce((sum, p) => sum + p.count, 0), APN.QUESTIONS.length);
 });

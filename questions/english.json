@@ -24,6 +24,10 @@
       "topics": [
         "vocabulario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -47,6 +51,10 @@
       "topics": [
         "calendario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -71,6 +79,10 @@
       "topics": [
         "verbos-irregulares-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -94,6 +106,10 @@
       "topics": [
         "vocabulario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -117,6 +133,10 @@
       "topics": [
         "verbos-irregulares-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -140,6 +160,10 @@
       "topics": [
         "gramatica-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -163,6 +187,10 @@
       "topics": [
         "gramatica-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -186,6 +214,10 @@
       "topics": [
         "gramatica-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -209,6 +241,10 @@
       "topics": [
         "calendario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,

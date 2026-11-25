@@ -82,6 +82,7 @@ history and the pull requests.
   "id": "medi-ca-001",
   "lang": "ca",
   "topics": ["cos-huma"],
+  "curriculum": { "area": "medi", "block": "cultura-cientifica" },
   "difficulty": 1,
   "place": "general",
   "minAge": 10,
@@ -103,11 +104,17 @@ Rules, enforced by the build and by `tests/data.test.js`:
   brackets, e.g. «Hot» ({caliente}), so a learner reads the meaning too; it still counts towards
   the 160-character limit.
 - The subject comes from the file (here `science.json`). `APN.SUBJECTS` gains `catalan`
-  (questions about the Catalan language). Language and subject must agree: `english` ⇔ `en`; `catalan` ⇒ `ca`; `language` (the Spanish
-  language) ⇒ `es`. Other subjects are `es` or `ca`.
+  (questions about the Catalan language) and `citizenship` (questions about Educació en Valors
+  Cívics i Ètics). Language and subject must agree: `english` ⇔ `en`; `catalan` ⇒ `ca`;
+  `language` (the Spanish language) ⇒ `es`. Other subjects are `es` or `ca`.
 - `topics`: one to three ids, each among the topics of the same file, with no repeats.
-- `difficulty`: 1, 2 or 3. **1** is taught in 5è, **2** is a 6è topic, **3** is a 6è topic with a
-  harder twist (two steps, a less obvious fact). Labelled now, unused by the game until part 3.
+- `curriculum`: required. An object with `area` and `block` from the closed lists in
+  `docs/curriculum/cicle-superior.md`. The build checks that the block belongs to the area and that
+  the area matches the subject (`culture` and `sports` accept two areas; the lists are in
+  `scripts/curriculum.js`).
+- `difficulty`: 1, 2 or 3. **1** is a direct recall of one cicle superior saber, **2** applies or
+  relates two sabers, **3** is two steps, a less obvious application or a justification. Labelled
+  now, unused by the game until part 3.
 - `place`: a stop id of the level, or `general`. Questions about a place keep today's subject
   rule: `geography`, `history`, `sports` or `culture`.
 - `minAge`/`maxAge`: kept as today (10 and 12), so the picker's age filter is unchanged.
@@ -126,6 +133,10 @@ the current curriculum's orientations for Coneixement del medi, Matemàtiques, L
 Llengües estrangeres (projectes.xtec.cat/nou-curriculum), plus the topics the 30 existing
 questions need (sports, culture of the six cities). A batch that needs a new topic adds it to
 its subject's file in the same pull request. A topic that no question uses is allowed.
+
+The authority for what is taught in the cicle superior is `docs/curriculum/cicle-superior.md`.
+A topic is only a label for the picker; a question whose fact is not an application of a saber in
+that document does not belong in the bank, whatever topic it uses.
 
 ### The build
 
@@ -152,8 +163,10 @@ uses Node's standard library only.
 field (an error, so a typo such as `"refrences"` cannot pass silently); unique ids across files;
 unique topic ids across files; every topic of a question existing in the same file; every file
 name being a subject and every subject having a file; `place` being a stop id or `general`;
-the Spanish marks (see *Marking the language on screen*). It gets `APN.SUBJECTS` and the stop ids by requiring `js/data-level-1.js`, so the lists
-live in one place. Counts over the whole bank (at least 3 per stop, at least 12 general) stay in
+the `curriculum` area and block, and their agreement with the subject; the Spanish marks (see
+*Marking the language on screen*). It gets `APN.SUBJECTS` and the stop ids by requiring
+`js/data-level-1.js`, and the curriculum lists from `scripts/curriculum.js`, so each list lives in
+one place. Counts over the whole bank (at least 3 per stop, at least 12 general) stay in
 `tests/data.test.js` only: they describe the bank, not a single file.
 
 **Loading:** like `js/data-level-1.js` today, the generated file sets `globalThis.APN` and is
@@ -181,7 +194,7 @@ it holds whenever the turn has any non-Catalan candidate, even at the cost of ru
 the bank's guarantee of non-Catalan questions for every stop and general turn (see The first
 batch), it always holds in practice. Because place questions are only geography,
 history, sports or culture, the subject rule spreads them over those four and the general turns
-over maths, science, language, english and catalan.
+over maths, science, language, english, catalan and citizenship.
 
 ### Marking the language on screen
 
@@ -212,6 +225,8 @@ inside an English question are marked as Spanish`.
   pages, Tresor de recursos, and general references (Wikipedia in Catalan or Spanish, official
   sites of the cities) for the city questions.
 - Each question's `references` points to where its fact can be checked, not to text it copies.
+- The curriculum reference for question writers is `docs/curriculum/cicle-superior.md`; it links
+  the official area documents and lists the facts that are out of scope.
 - The bank stays under the repository's MIT licence.
 
 ### The first batch
@@ -220,7 +235,8 @@ About 30 new questions written from the reading list, added to their subject fil
 
 - About a third in Catalan, at most two Catalan questions per city.
 - For each of the six cities, two or three new place questions, so every city has at least five.
-- The rest general, spread over maths, science, language, english and catalan, at least two each.
+- The rest general, spread over maths, science, language, english, catalan and citizenship, at
+  least two each.
 - Difficulties spread across 1, 2 and 3.
 - Every stop keeps at least 3 non-Catalan questions (its 3 existing ones), and the general
   questions keep at least 9 non-Catalan ones, so the Catalan cap never has to give way.
@@ -243,16 +259,17 @@ the difficulty labels, and the length limits.
   `every stop has at least 3 questions and there are at least 12 general ones`, keeping the place
   subject rule; the exact per-subject counts of the general questions are dropped.
 - New: `every question's language matches its subject`, `every topic of a question belongs to
-  its subject`, `every question has a difficulty from 1 to 3`, `every question has at least one
-  https reference`, `topic ids are unique`.
+  its subject`, `every question has a curriculum area and block`, `every question has a difficulty
+  from 1 to 3`, `every question has at least one https reference`, `topic ids are unique`.
 
 `tests/build-questions.test.js` (new):
 
 - `the committed js/questions.js matches the JSON files`: builds in memory and compares with the
   file on disk. This is the guard against a forgotten build.
 - One test per broken rule (duplicate id, a topic from another file, language and subject
-  disagree, a fourth topic, difficulty 4, missing reference, prompt over 120 characters, a file
-  that is not a subject, an unknown field), each asserting the exact
+  disagree, a fourth topic, a missing curriculum, a curriculum block from another area, a
+  curriculum area that does not match the subject, difficulty 4, missing reference, prompt over 120
+  characters, a file that is not a subject, an unknown field), each asserting the exact
   `<file>: <id>: <problem>` line and that nothing is written.
 
 `tests/game-logic.test.js` (picker):

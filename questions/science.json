@@ -32,6 +32,10 @@
       "topics": [
         "sistema-solar"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -55,6 +59,10 @@
       "topics": [
         "aire-y-respiracion"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -78,6 +86,10 @@
       "topics": [
         "cuerpo-humano"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -101,6 +113,10 @@
       "topics": [
         "plantas-y-seres-vivos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -124,6 +140,10 @@
       "topics": [
         "sistema-solar"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -147,6 +167,10 @@
       "topics": [
         "cuerpo-humano"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -170,6 +194,10 @@
       "topics": [
         "aire-y-respiracion"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -193,6 +221,10 @@
       "topics": [
         "materia-y-estados"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -216,6 +248,10 @@
       "topics": [
         "energia"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,

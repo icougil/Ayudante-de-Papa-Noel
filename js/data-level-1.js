@@ -3,7 +3,10 @@
 (function () {
   const APN = (globalThis.APN = globalThis.APN || {});
 
-  APN.SUBJECTS = ['geography', 'history', 'sports', 'culture', 'maths', 'science', 'language', 'english', 'catalan'];
+  APN.SUBJECTS = [
+    'geography', 'history', 'sports', 'culture', 'maths', 'science', 'language', 'english',
+    'catalan', 'citizenship'
+  ];
 
   APN.LEVELS = [
     {

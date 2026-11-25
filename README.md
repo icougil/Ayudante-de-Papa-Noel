@@ -101,7 +101,9 @@ so the memory only works when the game is served over http(s).
 | `js/questions.js` | The questions and topics the game loads. Generated, do not edit |
 | `scripts/build-questions.js` | Checks `questions/*.json` and generates `js/questions.js` |
 | `scripts/question-pools.js` | Counts the questions of each pool (`npm run pools`) |
+| `scripts/curriculum-pools.js` | Counts the questions of each curriculum block (`npm run curriculum`) |
 | `.claude/skills/write-question-batch/` | The instructions of the scheduled job that adds questions |
+| `docs/curriculum/` | The curriculum reference for question writers: the sabers and the facts that are out |
 | `js/game-logic.js` | The rules, as pure functions that never touch the page |
 | `js/sound.js` | The music and the sound effects, generated in the browser, and the sound switch |
 | `js/ui.js` | Draws the scene, moves it and wires the rules to the page |
@@ -113,16 +115,17 @@ so the memory only works when the game is served over http(s).
 ## Adding a question
 
 Questions live in the file of their subject, `questions/<subject>.json` (`geography`, `history`,
-`sports`, `culture`, `maths`, `science`, `language`, `english`, `catalan`). Each file has a `topics`
-list (`id` in kebab-case, `name` in Spanish) and a `questions` list. Copy an existing question and
-change its fields, in this order:
+`sports`, `culture`, `maths`, `science`, `language`, `english`, `catalan`, `citizenship`). Each
+file has a `topics` list (`id` in kebab-case, `name` in Spanish) and a `questions` list. Copy an
+existing question and change its fields, in this order:
 
 | Field | Meaning |
 |---|---|
 | `id` | Unique across all files, `<subject>-<lang>-<nnn>`, e.g. `geography-es-007` or `catalan-ca-004` |
 | `lang` | `es`, `ca` or `en`: `english` is `en`, `catalan` is `ca`, `language` is `es`, the others `es` or `ca` |
 | `topics` | 1 to 3 different topic ids from the `topics` list of the same file |
-| `difficulty` | 1 (taught in 5è), 2 (a 6è topic) or 3 (a 6è topic with a harder twist: two steps or a less obvious fact) |
+| `curriculum` | The cicle superior area and block the fact applies, e.g. `{"area":"medi","block":"societats-i-territoris"}`. The ids are in `docs/curriculum/cicle-superior.md` |
+| `difficulty` | 1 (direct recall of one cicle superior saber), 2 (applies or relates two sabers), 3 (two steps, a less obvious application, or a justification) |
 | `place` | The id of a city on the route, or `general`. A city only for geography, history, sports and culture |
 | `minAge` | 10 |
 | `maxAge` | 12 |
@@ -131,6 +134,14 @@ change its fields, in this order:
 | `correct` | Position of the right answer in `options`, from 0 to 3 |
 | `explanation` | Shown after a wrong answer, 160 characters at most. In an English question it glosses each key English word in Spanish in brackets, e.g. «Hot» ({caliente}) |
 | `references` | At least one `https://` page where the fact can be checked |
+
+Before writing, read [`docs/curriculum/cicle-superior.md`](docs/curriculum/cicle-superior.md). It
+lists the sabers of the cicle superior and the facts that are only review or general culture
+(prehistory, the astronomy of the first cycle, club sport, heraldry, artist biographies). Most
+questions must apply one of those sabers. A batch may include one review or general-culture
+question from that list, marked as such; the rest stay anchored. The official curriculum defines the
+sabers for the whole cicle (5è-6è), not per course; the `difficulty` labels are a project convention.
+The `curriculum` field is required: the build rejects a question without a valid area and block.
 
 Spanish words inside a Catalan or English prompt or explanation go in braces, e.g.
 `Which English word means «{hermano}»?`. The braces are not shown, and the game reads the word
@@ -148,12 +159,17 @@ every game, so the position of the right answer does not matter.
 ## Question batches
 
 A Claude routine called `question-batch` runs about every 3 days. It writes 10 new questions for the
-pools with the fewest (each of the six cities, and the general maths, science, language, english
-and catalan), checks them, and opens a pull request that lists only the new questions with their
-answer, explanation, reference and any doubts. The owner reads the table, plays the branch and
-merges. Nothing reaches the game without that merge, and the routine does nothing while a
-`question-batch/` pull request is still open, so batches never pile up. The target is 15
-questions in every pool; `npm run pools` shows where each pool stands.
+pools with the fewest (each of the six cities, and the general maths, science, language, english,
+catalan and citizenship), checks them, and opens a pull request that lists only the new questions
+with their curriculum anchor (area and block), answer, explanation, reference and any doubts. It
+also runs `npm run curriculum` and spreads the batch over the thinnest curriculum blocks, avoiding
+the over-represented ones. Every question must apply a cicle superior saber from
+`docs/curriculum/cicle-superior.md`, except the batch's one review/general-culture question. The
+owner reads the table, plays the branch and merges. Nothing reaches the game without that merge, and the routine
+does nothing while a `question-batch/` pull request is still open, so batches never pile up. The
+minimums are 15 questions in every pool and 3 in every curriculum block; the routine does not stop
+there, it keeps adding to the pools and blocks with the fewest. `npm run pools` shows where each pool
+stands, and `npm run curriculum` shows the block counts and how many are missing to the floor of 3.
 
 Its instructions are `.claude/skills/write-question-batch/SKILL.md`, so changing how it writes is
 a pull request. To run it now, use "Run now" on the routine at claude.ai, or ask Claude Code to use

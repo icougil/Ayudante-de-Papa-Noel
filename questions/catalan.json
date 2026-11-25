@@ -20,6 +20,10 @@
       "topics": [
         "ortografia-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -43,6 +47,10 @@
       "topics": [
         "gramatica-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -66,6 +74,10 @@
       "topics": [
         "vocabulario-catalan"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -89,6 +101,10 @@
       "topics": [
         "vocabulario-catalan"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -112,6 +128,10 @@
       "topics": [
         "gramatica-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -135,6 +155,10 @@
       "topics": [
         "ortografia-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -158,6 +182,10 @@
       "topics": [
         "gramatica-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -181,6 +209,10 @@
       "topics": [
         "vocabulario-catalan"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -204,6 +236,10 @@
       "topics": [
         "ortografia-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,

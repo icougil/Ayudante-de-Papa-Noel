@@ -40,6 +40,10 @@
       "topics": [
         "juegos-olimpicos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "barcelona",
       "minAge": 10,
@@ -63,6 +67,10 @@
       "topics": [
         "deportes-tradicionales"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -86,6 +94,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -109,6 +121,10 @@
       "topics": [
         "baloncesto"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -132,6 +148,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "sevilla",
       "minAge": 10,
@@ -155,6 +175,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -178,6 +202,10 @@
       "topics": [
         "deportes-tradicionales"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 2,
       "place": "bilbao",
       "minAge": 10,
@@ -201,6 +229,10 @@
       "topics": [
         "juegos-olimpicos"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "interaccio-amb-l-entorn"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -224,6 +256,10 @@
       "topics": [
         "tenis"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
@@ -247,6 +283,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -270,6 +310,10 @@
       "topics": [
         "baloncesto"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -293,6 +337,10 @@
       "topics": [
         "deportes-de-invierno"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "interaccio-amb-l-entorn"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -316,6 +364,10 @@
       "topics": [
         "piraguismo"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -339,6 +391,10 @@
       "topics": [
         "tenis"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 3,
       "place": "sevilla",
       "minAge": 10,
@@ -362,6 +418,10 @@
       "topics": [
         "natacion"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 3,
       "place": "barcelona",
       "minAge": 10,

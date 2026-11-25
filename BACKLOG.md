@@ -7,18 +7,18 @@ it came from.
 ## Questions
 
 - [ ] **Grow the question bank a lot, across varied topics.** Part 1 is done: the questions live
-  in one file per subject (`questions/*.json`), each with a language label, topics, difficulty and
-  references, and the bank holds about 60 questions. Part 2 is built (a scheduled job that adds
-  10 questions every 3 days as a pull request, see `docs/specs/2026-11-24-question-batch-job-design.md`);
-  it is done once the first batch is merged. Still to do: the rest of part 3 (remembering the player); see
-  `docs/specs/2026-11-18-question-bank-design.md`. Targets for the job: at least 15 questions in
-  every pool (each of the six cities and each general subject: maths, science, language, english,
-  catalan), about 11 batches of 10. Fill the pools furthest below 15 first: general catalan (3),
-  language (5), english (6), and every city (5). Cities also lack subjects: sports in Santiago,
-  Sevilla and Zaragoza (1 each in Barcelona, Bilbao and Madrid), history in Barcelona, Bilbao and
-  Madrid. City questions are almost all difficulty 1, so add harder ones too.
+  in one file per subject (`questions/*.json`), each with a language label, topics, a curriculum
+  anchor, difficulty and references, and the bank holds about 100 questions. Part 2 is done (a
+  scheduled job that adds 10 questions every 3 days as a pull request; the first batch is merged,
+  see `docs/specs/2026-11-24-question-batch-job-design.md`). Still to do: the rest of part 3
+  (remembering the player); see `docs/specs/2026-11-18-question-bank-design.md`. Minimums for the
+  job: 15 questions in every pool (each of the six cities and each general subject: maths, science,
+  language, english, catalan, citizenship), and 3 in every curriculum block (`npm run curriculum`).
+  The job does not stop when they are met: it keeps adding to the pools and blocks with the fewest.
+  Fill the pools and blocks furthest below first; the skill has the balance rules. Every city now
+  has all four subjects; keep adding difficulty 2 and 3, which city pools still have few of.
 - [ ] **Get questions from an external source instead of writing them by hand.** Part 1 is done
-  (subject files, labels, about 60 questions written from the reading list in the spec, each with a
+  (subject files, labels, about 100 questions written from the reading list in the spec, each with a
   reference). Part 2 (a scheduled job writing the questions itself, reviewed by the owner in a pull
   request) is built and part 3 (remembering the player) remains; see
   `docs/specs/2026-11-18-question-bank-design.md`.
@@ -30,20 +30,16 @@ it came from.
   checking that for every new batch.
 - [ ] **Ask general questions about Catalonia, not only at the Barcelona stop.** The players are
   in Catalonia (cicle superior), yet Catalan places, history and traditions only come up at the
-  Barcelona stop (5 questions, one per game), plus 3 Catalan-language questions. Geography,
+  Barcelona stop, plus the Catalan-language questions. Geography,
   history and culture questions are always tied to one of the 6 cities, and the picker's general
-  turns only draw maths, science, language, english and catalan (see *The picker* in
+  turns only draw maths, science, language, english, catalan and citizenship (see *The picker* in
   `docs/specs/2026-11-18-question-bank-design.md`). Wanted: questions about Catalonia (e.g.
   Montserrat, the Pyrenees, the Ebre delta, castells, Sant Jordi, caga tió) that can come up on a
   general turn, in Spanish or Catalan, suited to ages 10 to 12. Needs a design step first:
   how they are marked (a new place like `catalunya`, or a topic), how often a game may ask them,
   and how they fit the picker's rules and the two-`ca`-questions cap.
-- [ ] **Let the first stop (Barcelona) have more than 5 questions without breaking a test.** The
-  test `pickQuestions repeats the least recently seen city question when city and general are all
-  seen` in `tests/game-logic.test.js` assumes the first stop has exactly 5 questions, so it fails
-  when the Barcelona pool grows to 6. The first batch (PR #17) had to drop its Barcelona question
-  because of it, so Barcelona stays at 5 while the other pools grow. Fix the test so it does not
-  depend on the pool size, then let the batch job fill Barcelona too.
+- [x] **Let the first stop (Barcelona) have more than 5 questions without breaking a test.** Done:
+  the picker tests no longer depend on how many questions a city has, and Barcelona has 9.
 
 ## Cities
 
@@ -53,8 +49,8 @@ it came from.
   "longer games" is an anti-goal in `docs/specs/2026-11-16-five-stars-design.md`. A trip keeps
   6 stops, the "Ciudad N/6" scoreboard and the stars. Each game takes its stops from a larger
   pool, so repeat players see new places. Wait until the 6 current city pools reach about 10
-  questions each (they are at 5 or 6). Before that, rotating would only spread the repeats
-  around. Depends on the item "Let the first stop (Barcelona) have more than 5 questions".
+  questions each (they are at 9). Before that, rotating would only spread the repeats
+  around. The test fix that used to block this is done.
   Proposed, to settle in the design step:
   - Pool: the 6 current cities plus Valencia (Ciudad de las Artes y las Ciencias), Granada
     (Alhambra), Tenerife (El Teide; chosen by the owner over Palma for its volcanic geography
@@ -75,6 +71,16 @@ it came from.
     batch job grows its pool.
   - Order: the test fix above, then the current city pools to about 10, then the rotation code
     with the current 6 cities (same game, ring order), then one pull request per new city.
+
+## Difficulty
+
+- [ ] **Move the difficulty with the player.** The questions carry difficulty 1, 2 or 3 (1 is a
+  direct recall, 2 applies or relates two sabers, 3 is two steps or a less obvious application),
+  but the picker ignores it and every game draws the same mix. Wanted: when the player does well,
+  the next questions go up a level; when they miss, down. Two ways: between games (store a skill
+  level in localStorage and prefer that difficulty next time) or within a game (pick each question
+  after the previous answer, which is a bigger change to `pickQuestions`, `createGame` and the UI).
+  Decide which before starting.
 
 ## Sound
 

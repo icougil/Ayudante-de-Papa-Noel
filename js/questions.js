@@ -246,6 +246,26 @@
       "id": "vocabulario-catalan",
       "subject": "catalan",
       "name": "Vocabulario catalán"
+    },
+    {
+      "id": "drets-i-democracia",
+      "subject": "citizenship",
+      "name": "Derechos y democracia"
+    },
+    {
+      "id": "sostenibilidad",
+      "subject": "citizenship",
+      "name": "Sostenibilidad"
+    },
+    {
+      "id": "emociones-y-relaciones",
+      "subject": "citizenship",
+      "name": "Emociones y relaciones"
+    },
+    {
+      "id": "identidad-y-autonomia",
+      "subject": "citizenship",
+      "name": "Identidad y autonomía"
     }
   ];
   APN.QUESTIONS = [
@@ -256,6 +276,10 @@
       "topics": [
         "mares-y-costas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "barcelona",
       "minAge": 10,
@@ -280,6 +304,10 @@
       "topics": [
         "rios-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -304,6 +332,10 @@
       "topics": [
         "comunidades-autonomas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -328,6 +360,10 @@
       "topics": [
         "rios-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -352,6 +388,10 @@
       "topics": [
         "rios-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -376,6 +416,10 @@
       "topics": [
         "comunidades-autonomas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -400,6 +444,10 @@
       "topics": [
         "comunidades-autonomas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -424,6 +472,10 @@
       "topics": [
         "mares-y-costas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -448,6 +500,10 @@
       "topics": [
         "montanas-y-relieve"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -472,6 +528,10 @@
       "topics": [
         "montanas-y-relieve"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
@@ -496,6 +556,10 @@
       "topics": [
         "mares-y-costas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -520,6 +584,10 @@
       "topics": [
         "hispania-romana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -544,6 +612,10 @@
       "topics": [
         "al-andalus"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "sevilla",
       "minAge": 10,
@@ -568,6 +640,10 @@
       "topics": [
         "al-andalus"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -592,6 +668,10 @@
       "topics": [
         "historia-reciente"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "sevilla",
       "minAge": 10,
@@ -616,6 +696,10 @@
       "topics": [
         "religion-y-peregrinaciones"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -640,6 +724,10 @@
       "topics": [
         "monarquia-y-capitales"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -664,6 +752,10 @@
       "topics": [
         "historia-reciente"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
@@ -688,6 +780,10 @@
       "topics": [
         "hispania-romana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -712,6 +808,10 @@
       "topics": [
         "descubrimientos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 3,
       "place": "sevilla",
       "minAge": 10,
@@ -736,6 +836,10 @@
       "topics": [
         "religion-y-peregrinaciones"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -760,6 +864,10 @@
       "topics": [
         "guerras-y-batallas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 3,
       "place": "zaragoza",
       "minAge": 10,
@@ -784,6 +892,10 @@
       "topics": [
         "historia-reciente"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "bilbao",
       "minAge": 10,
@@ -808,6 +920,10 @@
       "topics": [
         "historia-reciente"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
@@ -832,6 +948,10 @@
       "topics": [
         "juegos-olimpicos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "barcelona",
       "minAge": 10,
@@ -856,6 +976,10 @@
       "topics": [
         "deportes-tradicionales"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -880,6 +1004,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -904,6 +1032,10 @@
       "topics": [
         "baloncesto"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -928,6 +1060,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "sevilla",
       "minAge": 10,
@@ -952,6 +1088,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -976,6 +1116,10 @@
       "topics": [
         "deportes-tradicionales"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 2,
       "place": "bilbao",
       "minAge": 10,
@@ -1000,6 +1144,10 @@
       "topics": [
         "juegos-olimpicos"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "interaccio-amb-l-entorn"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -1024,6 +1172,10 @@
       "topics": [
         "tenis"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 2,
       "place": "madrid",
       "minAge": 10,
@@ -1048,6 +1200,10 @@
       "topics": [
         "futbol"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -1072,6 +1228,10 @@
       "topics": [
         "baloncesto"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -1096,6 +1256,10 @@
       "topics": [
         "deportes-de-invierno"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "interaccio-amb-l-entorn"
+      },
       "difficulty": 1,
       "place": "zaragoza",
       "minAge": 10,
@@ -1120,6 +1284,10 @@
       "topics": [
         "piraguismo"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -1144,6 +1312,10 @@
       "topics": [
         "tenis"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 3,
       "place": "sevilla",
       "minAge": 10,
@@ -1168,6 +1340,10 @@
       "topics": [
         "natacion"
       ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
       "difficulty": 3,
       "place": "barcelona",
       "minAge": 10,
@@ -1192,6 +1368,10 @@
       "topics": [
         "arte-y-arquitectura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 1,
       "place": "barcelona",
       "minAge": 10,
@@ -1216,6 +1396,10 @@
       "topics": [
         "museos-y-pintura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -1240,6 +1424,10 @@
       "topics": [
         "simbolos-y-escudos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "madrid",
       "minAge": 10,
@@ -1265,6 +1453,10 @@
       "topics": [
         "rutas-y-patrimonio"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -1289,6 +1481,10 @@
       "topics": [
         "lenguas-de-espana"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "santiago",
       "minAge": 10,
@@ -1313,6 +1509,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -1337,6 +1537,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "barcelona",
       "minAge": 10,
@@ -1361,6 +1565,10 @@
       "topics": [
         "museos-y-pintura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -1385,6 +1593,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "sevilla",
       "minAge": 10,
@@ -1409,6 +1621,10 @@
       "topics": [
         "rutas-y-patrimonio"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -1433,6 +1649,10 @@
       "topics": [
         "arte-y-arquitectura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -1457,6 +1677,10 @@
       "topics": [
         "tradiciones-y-fiestas"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "zaragoza",
       "minAge": 10,
@@ -1481,6 +1705,10 @@
       "topics": [
         "arte-y-arquitectura"
       ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "plastica-i-visual"
+      },
       "difficulty": 3,
       "place": "barcelona",
       "minAge": 10,
@@ -1505,6 +1733,10 @@
       "topics": [
         "gastronomia"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 2,
       "place": "santiago",
       "minAge": 10,
@@ -1529,6 +1761,10 @@
       "topics": [
         "gastronomia"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
       "difficulty": 1,
       "place": "bilbao",
       "minAge": 10,
@@ -1553,6 +1789,10 @@
       "topics": [
         "operaciones"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -1577,6 +1817,10 @@
       "topics": [
         "fracciones"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1601,6 +1845,10 @@
       "topics": [
         "geometria-y-medidas"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-espacial"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1625,6 +1873,10 @@
       "topics": [
         "divisibilidad-y-primos"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1649,6 +1901,10 @@
       "topics": [
         "operaciones"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -1673,6 +1929,10 @@
       "topics": [
         "geometria-y-medidas"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-espacial"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -1697,6 +1957,10 @@
       "topics": [
         "porcentajes-y-decimales"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1721,6 +1985,10 @@
       "topics": [
         "divisibilidad-y-primos"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -1745,6 +2013,10 @@
       "topics": [
         "mcm-y-mcd"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1769,6 +2041,10 @@
       "topics": [
         "proporcionalidad"
       ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-numeric"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1793,6 +2069,10 @@
       "topics": [
         "sistema-solar"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -1817,6 +2097,10 @@
       "topics": [
         "aire-y-respiracion"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -1841,6 +2125,10 @@
       "topics": [
         "cuerpo-humano"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -1865,6 +2153,10 @@
       "topics": [
         "plantas-y-seres-vivos"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -1889,6 +2181,10 @@
       "topics": [
         "sistema-solar"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -1913,6 +2209,10 @@
       "topics": [
         "cuerpo-humano"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1937,6 +2237,10 @@
       "topics": [
         "aire-y-respiracion"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1961,6 +2265,10 @@
       "topics": [
         "materia-y-estados"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -1985,6 +2293,10 @@
       "topics": [
         "energia"
       ],
+      "curriculum": {
+        "area": "medi",
+        "block": "cultura-cientifica"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -2009,6 +2321,10 @@
       "topics": [
         "categorias-gramaticales"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2033,6 +2349,10 @@
       "topics": [
         "acentuacion"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2057,6 +2377,10 @@
       "topics": [
         "categorias-gramaticales"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2081,6 +2405,10 @@
       "topics": [
         "ortografia"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2106,6 +2434,10 @@
       "topics": [
         "acentuacion"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -2130,6 +2462,10 @@
       "topics": [
         "categorias-gramaticales"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2154,6 +2490,10 @@
       "topics": [
         "acentuacion"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2178,6 +2518,10 @@
       "topics": [
         "ortografia"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2202,6 +2546,10 @@
       "topics": [
         "ortografia"
       ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2226,6 +2574,10 @@
       "topics": [
         "vocabulario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2250,6 +2602,10 @@
       "topics": [
         "calendario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2275,6 +2631,10 @@
       "topics": [
         "verbos-irregulares-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2299,6 +2659,10 @@
       "topics": [
         "vocabulario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2323,6 +2687,10 @@
       "topics": [
         "verbos-irregulares-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2347,6 +2715,10 @@
       "topics": [
         "gramatica-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2371,6 +2743,10 @@
       "topics": [
         "gramatica-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2395,6 +2771,10 @@
       "topics": [
         "gramatica-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -2419,6 +2799,10 @@
       "topics": [
         "calendario-ingles"
       ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2443,6 +2827,10 @@
       "topics": [
         "ortografia-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2467,6 +2855,10 @@
       "topics": [
         "gramatica-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -2491,6 +2883,10 @@
       "topics": [
         "vocabulario-catalan"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2515,6 +2911,10 @@
       "topics": [
         "vocabulario-catalan"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2539,6 +2939,10 @@
       "topics": [
         "gramatica-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2563,6 +2967,10 @@
       "topics": [
         "ortografia-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 3,
       "place": "general",
       "minAge": 10,
@@ -2587,6 +2995,10 @@
       "topics": [
         "gramatica-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
@@ -2611,6 +3023,10 @@
       "topics": [
         "vocabulario-catalan"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 1,
       "place": "general",
       "minAge": 10,
@@ -2635,6 +3051,10 @@
       "topics": [
         "ortografia-catalana"
       ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "reflexio-sobre-la-llengua"
+      },
       "difficulty": 2,
       "place": "general",
       "minAge": 10,
