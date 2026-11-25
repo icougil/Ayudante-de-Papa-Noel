@@ -142,6 +142,9 @@ questions must apply one of those sabers. A batch may include one review or gene
 question from that list, marked as such; the rest stay anchored. The official curriculum defines the
 sabers for the whole cicle (5è-6è), not per course; the `difficulty` labels are a project convention.
 The `curriculum` field is required: the build rejects a question without a valid area and block.
+New questions should also keep the prompt at most 90 characters, the options around 25 and the
+explanation at most 140: the build allows more, but the browser tests put the longest prompt on a
+360×640 phone.
 
 Spanish words inside a Catalan or English prompt or explanation go in braces, e.g.
 `Which English word means «{hermano}»?`. The braces are not shown, and the game reads the word
