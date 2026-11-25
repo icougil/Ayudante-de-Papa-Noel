@@ -201,6 +201,29 @@
       "references": [
         "https://es.wikipedia.org/wiki/Montjuïc"
       ]
+    },
+    {
+      "id": "sports-es-007",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El Athletic Club de Bilbao tiene una tradición muy especial. ¿Cuál es?",
+      "options": [
+        "Ficha jugadores de cantera vasca",
+        "Solo ficha futbolistas extranjeros",
+        "Nunca cambia de entrenador",
+        "Juega sin portero titular"
+      ],
+      "correct": 0,
+      "explanation": "El Athletic Club de Bilbao se distingue porque suele fichar solo jugadores formados en el fútbol vasco.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Athletic_Club"
+      ]
     }
   ]
 }

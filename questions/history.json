@@ -161,29 +161,6 @@
       ]
     },
     {
-      "id": "history-es-006",
-      "lang": "es",
-      "topics": [
-        "historia-reciente"
-      ],
-      "difficulty": 2,
-      "place": "bilbao",
-      "minAge": 10,
-      "maxAge": 12,
-      "prompt": "¿En qué año se inauguró el Museo Guggenheim de Bilbao?",
-      "options": [
-        "1997",
-        "1975",
-        "1982",
-        "2008"
-      ],
-      "correct": 0,
-      "explanation": "El Museo Guggenheim abrió en 1997 y cambió la imagen de Bilbao: de ciudad industrial a ciudad de arte.",
-      "references": [
-        "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
-      ]
-    },
-    {
       "id": "history-es-007",
       "lang": "es",
       "topics": [

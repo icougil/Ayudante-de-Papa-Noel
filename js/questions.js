@@ -608,30 +608,6 @@
       ]
     },
     {
-      "id": "history-es-006",
-      "lang": "es",
-      "subject": "history",
-      "topics": [
-        "historia-reciente"
-      ],
-      "difficulty": 2,
-      "place": "bilbao",
-      "minAge": 10,
-      "maxAge": 12,
-      "prompt": "¿En qué año se inauguró el Museo Guggenheim de Bilbao?",
-      "options": [
-        "1997",
-        "1975",
-        "1982",
-        "2008"
-      ],
-      "correct": 0,
-      "explanation": "El Museo Guggenheim abrió en 1997 y cambió la imagen de Bilbao: de ciudad industrial a ciudad de arte.",
-      "references": [
-        "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
-      ]
-    },
-    {
       "id": "history-es-007",
       "lang": "es",
       "subject": "history",
@@ -869,6 +845,30 @@
       "explanation": "El Estadio Olímpico y el anillo olímpico de 1992 están en la montaña de Montjuïc, con vistas a toda la ciudad.",
       "references": [
         "https://es.wikipedia.org/wiki/Montjuïc"
+      ]
+    },
+    {
+      "id": "sports-es-007",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El Athletic Club de Bilbao tiene una tradición muy especial. ¿Cuál es?",
+      "options": [
+        "Ficha jugadores de cantera vasca",
+        "Solo ficha futbolistas extranjeros",
+        "Nunca cambia de entrenador",
+        "Juega sin portero titular"
+      ],
+      "correct": 0,
+      "explanation": "El Athletic Club de Bilbao se distingue porque suele fichar solo jugadores formados en el fútbol vasco.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Athletic_Club"
       ]
     },
     {
