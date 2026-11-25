@@ -155,6 +155,29 @@
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_de_La_Romareda"
       ]
+    },
+    {
+      "id": "sports-es-005",
+      "lang": "es",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el estadio donde juega el Athletic Club de Bilbao?",
+      "options": [
+        "San Mamés",
+        "Anoeta",
+        "Mestalla",
+        "El Sadar"
+      ],
+      "correct": 0,
+      "explanation": "El Athletic Club juega en San Mamés, un estadio moderno que sustituyó al viejo, llamado «La Catedral».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_de_San_Mamés"
+      ]
     }
   ]
 }

@@ -19,6 +19,10 @@
     {
       "id": "monarquia-y-capitales",
       "name": "Monarquía y capitales"
+    },
+    {
+      "id": "america-y-descubrimientos",
+      "name": "América y los descubrimientos"
     }
   ],
   "questions": [
@@ -158,6 +162,75 @@
       "explanation": "El Palacio Real de Madrid es un enorme palacio donde vivieron los reyes de España. Hoy se usa para actos oficiales y se puede visitar.",
       "references": [
         "https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid"
+      ]
+    },
+    {
+      "id": "history-es-006",
+      "lang": "es",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué industria hizo crecer Bilbao a finales del siglo XIX, con minas de hierro y altos hornos?",
+      "options": [
+        "La siderurgia",
+        "La industria del juguete",
+        "La producción de vino",
+        "El turismo de playa"
+      ],
+      "correct": 0,
+      "explanation": "Bilbao creció gracias al hierro de sus minas y a los altos hornos que lo convertían en acero: la siderurgia.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Historia_de_Bilbao"
+      ]
+    },
+    {
+      "id": "history-es-007",
+      "lang": "es",
+      "topics": [
+        "monarquia-y-capitales"
+      ],
+      "difficulty": 3,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué rey fijó la capital de España en Madrid en 1561?",
+      "options": [
+        "Felipe II",
+        "Carlos III",
+        "Felipe V",
+        "Fernando el Católico"
+      ],
+      "correct": 0,
+      "explanation": "Felipe II trasladó la corte a Madrid en 1561. Desde entonces, salvo breves épocas, Madrid ha sido la capital de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Historia_de_Madrid"
+      ]
+    },
+    {
+      "id": "history-es-008",
+      "lang": "es",
+      "topics": [
+        "america-y-descubrimientos"
+      ],
+      "difficulty": 3,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué edificio de Sevilla guarda los documentos de la administración de la América española?",
+      "options": [
+        "Archivo General de Indias",
+        "Torre del Oro",
+        "Real Alcázar",
+        "Hospital de la Caridad"
+      ],
+      "correct": 0,
+      "explanation": "El Archivo General de Indias conserva millones de documentos sobre América y Filipinas en tiempos de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Archivo_General_de_Indias"
       ]
     }
   ]

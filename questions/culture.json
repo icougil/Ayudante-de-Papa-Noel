@@ -279,6 +279,52 @@
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
       ]
+    },
+    {
+      "id": "culture-es-005",
+      "lang": "es",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué día de octubre se celebra la fiesta grande de Zaragoza, en honor a la Virgen del Pilar?",
+      "options": [
+        "El 12",
+        "El 1",
+        "El 24",
+        "El 31"
+      ],
+      "correct": 0,
+      "explanation": "Las Fiestas del Pilar de Zaragoza se celebran en torno al 12 de octubre, día de la Virgen del Pilar, patrona de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Fiestas_del_Pilar"
+      ]
+    },
+    {
+      "id": "culture-es-004",
+      "lang": "es",
+      "topics": [
+        "rutas-y-patrimonio"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué concha es el símbolo de los peregrinos del Camino de Santiago?",
+      "options": [
+        "La vieira",
+        "El mejillón",
+        "La almeja",
+        "El berberecho"
+      ],
+      "correct": 0,
+      "explanation": "La vieira es el símbolo del Camino de Santiago: los peregrinos la llevan colgada de la mochila o la ropa.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Vieira_(concha)"
+      ]
     }
   ]
 }

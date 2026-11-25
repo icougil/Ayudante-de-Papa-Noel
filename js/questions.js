@@ -48,6 +48,11 @@
       "name": "Monarquía y capitales"
     },
     {
+      "id": "america-y-descubrimientos",
+      "subject": "history",
+      "name": "América y los descubrimientos"
+    },
+    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -464,6 +469,30 @@
       ]
     },
     {
+      "id": "geography-es-003",
+      "lang": "es",
+      "subject": "geography",
+      "topics": [
+        "montanas-y-relieve"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué cordillera separa Aragón de Francia, al norte de Zaragoza?",
+      "options": [
+        "Los Pirineos",
+        "Los Picos de Europa",
+        "Sierra Nevada",
+        "Los Alpes"
+      ],
+      "correct": 0,
+      "explanation": "Los Pirineos forman la frontera natural entre España y Francia, y Aragón tiene en ellos las montañas más altas.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Pirineos"
+      ]
+    },
+    {
       "id": "zaragoza-3",
       "lang": "es",
       "subject": "history",
@@ -608,6 +637,78 @@
       ]
     },
     {
+      "id": "history-es-006",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué industria hizo crecer Bilbao a finales del siglo XIX, con minas de hierro y altos hornos?",
+      "options": [
+        "La siderurgia",
+        "La industria del juguete",
+        "La producción de vino",
+        "El turismo de playa"
+      ],
+      "correct": 0,
+      "explanation": "Bilbao creció gracias al hierro de sus minas y a los altos hornos que lo convertían en acero: la siderurgia.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Historia_de_Bilbao"
+      ]
+    },
+    {
+      "id": "history-es-007",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "monarquia-y-capitales"
+      ],
+      "difficulty": 3,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué rey fijó la capital de España en Madrid en 1561?",
+      "options": [
+        "Felipe II",
+        "Carlos III",
+        "Felipe V",
+        "Fernando el Católico"
+      ],
+      "correct": 0,
+      "explanation": "Felipe II trasladó la corte a Madrid en 1561. Desde entonces, salvo breves épocas, Madrid ha sido la capital de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Historia_de_Madrid"
+      ]
+    },
+    {
+      "id": "history-es-008",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "america-y-descubrimientos"
+      ],
+      "difficulty": 3,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué edificio de Sevilla guarda los documentos de la administración de la América española?",
+      "options": [
+        "Archivo General de Indias",
+        "Torre del Oro",
+        "Real Alcázar",
+        "Hospital de la Caridad"
+      ],
+      "correct": 0,
+      "explanation": "El Archivo General de Indias conserva millones de documentos sobre América y Filipinas en tiempos de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Archivo_General_de_Indias"
+      ]
+    },
+    {
       "id": "barcelona-3",
       "lang": "es",
       "subject": "sports",
@@ -749,6 +850,30 @@
       "explanation": "El Real Zaragoza juega en La Romareda, el estadio de la ciudad.",
       "references": [
         "https://es.wikipedia.org/wiki/Estadio_de_La_Romareda"
+      ]
+    },
+    {
+      "id": "sports-es-005",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el estadio donde juega el Athletic Club de Bilbao?",
+      "options": [
+        "San Mamés",
+        "Anoeta",
+        "Mestalla",
+        "El Sadar"
+      ],
+      "correct": 0,
+      "explanation": "El Athletic Club juega en San Mamés, un estadio moderno que sustituyó al viejo, llamado «La Catedral».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Estadio_de_San_Mamés"
       ]
     },
     {
@@ -1014,6 +1139,54 @@
       "explanation": "Es «Puppy», un perro de más de 12 metros cubierto de miles de flores de verdad, obra del artista Jeff Koons.",
       "references": [
         "https://es.wikipedia.org/wiki/Museo_Guggenheim_Bilbao"
+      ]
+    },
+    {
+      "id": "culture-es-005",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "tradiciones-y-fiestas"
+      ],
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué día de octubre se celebra la fiesta grande de Zaragoza, en honor a la Virgen del Pilar?",
+      "options": [
+        "El 12",
+        "El 1",
+        "El 24",
+        "El 31"
+      ],
+      "correct": 0,
+      "explanation": "Las Fiestas del Pilar de Zaragoza se celebran en torno al 12 de octubre, día de la Virgen del Pilar, patrona de la ciudad.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Fiestas_del_Pilar"
+      ]
+    },
+    {
+      "id": "culture-es-004",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "rutas-y-patrimonio"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué concha es el símbolo de los peregrinos del Camino de Santiago?",
+      "options": [
+        "La vieira",
+        "El mejillón",
+        "La almeja",
+        "El berberecho"
+      ],
+      "correct": 0,
+      "explanation": "La vieira es el símbolo del Camino de Santiago: los peregrinos la llevan colgada de la mochila o la ropa.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Vieira_(concha)"
       ]
     },
     {
@@ -1739,6 +1912,54 @@
       ]
     },
     {
+      "id": "english-en-004",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the plural of «child»?",
+      "options": [
+        "Children",
+        "Childs",
+        "Childes",
+        "Childrens"
+      ],
+      "correct": 0,
+      "explanation": "«Child» ({niño}) has an irregular plural: «children» ({niños}). We do not add -s to it.",
+      "references": [
+        "https://en.wikipedia.org/wiki/English_plurals"
+      ]
+    },
+    {
+      "id": "english-en-005",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the comparative of «good»?",
+      "options": [
+        "Better",
+        "Gooder",
+        "More good",
+        "Best"
+      ],
+      "correct": 0,
+      "explanation": "«Good» ({bueno}) is irregular: its comparative is «better» ({mejor}). «Best» ({el mejor}) is the superlative.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Comparison_(grammar)"
+      ]
+    },
+    {
       "id": "catalan-ca-001",
       "lang": "ca",
       "subject": "catalan",
@@ -1880,6 +2101,30 @@
       "explanation": "El verb «saber» en primera persona porta accent: «sé». La conjunció «que» no en porta.",
       "references": [
         "https://ca.wikipedia.org/wiki/Accent_diacr%C3%ADtic"
+      ]
+    },
+    {
+      "id": "catalan-ca-007",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "gramatica-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin és el plural de «llapis»?",
+      "options": [
+        "Llapis",
+        "Llapisos",
+        "Llapises",
+        "Llapissos"
+      ],
+      "correct": 0,
+      "explanation": "Les paraules acabades en -s tòniques com «llapis» no canvien al plural: «el llapis», «els llapis».",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Plural_(gram%C3%A0tica)"
       ]
     }
   ];

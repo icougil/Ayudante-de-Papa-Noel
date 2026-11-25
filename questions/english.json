@@ -156,6 +156,52 @@
       "references": [
         "https://en.wikipedia.org/wiki/Do-support"
       ]
+    },
+    {
+      "id": "english-en-004",
+      "lang": "en",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the plural of «child»?",
+      "options": [
+        "Children",
+        "Childs",
+        "Childes",
+        "Childrens"
+      ],
+      "correct": 0,
+      "explanation": "«Child» ({niño}) has an irregular plural: «children» ({niños}). We do not add -s to it.",
+      "references": [
+        "https://en.wikipedia.org/wiki/English_plurals"
+      ]
+    },
+    {
+      "id": "english-en-005",
+      "lang": "en",
+      "topics": [
+        "gramatica-ingles"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "What is the comparative of «good»?",
+      "options": [
+        "Better",
+        "Gooder",
+        "More good",
+        "Best"
+      ],
+      "correct": 0,
+      "explanation": "«Good» ({bueno}) is irregular: its comparative is «better» ({mejor}). «Best» ({el mejor}) is the superlative.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Comparison_(grammar)"
+      ]
     }
   ]
 }
