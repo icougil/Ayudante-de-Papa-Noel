@@ -11,6 +11,10 @@
     {
       "id": "vocabulario-catalan",
       "name": "Vocabulario catalán"
+    },
+    {
+      "id": "lenguas-de-cataluna",
+      "name": "Lenguas de Cataluña"
     }
   ],
   "questions": [
@@ -255,6 +259,33 @@
       "explanation": "La «ç» (essa trencada) se sent com una essa davant d'«a», «o» o «u», per exemple a «plaça». Davant d'«e» i «i» s'escriu «c».",
       "references": [
         "https://ca.wikipedia.org/wiki/Ce_trencada"
+      ]
+    },
+    {
+      "id": "catalan-ca-010",
+      "lang": "ca",
+      "topics": [
+        "lenguas-de-cataluna"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "les-llengues-i-els-seus-parlants"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina llengua és oficial a Catalunya, a més del català i el castellà?",
+      "options": [
+        "L'aranès",
+        "El basc",
+        "El gallec",
+        "L'asturià"
+      ],
+      "correct": 0,
+      "explanation": "L'aranès, una varietat de l'occità que es parla a la Vall d'Aran, és oficial a tot Catalunya.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Aran%C3%A8s"
       ]
     }
   ]

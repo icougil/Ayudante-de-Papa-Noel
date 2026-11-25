@@ -11,6 +11,10 @@
     {
       "id": "ortografia",
       "name": "Ortografía"
+    },
+    {
+      "id": "literatura",
+      "name": "Literatura"
     }
   ],
   "questions": [
@@ -256,6 +260,33 @@
       "explanation": "En «gente» la «g» delante de «e» suena como «j». En gato, gusano y globo suena fuerte, como en «ga», «gu» y «gl».",
       "references": [
         "https://es.wikipedia.org/wiki/Ortografía_española"
+      ]
+    },
+    {
+      "id": "language-es-008",
+      "lang": "es",
+      "topics": [
+        "literatura"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "educacio-literaria"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En un cuento, ¿cómo se llama la parte en que aparece el problema de los personajes?",
+      "options": [
+        "El nudo",
+        "El título",
+        "El autor",
+        "La portada"
+      ],
+      "correct": 0,
+      "explanation": "En un cuento hay planteamiento, nudo y desenlace. En el nudo surge el conflicto.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Cuento"
       ]
     }
   ]
