@@ -86,5 +86,7 @@ attempts, stop without opening a pull request and say what failed.
 ## Never
 
 - Copy text from a source.
-- Touch any file other than `questions/*.json` and `js/questions.js`.
+- Touch any file other than `questions/*.json` and `js/questions.js`. A batch never edits a test: if
+  a new question makes `npm test` fail for a reason other than the question itself being invalid,
+  stop without opening a pull request and say which test failed, so the owner can fix the test first.
 - Merge, push to `main`, or change these rules.
