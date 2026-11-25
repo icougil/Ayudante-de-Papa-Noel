@@ -63,6 +63,10 @@ Fix or replace any question that fails, then check again:
   doubts say that none of the references could be opened.
 - **Repeat:** read all the existing questions first. Do not ask the same fact, or nearly the same
   prompt, as one already in the bank.
+  Also check the questions that were removed or rewritten in the past, which the bank no longer shows:
+  run `git log -p --format= -- questions js/data-level-1.js | grep -E '^[-+] +"?prompt"?:' | sort -u` and
+  read every prompt. A question the owner removed or replaced (for example for being too hard) must
+  not come back, nor any question about the same fact.
 - **Wrong options:** the three wrong options are plausible and clearly wrong, never a trick.
 
 ## 5. Build and test
