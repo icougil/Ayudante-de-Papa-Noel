@@ -202,6 +202,29 @@
       "references": [
         "https://en.wikipedia.org/wiki/Comparison_(grammar)"
       ]
+    },
+    {
+      "id": "english-en-006",
+      "lang": "en",
+      "topics": [
+        "calendario-ingles"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which day comes between Monday and Wednesday?",
+      "options": [
+        "Tuesday",
+        "Thursday",
+        "Friday",
+        "Sunday"
+      ],
+      "correct": 0,
+      "explanation": "«Tuesday» ({martes}) comes after «Monday» ({lunes}) and before «Wednesday» ({miércoles}).",
+      "references": [
+        "https://en.wikipedia.org/wiki/Tuesday"
+      ]
     }
   ]
 }

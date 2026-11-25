@@ -88,6 +88,16 @@
       "name": "Deportes de invierno"
     },
     {
+      "id": "natacion",
+      "subject": "sports",
+      "name": "Natación"
+    },
+    {
+      "id": "piraguismo",
+      "subject": "sports",
+      "name": "Piragüismo"
+    },
+    {
       "id": "arte-y-arquitectura",
       "subject": "culture",
       "name": "Arte y arquitectura"
@@ -148,6 +158,16 @@
       "name": "Porcentajes y decimales"
     },
     {
+      "id": "mcm-y-mcd",
+      "subject": "maths",
+      "name": "Mínimo común múltiplo y máximo común divisor"
+    },
+    {
+      "id": "proporcionalidad",
+      "subject": "maths",
+      "name": "Proporcionalidad"
+    },
+    {
       "id": "sistema-solar",
       "subject": "science",
       "name": "Sistema solar"
@@ -171,6 +191,11 @@
       "id": "materia-y-estados",
       "subject": "science",
       "name": "Materia y estados"
+    },
+    {
+      "id": "energia",
+      "subject": "science",
+      "name": "Energía"
     },
     {
       "id": "categorias-gramaticales",
@@ -691,7 +716,7 @@
       "place": "sevilla",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Quién completó la primera vuelta al mundo, que terminó en 1522 con la llegada de la expedición a Sevilla?",
+      "prompt": "¿Quién completó la primera vuelta al mundo, que terminó en Sevilla en 1522?",
       "options": [
         "Juan Sebastián Elcano",
         "Cristóbal Colón",
@@ -715,7 +740,7 @@
       "place": "santiago",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llama el año especial en que la catedral de Santiago abre su Puerta Santa a los peregrinos?",
+      "prompt": "¿Cómo se llama el año en que la catedral de Santiago abre su Puerta Santa?",
       "options": [
         "Año Santo Xacobeo",
         "Año Bisiesto",
@@ -750,6 +775,54 @@
       "explanation": "Los zaragozanos defendieron la ciudad contra las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
       "references": [
         "https://es.wikipedia.org/wiki/Sitios_de_Zaragoza"
+      ]
+    },
+    {
+      "id": "history-es-013",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué ciudad vasca bombardeada en 1937 da nombre a un famoso cuadro de Picasso?",
+      "options": [
+        "Guernica",
+        "Vitoria",
+        "San Sebastián",
+        "Pamplona"
+      ],
+      "correct": 0,
+      "explanation": "El bombardeo de Guernica, en 1937, inspiró a Picasso su cuadro «Guernica», que hoy está en el Museo Reina Sofía de Madrid.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Bombardeo_de_Guernica"
+      ]
+    },
+    {
+      "id": "history-es-014",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Los diputados se reúnen en Madrid. ¿Cómo se llama el edificio donde trabajan?",
+      "options": [
+        "Congreso de los Diputados",
+        "Palacio Real",
+        "Museo del Prado",
+        "Teatro Real"
+      ],
+      "correct": 0,
+      "explanation": "Los diputados se reúnen en el Congreso de los Diputados, en Madrid, donde debaten y aprueban las leyes de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Congreso_de_los_Diputados_(España)"
       ]
     },
     {
@@ -1038,6 +1111,78 @@
       "explanation": "En Formigal y otras estaciones de los Pirineos aragoneses se esquía sobre la nieve durante el invierno.",
       "references": [
         "https://es.wikipedia.org/wiki/Formigal"
+      ]
+    },
+    {
+      "id": "sports-es-011",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "piraguismo"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "David Cal, deportista gallego, ganó cinco medallas olímpicas. ¿En qué deporte compitió?",
+      "options": [
+        "Piragüismo",
+        "Natación",
+        "Atletismo",
+        "Judo"
+      ],
+      "correct": 0,
+      "explanation": "David Cal, de Galicia, ganó oro y plata en piragüismo en los Juegos Olímpicos, remando en una piragua sobre el agua.",
+      "references": [
+        "https://es.wikipedia.org/wiki/David_Cal"
+      ]
+    },
+    {
+      "id": "sports-es-012",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "tenis"
+      ],
+      "difficulty": 3,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En 2004 España ganó la Copa Davis en Sevilla. ¿Qué tenista de 18 años jugó?",
+      "options": [
+        "Rafa Nadal",
+        "Carlos Alcaraz",
+        "Marc Márquez",
+        "Pau Gasol"
+      ],
+      "correct": 0,
+      "explanation": "Rafa Nadal, con 18 años, ayudó a España a ganar la Copa Davis de 2004 en Sevilla contra Estados Unidos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Copa_Davis_2004"
+      ]
+    },
+    {
+      "id": "sports-es-013",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "natacion"
+      ],
+      "difficulty": 3,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué nadadora de Badalona ganó el oro olímpico en 200 m mariposa en Río 2016?",
+      "options": [
+        "Mireia Belmonte",
+        "Carolina Marín",
+        "Alexia Putellas",
+        "Lydia Valentín"
+      ],
+      "correct": 0,
+      "explanation": "Mireia Belmonte, de Badalona, ganó el oro en 200 m mariposa en los Juegos de Río de Janeiro de 2016.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Mireia_Belmonte"
       ]
     },
     {
@@ -1364,7 +1509,7 @@
       "place": "santiago",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué plato típico gallego se cocina con tentáculos y se sirve en una fuente de madera, con pimentón y aceite?",
+      "prompt": "¿Qué plato gallego con tentáculos se sirve en fuente de madera, con pimentón y aceite?",
       "options": [
         "El pulpo a feira",
         "La paella",
@@ -1388,7 +1533,7 @@
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llaman los pequeños bocados que se comen en los bares del País Vasco, a menudo pinchados con un palillo?",
+      "prompt": "¿Cómo se llaman los pequeños bocados que se comen en los bares del País Vasco?",
       "options": [
         "Pintxos",
         "Churros",
@@ -1594,6 +1739,54 @@
       ]
     },
     {
+      "id": "maths-es-003",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "mcm-y-mcd"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál es el máximo común divisor de 12 y 18?",
+      "options": [
+        "6",
+        "3",
+        "9",
+        "36"
+      ],
+      "correct": 0,
+      "explanation": "Los divisores de 12 son 1, 2, 3, 4, 6 y 12; los de 18, 1, 2, 3, 6, 9 y 18. El mayor que comparten es 6.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Máximo_común_divisor"
+      ]
+    },
+    {
+      "id": "maths-es-004",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "proporcionalidad"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Si 3 cuadernos cuestan 6 €, ¿cuánto cuestan 5 cuadernos iguales?",
+      "options": [
+        "10 €",
+        "8 €",
+        "12 €",
+        "15 €"
+      ],
+      "correct": 0,
+      "explanation": "Un cuaderno cuesta 6 € : 3 = 2 €. Cinco cuadernos cuestan 5 × 2 € = 10 €.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Regla_de_tres"
+      ]
+    },
+    {
       "id": "general-5",
       "lang": "es",
       "subject": "science",
@@ -1783,6 +1976,30 @@
       "explanation": "Quan un gas es refreda i es torna líquid hi ha condensació; per exemple, el vapor d'aigua que es converteix en gotes sobre un vidre fred.",
       "references": [
         "https://ca.wikipedia.org/wiki/Condensació"
+      ]
+    },
+    {
+      "id": "science-es-004",
+      "lang": "es",
+      "subject": "science",
+      "topics": [
+        "energia"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un balón rueda por el suelo. ¿Qué tipo de energía tiene por estar en movimiento?",
+      "options": [
+        "Energía cinética",
+        "Energía potencial",
+        "Energía térmica",
+        "Energía química"
+      ],
+      "correct": 0,
+      "explanation": "La energía que tiene un cuerpo por moverse se llama energía cinética: cuanto más rápido va, más tiene.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Energía_cinética"
       ]
     },
     {
@@ -1979,6 +2196,30 @@
       ]
     },
     {
+      "id": "language-es-007",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "ortografia"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas palabras se escribe con «g» y suena como «j»?",
+      "options": [
+        "Gente",
+        "Gato",
+        "Gusano",
+        "Globo"
+      ],
+      "correct": 0,
+      "explanation": "En «gente» la «g» delante de «e» suena como «j». En gato, gusano y globo suena fuerte, como en «ga», «gu» y «gl».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Ortografía_española"
+      ]
+    },
+    {
       "id": "general-10",
       "lang": "en",
       "subject": "english",
@@ -2169,6 +2410,30 @@
       "explanation": "«Good» ({bueno}) is irregular: its comparative is «better» ({mejor}). «Best» ({el mejor}) is the superlative.",
       "references": [
         "https://en.wikipedia.org/wiki/Comparison_(grammar)"
+      ]
+    },
+    {
+      "id": "english-en-006",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "calendario-ingles"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which day comes between Monday and Wednesday?",
+      "options": [
+        "Tuesday",
+        "Thursday",
+        "Friday",
+        "Sunday"
+      ],
+      "correct": 0,
+      "explanation": "«Tuesday» ({martes}) comes after «Monday» ({lunes}) and before «Wednesday» ({miércoles}).",
+      "references": [
+        "https://en.wikipedia.org/wiki/Tuesday"
       ]
     },
     {

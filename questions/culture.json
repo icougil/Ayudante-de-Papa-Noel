@@ -340,7 +340,7 @@
       "place": "santiago",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué plato típico gallego se cocina con tentáculos y se sirve en una fuente de madera, con pimentón y aceite?",
+      "prompt": "¿Qué plato gallego con tentáculos se sirve en fuente de madera, con pimentón y aceite?",
       "options": [
         "El pulpo a feira",
         "La paella",
@@ -363,7 +363,7 @@
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llaman los pequeños bocados que se comen en los bares del País Vasco, a menudo pinchados con un palillo?",
+      "prompt": "¿Cómo se llaman los pequeños bocados que se comen en los bares del País Vasco?",
       "options": [
         "Pintxos",
         "Churros",

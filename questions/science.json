@@ -19,6 +19,10 @@
     {
       "id": "materia-y-estados",
       "name": "Materia y estados"
+    },
+    {
+      "id": "energia",
+      "name": "Energía"
     }
   ],
   "questions": [
@@ -204,6 +208,29 @@
       "explanation": "Quan un gas es refreda i es torna líquid hi ha condensació; per exemple, el vapor d'aigua que es converteix en gotes sobre un vidre fred.",
       "references": [
         "https://ca.wikipedia.org/wiki/Condensació"
+      ]
+    },
+    {
+      "id": "science-es-004",
+      "lang": "es",
+      "topics": [
+        "energia"
+      ],
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un balón rueda por el suelo. ¿Qué tipo de energía tiene por estar en movimiento?",
+      "options": [
+        "Energía cinética",
+        "Energía potencial",
+        "Energía térmica",
+        "Energía química"
+      ],
+      "correct": 0,
+      "explanation": "La energía que tiene un cuerpo por moverse se llama energía cinética: cuanto más rápido va, más tiene.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Energía_cinética"
       ]
     }
   ]

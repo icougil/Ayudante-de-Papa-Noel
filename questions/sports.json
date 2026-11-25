@@ -23,6 +23,14 @@
     {
       "id": "deportes-de-invierno",
       "name": "Deportes de invierno"
+    },
+    {
+      "id": "natacion",
+      "name": "Natación"
+    },
+    {
+      "id": "piraguismo",
+      "name": "Piragüismo"
     }
   ],
   "questions": [
@@ -300,6 +308,75 @@
       "explanation": "En Formigal y otras estaciones de los Pirineos aragoneses se esquía sobre la nieve durante el invierno.",
       "references": [
         "https://es.wikipedia.org/wiki/Formigal"
+      ]
+    },
+    {
+      "id": "sports-es-011",
+      "lang": "es",
+      "topics": [
+        "piraguismo"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "David Cal, deportista gallego, ganó cinco medallas olímpicas. ¿En qué deporte compitió?",
+      "options": [
+        "Piragüismo",
+        "Natación",
+        "Atletismo",
+        "Judo"
+      ],
+      "correct": 0,
+      "explanation": "David Cal, de Galicia, ganó oro y plata en piragüismo en los Juegos Olímpicos, remando en una piragua sobre el agua.",
+      "references": [
+        "https://es.wikipedia.org/wiki/David_Cal"
+      ]
+    },
+    {
+      "id": "sports-es-012",
+      "lang": "es",
+      "topics": [
+        "tenis"
+      ],
+      "difficulty": 3,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En 2004 España ganó la Copa Davis en Sevilla. ¿Qué tenista de 18 años jugó?",
+      "options": [
+        "Rafa Nadal",
+        "Carlos Alcaraz",
+        "Marc Márquez",
+        "Pau Gasol"
+      ],
+      "correct": 0,
+      "explanation": "Rafa Nadal, con 18 años, ayudó a España a ganar la Copa Davis de 2004 en Sevilla contra Estados Unidos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Copa_Davis_2004"
+      ]
+    },
+    {
+      "id": "sports-es-013",
+      "lang": "es",
+      "topics": [
+        "natacion"
+      ],
+      "difficulty": 3,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué nadadora de Badalona ganó el oro olímpico en 200 m mariposa en Río 2016?",
+      "options": [
+        "Mireia Belmonte",
+        "Carolina Marín",
+        "Alexia Putellas",
+        "Lydia Valentín"
+      ],
+      "correct": 0,
+      "explanation": "Mireia Belmonte, de Badalona, ganó el oro en 200 m mariposa en los Juegos de Río de Janeiro de 2016.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Mireia_Belmonte"
       ]
     }
   ]
