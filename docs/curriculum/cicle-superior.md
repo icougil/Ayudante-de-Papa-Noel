@@ -342,7 +342,8 @@ choose the thinnest blocks first and to avoid the high ones. A batch aims for at
 blocks and never more than 2 questions from the same block. The block floor wins over the
 15-per-pool minimum when a thin block has no other fitting pool. The 3-per-block floor and the
 15-per-pool target are **minimums**, not a stop: the job keeps adding to the least-covered blocks and
-pools.
+pools. When several pools or blocks tie at the lowest count, the skill picks one at random, so the
+choice does not always fall on the first name.
 
 ## Maintenance
 
