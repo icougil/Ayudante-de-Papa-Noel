@@ -15,6 +15,10 @@
     {
       "id": "gramatica-ingles",
       "name": "Gramática básica en inglés"
+    },
+    {
+      "id": "comprension-lectora-ingles",
+      "name": "Comprensión lectora en inglés"
     }
   ],
   "questions": [
@@ -260,6 +264,33 @@
       "explanation": "«Tuesday» ({martes}) comes after «Monday» ({lunes}) and before «Wednesday» ({miércoles}).",
       "references": [
         "https://en.wikipedia.org/wiki/Tuesday"
+      ]
+    },
+    {
+      "id": "english-en-007",
+      "lang": "en",
+      "topics": [
+        "comprension-lectora-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "comprensio-lectora"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "It is raining. Tom takes his umbrella. Why does Tom take it?",
+      "options": [
+        "Because it is raining",
+        "Because it is sunny",
+        "Because he is hungry",
+        "Because he is late"
+      ],
+      "correct": 0,
+      "explanation": "«It is raining» ({está lloviendo}), so «Tom takes» ({Tom coge}) his umbrella «because» ({porque}) he does not want to get wet ({mojarse}).",
+      "references": [
+        "https://learnenglish.britishcouncil.org/skills/reading"
       ]
     }
   ]

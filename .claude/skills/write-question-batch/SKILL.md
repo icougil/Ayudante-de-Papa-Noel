@@ -27,28 +27,31 @@ first. The design of this job is `docs/specs/2026-11-24-question-batch-job-desig
 
 ## 2. Choose the 10 slots
 
-- Run `npm run pools` and `npm run curriculum`. In the first, each line is
-  `pool  <questions it has now>  below|ok  ...`: the number is how many questions the pool **already
-  has**, so the lowest numbers are the thinnest pools (15 is the minimum, not a stop). Give the 10
-  slots to the pools with the fewest questions, **at most 3 per pool**, so a batch covers at least
-  4 pools. If several pools tie at the lowest count, pick among them at random (for example
-  `node -e "const a=['x','y']; console.log(a[Math.floor(Math.random()*a.length)])"`), not always the
-  first one. In the second, each line is `area/block  have  floor  missing  status`: use it to
-  choose the curriculum block for each question.
-- The job always writes 10 questions. A pool may go above 15 when a block below 3 has no other
-  fitting pool: the block floor wins over the pool minimum.
-- For a city, fill its missing subjects first: sports in Santiago, Sevilla and Zaragoza; history in
-  Barcelona, Bilbao and Madrid. City questions are almost all difficulty 1: add difficulty 2 and 3.
+- Run `npm run pools` and `npm run curriculum`. The first shows each pool's count; the second
+  shows each curriculum block as `area/block  have  floor  missing  status`.
+- Choose the **blocks before the pools**. Sort the blocks by `have`: every block with 0 first,
+  then 1, then 2, then the rest. A block with 0 questions must be filled before any question goes
+  to a block with 3 or more.
+- Do not add a question to a `high` block (more than 9) while any block is below 3. If a pool's
+  only fitting block is high, skip that pool in this batch. This is what stops the block that
+  already has the most from growing.
+- For each chosen block, pick a pool that can host it (the mapping is in `scripts/curriculum.js`
+  and `docs/curriculum/cicle-superior.md`) and has the fewest questions. Use at most 3 questions
+  per pool, at most 1 per block while any block is below 3, and aim for at least 6 different
+  blocks. If several pools or blocks tie, pick at random.
+- For a city, fill its missing subjects first. If no subject is missing, prefer a subject whose
+  block is at 0: `culture` for `educacio-artistica/musica`, `audiovisual` or `arts-esceniques`, or
+  `sports` for `educacio-fisica/vida-activa-i-saludable`,
+  `resolucio-de-problemes-motrius` or `autoregulacio-emocional`. Do not use a city slot for another
+  history/geography question in `medi/societats` while a zero block has a fitting pool.
 - A city's sports slot is normally an Educació Física or heritage question (a traditional game, a
   local woman athlete); a club fact is at most the batch's one amber review question. A city's
   history slot is medieval, modern or contemporary; Ancient History is at most that one review
   question.
-- For each slot, choose a block that fits the pool's subject and place: first a `below` block
-  (fewer than 3 questions), then the block with the fewest questions. Avoid a `high` block (more
-  than 9) while another block fits. If several blocks tie at the lowest count, pick one at random.
-  Aim for at least 6 different blocks and never more than 2 questions from the same block.
-- When every pool is at least 15 and every block at least 3, keep writing 10 questions: choose the
-  lowest counts and break ties at random, so the game keeps growing in a balanced way.
+- The job always writes 10. A pool may go above 15 when a block below 3 has no other fitting pool:
+  the block floor wins over the pool minimum.
+- When every pool is at least 15 and every block at least 3, keep writing 10: choose the lowest
+  counts and break ties at random, so the game keeps growing in a balanced way.
 - Spread the difficulties inside a pool: 1 is a direct recall, 2 applies or relates two sabers, 3
   is two steps or a less obvious application.
 

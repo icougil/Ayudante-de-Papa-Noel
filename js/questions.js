@@ -58,11 +58,6 @@
       "name": "Guerras y batallas"
     },
     {
-      "id": "edad-media",
-      "subject": "history",
-      "name": "Edad Media"
-    },
-    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -183,6 +178,11 @@
       "name": "Proporcionalidad"
     },
     {
+      "id": "estadistica-y-probabilidad",
+      "subject": "maths",
+      "name": "Estadística y probabilidad"
+    },
+    {
       "id": "sistema-solar",
       "subject": "science",
       "name": "Sistema solar"
@@ -256,6 +256,11 @@
       "id": "gramatica-ingles",
       "subject": "english",
       "name": "Gramática básica en inglés"
+    },
+    {
+      "id": "comprension-lectora-ingles",
+      "subject": "english",
+      "name": "Comprensión lectora en inglés"
     },
     {
       "id": "ortografia-catalana",
@@ -969,62 +974,6 @@
       "explanation": "Los diputados se reúnen en el Congreso de los Diputados, en Madrid, donde debaten y aprueban las leyes de España.",
       "references": [
         "https://es.wikipedia.org/wiki/Congreso_de_los_Diputados_(España)"
-      ]
-    },
-    {
-      "id": "history-es-015",
-      "lang": "es",
-      "subject": "history",
-      "topics": [
-        "edad-media"
-      ],
-      "curriculum": {
-        "area": "medi",
-        "block": "societats-i-territoris"
-      },
-      "difficulty": 2,
-      "place": "bilbao",
-      "minAge": 10,
-      "maxAge": 12,
-      "prompt": "Bilbao se fundó como villa en el año 1300. ¿En qué época histórica fue?",
-      "options": [
-        "Edad Media",
-        "Edad Moderna",
-        "Edad Contemporánea",
-        "Prehistoria"
-      ],
-      "correct": 0,
-      "explanation": "La villa de Bilbao se fundó en 1300, en plena Edad Media, por el señor de Vizcaya.",
-      "references": [
-        "https://en.wikipedia.org/wiki/Bilbao"
-      ]
-    },
-    {
-      "id": "history-es-016",
-      "lang": "es",
-      "subject": "history",
-      "topics": [
-        "guerras-y-batallas"
-      ],
-      "curriculum": {
-        "area": "medi",
-        "block": "societats-i-territoris"
-      },
-      "difficulty": 2,
-      "place": "madrid",
-      "minAge": 10,
-      "maxAge": 12,
-      "prompt": "El 2 de mayo es fiesta en la Comunidad de Madrid. ¿Qué se recuerda ese día?",
-      "options": [
-        "El levantamiento contra Napoleón",
-        "La llegada del primer tren",
-        "La inauguración del Prado",
-        "La proclamación de la República"
-      ],
-      "correct": 0,
-      "explanation": "El 2 de mayo de 1808 los madrileños se alzaron contra las tropas francesas de Napoleón.",
-      "references": [
-        "https://es.wikipedia.org/wiki/Levantamiento_del_Dos_de_Mayo"
       ]
     },
     {
@@ -2205,6 +2154,34 @@
       ]
     },
     {
+      "id": "maths-es-005",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "estadistica-y-probabilidad"
+      ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-estocastic"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Cuatro amigos consiguen 6, 7, 8 y 9 puntos. ¿Cuál es la media?",
+      "options": [
+        "7,5",
+        "7",
+        "8",
+        "6,5"
+      ],
+      "correct": 0,
+      "explanation": "La media se calcula sumando 6 + 7 + 8 + 9 = 30 y dividiendo entre 4: 30 ÷ 4 = 7,5.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Media_aritm%C3%A9tica"
+      ]
+    },
+    {
       "id": "general-5",
       "lang": "es",
       "subject": "science",
@@ -3016,6 +2993,34 @@
       "explanation": "«Tuesday» ({martes}) comes after «Monday» ({lunes}) and before «Wednesday» ({miércoles}).",
       "references": [
         "https://en.wikipedia.org/wiki/Tuesday"
+      ]
+    },
+    {
+      "id": "english-en-007",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "comprension-lectora-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "comprensio-lectora"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "It is raining. Tom takes his umbrella. Why does Tom take it?",
+      "options": [
+        "Because it is raining",
+        "Because it is sunny",
+        "Because he is hungry",
+        "Because he is late"
+      ],
+      "correct": 0,
+      "explanation": "«It is raining» ({está lloviendo}), so «Tom takes» ({Tom coge}) his umbrella «because» ({porque}) he does not want to get wet ({mojarse}).",
+      "references": [
+        "https://learnenglish.britishcouncil.org/skills/reading"
       ]
     },
     {
