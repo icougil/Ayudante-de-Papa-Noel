@@ -45,6 +45,9 @@ question"). Read both first. The design of this job is `docs/specs/2026-11-24-qu
 - Balance topics: before choosing a topic for a question, count how many questions of its subject use
   each topic (`questions/<subject>.json`), and prefer the least used one, so no topic (football in
   sports, for example) grows far ahead of the others. Add a new topic if none fits.
+- Sports are not only football: also use basketball, tennis, athletics, cycling, swimming, handball,
+  motorsport, winter sports and traditional sports. Football is at most about a third of a subject's
+  sports questions; a new sport gets its own topic in `sports.json`.
 - A pool's Catalan share stays at or below a third, except the `catalan` pool, which is all Catalan.
 - Place questions are only geography, history, sports or culture. General turns are maths, science,
   language, english and catalan.
