@@ -804,23 +804,23 @@
       "lang": "es",
       "subject": "sports",
       "topics": [
-        "futbol"
+        "deportes-tradicionales"
       ],
       "difficulty": 2,
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llama el estadio donde juega el Athletic Club de Bilbao?",
+      "prompt": "En los deportes rurales vascos, ¿qué hace un aizkolari?",
       "options": [
-        "San Mamés",
-        "Anoeta",
-        "Mestalla",
-        "El Sadar"
+        "Corta troncos de madera con un hacha",
+        "Levanta una piedra enorme",
+        "Rema en una trainera",
+        "Tira de una cuerda en equipo"
       ],
       "correct": 0,
-      "explanation": "El Athletic Club juega en San Mamés, un estadio moderno que sustituyó al viejo, llamado «La Catedral».",
+      "explanation": "El aizkolari compite cortando troncos con un hacha, lo más rápido posible. Es uno de los deportes rurales más típicos del País Vasco.",
       "references": [
-        "https://es.wikipedia.org/wiki/Estadio_de_San_Mamés"
+        "https://es.wikipedia.org/wiki/Aizkolari"
       ]
     },
     {
