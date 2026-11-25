@@ -79,10 +79,23 @@ Fix or replace any question that fails, then check again:
   read every prompt. A question the owner removed or replaced (for example for being too hard) must
   not come back, nor any question about the same fact.
 - **Wrong options:** the three wrong options are plausible and clearly wrong, never a trick.
+- **Fits a small phone:** the browser tests (`e2e/game.spec.js`, "the longest prompt of the bank
+  still fits without scrolling") put the longest prompt in the bank on a 360x640 screen, and CI failed
+  when a batch made it 114 characters. Keep every new prompt **at most 90 characters** (the limit of
+  120 is not safe); keep options short (about 25 characters) and the explanation at most 140.
+- **Fits the curriculum:** a fact must be taught in Catalonia's cicle superior (5è and 6è) or be
+  everyday general knowledge. The Departament d'Educació's sabers are at
+  https://projectes.xtec.cat/nou-curriculum/ (Coneixement del Medi Natural, Social i Cultural:
+  https://repositori.educacio.gencat.cat/handle/20.500.12694/6158). If the session can open them, check the
+  topic there; if not, say in the doubts that the curriculum could not be checked. Prefer main
+  monuments, rivers, festivals, institutions and well-known people over details of battles, kings or
+  architecture.
 
 ## 5. Build and test
 
-Run `npm run build:questions`, then `npm test`. If either fails, fix it. After two failed
+Run `npm run build:questions`, then `npm test`. If the session has a browser (Playwright), also run
+`npx playwright test --trace off --project=desktop e2e/game.spec.js e2e/sound.spec.js`: `npm test` does not
+include the layout tests that CI runs. If any fails, fix it (usually by shortening a prompt). After two failed
 attempts, stop without opening a pull request and say what failed.
 
 ## 6. Open the pull request
