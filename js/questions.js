@@ -48,6 +48,16 @@
       "name": "Monarquía y capitales"
     },
     {
+      "id": "descubrimientos",
+      "subject": "history",
+      "name": "Descubrimientos y exploradores"
+    },
+    {
+      "id": "guerras-y-batallas",
+      "subject": "history",
+      "name": "Guerras y batallas"
+    },
+    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -71,6 +81,11 @@
       "id": "tenis",
       "subject": "sports",
       "name": "Tenis"
+    },
+    {
+      "id": "deportes-de-invierno",
+      "subject": "sports",
+      "name": "Deportes de invierno"
     },
     {
       "id": "arte-y-arquitectura",
@@ -101,6 +116,11 @@
       "id": "rutas-y-patrimonio",
       "subject": "culture",
       "name": "Rutas y patrimonio"
+    },
+    {
+      "id": "gastronomia",
+      "subject": "culture",
+      "name": "Gastronomía"
     },
     {
       "id": "operaciones",
@@ -661,6 +681,78 @@
       ]
     },
     {
+      "id": "history-es-010",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "descubrimientos"
+      ],
+      "difficulty": 3,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Quién completó la primera vuelta al mundo, que terminó en 1522 con la llegada de la expedición a Sevilla?",
+      "options": [
+        "Juan Sebastián Elcano",
+        "Cristóbal Colón",
+        "Hernán Cortés",
+        "Vasco da Gama"
+      ],
+      "correct": 0,
+      "explanation": "Magallanes murió en el viaje. Elcano tomó el mando y regresó a España con la nave Victoria, tres años después de salir de Sevilla.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Juan_Sebasti%C3%A1n_Elcano"
+      ]
+    },
+    {
+      "id": "history-es-011",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "religion-y-peregrinaciones"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llama el año especial en que la catedral de Santiago abre su Puerta Santa a los peregrinos?",
+      "options": [
+        "Año Santo Xacobeo",
+        "Año Bisiesto",
+        "Año Mariano",
+        "Año Olímpico"
+      ],
+      "correct": 0,
+      "explanation": "Es el Año Santo Xacobeo, que se celebra cuando el 25 de julio, día de Santiago, cae en domingo. Muchos peregrinos viajan ese año.",
+      "references": [
+        "https://es.wikipedia.org/wiki/A%C3%B1o_Santo_Compostelano"
+      ]
+    },
+    {
+      "id": "history-es-012",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "guerras-y-batallas"
+      ],
+      "difficulty": 3,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En 1808 y 1809 Zaragoza resistió dos asedios, los Sitios. ¿Contra qué ejército luchó?",
+      "options": [
+        "El ejército francés de Napoleón",
+        "El ejército inglés",
+        "El ejército romano",
+        "El ejército musulmán"
+      ],
+      "correct": 0,
+      "explanation": "Los zaragozanos defendieron la ciudad contra las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Sitios_de_Zaragoza"
+      ]
+    },
+    {
       "id": "barcelona-3",
       "lang": "es",
       "subject": "sports",
@@ -874,6 +966,78 @@
       "explanation": "El Madrid Open es uno de los grandes torneos de tenis del año. Rafa Nadal, el tenista español más famoso, lo ha ganado varias veces.",
       "references": [
         "https://es.wikipedia.org/wiki/Masters_de_Madrid"
+      ]
+    },
+    {
+      "id": "sports-es-008",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "futbol"
+      ],
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿De qué colores es la camiseta del Real Betis, uno de los equipos de Sevilla?",
+      "options": [
+        "Verde y blanca",
+        "Roja y blanca",
+        "Azul y amarilla",
+        "Negra y naranja"
+      ],
+      "correct": 0,
+      "explanation": "El Real Betis viste de verde y blanco, por eso a sus aficionados se les llama «verdiblancos». Juega en el estadio Benito Villamarín.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Real_Betis_Balompi%C3%A9"
+      ]
+    },
+    {
+      "id": "sports-es-009",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "baloncesto"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿En qué deporte compite el Bilbao Basket, un equipo de la liga ACB?",
+      "options": [
+        "Baloncesto",
+        "Balonmano",
+        "Voleibol",
+        "Rugby"
+      ],
+      "correct": 0,
+      "explanation": "El Bilbao Basket es un club de baloncesto de Bilbao que juega en la liga ACB, la máxima categoría del baloncesto español.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Bilbao_Basket"
+      ]
+    },
+    {
+      "id": "sports-es-010",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "deportes-de-invierno"
+      ],
+      "difficulty": 1,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En Formigal, una estación de los Pirineos de Aragón, ¿qué deporte se practica en invierno?",
+      "options": [
+        "Esquí",
+        "Surf",
+        "Remo",
+        "Waterpolo"
+      ],
+      "correct": 0,
+      "explanation": "En Formigal y otras estaciones de los Pirineos aragoneses se esquía sobre la nieve durante el invierno.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Formigal"
       ]
     },
     {
@@ -1187,6 +1351,54 @@
       "explanation": "El Arco de Triunfo de Barcelona fue la entrada a la Exposición Universal de 1888 y es de ladrillo rojo.",
       "references": [
         "https://es.wikipedia.org/wiki/Arco_de_Triunfo_(Barcelona)"
+      ]
+    },
+    {
+      "id": "culture-es-007",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "gastronomia"
+      ],
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué plato típico gallego se cocina con tentáculos y se sirve en una fuente de madera, con pimentón y aceite?",
+      "options": [
+        "El pulpo a feira",
+        "La paella",
+        "El gazpacho",
+        "El cocido madrileño"
+      ],
+      "correct": 0,
+      "explanation": "El pulpo a feira es muy típico de Galicia: se cuece, se corta en rodajas y se sirve con sal, pimentón y aceite de oliva.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Pulpo_a_feira"
+      ]
+    },
+    {
+      "id": "culture-es-008",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "gastronomia"
+      ],
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cómo se llaman los pequeños bocados que se comen en los bares del País Vasco, a menudo pinchados con un palillo?",
+      "options": [
+        "Pintxos",
+        "Churros",
+        "Croquetas",
+        "Empanadillas"
+      ],
+      "correct": 0,
+      "explanation": "Los pintxos son bocados típicos del País Vasco. En Bilbao es muy habitual ir de bar en bar probando pintxos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Pintxo"
       ]
     },
     {
@@ -2125,6 +2337,54 @@
       "explanation": "Les paraules acabades en -s tòniques com «llapis» no canvien al plural: «el llapis», «els llapis».",
       "references": [
         "https://ca.wikipedia.org/wiki/Plural_(gram%C3%A0tica)"
+      ]
+    },
+    {
+      "id": "catalan-ca-008",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "vocabulario-catalan"
+      ],
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin és el contrari de «amunt»?",
+      "options": [
+        "Avall",
+        "Enrere",
+        "Lluny",
+        "Endins"
+      ],
+      "correct": 0,
+      "explanation": "«Amunt» vol dir cap a dalt i el seu contrari és «avall», cap a baix. Per exemple: «Pujo amunt» i «baixo avall».",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Antonimia"
+      ]
+    },
+    {
+      "id": "catalan-ca-009",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "ortografia-catalana"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina d'aquestes paraules s'escriu amb «ç»?",
+      "options": [
+        "Plaça",
+        "Cinema",
+        "Cel",
+        "Cervell"
+      ],
+      "correct": 0,
+      "explanation": "La «ç» (essa trencada) se sent com una essa davant d'«a», «o» o «u», per exemple a «plaça». Davant d'«e» i «i» s'escriu «c».",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Ce_trencada"
       ]
     }
   ];
