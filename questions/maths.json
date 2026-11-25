@@ -19,6 +19,14 @@
     {
       "id": "porcentajes-y-decimales",
       "name": "Porcentajes y decimales"
+    },
+    {
+      "id": "mcm-y-mcd",
+      "name": "Mínimo común múltiplo y máximo común divisor"
+    },
+    {
+      "id": "proporcionalidad",
+      "name": "Proporcionalidad"
     }
   ],
   "questions": [
@@ -204,6 +212,52 @@
       "explanation": "Cal el mínim comú múltiple de 4 i 6. Múltiples de 4: 4, 8, 12. De 6: 6, 12. El primer que tenen igual és el 12.",
       "references": [
         "https://ca.wikipedia.org/wiki/Mínim_comú_múltiple"
+      ]
+    },
+    {
+      "id": "maths-es-003",
+      "lang": "es",
+      "topics": [
+        "mcm-y-mcd"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál es el máximo común divisor de 12 y 18?",
+      "options": [
+        "6",
+        "3",
+        "9",
+        "36"
+      ],
+      "correct": 0,
+      "explanation": "Los divisores de 12 son 1, 2, 3, 4, 6 y 12; los de 18, 1, 2, 3, 6, 9 y 18. El mayor que comparten es 6.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Máximo_común_divisor"
+      ]
+    },
+    {
+      "id": "maths-es-004",
+      "lang": "es",
+      "topics": [
+        "proporcionalidad"
+      ],
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Si 3 cuadernos cuestan 6 €, ¿cuánto cuestan 5 cuadernos iguales?",
+      "options": [
+        "10 €",
+        "8 €",
+        "12 €",
+        "15 €"
+      ],
+      "correct": 0,
+      "explanation": "Un cuaderno cuesta 6 € : 3 = 2 €. Cinco cuadernos cuestan 5 × 2 € = 10 €.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Regla_de_tres"
       ]
     }
   ]

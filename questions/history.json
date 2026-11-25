@@ -224,7 +224,7 @@
       "place": "sevilla",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Quién completó la primera vuelta al mundo, que terminó en 1522 con la llegada de la expedición a Sevilla?",
+      "prompt": "¿Quién completó la primera vuelta al mundo, que terminó en Sevilla en 1522?",
       "options": [
         "Juan Sebastián Elcano",
         "Cristóbal Colón",
@@ -247,7 +247,7 @@
       "place": "santiago",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llama el año especial en que la catedral de Santiago abre su Puerta Santa a los peregrinos?",
+      "prompt": "¿Cómo se llama el año en que la catedral de Santiago abre su Puerta Santa?",
       "options": [
         "Año Santo Xacobeo",
         "Año Bisiesto",
@@ -281,6 +281,52 @@
       "explanation": "Los zaragozanos defendieron la ciudad contra las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
       "references": [
         "https://es.wikipedia.org/wiki/Sitios_de_Zaragoza"
+      ]
+    },
+    {
+      "id": "history-es-013",
+      "lang": "es",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué ciudad vasca bombardeada en 1937 da nombre a un famoso cuadro de Picasso?",
+      "options": [
+        "Guernica",
+        "Vitoria",
+        "San Sebastián",
+        "Pamplona"
+      ],
+      "correct": 0,
+      "explanation": "El bombardeo de Guernica, en 1937, inspiró a Picasso su cuadro «Guernica», que hoy está en el Museo Reina Sofía de Madrid.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Bombardeo_de_Guernica"
+      ]
+    },
+    {
+      "id": "history-es-014",
+      "lang": "es",
+      "topics": [
+        "historia-reciente"
+      ],
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Los diputados se reúnen en Madrid. ¿Cómo se llama el edificio donde trabajan?",
+      "options": [
+        "Congreso de los Diputados",
+        "Palacio Real",
+        "Museo del Prado",
+        "Teatro Real"
+      ],
+      "correct": 0,
+      "explanation": "Los diputados se reúnen en el Congreso de los Diputados, en Madrid, donde debaten y aprueban las leyes de España.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Congreso_de_los_Diputados_(España)"
       ]
     }
   ]
