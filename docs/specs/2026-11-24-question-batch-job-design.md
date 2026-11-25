@@ -68,17 +68,16 @@ game. The job's aim is to make that review quick, not to replace it.
    the targets are met. The run's log says why it stopped only when a guard applies.
 2. **Choose the slots.** Run `node scripts/question-pools.js` and `node scripts/curriculum-pools.js`.
    The first prints each pool with its count and the subjects and difficulties already in it; the
-   second prints each curriculum block with its count, floor (3) and status. Give the 10 slots to
-   the pools with the fewest questions (15 is a minimum, not a stop), at most 3 per pool, so a
-   batch covers at least 4 pools **(designer's call)**. Break ties at random. For each slot, choose
-   a block that fits the pool's subject and place: first a `below` block, then the block with the
-   fewest questions; avoid a `high` block (above 9) while another block fits. Break ties at random
-   too. Aim for at least 6 different blocks and never more than 2 questions from the same block.
-   The job always writes 10. A pool may go above 15 when
-   a block below 3 has no other fitting pool: the block floor wins over the pool minimum. Within a
-   city, fill the missing subjects first (sports in Santiago, Sevilla and Zaragoza; history in
-   Barcelona, Bilbao and Madrid) and add difficulty 2 and 3, since city questions are almost all
-   difficulty 1 (backlog).
+   second prints each curriculum block with its count, floor (3) and status. Choose **blocks before
+   pools**: every block at 0 first, then 1, then 2. Do not add to a `high` block (above 9) while
+   any block is below 3. For each block, pick a pool that can host it and has the fewest questions;
+   use at most 3 per pool and at most 1 per block while any block is below 3. Aim for at least 6
+   different blocks and at least 4 pools **(designer's call)**. Break ties at random. The job
+   always writes 10. A pool may go above 15 when a block below 3 has no other fitting pool: the
+   block floor wins over the pool minimum. Within a city, fill the missing subjects first; if none
+   is missing, prefer culture for a 0 art block or sports for a 0 PE block, not another
+   history/geography question in `societats`. Add difficulty 2 and 3, since city questions are almost
+   all difficulty 1 (backlog).
 3. **Write the questions** following part 1's data format and rules: own words, a real checkable
    `https` reference for each, labels (`lang`, `topics`, `curriculum`, `difficulty`), the length
    limits, the language and subject agreement, and the Spanish marks in braces. A pool's Catalan

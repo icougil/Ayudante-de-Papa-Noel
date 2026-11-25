@@ -337,13 +337,15 @@ If a row of the review table has no valid `curriculum` area and block, the batch
 ## Coverage
 
 `npm run curriculum` counts the questions of every area/block. Each block has a floor of 3 and is
-marked `below` under it, `ok` from 3 to 9, and `high` above 9. The batch skill uses the report to
-choose the thinnest blocks first and to avoid the high ones. A batch aims for at least 6 different
-blocks and never more than 2 questions from the same block. The block floor wins over the
-15-per-pool minimum when a thin block has no other fitting pool. The 3-per-block floor and the
-15-per-pool target are **minimums**, not a stop: the job keeps adding to the least-covered blocks and
-pools. When several pools or blocks tie at the lowest count, the skill picks one at random, so the
-choice does not always fall on the first name.
+marked `below` under it, `ok` from 3 to 9, and `high` above 9. The batch skill chooses **blocks
+before pools**: every block at 0 first, then 1, then 2. It never adds to a `high` block while any
+block is below 3, so the block that already has the most does not grow. For each block it picks a
+pool that can host it, at most 1 question per block while any block is below 3 and at most 3 per
+pool; it aims for at least 6 different blocks. The block floor wins over the 15-per-pool minimum
+when a thin block has no other fitting pool. The 3-per-block floor and the 15-per-pool target are
+**minimums**, not a stop: the job keeps adding to the least-covered blocks and pools. When several
+pools or blocks tie at the lowest count, the skill picks one at random, so the choice does not
+always fall on the first name.
 
 ## Maintenance
 
