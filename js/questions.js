@@ -68,6 +68,11 @@
       "name": "Baloncesto"
     },
     {
+      "id": "tenis",
+      "subject": "sports",
+      "name": "Tenis"
+    },
+    {
       "id": "arte-y-arquitectura",
       "subject": "culture",
       "name": "Arte y arquitectura"
@@ -852,23 +857,23 @@
       "lang": "es",
       "subject": "sports",
       "topics": [
-        "futbol"
+        "tenis"
       ],
       "difficulty": 2,
-      "place": "bilbao",
+      "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "El Athletic Club de Bilbao tiene una tradición muy especial. ¿Cuál es?",
+      "prompt": "¿Qué torneo de tenis se juega cada año en la Caja Mágica de Madrid?",
       "options": [
-        "Ficha jugadores de cantera vasca",
-        "Solo ficha futbolistas extranjeros",
-        "Nunca cambia de entrenador",
-        "Juega sin portero titular"
+        "El Madrid Open",
+        "Roland Garros",
+        "Wimbledon",
+        "El US Open"
       ],
       "correct": 0,
-      "explanation": "El Athletic Club de Bilbao se distingue porque suele fichar solo jugadores formados en el fútbol vasco.",
+      "explanation": "El Madrid Open es uno de los grandes torneos de tenis del año. Rafa Nadal, el tenista español más famoso, lo ha ganado varias veces.",
       "references": [
-        "https://es.wikipedia.org/wiki/Athletic_Club"
+        "https://es.wikipedia.org/wiki/Masters_de_Madrid"
       ]
     },
     {
