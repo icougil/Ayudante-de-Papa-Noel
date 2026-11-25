@@ -31,6 +31,14 @@
     {
       "id": "piraguismo",
       "name": "Piragüismo"
+    },
+    {
+      "id": "atletismo",
+      "name": "Atletismo"
+    },
+    {
+      "id": "remo",
+      "name": "Remo"
     }
   ],
   "questions": [
@@ -437,6 +445,60 @@
       "explanation": "Mireia Belmonte, de Badalona, ganó el oro en 200 m mariposa en los Juegos de Río de Janeiro de 2016.",
       "references": [
         "https://es.wikipedia.org/wiki/Mireia_Belmonte"
+      ]
+    },
+    {
+      "id": "sports-es-014",
+      "lang": "es",
+      "topics": [
+        "atletismo"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La gallega Ana Peleteiro es medallista olímpica de atletismo. ¿En qué prueba?",
+      "options": [
+        "Triple salto",
+        "Lanzamiento de jabalina",
+        "100 metros vallas",
+        "Salto con pértiga"
+      ],
+      "correct": 0,
+      "explanation": "Ana Peleteiro, de Ribeira (Galicia), ganó medalla olímpica en el triple salto: tres saltos seguidos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Ana_Peleteiro"
+      ]
+    },
+    {
+      "id": "sports-es-015",
+      "lang": "es",
+      "topics": [
+        "remo"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "interaccio-amb-l-entorn"
+      },
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La histórica regata Sevilla-Betis se celebra en el Guadalquivir. ¿Qué deporte es?",
+      "options": [
+        "Remo",
+        "Esquí",
+        "Ciclismo",
+        "Atletismo"
+      ],
+      "correct": 0,
+      "explanation": "La regata Sevilla-Betis es una competición de remo en el río Guadalquivir.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Regata_Sevilla-Betis"
       ]
     }
   ]

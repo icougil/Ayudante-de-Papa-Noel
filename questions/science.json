@@ -23,6 +23,10 @@
     {
       "id": "energia",
       "name": "Energía"
+    },
+    {
+      "id": "cambio-climatico",
+      "name": "Cambio climático"
     }
   ],
   "questions": [
@@ -267,6 +271,33 @@
       "explanation": "La energía que tiene un cuerpo por moverse se llama energía cinética: cuanto más rápido va, más tiene.",
       "references": [
         "https://es.wikipedia.org/wiki/Energía_cinética"
+      ]
+    },
+    {
+      "id": "science-es-005",
+      "lang": "es",
+      "topics": [
+        "cambio-climatico"
+      ],
+      "curriculum": {
+        "area": "medi",
+        "block": "consciencia-ecosocial"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Al quemar petróleo y carbón se libera un gas que refuerza el efecto invernadero. ¿Cuál?",
+      "options": [
+        "Dióxido de carbono",
+        "Oxígeno",
+        "Nitrógeno",
+        "Helio"
+      ],
+      "correct": 0,
+      "explanation": "El dióxido de carbono (CO₂) retiene calor en la atmósfera y es una causa del cambio climático.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Di%C3%B3xido_de_carbono"
       ]
     }
   ]

@@ -58,6 +58,11 @@
       "name": "Guerras y batallas"
     },
     {
+      "id": "edad-media",
+      "subject": "history",
+      "name": "Edad Media"
+    },
+    {
       "id": "juegos-olimpicos",
       "subject": "sports",
       "name": "Juegos Olímpicos"
@@ -96,6 +101,16 @@
       "id": "piraguismo",
       "subject": "sports",
       "name": "Piragüismo"
+    },
+    {
+      "id": "atletismo",
+      "subject": "sports",
+      "name": "Atletismo"
+    },
+    {
+      "id": "remo",
+      "subject": "sports",
+      "name": "Remo"
     },
     {
       "id": "arte-y-arquitectura",
@@ -198,6 +213,11 @@
       "name": "Energía"
     },
     {
+      "id": "cambio-climatico",
+      "subject": "science",
+      "name": "Cambio climático"
+    },
+    {
       "id": "categorias-gramaticales",
       "subject": "language",
       "name": "Categorías gramaticales"
@@ -211,6 +231,11 @@
       "id": "ortografia",
       "subject": "language",
       "name": "Ortografía"
+    },
+    {
+      "id": "literatura",
+      "subject": "language",
+      "name": "Literatura"
     },
     {
       "id": "vocabulario-ingles",
@@ -246,6 +271,11 @@
       "id": "vocabulario-catalan",
       "subject": "catalan",
       "name": "Vocabulario catalán"
+    },
+    {
+      "id": "lenguas-de-cataluna",
+      "subject": "catalan",
+      "name": "Lenguas de Cataluña"
     },
     {
       "id": "drets-i-democracia",
@@ -942,6 +972,62 @@
       ]
     },
     {
+      "id": "history-es-015",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "edad-media"
+      ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Bilbao se fundó como villa en el año 1300. ¿En qué época histórica fue?",
+      "options": [
+        "Edad Media",
+        "Edad Moderna",
+        "Edad Contemporánea",
+        "Prehistoria"
+      ],
+      "correct": 0,
+      "explanation": "La villa de Bilbao se fundó en 1300, en plena Edad Media, por el señor de Vizcaya.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Bilbao"
+      ]
+    },
+    {
+      "id": "history-es-016",
+      "lang": "es",
+      "subject": "history",
+      "topics": [
+        "guerras-y-batallas"
+      ],
+      "curriculum": {
+        "area": "medi",
+        "block": "societats-i-territoris"
+      },
+      "difficulty": 2,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El 2 de mayo es fiesta en la Comunidad de Madrid. ¿Qué se recuerda ese día?",
+      "options": [
+        "El levantamiento contra Napoleón",
+        "La llegada del primer tren",
+        "La inauguración del Prado",
+        "La proclamación de la República"
+      ],
+      "correct": 0,
+      "explanation": "El 2 de mayo de 1808 los madrileños se alzaron contra las tropas francesas de Napoleón.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Levantamiento_del_Dos_de_Mayo"
+      ]
+    },
+    {
       "id": "barcelona-3",
       "lang": "es",
       "subject": "sports",
@@ -1359,6 +1445,62 @@
       "explanation": "Mireia Belmonte, de Badalona, ganó el oro en 200 m mariposa en los Juegos de Río de Janeiro de 2016.",
       "references": [
         "https://es.wikipedia.org/wiki/Mireia_Belmonte"
+      ]
+    },
+    {
+      "id": "sports-es-014",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "atletismo"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "activitats-ludiques-culturals-i-expressives"
+      },
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La gallega Ana Peleteiro es medallista olímpica de atletismo. ¿En qué prueba?",
+      "options": [
+        "Triple salto",
+        "Lanzamiento de jabalina",
+        "100 metros vallas",
+        "Salto con pértiga"
+      ],
+      "correct": 0,
+      "explanation": "Ana Peleteiro, de Ribeira (Galicia), ganó medalla olímpica en el triple salto: tres saltos seguidos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Ana_Peleteiro"
+      ]
+    },
+    {
+      "id": "sports-es-015",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "remo"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "interaccio-amb-l-entorn"
+      },
+      "difficulty": 1,
+      "place": "sevilla",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La histórica regata Sevilla-Betis se celebra en el Guadalquivir. ¿Qué deporte es?",
+      "options": [
+        "Remo",
+        "Esquí",
+        "Ciclismo",
+        "Atletismo"
+      ],
+      "correct": 0,
+      "explanation": "La regata Sevilla-Betis es una competición de remo en el río Guadalquivir.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Regata_Sevilla-Betis"
       ]
     },
     {
@@ -2315,6 +2457,34 @@
       ]
     },
     {
+      "id": "science-es-005",
+      "lang": "es",
+      "subject": "science",
+      "topics": [
+        "cambio-climatico"
+      ],
+      "curriculum": {
+        "area": "medi",
+        "block": "consciencia-ecosocial"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Al quemar petróleo y carbón se libera un gas que refuerza el efecto invernadero. ¿Cuál?",
+      "options": [
+        "Dióxido de carbono",
+        "Oxígeno",
+        "Nitrógeno",
+        "Helio"
+      ],
+      "correct": 0,
+      "explanation": "El dióxido de carbono (CO₂) retiene calor en la atmósfera y es una causa del cambio climático.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Di%C3%B3xido_de_carbono"
+      ]
+    },
+    {
       "id": "general-8",
       "lang": "es",
       "subject": "language",
@@ -2565,6 +2735,34 @@
       "explanation": "En «gente» la «g» delante de «e» suena como «j». En gato, gusano y globo suena fuerte, como en «ga», «gu» y «gl».",
       "references": [
         "https://es.wikipedia.org/wiki/Ortografía_española"
+      ]
+    },
+    {
+      "id": "language-es-008",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "literatura"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "educacio-literaria"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En un cuento, ¿cómo se llama la parte en que aparece el problema de los personajes?",
+      "options": [
+        "El nudo",
+        "El título",
+        "El autor",
+        "La portada"
+      ],
+      "correct": 0,
+      "explanation": "En un cuento hay planteamiento, nudo y desenlace. En el nudo surge el conflicto.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Cuento"
       ]
     },
     {
@@ -3070,6 +3268,118 @@
       "explanation": "La «ç» (essa trencada) se sent com una essa davant d'«a», «o» o «u», per exemple a «plaça». Davant d'«e» i «i» s'escriu «c».",
       "references": [
         "https://ca.wikipedia.org/wiki/Ce_trencada"
+      ]
+    },
+    {
+      "id": "catalan-ca-010",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "lenguas-de-cataluna"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "les-llengues-i-els-seus-parlants"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina llengua és oficial a Catalunya, a més del català i el castellà?",
+      "options": [
+        "L'aranès",
+        "El basc",
+        "El gallec",
+        "L'asturià"
+      ],
+      "correct": 0,
+      "explanation": "L'aranès, una varietat de l'occità que es parla a la Vall d'Aran, és oficial a tot Catalunya.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Aran%C3%A8s"
+      ]
+    },
+    {
+      "id": "citizenship-es-001",
+      "lang": "es",
+      "subject": "citizenship",
+      "topics": [
+        "drets-i-democracia"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "societat-justicia-i-democracia"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué texto de la ONU recoge los derechos de todos los niños y niñas del mundo?",
+      "options": [
+        "Convención sobre los Derechos del Niño",
+        "Carta Olímpica",
+        "Código de Circulación",
+        "Tratado de la Unión Europea"
+      ],
+      "correct": 0,
+      "explanation": "La Convención sobre los Derechos del Niño, de la ONU, reconoce los derechos de todos los menores de 18 años.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Convenci%C3%B3n_sobre_los_Derechos_del_Ni%C3%B1o"
+      ]
+    },
+    {
+      "id": "citizenship-es-002",
+      "lang": "es",
+      "subject": "citizenship",
+      "topics": [
+        "sostenibilidad"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "sostenibilitat-i-etica-ambiental"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En España, ¿en qué contenedor se echan las latas y los envases de plástico?",
+      "options": [
+        "Amarillo",
+        "Azul",
+        "Verde",
+        "Marrón"
+      ],
+      "correct": 0,
+      "explanation": "El contenedor amarillo es para envases de plástico, latas y briks; así se pueden reciclar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Reciclaje"
+      ]
+    },
+    {
+      "id": "citizenship-es-003",
+      "lang": "es",
+      "subject": "citizenship",
+      "topics": [
+        "emociones-y-relaciones"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "educacio-emocional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un alumno se burla de otro una y otra vez y le hace sentir mal. ¿Qué es eso?",
+      "options": [
+        "Acoso escolar",
+        "Una broma puntual",
+        "Un debate",
+        "Un juego de equipo"
+      ],
+      "correct": 0,
+      "explanation": "Si las burlas se repiten y hacen daño, es acoso escolar (bullying). Hay que contarlo a un adulto.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Acoso_escolar"
       ]
     }
   ];
