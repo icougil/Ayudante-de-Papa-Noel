@@ -318,15 +318,15 @@
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "Cuatro amigos consiguen 6, 7, 8 y 9 puntos. ¿Cuál es la media?",
+      "prompt": "Cuatro amigos consiguen 6, 8, 10 y 12 puntos. ¿Cuál es la media?",
       "options": [
-        "7,5",
-        "7",
+        "9",
         "8",
-        "6,5"
+        "10",
+        "11"
       ],
       "correct": 0,
-      "explanation": "La media se calcula sumando 6 + 7 + 8 + 9 = 30 y dividiendo entre 4: 30 ÷ 4 = 7,5.",
+      "explanation": "La media se calcula sumando 6 + 8 + 10 + 12 = 36 y dividiendo entre 4: 36 ÷ 4 = 9.",
       "references": [
         "https://es.wikipedia.org/wiki/Media_aritm%C3%A9tica"
       ]

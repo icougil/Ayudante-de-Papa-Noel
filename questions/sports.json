@@ -33,12 +33,12 @@
       "name": "Piragüismo"
     },
     {
-      "id": "atletismo",
-      "name": "Atletismo"
-    },
-    {
       "id": "remo",
       "name": "Remo"
+    },
+    {
+      "id": "motociclismo",
+      "name": "Motociclismo"
     }
   ],
   "questions": [
@@ -451,27 +451,27 @@
       "id": "sports-es-014",
       "lang": "es",
       "topics": [
-        "atletismo"
+        "motociclismo"
       ],
       "curriculum": {
         "area": "educacio-fisica",
         "block": "activitats-ludiques-culturals-i-expressives"
       },
       "difficulty": 2,
-      "place": "santiago",
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "La gallega Ana Peleteiro es medallista olímpica de atletismo. ¿En qué prueba?",
+      "prompt": "Marc Márquez, nacido en Cervera, es campeón del mundo. ¿En qué deporte compite?",
       "options": [
-        "Triple salto",
-        "Lanzamiento de jabalina",
-        "100 metros vallas",
-        "Salto con pértiga"
+        "Motociclismo",
+        "Fórmula 1",
+        "Ciclismo",
+        "Tenis"
       ],
       "correct": 0,
-      "explanation": "Ana Peleteiro, de Ribeira (Galicia), ganó medalla olímpica en el triple salto: tres saltos seguidos.",
+      "explanation": "Marc Márquez compite en motociclismo y ha ganado varios campeonatos del mundo de MotoGP.",
       "references": [
-        "https://es.wikipedia.org/wiki/Ana_Peleteiro"
+        "https://es.wikipedia.org/wiki/Marc_M%C3%A1rquez"
       ]
     },
     {
