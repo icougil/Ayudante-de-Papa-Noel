@@ -3320,10 +3320,10 @@
       "maxAge": 12,
       "prompt": "¿Qué texto de la ONU recoge los derechos de todos los niños y niñas del mundo?",
       "options": [
-        "Convención sobre los Derechos del Niño",
+        "Convención de los Niños",
         "Carta Olímpica",
         "Código de Circulación",
-        "Tratado de la Unión Europea"
+        "Tratado de la UE"
       ],
       "correct": 0,
       "explanation": "La Convención sobre los Derechos del Niño, de la ONU, reconoce los derechos de todos los menores de 18 años.",
