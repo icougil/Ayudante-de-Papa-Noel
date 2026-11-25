@@ -143,6 +143,11 @@
       "name": "Gastronomía"
     },
     {
+      "id": "musica-y-danza",
+      "subject": "culture",
+      "name": "Música y danza"
+    },
+    {
       "id": "operaciones",
       "subject": "maths",
       "name": "Operaciones"
@@ -183,6 +188,16 @@
       "name": "Estadística y probabilidad"
     },
     {
+      "id": "medidas",
+      "subject": "maths",
+      "name": "Medidas"
+    },
+    {
+      "id": "algebra-y-patrones",
+      "subject": "maths",
+      "name": "Álgebra y patrones"
+    },
+    {
       "id": "sistema-solar",
       "subject": "science",
       "name": "Sistema solar"
@@ -218,6 +233,11 @@
       "name": "Cambio climático"
     },
     {
+      "id": "seguridad-digital",
+      "subject": "science",
+      "name": "Seguridad digital"
+    },
+    {
       "id": "categorias-gramaticales",
       "subject": "language",
       "name": "Categorías gramaticales"
@@ -236,6 +256,11 @@
       "id": "literatura",
       "subject": "language",
       "name": "Literatura"
+    },
+    {
+      "id": "expresion-escrita",
+      "subject": "language",
+      "name": "Expresión escrita"
     },
     {
       "id": "vocabulario-ingles",
@@ -263,6 +288,16 @@
       "name": "Comprensión lectora en inglés"
     },
     {
+      "id": "idiomas-ingles",
+      "subject": "english",
+      "name": "Idiomas en inglés"
+    },
+    {
+      "id": "conversacion-ingles",
+      "subject": "english",
+      "name": "Conversación en inglés"
+    },
+    {
       "id": "ortografia-catalana",
       "subject": "catalan",
       "name": "Ortografía catalana"
@@ -281,6 +316,11 @@
       "id": "lenguas-de-cataluna",
       "subject": "catalan",
       "name": "Lenguas de Cataluña"
+    },
+    {
+      "id": "literatura-catalana",
+      "subject": "catalan",
+      "name": "Literatura catalana"
     },
     {
       "id": "drets-i-democracia",
@@ -1874,6 +1914,62 @@
       ]
     },
     {
+      "id": "culture-es-009",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "musica-y-danza"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "arts-esceniques"
+      },
+      "difficulty": 1,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué baile tradicional de Aragón se baila en las fiestas del Pilar?",
+      "options": [
+        "La jota",
+        "La sardana",
+        "La muñeira",
+        "Las sevillanas"
+      ],
+      "correct": 0,
+      "explanation": "La jota aragonesa es un baile y un canto tradicionales de Aragón, muy presentes en las fiestas del Pilar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Jota_aragonesa"
+      ]
+    },
+    {
+      "id": "culture-es-010",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "musica-y-danza"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "musica"
+      },
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La gaita gallega, ¿a qué familia de instrumentos pertenece?",
+      "options": [
+        "Viento",
+        "Cuerda",
+        "Percusión",
+        "Teclado"
+      ],
+      "correct": 0,
+      "explanation": "La gaita es un instrumento de viento: el aire de la bolsa hace sonar sus tubos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Gaita_gallega"
+      ]
+    },
+    {
       "id": "general-1",
       "lang": "es",
       "subject": "maths",
@@ -2182,6 +2278,62 @@
       ]
     },
     {
+      "id": "maths-es-006",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "medidas"
+      ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-de-la-mesura"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Una botella tiene 750 ml. ¿Cuántas botellas llenan 3 litros?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "correct": 0,
+      "explanation": "3 litros son 3000 ml, y 3000 ÷ 750 = 4 botellas.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Litro"
+      ]
+    },
+    {
+      "id": "maths-es-007",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "algebra-y-patrones"
+      ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-algebraic"
+      },
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Si 2 × n + 3 = 17, ¿cuánto vale n?",
+      "options": [
+        "7",
+        "14",
+        "10",
+        "5"
+      ],
+      "correct": 0,
+      "explanation": "Si 2 × n + 3 = 17, entonces 2 × n = 14, y n = 14 ÷ 2 = 7.",
+      "references": [
+        "https://es.wikipedia.org/wiki/%C3%81lgebra"
+      ]
+    },
+    {
       "id": "general-5",
       "lang": "es",
       "subject": "science",
@@ -2459,6 +2611,34 @@
       "explanation": "El dióxido de carbono (CO₂) retiene calor en la atmósfera y es una causa del cambio climático.",
       "references": [
         "https://es.wikipedia.org/wiki/Di%C3%B3xido_de_carbono"
+      ]
+    },
+    {
+      "id": "science-es-006",
+      "lang": "es",
+      "subject": "science",
+      "topics": [
+        "seguridad-digital"
+      ],
+      "curriculum": {
+        "area": "medi",
+        "block": "tecnologia-i-digitalitzacio"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál es la contraseña más segura?",
+      "options": [
+        "Larga, con números y símbolos",
+        "Tu fecha de cumpleaños",
+        "Tu nombre y apellido",
+        "12345678"
+      ],
+      "correct": 0,
+      "explanation": "Una contraseña larga y mezclada es difícil de adivinar. Tu nombre o fecha son fáciles de averiguar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Contrase%C3%B1a"
       ]
     },
     {
@@ -2743,6 +2923,34 @@
       ]
     },
     {
+      "id": "language-es-009",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "expresion-escrita"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "expressio-escrita"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Al escribir un texto, ¿qué debes hacer después de escribir el borrador?",
+      "options": [
+        "Revisarlo y corregirlo",
+        "Entregarlo sin leerlo",
+        "Cambiar de tema",
+        "Borrarlo entero"
+      ],
+      "correct": 0,
+      "explanation": "Escribir tiene pasos: planificar, escribir el borrador y revisarlo para corregir errores.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Redacci%C3%B3n"
+      ]
+    },
+    {
       "id": "general-10",
       "lang": "en",
       "subject": "english",
@@ -3021,6 +3229,62 @@
       "explanation": "«It is raining» ({está lloviendo}), so «Tom takes» ({Tom coge}) his umbrella «because» ({porque}) he does not want to get wet ({mojarse}).",
       "references": [
         "https://learnenglish.britishcouncil.org/skills/reading"
+      ]
+    },
+    {
+      "id": "english-en-008",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "idiomas-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "les-llengues-i-els-seus-parlants"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which language do people speak in Portugal?",
+      "options": [
+        "Portuguese",
+        "Spanish",
+        "French",
+        "Italian"
+      ],
+      "correct": 0,
+      "explanation": "«Portuguese» ({portugués}) is the language of Portugal. People also speak it in Brazil ({Brasil}).",
+      "references": [
+        "https://en.wikipedia.org/wiki/Portuguese_language"
+      ]
+    },
+    {
+      "id": "english-en-009",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "conversacion-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "comunicacio-oral"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Someone asks «How are you?». What is a good answer?",
+      "options": [
+        "I'm fine, thanks.",
+        "It's on the table.",
+        "My name is Ana.",
+        "I'm twelve years old."
+      ],
+      "correct": 0,
+      "explanation": "«How are you?» ({¿cómo estás?}) asks about feelings, so we say «I'm fine, thanks» ({estoy bien, gracias}).",
+      "references": [
+        "https://en.wikipedia.org/wiki/Greeting"
       ]
     },
     {
@@ -3304,6 +3568,34 @@
       ]
     },
     {
+      "id": "catalan-ca-011",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "literatura-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "educacio-literaria"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin gènere literari està escrit per ser representat per actors?",
+      "options": [
+        "Teatre",
+        "Poesia",
+        "Novel·la",
+        "Conte"
+      ],
+      "correct": 0,
+      "explanation": "El teatre s'escriu en forma de diàleg perquè uns actors el representin en un escenari.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Teatre"
+      ]
+    },
+    {
       "id": "citizenship-es-001",
       "lang": "es",
       "subject": "citizenship",
@@ -3385,6 +3677,34 @@
       "explanation": "Si las burlas se repiten y hacen daño, es acoso escolar (bullying). Hay que contarlo a un adulto.",
       "references": [
         "https://es.wikipedia.org/wiki/Acoso_escolar"
+      ]
+    },
+    {
+      "id": "citizenship-es-004",
+      "lang": "es",
+      "subject": "citizenship",
+      "topics": [
+        "identidad-y-autonomia"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "autoconeixement-i-autonomia-moral"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué debes hacer antes de publicar una foto de otra persona en internet?",
+      "options": [
+        "Pedirle permiso",
+        "Comprobar que sale bien",
+        "Esperar a que sea de noche",
+        "Ponerle un apodo"
+      ],
+      "correct": 0,
+      "explanation": "Cada persona decide sobre su imagen. Antes de compartir su foto en la red, hay que pedirle permiso.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Derecho_a_la_propia_imagen"
       ]
     }
   ];

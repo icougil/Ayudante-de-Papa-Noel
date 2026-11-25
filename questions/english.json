@@ -19,6 +19,14 @@
     {
       "id": "comprension-lectora-ingles",
       "name": "Comprensión lectora en inglés"
+    },
+    {
+      "id": "idiomas-ingles",
+      "name": "Idiomas en inglés"
+    },
+    {
+      "id": "conversacion-ingles",
+      "name": "Conversación en inglés"
     }
   ],
   "questions": [
@@ -291,6 +299,60 @@
       "explanation": "«It is raining» ({está lloviendo}), so «Tom takes» ({Tom coge}) his umbrella «because» ({porque}) he does not want to get wet ({mojarse}).",
       "references": [
         "https://learnenglish.britishcouncil.org/skills/reading"
+      ]
+    },
+    {
+      "id": "english-en-008",
+      "lang": "en",
+      "topics": [
+        "idiomas-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "les-llengues-i-els-seus-parlants"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which language do people speak in Portugal?",
+      "options": [
+        "Portuguese",
+        "Spanish",
+        "French",
+        "Italian"
+      ],
+      "correct": 0,
+      "explanation": "«Portuguese» ({portugués}) is the language of Portugal. People also speak it in Brazil ({Brasil}).",
+      "references": [
+        "https://en.wikipedia.org/wiki/Portuguese_language"
+      ]
+    },
+    {
+      "id": "english-en-009",
+      "lang": "en",
+      "topics": [
+        "conversacion-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "comunicacio-oral"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Someone asks «How are you?». What is a good answer?",
+      "options": [
+        "I'm fine, thanks.",
+        "It's on the table.",
+        "My name is Ana.",
+        "I'm twelve years old."
+      ],
+      "correct": 0,
+      "explanation": "«How are you?» ({¿cómo estás?}) asks about feelings, so we say «I'm fine, thanks» ({estoy bien, gracias}).",
+      "references": [
+        "https://en.wikipedia.org/wiki/Greeting"
       ]
     }
   ]

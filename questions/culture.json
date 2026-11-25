@@ -27,6 +27,10 @@
     {
       "id": "gastronomia",
       "name": "Gastronomía"
+    },
+    {
+      "id": "musica-y-danza",
+      "name": "Música y danza"
     }
   ],
   "questions": [
@@ -434,6 +438,60 @@
       "explanation": "Los pintxos son bocados típicos del País Vasco. En Bilbao es muy habitual ir de bar en bar probando pintxos.",
       "references": [
         "https://es.wikipedia.org/wiki/Pintxo"
+      ]
+    },
+    {
+      "id": "culture-es-009",
+      "lang": "es",
+      "topics": [
+        "musica-y-danza"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "arts-esceniques"
+      },
+      "difficulty": 1,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué baile tradicional de Aragón se baila en las fiestas del Pilar?",
+      "options": [
+        "La jota",
+        "La sardana",
+        "La muñeira",
+        "Las sevillanas"
+      ],
+      "correct": 0,
+      "explanation": "La jota aragonesa es un baile y un canto tradicionales de Aragón, muy presentes en las fiestas del Pilar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Jota_aragonesa"
+      ]
+    },
+    {
+      "id": "culture-es-010",
+      "lang": "es",
+      "topics": [
+        "musica-y-danza"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "musica"
+      },
+      "difficulty": 2,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "La gaita gallega, ¿a qué familia de instrumentos pertenece?",
+      "options": [
+        "Viento",
+        "Cuerda",
+        "Percusión",
+        "Teclado"
+      ],
+      "correct": 0,
+      "explanation": "La gaita es un instrumento de viento: el aire de la bolsa hace sonar sus tubos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Gaita_gallega"
       ]
     }
   ]

@@ -27,6 +27,10 @@
     {
       "id": "cambio-climatico",
       "name": "Cambio climático"
+    },
+    {
+      "id": "seguridad-digital",
+      "name": "Seguridad digital"
     }
   ],
   "questions": [
@@ -298,6 +302,33 @@
       "explanation": "El dióxido de carbono (CO₂) retiene calor en la atmósfera y es una causa del cambio climático.",
       "references": [
         "https://es.wikipedia.org/wiki/Di%C3%B3xido_de_carbono"
+      ]
+    },
+    {
+      "id": "science-es-006",
+      "lang": "es",
+      "topics": [
+        "seguridad-digital"
+      ],
+      "curriculum": {
+        "area": "medi",
+        "block": "tecnologia-i-digitalitzacio"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál es la contraseña más segura?",
+      "options": [
+        "Larga, con números y símbolos",
+        "Tu fecha de cumpleaños",
+        "Tu nombre y apellido",
+        "12345678"
+      ],
+      "correct": 0,
+      "explanation": "Una contraseña larga y mezclada es difícil de adivinar. Tu nombre o fecha son fáciles de averiguar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Contrase%C3%B1a"
       ]
     }
   ]

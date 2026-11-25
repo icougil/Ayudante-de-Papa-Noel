@@ -15,6 +15,10 @@
     {
       "id": "lenguas-de-cataluna",
       "name": "Lenguas de Cataluña"
+    },
+    {
+      "id": "literatura-catalana",
+      "name": "Literatura catalana"
     }
   ],
   "questions": [
@@ -286,6 +290,33 @@
       "explanation": "L'aranès, una varietat de l'occità que es parla a la Vall d'Aran, és oficial a tot Catalunya.",
       "references": [
         "https://ca.wikipedia.org/wiki/Aran%C3%A8s"
+      ]
+    },
+    {
+      "id": "catalan-ca-011",
+      "lang": "ca",
+      "topics": [
+        "literatura-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "educacio-literaria"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quin gènere literari està escrit per ser representat per actors?",
+      "options": [
+        "Teatre",
+        "Poesia",
+        "Novel·la",
+        "Conte"
+      ],
+      "correct": 0,
+      "explanation": "El teatre s'escriu en forma de diàleg perquè uns actors el representin en un escenari.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Teatre"
       ]
     }
   ]
