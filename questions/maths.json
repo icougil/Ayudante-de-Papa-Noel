@@ -31,6 +31,14 @@
     {
       "id": "estadistica-y-probabilidad",
       "name": "Estadística y probabilidad"
+    },
+    {
+      "id": "medidas",
+      "name": "Medidas"
+    },
+    {
+      "id": "algebra-y-patrones",
+      "name": "Álgebra y patrones"
     }
   ],
   "questions": [
@@ -329,6 +337,60 @@
       "explanation": "La media se calcula sumando 6 + 8 + 10 + 12 = 36 y dividiendo entre 4: 36 ÷ 4 = 9.",
       "references": [
         "https://es.wikipedia.org/wiki/Media_aritm%C3%A9tica"
+      ]
+    },
+    {
+      "id": "maths-es-006",
+      "lang": "es",
+      "topics": [
+        "medidas"
+      ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-de-la-mesura"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Una botella tiene 750 ml. ¿Cuántas botellas llenan 3 litros?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "correct": 0,
+      "explanation": "3 litros son 3000 ml, y 3000 ÷ 750 = 4 botellas.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Litro"
+      ]
+    },
+    {
+      "id": "maths-es-007",
+      "lang": "es",
+      "topics": [
+        "algebra-y-patrones"
+      ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-algebraic"
+      },
+      "difficulty": 3,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Si 2 × n + 3 = 17, ¿cuánto vale n?",
+      "options": [
+        "7",
+        "14",
+        "10",
+        "5"
+      ],
+      "correct": 0,
+      "explanation": "Si 2 × n + 3 = 17, entonces 2 × n = 14, y n = 14 ÷ 2 = 7.",
+      "references": [
+        "https://es.wikipedia.org/wiki/%C3%81lgebra"
       ]
     }
   ]

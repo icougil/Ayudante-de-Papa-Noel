@@ -98,6 +98,33 @@
       "references": [
         "https://es.wikipedia.org/wiki/Acoso_escolar"
       ]
+    },
+    {
+      "id": "citizenship-es-004",
+      "lang": "es",
+      "topics": [
+        "identidad-y-autonomia"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "autoconeixement-i-autonomia-moral"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué debes hacer antes de publicar una foto de otra persona en internet?",
+      "options": [
+        "Pedirle permiso",
+        "Comprobar que sale bien",
+        "Esperar a que sea de noche",
+        "Ponerle un apodo"
+      ],
+      "correct": 0,
+      "explanation": "Cada persona decide sobre su imagen. Antes de compartir su foto en la red, hay que pedirle permiso.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Derecho_a_la_propia_imagen"
+      ]
     }
   ]
 }

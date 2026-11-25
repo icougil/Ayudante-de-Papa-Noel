@@ -15,6 +15,10 @@
     {
       "id": "literatura",
       "name": "Literatura"
+    },
+    {
+      "id": "expresion-escrita",
+      "name": "Expresión escrita"
     }
   ],
   "questions": [
@@ -287,6 +291,33 @@
       "explanation": "En un cuento hay planteamiento, nudo y desenlace. En el nudo surge el conflicto.",
       "references": [
         "https://es.wikipedia.org/wiki/Cuento"
+      ]
+    },
+    {
+      "id": "language-es-009",
+      "lang": "es",
+      "topics": [
+        "expresion-escrita"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "expressio-escrita"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Al escribir un texto, ¿qué debes hacer después de escribir el borrador?",
+      "options": [
+        "Revisarlo y corregirlo",
+        "Entregarlo sin leerlo",
+        "Cambiar de tema",
+        "Borrarlo entero"
+      ],
+      "correct": 0,
+      "explanation": "Escribir tiene pasos: planificar, escribir el borrador y revisarlo para corregir errores.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Redacci%C3%B3n"
       ]
     }
   ]
