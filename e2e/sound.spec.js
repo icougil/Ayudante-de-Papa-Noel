@@ -1,10 +1,15 @@
 const { test, expect } = require('@playwright/test');
 const { openGame, recordSounds, startGame, answer, pageScrolls } = require('./helpers');
 
+// Long enough for the 1.5 s boost and the 2.5 s notice of a right answer.
+const ADVANCE_MS = 4_200;
+
 // Opens the game, collects page errors and taps the title so the browser allows sound.
-async function openWithSound(page) {
+// With `clock`, installs the fake clock before the page loads, so a whole game can skip its pauses.
+async function openWithSound(page, { clock = false } = {}) {
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
+  if (clock) await page.clock.install();
   await openGame(page);
   await page.locator('h1').click();
   return errors;
@@ -84,9 +89,10 @@ test('hiding the page suspends the sound and showing it resumes it', async ({ pa
 
 const toggle = (page) => page.locator('.sound-toggle:visible');
 
-async function playToResult(page) {
+async function playToResult(page, { clock = false } = {}) {
   for (let n = 0; n < 6; n++) {
     await answer(page, true);
+    if (clock) await page.clock.runFor(ADVANCE_MS);
     if (n < 5) {
       await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + (n + 2) + '/6');
     }
@@ -95,12 +101,13 @@ async function playToResult(page) {
 }
 
 test('the switch is on the cover, the trip and the result screen', async ({ page }) => {
+  await page.clock.install();
   await openGame(page);
   await expect(toggle(page)).toHaveCount(1);
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
   await expect(toggle(page)).toHaveCount(1);
-  await playToResult(page);
+  await playToResult(page, { clock: true });
   await expect(toggle(page)).toHaveCount(1);
 });
 
@@ -126,12 +133,13 @@ test('the switch is always called "Sonido"', async ({ page }) => {
     expect(labels).toHaveLength(3);
     expect(labels).toEqual(['Sonido', 'Sonido', 'Sonido']);
   };
+  await page.clock.install();
   await openGame(page);
   await expectAllNamed();
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
   await expectAllNamed();
-  await playToResult(page);
+  await playToResult(page, { clock: true });
   await expectAllNamed();
   await toggle(page).click();
   await expect(toggle(page)).toHaveText('🔇');
@@ -147,11 +155,12 @@ test('on the cover and the result screen the switch is in the top-right corner',
     expect(Math.abs(screen.x + screen.width - (box.x + box.width) - 8)).toBeLessThanOrEqual(1);
     expect(Math.abs(box.y - screen.y - 8)).toBeLessThanOrEqual(1);
   };
+  await page.clock.install();
   await openGame(page);
   await expectCorner('#screen-start');
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
-  await playToResult(page);
+  await playToResult(page, { clock: true });
   await expectCorner('#screen-result');
 });
 
@@ -253,7 +262,8 @@ test('at 1280x800 the switch does not make the scoreboard taller', async ({ page
 const calls = (page) => page.evaluate(() => window.__soundCalls);
 
 // Opens the game with the sound methods recorded and starts it.
-async function recordedStart(page) {
+async function recordedStart(page, { clock = false } = {}) {
+  if (clock) await page.clock.install();
   await openGame(page);
   await recordSounds(page);
   await page.locator('#button-start').click();
@@ -261,18 +271,20 @@ async function recordedStart(page) {
 }
 
 // Answers the question on screen right and waits for the next city.
-async function answerRightAndWaitFor(page, nextCity) {
+async function answerRightAndWaitFor(page, nextCity, { clock = false } = {}) {
   await answer(page, true);
+  if (clock) await page.clock.runFor(ADVANCE_MS);
   await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + nextCity + '/6');
 }
 
 // Plays the six cities, all right or all wrong, until the result screen.
-async function playSix(page, right) {
+async function playSix(page, right, { clock = false } = {}) {
   for (let n = 0; n < 6; n++) {
     await answer(page, right);
     if (!right) {
       await page.locator('#button-next').click();
     }
+    if (clock) await page.clock.runFor(ADVANCE_MS);
     if (n < 5) {
       await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + (n + 2) + '/6');
     }
@@ -319,10 +331,10 @@ test('a wrong answer sounds like its mishap, never like a delivery', async ({ pa
 });
 
 test('three right answers in a row sound the turbo and speed the music up', async ({ page }) => {
-  await recordedStart(page);
-  await answerRightAndWaitFor(page, 2);
-  await answerRightAndWaitFor(page, 3);
-  await answerRightAndWaitFor(page, 4);
+  await recordedStart(page, { clock: true });
+  await answerRightAndWaitFor(page, 2, { clock: true });
+  await answerRightAndWaitFor(page, 3, { clock: true });
+  await answerRightAndWaitFor(page, 4, { clock: true });
   const recorded = await calls(page);
   expect(recorded).toContainEqual(['play', 'turbo', 0.5]);
   expect(recorded.filter((call) => call[0] === 'setTurbo').pop()).toEqual(['setTurbo', true]);
@@ -341,8 +353,8 @@ test('reaching the city without answering rings the arrival, and the late answer
 });
 
 test('a passed level stops the music and plays the pass sound', async ({ page }) => {
-  await recordedStart(page);
-  await playSix(page, true);
+  await recordedStart(page, { clock: true });
+  await playSix(page, true, { clock: true });
   expect((await calls(page)).slice(-2)).toEqual([['stopMusic'], ['play', 'pass']]);
 });
 
@@ -353,8 +365,8 @@ test('a level that is not passed stops the music and plays the gentle sound', as
 });
 
 test('playing again takes off again', async ({ page }) => {
-  await recordedStart(page);
-  await playSix(page, true);
+  await recordedStart(page, { clock: true });
+  await playSix(page, true, { clock: true });
   const before = (await calls(page)).length;
   await page.locator('#button-again').click();
   await expect(page.locator('#options button')).toHaveCount(4);
@@ -365,21 +377,22 @@ test('playing again takes off again', async ({ page }) => {
 });
 
 test('a whole game with sound on raises no page error', async ({ page }) => {
-  const errors = await openWithSound(page);
+  const errors = await openWithSound(page, { clock: true });
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
-  await playToResult(page);
+  await playToResult(page, { clock: true });
   expect(errors).toEqual([]);
 });
 
 test('a whole game with sound switched off raises no page error and never plays music', async ({ page }) => {
-  const errors = await openWithSound(page);
+  const errors = await openWithSound(page, { clock: true });
   await toggle(page).click();
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
   expect((await state(page)).music).toBe(false);
   for (let n = 0; n < 6; n++) {
     await answer(page, true);
+    await page.clock.runFor(ADVANCE_MS);
     expect((await state(page)).music).toBe(false);
     if (n < 5) {
       await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + (n + 2) + '/6');
@@ -397,10 +410,11 @@ test('a whole game without AudioContext raises no page error', async ({ page }) 
     delete window.AudioContext;
     delete window.webkitAudioContext;
   });
+  await page.clock.install();
   await openGame(page);
   await page.locator('#button-start').click();
   await expect(page.locator('#options button')).toHaveCount(4);
-  await playToResult(page);
+  await playToResult(page, { clock: true });
   expect((await state(page)).context).toBe('none');
   expect(errors).toEqual([]);
 });
