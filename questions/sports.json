@@ -232,10 +232,10 @@
       "maxAge": 12,
       "prompt": "En los deportes rurales vascos, ¿qué hace un aizkolari?",
       "options": [
-        "Corta troncos de madera con un hacha",
+        "Corta troncos con un hacha",
         "Levanta una piedra enorme",
         "Rema en una trainera",
-        "Tira de una cuerda en equipo"
+        "Tira de una cuerda"
       ],
       "correct": 0,
       "explanation": "El aizkolari compite cortando troncos con un hacha, lo más rápido posible. Es uno de los deportes rurales más típicos del País Vasco.",
@@ -473,7 +473,7 @@
       "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "Marc Márquez, nacido en Cervera, es campeón del mundo. ¿En qué deporte compite?",
+      "prompt": "Marc Márquez, nacido en Cervera, ¿en qué deporte es campeón del mundo?",
       "options": [
         "Motociclismo",
         "Fórmula 1",
@@ -527,7 +527,7 @@
       "place": "madrid",
       "prompt": "Has corrido un buen rato por el Retiro de Madrid. ¿Qué es mejor beber después?",
       "options": [
-        "Un refresco con mucho azúcar",
+        "Un refresco azucarado",
         "Agua",
         "Un café muy cargado",
         "Nada, hasta la cena"
@@ -579,12 +579,12 @@
       },
       "difficulty": 2,
       "place": "barcelona",
-      "prompt": "En los castells de la Mercè de Barcelona, ¿qué hace falta sobre todo para no caer?",
+      "prompt": "En los castells de la Mercè de Barcelona, ¿qué evita que caigan?",
       "options": [
         "Ir muy deprisa",
         "Gritar muy fuerte",
         "Pesar mucho",
-        "Trabajo en equipo y confianza"
+        "Trabajo en equipo"
       ],
       "correct": 3,
       "explanation": "Cada persona tiene su puesto y confía en las demás: sin cooperación, la torre humana no se sostiene.",

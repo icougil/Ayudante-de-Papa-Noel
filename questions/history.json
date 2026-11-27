@@ -100,7 +100,7 @@
       "maxAge": 12,
       "prompt": "¿Quién construyó el palacio de la Aljafería de Zaragoza?",
       "options": [
-        "Los musulmanes de al-Ándalus",
+        "Musulmanes de al-Ándalus",
         "Los romanos",
         "Los vikingos",
         "Los egipcios"
@@ -206,7 +206,7 @@
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿En qué año se aprobó la Constitución española, que establece que Madrid es la capital?",
+      "prompt": "¿En qué año se aprobó la Constitución española, que fija la capital en Madrid?",
       "options": [
         "1978",
         "1936",
@@ -314,15 +314,15 @@
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "En 1808 y 1809 Zaragoza resistió dos asedios, los Sitios. ¿Contra qué ejército luchó?",
+      "prompt": "Zaragoza resistió dos asedios, los Sitios. ¿Contra qué ejército luchó?",
       "options": [
-        "El ejército francés de Napoleón",
+        "El ejército de Napoleón",
         "El ejército inglés",
         "El ejército romano",
         "El ejército musulmán"
       ],
       "correct": 0,
-      "explanation": "Los zaragozanos defendieron la ciudad contra las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
+      "explanation": "Los zaragozanos se defendieron de las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
       "references": [
         "https://es.wikipedia.org/wiki/Sitios_de_Zaragoza"
       ]
@@ -341,7 +341,7 @@
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué ciudad vasca bombardeada en 1937 da nombre a un famoso cuadro de Picasso?",
+      "prompt": "¿Qué ciudad vasca bombardeada en 1937 da nombre a un cuadro de Picasso?",
       "options": [
         "Guernica",
         "Vitoria",

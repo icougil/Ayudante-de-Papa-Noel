@@ -342,10 +342,10 @@
       "place": "general",
       "prompt": "¿Cuál de estas frases es un hecho y no una opinión?",
       "options": [
-        "El Teide es el monte más bonito.",
-        "Subir al Teide es aburrido.",
+        "El Teide es muy bonito.",
+        "Subir al Teide aburre.",
         "El Teide está en Tenerife.",
-        "Tenerife es mejor que Mallorca."
+        "Tenerife es la mejor isla."
       ],
       "correct": 2,
       "explanation": "Un hecho se puede comprobar. Las opiniones dependen de lo que piensa cada persona.",
@@ -372,10 +372,10 @@
         "¡Ey, qué pasa, tía!",
         "Hola, colega, ¿qué tal?",
         "¡Buenas, majo!",
-        "Buenos días, ¿cómo está usted?"
+        "Buenos días, ¿cómo está?"
       ],
       "correct": 3,
-      "explanation": "Con una persona mayor o con autoridad usamos un registro formal y tratamos de «usted».",
+      "explanation": "Con una persona mayor o con autoridad usamos un registro formal, no el tuteo de las otras frases.",
       "references": [
         "https://es.wikipedia.org/wiki/Registro_(socioling%C3%BCística)"
       ],

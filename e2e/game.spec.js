@@ -1,17 +1,38 @@
 // Drives the real game in desktop Chromium, at the window sizes that used to break the layout.
 const { test, expect } = require('@playwright/test');
-const { openGame, startGame, answer, pageScrolls } = require('./helpers');
+const { openGame, startGame, answer } = require('./helpers');
 
 test.describe('on a small phone (360x640)', () => {
   test.use({ viewport: { width: 360, height: 640 } });
 
-  test('the question and its four answers fit without scrolling', async ({ page }) => {
+  test('every question and its four answers fit without scrolling', async ({ page }) => {
     await startGame(page);
 
-    for (const option of await page.locator('#options button').all()) {
-      await expect(option).toBeInViewport({ ratio: 1 });
-    }
-    expect(await pageScrolls(page)).toBe(false);
+    const overflowing = await page.evaluate(() => {
+      const prompt = document.getElementById('prompt');
+      const options = document.getElementById('options');
+      const notice = document.getElementById('notice');
+      const next = document.getElementById('button-next');
+      const bad = [];
+      for (const q of globalThis.APN.QUESTIONS) {
+        prompt.textContent = globalThis.APN.plainText(q.prompt);
+        options.textContent = '';
+        for (const text of q.options) {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'option';
+          button.textContent = text;
+          options.appendChild(button);
+        }
+        notice.textContent = '';
+        next.hidden = true;
+        window.scrollTo(0, 0);
+        if (document.documentElement.scrollHeight > window.innerHeight) bad.push(q.id);
+      }
+      return bad;
+    });
+
+    expect(overflowing).toEqual([]);
   });
 
   test('the empty notice stays rendered, so screen readers announce what is written into it', async ({ page }) => {
@@ -21,19 +42,6 @@ test.describe('on a small phone (360x640)', () => {
     await expect(notice).toBeEmpty();
     await expect(notice).toHaveAttribute('aria-live', 'polite');
     await expect(notice).not.toHaveCSS('display', 'none');
-  });
-
-  test('the longest prompt of the bank still fits without scrolling', async ({ page }) => {
-    await startGame(page);
-
-    await page.evaluate(() => {
-      const prompts = globalThis.APN.QUESTIONS.map((q) => globalThis.APN.plainText(q.prompt));
-      const longest = prompts.reduce((a, b) => (b.length > a.length ? b : a));
-      document.getElementById('prompt').textContent = longest;
-    });
-
-    await expect(page.locator('#options button').last()).toBeInViewport({ ratio: 1 });
-    expect(await pageScrolls(page)).toBe(false);
   });
 
   test('a wrong answer brings "Seguir" into view, and the next question starts at the top', async ({ page }) => {

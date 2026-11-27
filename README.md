@@ -129,10 +129,10 @@ existing question and change its fields, in this order:
 | `place` | The id of a city on the route, or `general`. A city only for geography, history, sports and culture |
 | `minAge` | 10 |
 | `maxAge` | 12 |
-| `prompt` | The question, 120 characters at most |
-| `options` | Exactly 4 different answers, 40 characters each at most |
+| `prompt` | The question, 90 characters at most |
+| `options` | Exactly 4 different answers, 26 characters each at most |
 | `correct` | Position of the right answer in `options`, from 0 to 3 |
-| `explanation` | Shown after a wrong answer, 160 characters at most. In an English question it glosses each key English word in Spanish in brackets, e.g. «Hot» ({caliente}) |
+| `explanation` | Shown after a wrong answer, 140 characters at most. In an English question it glosses each key English word in Spanish in brackets, e.g. «Hot» ({caliente}) |
 | `references` | At least one `https://` page where the fact can be checked |
 
 Before writing, read [`docs/curriculum/cicle-superior.md`](docs/curriculum/cicle-superior.md). It
@@ -142,9 +142,10 @@ questions must apply one of those sabers. A batch may include one review or gene
 question from that list, marked as such; the rest stay anchored. The official curriculum defines the
 sabers for the whole cicle (5è-6è), not per course; the `difficulty` labels are a project convention.
 The `curriculum` field is required: the build rejects a question without a valid area and block.
-New questions should also keep the prompt at most 90 characters, the options around 25 and the
-explanation at most 140: the build allows more, but the browser tests put the longest prompt on a
-360×640 phone.
+New questions must keep the prompt at most 90 characters, every option at most 26 and the
+explanation at most 140: the build rejects longer text. The browser tests also put every question
+of the bank on a 360×640 phone, so keep prompts short enough to fit in three lines (80 characters
+or fewer is a safe target).
 
 Spanish words inside a Catalan or English prompt or explanation go in braces, e.g.
 `Which English word means «{hermano}»?`. The braces are not shown, and the game reads the word

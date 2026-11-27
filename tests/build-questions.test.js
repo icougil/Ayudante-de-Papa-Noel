@@ -332,21 +332,21 @@ test('a correct index out of range is reported', () => {
   assert.deepEqual(withQuestion({ correct: 1.5 }), ['geography.json: q-1: correct must be 0 to 3']);
 });
 
-test('a prompt over 120 characters is reported', () => {
-  assert.deepEqual(withQuestion({ prompt: 'x'.repeat(121) }), [
-    'geography.json: q-1: prompt longer than 120 characters'
+test('a prompt over 90 characters is reported', () => {
+  assert.deepEqual(withQuestion({ prompt: 'x'.repeat(91) }), [
+    'geography.json: q-1: prompt longer than 90 characters'
   ]);
 });
 
-test('an option over 40 characters is reported', () => {
-  assert.deepEqual(withQuestion({ options: ['x'.repeat(41), 'b', 'c', 'd'] }), [
-    'geography.json: q-1: option longer than 40 characters'
+test('an option over 26 characters is reported', () => {
+  assert.deepEqual(withQuestion({ options: ['x'.repeat(27), 'b', 'c', 'd'] }), [
+    'geography.json: q-1: option longer than 26 characters'
   ]);
 });
 
-test('an explanation over 160 characters is reported', () => {
-  assert.deepEqual(withQuestion({ explanation: 'x'.repeat(161) }), [
-    'geography.json: q-1: explanation longer than 160 characters'
+test('an explanation over 140 characters is reported', () => {
+  assert.deepEqual(withQuestion({ explanation: 'x'.repeat(141) }), [
+    'geography.json: q-1: explanation longer than 140 characters'
   ]);
 });
 
@@ -476,7 +476,7 @@ test('a brace in an option is reported', () => {
 });
 
 test('the braces do not count towards the length limits', () => {
-  const explanation = '{' + 'a'.repeat(158) + '} b';
-  assert.equal(explanation.length, 162);
+  const explanation = '{' + 'a'.repeat(138) + '} b';
+  assert.equal(explanation.length, 142);
   assert.deepEqual(withEnglishQuestion({ explanation }), []);
 });

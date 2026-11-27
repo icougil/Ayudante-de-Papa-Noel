@@ -775,7 +775,7 @@
       "maxAge": 12,
       "prompt": "¿Quién construyó el palacio de la Aljafería de Zaragoza?",
       "options": [
-        "Los musulmanes de al-Ándalus",
+        "Musulmanes de al-Ándalus",
         "Los romanos",
         "Los vikingos",
         "Los egipcios"
@@ -885,7 +885,7 @@
       "place": "madrid",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿En qué año se aprobó la Constitución española, que establece que Madrid es la capital?",
+      "prompt": "¿En qué año se aprobó la Constitución española, que fija la capital en Madrid?",
       "options": [
         "1978",
         "1936",
@@ -997,15 +997,15 @@
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "En 1808 y 1809 Zaragoza resistió dos asedios, los Sitios. ¿Contra qué ejército luchó?",
+      "prompt": "Zaragoza resistió dos asedios, los Sitios. ¿Contra qué ejército luchó?",
       "options": [
-        "El ejército francés de Napoleón",
+        "El ejército de Napoleón",
         "El ejército inglés",
         "El ejército romano",
         "El ejército musulmán"
       ],
       "correct": 0,
-      "explanation": "Los zaragozanos defendieron la ciudad contra las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
+      "explanation": "Los zaragozanos se defendieron de las tropas de Napoleón en la Guerra de la Independencia. Agustina de Aragón fue una heroína de los Sitios.",
       "references": [
         "https://es.wikipedia.org/wiki/Sitios_de_Zaragoza"
       ]
@@ -1025,7 +1025,7 @@
       "place": "bilbao",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué ciudad vasca bombardeada en 1937 da nombre a un famoso cuadro de Picasso?",
+      "prompt": "¿Qué ciudad vasca bombardeada en 1937 da nombre a un cuadro de Picasso?",
       "options": [
         "Guernica",
         "Vitoria",
@@ -1251,10 +1251,10 @@
       "maxAge": 12,
       "prompt": "En los deportes rurales vascos, ¿qué hace un aizkolari?",
       "options": [
-        "Corta troncos de madera con un hacha",
+        "Corta troncos con un hacha",
         "Levanta una piedra enorme",
         "Rema en una trainera",
-        "Tira de una cuerda en equipo"
+        "Tira de una cuerda"
       ],
       "correct": 0,
       "explanation": "El aizkolari compite cortando troncos con un hacha, lo más rápido posible. Es uno de los deportes rurales más típicos del País Vasco.",
@@ -1501,7 +1501,7 @@
       "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "Marc Márquez, nacido en Cervera, es campeón del mundo. ¿En qué deporte compite?",
+      "prompt": "Marc Márquez, nacido en Cervera, ¿en qué deporte es campeón del mundo?",
       "options": [
         "Motociclismo",
         "Fórmula 1",
@@ -1559,7 +1559,7 @@
       "maxAge": 12,
       "prompt": "Has corrido un buen rato por el Retiro de Madrid. ¿Qué es mejor beber después?",
       "options": [
-        "Un refresco con mucho azúcar",
+        "Un refresco azucarado",
         "Agua",
         "Un café muy cargado",
         "Nada, hasta la cena"
@@ -1613,12 +1613,12 @@
       "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "En los castells de la Mercè de Barcelona, ¿qué hace falta sobre todo para no caer?",
+      "prompt": "En los castells de la Mercè de Barcelona, ¿qué evita que caigan?",
       "options": [
         "Ir muy deprisa",
         "Gritar muy fuerte",
         "Pesar mucho",
-        "Trabajo en equipo y confianza"
+        "Trabajo en equipo"
       ],
       "correct": 3,
       "explanation": "Cada persona tiene su puesto y confía en las demás: sin cooperación, la torre humana no se sostiene.",
@@ -1818,7 +1818,7 @@
         "La Diada"
       ],
       "correct": 0,
-      "explanation": "La Mercè és la gran festa de la ciutat; se celebra a finals de setembre en honor de la Mare de Déu de la Mercè, amb castells, gegants i correfoc.",
+      "explanation": "La Mercè és la gran festa de la ciutat; se celebra a finals de setembre amb castells, gegants i correfoc.",
       "references": [
         "https://ca.wikipedia.org/wiki/La_Mercè"
       ]
@@ -1950,7 +1950,7 @@
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué día de octubre se celebra la fiesta grande de Zaragoza, en honor a la Virgen del Pilar?",
+      "prompt": "¿Qué día de octubre se celebra la fiesta del Pilar en Zaragoza?",
       "options": [
         "El 12",
         "El 1",
@@ -2115,20 +2115,20 @@
         "block": "audiovisual"
       },
       "difficulty": 2,
-      "place": "bilbao",
+      "place": "barcelona",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "El festival Zinebi de Bilbao proyecta sobre todo documentales y…",
+      "prompt": "El festival de cine de Sitges, cerca de Barcelona, es famoso por el cine de…",
       "options": [
+        "terror",
+        "documentales",
         "telenovelas",
-        "anuncios de televisión",
-        "videojuegos",
-        "cortometrajes"
+        "anuncios"
       ],
-      "correct": 3,
-      "explanation": "Zinebi es un festival de cine documental y cortometrajes: películas cortas que cuentan una historia en pocos minutos.",
+      "correct": 0,
+      "explanation": "Sitges es el festival de cine fantástico de Cataluña: sus películas más famosas son de terror, fantasía y ciencia ficción.",
       "references": [
-        "https://es.wikipedia.org/wiki/Zinebi"
+        "https://es.wikipedia.org/wiki/Festival_de_Cine_de_Sitges"
       ]
     },
     {
@@ -2342,7 +2342,7 @@
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "Un far s'encén cada 4 segons i un altre cada 6. Si coincideixen ara, quan tornaran a coincidir?",
+      "prompt": "Un far s'encén cada 4 segons i un altre cada 6. Quan tornaran a coincidir?",
       "options": [
         "D'aquí a 12 segons",
         "D'aquí a 10 segons",
@@ -2594,7 +2594,7 @@
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llama el proceso con el que las plantas fabrican su alimento usando la luz del sol?",
+      "prompt": "¿Cómo se llama el proceso con el que las plantas fabrican alimento con luz solar?",
       "options": [
         "Fotosíntesis",
         "Respiración",
@@ -2624,8 +2624,8 @@
       "maxAge": 12,
       "prompt": "¿Qué causa las estaciones del año en la Tierra?",
       "options": [
-        "La inclinación del eje de la Tierra",
-        "La distancia de la Tierra al Sol",
+        "La inclinación del eje",
+        "La distancia al Sol",
         "Las fases de la Luna",
         "La velocidad del viento"
       ],
@@ -2792,7 +2792,7 @@
       "maxAge": 12,
       "prompt": "¿Cuál es la contraseña más segura?",
       "options": [
-        "Larga, con números y símbolos",
+        "Larga, números y símbolos",
         "Tu fecha de cumpleaños",
         "Tu nombre y apellido",
         "12345678"
@@ -3129,10 +3129,10 @@
       "maxAge": 12,
       "prompt": "¿Cuál de estas frases es un hecho y no una opinión?",
       "options": [
-        "El Teide es el monte más bonito.",
-        "Subir al Teide es aburrido.",
+        "El Teide es muy bonito.",
+        "Subir al Teide aburre.",
         "El Teide está en Tenerife.",
-        "Tenerife es mejor que Mallorca."
+        "Tenerife es la mejor isla."
       ],
       "correct": 2,
       "explanation": "Un hecho se puede comprobar. Las opiniones dependen de lo que piensa cada persona.",
@@ -3160,10 +3160,10 @@
         "¡Ey, qué pasa, tía!",
         "Hola, colega, ¿qué tal?",
         "¡Buenas, majo!",
-        "Buenos días, ¿cómo está usted?"
+        "Buenos días, ¿cómo está?"
       ],
       "correct": 3,
-      "explanation": "Con una persona mayor o con autoridad usamos un registro formal y tratamos de «usted».",
+      "explanation": "Con una persona mayor o con autoridad usamos un registro formal, no el tuteo de las otras frases.",
       "references": [
         "https://es.wikipedia.org/wiki/Registro_(socioling%C3%BCística)"
       ]

@@ -223,7 +223,7 @@
         "La Diada"
       ],
       "correct": 0,
-      "explanation": "La Mercè és la gran festa de la ciutat; se celebra a finals de setembre en honor de la Mare de Déu de la Mercè, amb castells, gegants i correfoc.",
+      "explanation": "La Mercè és la gran festa de la ciutat; se celebra a finals de setembre amb castells, gegants i correfoc.",
       "references": [
         "https://ca.wikipedia.org/wiki/La_Mercè"
       ]
@@ -350,7 +350,7 @@
       "place": "zaragoza",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Qué día de octubre se celebra la fiesta grande de Zaragoza, en honor a la Virgen del Pilar?",
+      "prompt": "¿Qué día de octubre se celebra la fiesta del Pilar en Zaragoza?",
       "options": [
         "El 12",
         "El 1",
@@ -509,18 +509,18 @@
         "block": "audiovisual"
       },
       "difficulty": 2,
-      "place": "bilbao",
-      "prompt": "El festival Zinebi de Bilbao proyecta sobre todo documentales y…",
+      "place": "barcelona",
+      "prompt": "El festival de cine de Sitges, cerca de Barcelona, es famoso por el cine de…",
       "options": [
+        "terror",
+        "documentales",
         "telenovelas",
-        "anuncios de televisión",
-        "videojuegos",
-        "cortometrajes"
+        "anuncios"
       ],
-      "correct": 3,
-      "explanation": "Zinebi es un festival de cine documental y cortometrajes: películas cortas que cuentan una historia en pocos minutos.",
+      "correct": 0,
+      "explanation": "Sitges es el festival de cine fantástico de Cataluña: sus películas más famosas son de terror, fantasía y ciencia ficción.",
       "references": [
-        "https://es.wikipedia.org/wiki/Zinebi"
+        "https://es.wikipedia.org/wiki/Festival_de_Cine_de_Sitges"
       ],
       "minAge": 10,
       "maxAge": 12

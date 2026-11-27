@@ -245,7 +245,7 @@
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "Un far s'encén cada 4 segons i un altre cada 6. Si coincideixen ara, quan tornaran a coincidir?",
+      "prompt": "Un far s'encén cada 4 segons i un altre cada 6. Quan tornaran a coincidir?",
       "options": [
         "D'aquí a 12 segons",
         "D'aquí a 10 segons",
