@@ -168,6 +168,11 @@
       "name": "Cine y audiovisual"
     },
     {
+      "id": "instrumentos-musicales",
+      "subject": "culture",
+      "name": "Instrumentos musicales"
+    },
+    {
       "id": "operaciones",
       "subject": "maths",
       "name": "Operaciones"
@@ -293,6 +298,16 @@
       "name": "Comunicación oral"
     },
     {
+      "id": "diversidad-linguistica",
+      "subject": "language",
+      "name": "Diversidad lingüística"
+    },
+    {
+      "id": "comprension-lectora",
+      "subject": "language",
+      "name": "Comprensión lectora"
+    },
+    {
       "id": "vocabulario-ingles",
       "subject": "english",
       "name": "Vocabulario básico en inglés"
@@ -338,6 +353,11 @@
       "name": "Literatura en inglés"
     },
     {
+      "id": "alfabetizacion-informacional-ingles",
+      "subject": "english",
+      "name": "Alfabetización informacional en inglés"
+    },
+    {
       "id": "ortografia-catalana",
       "subject": "catalan",
       "name": "Ortografía catalana"
@@ -371,6 +391,16 @@
       "id": "expresion-escrita-catalana",
       "subject": "catalan",
       "name": "Expresión escrita en catalán"
+    },
+    {
+      "id": "comunicacion-oral-catalana",
+      "subject": "catalan",
+      "name": "Comunicación oral en catalán"
+    },
+    {
+      "id": "alfabetizacion-informacional-catalana",
+      "subject": "catalan",
+      "name": "Alfabetización informacional en catalán"
     },
     {
       "id": "drets-i-democracia",
@@ -1627,6 +1657,34 @@
       ]
     },
     {
+      "id": "sports-es-019",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "salud-y-ejercicio"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "vida-activa-i-saludable"
+      },
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En verano hace mucho calor en Zaragoza. ¿Cuándo es más sano hacer deporte fuera?",
+      "options": [
+        "Por la mañana temprano",
+        "A las tres de la tarde",
+        "Con el sol más fuerte",
+        "Sin beber agua"
+      ],
+      "correct": 0,
+      "explanation": "Con calor intenso conviene hacer ejercicio a primera hora o al caer la tarde, y beber agua.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Golpe_de_calor"
+      ]
+    },
+    {
       "id": "barcelona-2",
       "lang": "es",
       "subject": "culture",
@@ -2132,6 +2190,34 @@
       ]
     },
     {
+      "id": "culture-es-012",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "instrumentos-musicales"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "musica"
+      },
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El txistu es una flauta típica vasca. ¿A qué familia de instrumentos pertenece?",
+      "options": [
+        "Viento",
+        "Percusión",
+        "Cuerda",
+        "Teclado"
+      ],
+      "correct": 0,
+      "explanation": "El aire hace sonar el txistu al soplar, así que pertenece a la familia del viento.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Txistu"
+      ]
+    },
+    {
       "id": "general-1",
       "lang": "es",
       "subject": "maths",
@@ -2493,6 +2579,34 @@
       "explanation": "Si 2 × n + 3 = 17, entonces 2 × n = 14, y n = 14 ÷ 2 = 7.",
       "references": [
         "https://es.wikipedia.org/wiki/%C3%81lgebra"
+      ]
+    },
+    {
+      "id": "maths-es-008",
+      "lang": "es",
+      "subject": "maths",
+      "topics": [
+        "estadistica-y-probabilidad"
+      ],
+      "curriculum": {
+        "area": "matematiques",
+        "block": "sentit-estocastic"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Una bolsa tiene 3 bolas rojas y 1 azul. ¿Qué probabilidad hay de sacar la azul?",
+      "options": [
+        "1/4",
+        "1/3",
+        "3/4",
+        "1/2"
+      ],
+      "correct": 0,
+      "explanation": "Hay 1 bola azul entre 4 en total, así que la probabilidad es 1/4.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Probabilidad"
       ]
     },
     {
@@ -3169,6 +3283,62 @@
       ]
     },
     {
+      "id": "language-es-012",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "diversidad-linguistica"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "les-llengues-i-els-seus-parlants"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un compañero habla en euskera con su abuela. ¿Qué actitud es la más respetuosa?",
+      "options": [
+        "Respetar su lengua",
+        "Reírse de su acento",
+        "Pedirle que no la hable",
+        "Decir que no sirve"
+      ],
+      "correct": 0,
+      "explanation": "Todas las lenguas son valiosas y merecen respeto; en España conviven varias.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Lenguas_de_Espa%C3%B1a"
+      ]
+    },
+    {
+      "id": "language-es-013",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "comprension-lectora"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "comprensio-lectora"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Lucas se pone gorro y guantes y sopla en sus manos. ¿Qué siente?",
+      "options": [
+        "Frío",
+        "Calor",
+        "Sueño",
+        "Hambre"
+      ],
+      "correct": 0,
+      "explanation": "El texto no lo dice, pero se deduce: se abriga y se calienta las manos porque tiene frío.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Comprensi%C3%B3n_lectora"
+      ]
+    },
+    {
       "id": "general-10",
       "lang": "en",
       "subject": "english",
@@ -3562,6 +3732,34 @@
       ]
     },
     {
+      "id": "english-en-012",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "alfabetizacion-informacional-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "alfabetitzacio-informacional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which is the best place to check a fact?",
+      "options": [
+        "A school encyclopedia",
+        "A funny meme",
+        "A rumour from a friend",
+        "An unsigned post"
+      ],
+      "correct": 0,
+      "explanation": "An «encyclopedia» ({enciclopedia}) is a «reliable» ({fiable}) source: it names its authors.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Encyclopedia"
+      ]
+    },
+    {
       "id": "catalan-ca-001",
       "lang": "ca",
       "subject": "catalan",
@@ -3926,6 +4124,62 @@
       ]
     },
     {
+      "id": "catalan-ca-014",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "comunicacion-oral-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "comunicacio-oral"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Mentre algú t'explica una cosa, què mostra que l'escoltes amb atenció?",
+      "options": [
+        "Mirar-lo i assentir",
+        "Mirar el mòbil",
+        "Parlar a la vegada",
+        "Mirar cap a un altre lloc"
+      ],
+      "correct": 0,
+      "explanation": "Mirar qui parla i assentir amb el cap és comunicació no verbal que mostra atenció.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Comunicaci%C3%B3_no_verbal"
+      ]
+    },
+    {
+      "id": "catalan-ca-015",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "alfabetizacion-informacional-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "alfabetitzacio-informacional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Per saber si una notícia d'internet és fiable, què és millor fer?",
+      "options": [
+        "Comparar-la amb més fonts",
+        "Creure-la si té fotos",
+        "Mirar els «m'agrada»",
+        "Compartir-la de pressa"
+      ],
+      "correct": 0,
+      "explanation": "Contrastar la notícia amb altres fonts fiables ajuda a detectar-ne de falses.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Verificaci%C3%B3n_de_hechos"
+      ]
+    },
+    {
       "id": "citizenship-es-001",
       "lang": "es",
       "subject": "citizenship",
@@ -4035,6 +4289,62 @@
       "explanation": "Cada persona decide sobre su imagen. Antes de compartir su foto en la red, hay que pedirle permiso.",
       "references": [
         "https://es.wikipedia.org/wiki/Derechos_personal%C3%ADsimos"
+      ]
+    },
+    {
+      "id": "citizenship-es-005",
+      "lang": "es",
+      "subject": "citizenship",
+      "topics": [
+        "drets-i-democracia"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "societat-justicia-i-democracia"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué es una ONG, como Cruz Roja o Médicos Sin Fronteras?",
+      "options": [
+        "Asociación solidaria",
+        "Un banco",
+        "Un partido político",
+        "Una tienda de ropa"
+      ],
+      "correct": 0,
+      "explanation": "Una ONG es una organización no gubernamental que ayuda a otras personas sin buscar beneficio.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_no_gubernamental"
+      ]
+    },
+    {
+      "id": "citizenship-es-006",
+      "lang": "es",
+      "subject": "citizenship",
+      "topics": [
+        "emociones-y-relaciones"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "educacio-emocional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Tu amiga está triste y no quiere hablar. ¿Qué es mejor hacer?",
+      "options": [
+        "Escucharla con calma",
+        "Reírte de ella",
+        "Ignorarla",
+        "Gritarle que se calle"
+      ],
+      "correct": 0,
+      "explanation": "La empatía, escuchar sin juzgar, ayuda a que se sienta acompañada.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Empat%C3%ADa"
       ]
     }
   ];

@@ -27,6 +27,14 @@
     {
       "id": "comunicacion-oral",
       "name": "Comunicación oral"
+    },
+    {
+      "id": "diversidad-linguistica",
+      "name": "Diversidad lingüística"
+    },
+    {
+      "id": "comprension-lectora",
+      "name": "Comprensión lectora"
     }
   ],
   "questions": [
@@ -381,6 +389,60 @@
       ],
       "minAge": 10,
       "maxAge": 12
+    },
+    {
+      "id": "language-es-012",
+      "lang": "es",
+      "topics": [
+        "diversidad-linguistica"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "les-llengues-i-els-seus-parlants"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Un compañero habla en euskera con su abuela. ¿Qué actitud es la más respetuosa?",
+      "options": [
+        "Respetar su lengua",
+        "Reírse de su acento",
+        "Pedirle que no la hable",
+        "Decir que no sirve"
+      ],
+      "correct": 0,
+      "explanation": "Todas las lenguas son valiosas y merecen respeto; en España conviven varias.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Lenguas_de_Espa%C3%B1a"
+      ]
+    },
+    {
+      "id": "language-es-013",
+      "lang": "es",
+      "topics": [
+        "comprension-lectora"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "comprensio-lectora"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Lucas se pone gorro y guantes y sopla en sus manos. ¿Qué siente?",
+      "options": [
+        "Frío",
+        "Calor",
+        "Sueño",
+        "Hambre"
+      ],
+      "correct": 0,
+      "explanation": "El texto no lo dice, pero se deduce: se abriga y se calienta las manos porque tiene frío.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Comprensi%C3%B3n_lectora"
+      ]
     }
   ]
 }

@@ -35,6 +35,10 @@
     {
       "id": "cine-y-audiovisual",
       "name": "Cine y audiovisual"
+    },
+    {
+      "id": "instrumentos-musicales",
+      "name": "Instrumentos musicales"
     }
   ],
   "questions": [
@@ -524,6 +528,33 @@
       ],
       "minAge": 10,
       "maxAge": 12
+    },
+    {
+      "id": "culture-es-012",
+      "lang": "es",
+      "topics": [
+        "instrumentos-musicales"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "musica"
+      },
+      "difficulty": 1,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El txistu es una flauta típica vasca. ¿A qué familia de instrumentos pertenece?",
+      "options": [
+        "Viento",
+        "Percusión",
+        "Cuerda",
+        "Teclado"
+      ],
+      "correct": 0,
+      "explanation": "El aire hace sonar el txistu al soplar, así que pertenece a la familia del viento.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Txistu"
+      ]
     }
   ]
 }
