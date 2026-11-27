@@ -39,6 +39,18 @@
     {
       "id": "motociclismo",
       "name": "Motociclismo"
+    },
+    {
+      "id": "salud-y-ejercicio",
+      "name": "Salud y ejercicio"
+    },
+    {
+      "id": "cuerpo-y-movimiento",
+      "name": "Cuerpo y movimiento"
+    },
+    {
+      "id": "trabajo-en-equipo",
+      "name": "Trabajo en equipo"
     }
   ],
   "questions": [
@@ -500,6 +512,87 @@
       "references": [
         "https://es.wikipedia.org/wiki/Regata_Sevilla-Betis"
       ]
+    },
+    {
+      "id": "sports-es-016",
+      "lang": "es",
+      "topics": [
+        "salud-y-ejercicio"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "vida-activa-i-saludable"
+      },
+      "difficulty": 1,
+      "place": "madrid",
+      "prompt": "Has corrido un buen rato por el Retiro de Madrid. ¿Qué es mejor beber después?",
+      "options": [
+        "Un refresco con mucho azúcar",
+        "Agua",
+        "Un café muy cargado",
+        "Nada, hasta la cena"
+      ],
+      "correct": 1,
+      "explanation": "Al sudar perdemos agua y sales. Beber agua repone lo perdido; el refresco azucarado hidrata peor.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Deshidrataci%C3%B3n"
+      ],
+      "minAge": 10,
+      "maxAge": 12
+    },
+    {
+      "id": "sports-es-017",
+      "lang": "es",
+      "topics": [
+        "cuerpo-y-movimiento"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "resolucio-de-problemes-motrius"
+      },
+      "difficulty": 1,
+      "place": "santiago",
+      "prompt": "Los peregrinos caminan hasta Santiago. ¿Qué articulación se dobla entre muslo y pierna?",
+      "options": [
+        "El codo",
+        "La muñeca",
+        "La rodilla",
+        "El hombro"
+      ],
+      "correct": 2,
+      "explanation": "La rodilla une el hueso del muslo con los de la pierna y se dobla en cada paso al caminar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Rodilla"
+      ],
+      "minAge": 10,
+      "maxAge": 12
+    },
+    {
+      "id": "sports-es-018",
+      "lang": "es",
+      "topics": [
+        "trabajo-en-equipo"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "autoregulacio-emocional"
+      },
+      "difficulty": 2,
+      "place": "barcelona",
+      "prompt": "En los castells de la Mercè de Barcelona, ¿qué hace falta sobre todo para no caer?",
+      "options": [
+        "Ir muy deprisa",
+        "Gritar muy fuerte",
+        "Pesar mucho",
+        "Trabajo en equipo y confianza"
+      ],
+      "correct": 3,
+      "explanation": "Cada persona tiene su puesto y confía en las demás: sin cooperación, la torre humana no se sostiene.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Castells"
+      ],
+      "minAge": 10,
+      "maxAge": 12
     }
   ]
 }
