@@ -27,6 +27,14 @@
     {
       "id": "expresion-escrita-catalana",
       "name": "Expresión escrita en catalán"
+    },
+    {
+      "id": "comunicacion-oral-catalana",
+      "name": "Comunicación oral en catalán"
+    },
+    {
+      "id": "alfabetizacion-informacional-catalana",
+      "name": "Alfabetización informacional en catalán"
     }
   ],
   "questions": [
@@ -380,6 +388,60 @@
       ],
       "minAge": 10,
       "maxAge": 12
+    },
+    {
+      "id": "catalan-ca-014",
+      "lang": "ca",
+      "topics": [
+        "comunicacion-oral-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "comunicacio-oral"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Mentre algú t'explica una cosa, què mostra que l'escoltes amb atenció?",
+      "options": [
+        "Mirar-lo i assentir",
+        "Mirar el mòbil",
+        "Parlar a la vegada",
+        "Mirar cap a un altre lloc"
+      ],
+      "correct": 0,
+      "explanation": "Mirar qui parla i assentir amb el cap és comunicació no verbal que mostra atenció.",
+      "references": [
+        "https://ca.wikipedia.org/wiki/Comunicaci%C3%B3_no_verbal"
+      ]
+    },
+    {
+      "id": "catalan-ca-015",
+      "lang": "ca",
+      "topics": [
+        "alfabetizacion-informacional-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "alfabetitzacio-informacional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Per saber si una notícia d'internet és fiable, què és millor fer?",
+      "options": [
+        "Comparar-la amb més fonts",
+        "Creure-la si té fotos",
+        "Mirar els «m'agrada»",
+        "Compartir-la de pressa"
+      ],
+      "correct": 0,
+      "explanation": "Contrastar la notícia amb altres fonts fiables ajuda a detectar-ne de falses.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Verificaci%C3%B3n_de_hechos"
+      ]
     }
   ]
 }

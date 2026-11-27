@@ -593,6 +593,33 @@
       ],
       "minAge": 10,
       "maxAge": 12
+    },
+    {
+      "id": "sports-es-019",
+      "lang": "es",
+      "topics": [
+        "salud-y-ejercicio"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "vida-activa-i-saludable"
+      },
+      "difficulty": 2,
+      "place": "zaragoza",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En verano hace mucho calor en Zaragoza. ¿Cuándo es más sano hacer deporte fuera?",
+      "options": [
+        "Por la mañana temprano",
+        "A las tres de la tarde",
+        "Con el sol más fuerte",
+        "Sin beber agua"
+      ],
+      "correct": 0,
+      "explanation": "Con calor intenso conviene hacer ejercicio a primera hora o al caer la tarde, y beber agua.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Golpe_de_calor"
+      ]
     }
   ]
 }

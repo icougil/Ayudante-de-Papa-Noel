@@ -125,6 +125,60 @@
       "references": [
         "https://es.wikipedia.org/wiki/Derechos_personal%C3%ADsimos"
       ]
+    },
+    {
+      "id": "citizenship-es-005",
+      "lang": "es",
+      "topics": [
+        "drets-i-democracia"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "societat-justicia-i-democracia"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Qué es una ONG, como Cruz Roja o Médicos Sin Fronteras?",
+      "options": [
+        "Asociación solidaria",
+        "Un banco",
+        "Un partido político",
+        "Una tienda de ropa"
+      ],
+      "correct": 0,
+      "explanation": "Una ONG es una organización no gubernamental que ayuda a otras personas sin buscar beneficio.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Organizaci%C3%B3n_no_gubernamental"
+      ]
+    },
+    {
+      "id": "citizenship-es-006",
+      "lang": "es",
+      "topics": [
+        "emociones-y-relaciones"
+      ],
+      "curriculum": {
+        "area": "valors-civics",
+        "block": "educacio-emocional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Tu amiga está triste y no quiere hablar. ¿Qué es mejor hacer?",
+      "options": [
+        "Escucharla con calma",
+        "Reírte de ella",
+        "Ignorarla",
+        "Gritarle que se calle"
+      ],
+      "correct": 0,
+      "explanation": "La empatía, escuchar sin juzgar, ayuda a que se sienta acompañada.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Empat%C3%ADa"
+      ]
     }
   ]
 }

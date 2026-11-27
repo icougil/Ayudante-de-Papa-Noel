@@ -35,6 +35,10 @@
     {
       "id": "literatura-ingles",
       "name": "Literatura en inglés"
+    },
+    {
+      "id": "alfabetizacion-informacional-ingles",
+      "name": "Alfabetización informacional en inglés"
     }
   ],
   "questions": [
@@ -416,6 +420,33 @@
       ],
       "minAge": 10,
       "maxAge": 12
+    },
+    {
+      "id": "english-en-012",
+      "lang": "en",
+      "topics": [
+        "alfabetizacion-informacional-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "alfabetitzacio-informacional"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which is the best place to check a fact?",
+      "options": [
+        "A school encyclopedia",
+        "A funny meme",
+        "A rumour from a friend",
+        "An unsigned post"
+      ],
+      "correct": 0,
+      "explanation": "An «encyclopedia» ({enciclopedia}) is a «reliable» ({fiable}) source: it names its authors.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Encyclopedia"
+      ]
     }
   ]
 }
