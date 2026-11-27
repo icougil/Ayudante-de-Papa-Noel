@@ -110,16 +110,20 @@ Fix or replace any question that fails, then check again:
   read every prompt. A question the owner removed or replaced (for example for being too hard) must
   not come back, nor any question about the same fact.
 - **Wrong options:** the three wrong options are plausible and clearly wrong, never a trick.
-- **Fits a small phone:** the browser tests put the longest prompt in the bank on a 360×640 screen.
-  Keep every new prompt **at most 90 characters** (the build limit of 120 is not safe), the options
-  around 25 characters and the explanation at most 140.
+- **Fits a small phone:** the browser tests put every question of the bank on a 360×640 screen.
+  Keep every new prompt **at most 90 characters**, every option **at most 26** and the explanation
+  **at most 140**: the build now rejects longer text. A prompt of 85 characters or more can take
+  four lines and push the answers off the screen, so aim for 80 or fewer.
 
 ## 5. Build and test
 
-Run `npm run build:questions`, then `npm test`. If the session has a browser (Playwright), also run
+Run `npm run build:questions`, then `npm test`. The build rejects a prompt over 90 characters,
+an option over 26 and an explanation over 140, so fix those before going on. If the session has a
+browser (Playwright), also run
 `npx playwright test --trace off --project=desktop e2e/game.spec.js e2e/sound.spec.js`: `npm test`
-does not include the layout tests that CI runs. If any fails, fix it (usually by shortening a
-prompt). After two failed attempts, stop without opening a pull request and say what failed.
+does not include the layout tests that CI runs, and that one puts every question of the bank on a
+360×640 phone. If any fails, shorten its prompt or options. After two failed attempts, stop without
+opening a pull request and say what failed.
 
 ## 6. Open the pull request
 

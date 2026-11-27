@@ -129,7 +129,7 @@
       "place": "general",
       "minAge": 10,
       "maxAge": 12,
-      "prompt": "¿Cómo se llama el proceso con el que las plantas fabrican su alimento usando la luz del sol?",
+      "prompt": "¿Cómo se llama el proceso con el que las plantas fabrican alimento con luz solar?",
       "options": [
         "Fotosíntesis",
         "Respiración",
@@ -158,8 +158,8 @@
       "maxAge": 12,
       "prompt": "¿Qué causa las estaciones del año en la Tierra?",
       "options": [
-        "La inclinación del eje de la Tierra",
-        "La distancia de la Tierra al Sol",
+        "La inclinación del eje",
+        "La distancia al Sol",
         "Las fases de la Luna",
         "La velocidad del viento"
       ],
@@ -320,7 +320,7 @@
       "maxAge": 12,
       "prompt": "¿Cuál es la contraseña más segura?",
       "options": [
-        "Larga, con números y símbolos",
+        "Larga, números y símbolos",
         "Tu fecha de cumpleaños",
         "Tu nombre y apellido",
         "12345678"

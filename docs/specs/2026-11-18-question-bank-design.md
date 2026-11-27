@@ -118,8 +118,9 @@ Rules, enforced by the build and by `tests/data.test.js`:
 - `place`: a stop id of the level, or `general`. Questions about a place keep today's subject
   rule: `geography`, `history`, `sports` or `culture`.
 - `minAge`/`maxAge`: kept as today (10 and 12), so the picker's age filter is unchanged.
-- `prompt` at most 120 characters, each option at most 40, `explanation` at most 160 (today's
-  limits). Four distinct, non-blank options; `correct` an integer 0 to 3.
+- `prompt` at most 90 characters, each option at most 26, `explanation` at most 140 (the
+  smallest limits that keep every question on a 360×640 phone). Four distinct, non-blank options;
+  `correct` an integer 0 to 3.
 - `references`: at least one `https://` URL where the fact can be checked. Required for every
   question, including the 30 existing ones, which get references added while being moved
   **(designer's call: it also makes the owner's pending review of those 30 easier)**.
