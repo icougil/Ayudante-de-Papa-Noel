@@ -19,6 +19,14 @@
     {
       "id": "expresion-escrita",
       "name": "Expresión escrita"
+    },
+    {
+      "id": "alfabetizacion-informacional",
+      "name": "Hechos y opiniones"
+    },
+    {
+      "id": "comunicacion-oral",
+      "name": "Comunicación oral"
     }
   ],
   "questions": [
@@ -319,6 +327,60 @@
       "references": [
         "https://es.wikipedia.org/wiki/Redacci%C3%B3n"
       ]
+    },
+    {
+      "id": "language-es-010",
+      "lang": "es",
+      "topics": [
+        "alfabetizacion-informacional"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "alfabetitzacio-informacional"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "prompt": "¿Cuál de estas frases es un hecho y no una opinión?",
+      "options": [
+        "El Teide es el monte más bonito.",
+        "Subir al Teide es aburrido.",
+        "El Teide está en Tenerife.",
+        "Tenerife es mejor que Mallorca."
+      ],
+      "correct": 2,
+      "explanation": "Un hecho se puede comprobar. Las opiniones dependen de lo que piensa cada persona.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Opini%C3%B3n"
+      ],
+      "minAge": 10,
+      "maxAge": 12
+    },
+    {
+      "id": "language-es-011",
+      "lang": "es",
+      "topics": [
+        "comunicacion-oral"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "comunicacio-oral"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "prompt": "Al saludar a la directora del colegio, ¿qué frase es la más adecuada?",
+      "options": [
+        "¡Ey, qué pasa, tía!",
+        "Hola, colega, ¿qué tal?",
+        "¡Buenas, majo!",
+        "Buenos días, ¿cómo está usted?"
+      ],
+      "correct": 3,
+      "explanation": "Con una persona mayor o con autoridad usamos un registro formal y tratamos de «usted».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Registro_(socioling%C3%BCística)"
+      ],
+      "minAge": 10,
+      "maxAge": 12
     }
   ]
 }

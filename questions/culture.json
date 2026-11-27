@@ -31,6 +31,10 @@
     {
       "id": "musica-y-danza",
       "name": "Música y danza"
+    },
+    {
+      "id": "cine-y-audiovisual",
+      "name": "Cine y audiovisual"
     }
   ],
   "questions": [
@@ -493,6 +497,33 @@
       "references": [
         "https://es.wikipedia.org/wiki/Gaita_gallega"
       ]
+    },
+    {
+      "id": "culture-es-011",
+      "lang": "es",
+      "topics": [
+        "cine-y-audiovisual"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "audiovisual"
+      },
+      "difficulty": 2,
+      "place": "bilbao",
+      "prompt": "El festival Zinebi de Bilbao proyecta sobre todo documentales y…",
+      "options": [
+        "telenovelas",
+        "anuncios de televisión",
+        "videojuegos",
+        "cortometrajes"
+      ],
+      "correct": 3,
+      "explanation": "Zinebi es un festival de cine documental y cortometrajes: películas cortas que cuentan una historia en pocos minutos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Zinebi"
+      ],
+      "minAge": 10,
+      "maxAge": 12
     }
   ]
 }

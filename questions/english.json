@@ -27,6 +27,14 @@
     {
       "id": "conversacion-ingles",
       "name": "Conversación en inglés"
+    },
+    {
+      "id": "escritura-ingles",
+      "name": "Escritura en inglés"
+    },
+    {
+      "id": "literatura-ingles",
+      "name": "Literatura en inglés"
     }
   ],
   "questions": [
@@ -354,6 +362,60 @@
       "references": [
         "https://en.wikipedia.org/wiki/Greeting"
       ]
+    },
+    {
+      "id": "english-en-010",
+      "lang": "en",
+      "topics": [
+        "escritura-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "expressio-escrita"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "prompt": "Which sentence uses capital letters correctly?",
+      "options": [
+        "my friend lives in spain.",
+        "My Friend lives in spain.",
+        "My friend lives in Spain.",
+        "my friend Lives in Spain."
+      ],
+      "correct": 2,
+      "explanation": "A sentence starts with a «capital letter» ({mayúscula}), and so does «Spain» ({España}), the name of a country.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Capitalization"
+      ],
+      "minAge": 10,
+      "maxAge": 12
+    },
+    {
+      "id": "english-en-011",
+      "lang": "en",
+      "topics": [
+        "literatura-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "educacio-literaria"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "prompt": "In a story, who is the «protagonist»?",
+      "options": [
+        "The last page",
+        "The title of the book",
+        "The main character",
+        "The writer's best friend"
+      ],
+      "correct": 2,
+      "explanation": "The «protagonist» ({protagonista}) is the main character of a story: the one it is mostly about.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Protagonist"
+      ],
+      "minAge": 10,
+      "maxAge": 12
     }
   ]
 }

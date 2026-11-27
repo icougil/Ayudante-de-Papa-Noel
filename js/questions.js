@@ -108,6 +108,21 @@
       "name": "Motociclismo"
     },
     {
+      "id": "salud-y-ejercicio",
+      "subject": "sports",
+      "name": "Salud y ejercicio"
+    },
+    {
+      "id": "cuerpo-y-movimiento",
+      "subject": "sports",
+      "name": "Cuerpo y movimiento"
+    },
+    {
+      "id": "trabajo-en-equipo",
+      "subject": "sports",
+      "name": "Trabajo en equipo"
+    },
+    {
       "id": "arte-y-arquitectura",
       "subject": "culture",
       "name": "Arte y arquitectura"
@@ -146,6 +161,11 @@
       "id": "musica-y-danza",
       "subject": "culture",
       "name": "Música y danza"
+    },
+    {
+      "id": "cine-y-audiovisual",
+      "subject": "culture",
+      "name": "Cine y audiovisual"
     },
     {
       "id": "operaciones",
@@ -263,6 +283,16 @@
       "name": "Expresión escrita"
     },
     {
+      "id": "alfabetizacion-informacional",
+      "subject": "language",
+      "name": "Hechos y opiniones"
+    },
+    {
+      "id": "comunicacion-oral",
+      "subject": "language",
+      "name": "Comunicación oral"
+    },
+    {
       "id": "vocabulario-ingles",
       "subject": "english",
       "name": "Vocabulario básico en inglés"
@@ -298,6 +328,16 @@
       "name": "Conversación en inglés"
     },
     {
+      "id": "escritura-ingles",
+      "subject": "english",
+      "name": "Escritura en inglés"
+    },
+    {
+      "id": "literatura-ingles",
+      "subject": "english",
+      "name": "Literatura en inglés"
+    },
+    {
       "id": "ortografia-catalana",
       "subject": "catalan",
       "name": "Ortografía catalana"
@@ -321,6 +361,16 @@
       "id": "literatura-catalana",
       "subject": "catalan",
       "name": "Literatura catalana"
+    },
+    {
+      "id": "comprension-lectora-catalana",
+      "subject": "catalan",
+      "name": "Comprensión lectora en catalán"
+    },
+    {
+      "id": "expresion-escrita-catalana",
+      "subject": "catalan",
+      "name": "Expresión escrita en catalán"
     },
     {
       "id": "drets-i-democracia",
@@ -1493,6 +1543,90 @@
       ]
     },
     {
+      "id": "sports-es-016",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "salud-y-ejercicio"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "vida-activa-i-saludable"
+      },
+      "difficulty": 1,
+      "place": "madrid",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Has corrido un buen rato por el Retiro de Madrid. ¿Qué es mejor beber después?",
+      "options": [
+        "Un refresco con mucho azúcar",
+        "Agua",
+        "Un café muy cargado",
+        "Nada, hasta la cena"
+      ],
+      "correct": 1,
+      "explanation": "Al sudar perdemos agua y sales. Beber agua repone lo perdido; el refresco azucarado hidrata peor.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Deshidrataci%C3%B3n"
+      ]
+    },
+    {
+      "id": "sports-es-017",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "cuerpo-y-movimiento"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "resolucio-de-problemes-motrius"
+      },
+      "difficulty": 1,
+      "place": "santiago",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Los peregrinos caminan hasta Santiago. ¿Qué articulación se dobla entre muslo y pierna?",
+      "options": [
+        "El codo",
+        "La muñeca",
+        "La rodilla",
+        "El hombro"
+      ],
+      "correct": 2,
+      "explanation": "La rodilla une el hueso del muslo con los de la pierna y se dobla en cada paso al caminar.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Rodilla"
+      ]
+    },
+    {
+      "id": "sports-es-018",
+      "lang": "es",
+      "subject": "sports",
+      "topics": [
+        "trabajo-en-equipo"
+      ],
+      "curriculum": {
+        "area": "educacio-fisica",
+        "block": "autoregulacio-emocional"
+      },
+      "difficulty": 2,
+      "place": "barcelona",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "En los castells de la Mercè de Barcelona, ¿qué hace falta sobre todo para no caer?",
+      "options": [
+        "Ir muy deprisa",
+        "Gritar muy fuerte",
+        "Pesar mucho",
+        "Trabajo en equipo y confianza"
+      ],
+      "correct": 3,
+      "explanation": "Cada persona tiene su puesto y confía en las demás: sin cooperación, la torre humana no se sostiene.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Castells"
+      ]
+    },
+    {
       "id": "barcelona-2",
       "lang": "es",
       "subject": "culture",
@@ -1967,6 +2101,34 @@
       "explanation": "La gaita es un instrumento de viento: el aire de la bolsa hace sonar sus tubos.",
       "references": [
         "https://es.wikipedia.org/wiki/Gaita_gallega"
+      ]
+    },
+    {
+      "id": "culture-es-011",
+      "lang": "es",
+      "subject": "culture",
+      "topics": [
+        "cine-y-audiovisual"
+      ],
+      "curriculum": {
+        "area": "educacio-artistica",
+        "block": "audiovisual"
+      },
+      "difficulty": 2,
+      "place": "bilbao",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El festival Zinebi de Bilbao proyecta sobre todo documentales y…",
+      "options": [
+        "telenovelas",
+        "anuncios de televisión",
+        "videojuegos",
+        "cortometrajes"
+      ],
+      "correct": 3,
+      "explanation": "Zinebi es un festival de cine documental y cortometrajes: películas cortas que cuentan una historia en pocos minutos.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Zinebi"
       ]
     },
     {
@@ -2951,6 +3113,62 @@
       ]
     },
     {
+      "id": "language-es-010",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "alfabetizacion-informacional"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "alfabetitzacio-informacional"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "¿Cuál de estas frases es un hecho y no una opinión?",
+      "options": [
+        "El Teide es el monte más bonito.",
+        "Subir al Teide es aburrido.",
+        "El Teide está en Tenerife.",
+        "Tenerife es mejor que Mallorca."
+      ],
+      "correct": 2,
+      "explanation": "Un hecho se puede comprobar. Las opiniones dependen de lo que piensa cada persona.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Opini%C3%B3n"
+      ]
+    },
+    {
+      "id": "language-es-011",
+      "lang": "es",
+      "subject": "language",
+      "topics": [
+        "comunicacion-oral"
+      ],
+      "curriculum": {
+        "area": "llengua-castellana",
+        "block": "comunicacio-oral"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Al saludar a la directora del colegio, ¿qué frase es la más adecuada?",
+      "options": [
+        "¡Ey, qué pasa, tía!",
+        "Hola, colega, ¿qué tal?",
+        "¡Buenas, majo!",
+        "Buenos días, ¿cómo está usted?"
+      ],
+      "correct": 3,
+      "explanation": "Con una persona mayor o con autoridad usamos un registro formal y tratamos de «usted».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Registro_(socioling%C3%BCística)"
+      ]
+    },
+    {
       "id": "general-10",
       "lang": "en",
       "subject": "english",
@@ -3288,6 +3506,62 @@
       ]
     },
     {
+      "id": "english-en-010",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "escritura-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "expressio-escrita"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Which sentence uses capital letters correctly?",
+      "options": [
+        "my friend lives in spain.",
+        "My Friend lives in spain.",
+        "My friend lives in Spain.",
+        "my friend Lives in Spain."
+      ],
+      "correct": 2,
+      "explanation": "A sentence starts with a «capital letter» ({mayúscula}), and so does «Spain» ({España}), the name of a country.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Capitalization"
+      ]
+    },
+    {
+      "id": "english-en-011",
+      "lang": "en",
+      "subject": "english",
+      "topics": [
+        "literatura-ingles"
+      ],
+      "curriculum": {
+        "area": "llengua-estrangera",
+        "block": "educacio-literaria"
+      },
+      "difficulty": 1,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "In a story, who is the «protagonist»?",
+      "options": [
+        "The last page",
+        "The title of the book",
+        "The main character",
+        "The writer's best friend"
+      ],
+      "correct": 2,
+      "explanation": "The «protagonist» ({protagonista}) is the main character of a story: the one it is mostly about.",
+      "references": [
+        "https://en.wikipedia.org/wiki/Protagonist"
+      ]
+    },
+    {
       "id": "catalan-ca-001",
       "lang": "ca",
       "subject": "catalan",
@@ -3593,6 +3867,62 @@
       "explanation": "El teatre s'escriu en forma de diàleg perquè uns actors el representin en un escenari.",
       "references": [
         "https://ca.wikipedia.org/wiki/Teatre"
+      ]
+    },
+    {
+      "id": "catalan-ca-012",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "comprension-lectora-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "comprensio-lectora"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "El cel s'omple de núvols i la Marta agafa el paraigua. Què creu que passarà?",
+      "options": [
+        "Que farà molta calor",
+        "Que plourà",
+        "Que es farà de nit",
+        "Que sortirà la lluna"
+      ],
+      "correct": 1,
+      "explanation": "Els núvols fan pensar en pluja: deduïm el que el text no diu a partir de les pistes que dona.",
+      "references": [
+        "https://es.wikipedia.org/wiki/Comprensi%C3%B3n_lectora"
+      ]
+    },
+    {
+      "id": "catalan-ca-013",
+      "lang": "ca",
+      "subject": "catalan",
+      "topics": [
+        "expresion-escrita-catalana"
+      ],
+      "curriculum": {
+        "area": "llengua-catalana",
+        "block": "expressio-escrita"
+      },
+      "difficulty": 2,
+      "place": "general",
+      "minAge": 10,
+      "maxAge": 12,
+      "prompt": "Quina frase té la puntuació ben posada?",
+      "options": [
+        "Maria vols, venir a jugar?",
+        "Maria vols venir, a jugar?",
+        "Maria, vols venir a jugar?",
+        "Maria vols venir a jugar,?"
+      ],
+      "correct": 2,
+      "explanation": "El nom de qui parlem, «Maria», se separa amb una coma, i la pregunta acaba amb «?».",
+      "references": [
+        "https://es.wikipedia.org/wiki/Coma_(puntuaci%C3%B3n)"
       ]
     },
     {
