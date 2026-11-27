@@ -58,8 +58,7 @@ test.describe('on a small phone (360x640)', () => {
   });
 
   test('the five stars fit on one line', async ({ page }) => {
-    await startGame(page);
-    await playGame(page, SIX_RIGHT);
+    await playWithClock(page, SIX_RIGHT, []);
 
     await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
     const stars = page.locator('#result-stars');
@@ -97,18 +96,27 @@ test.describe('on a small laptop window (900x645)', () => {
 // Advances the fake clock until Santa circles over the city (the waiting notice is shown).
 async function waitForArrival(page) {
   const waiting = page.locator('#notice .notice-waiting');
-  for (let i = 0; i < 40 && !(await waiting.isVisible()); i++) {
-    await page.clock.runFor(1000);
+  for (let i = 0; i < 6 && !(await waiting.isVisible()); i++) {
+    await page.clock.runFor(10_000);
   }
   await expect(waiting).toBeVisible();
 }
 
+// Long enough for the 1.5 s boost and the 2.5 s notice of a right answer.
+const ADVANCE_MS = 4_200;
+
+// Starts a game with the fake clock, so the pauses between cities do not run in real time.
+async function startGameWithClock(page) {
+  await page.clock.install();
+  await startGame(page);
+}
+
 // Plays the six cities: a right answer is given at once (an express delivery), a wrong one is
 // followed by "Seguir".
-// With `lates` (needs page.clock.install() before the page loads), the answer of a city whose entry
-// is true waits until Santa has reached the city (not an express delivery); the flight is made
-// fast by advancing the fake clock.
-async function playGame(page, rights, lates = []) {
+// With `lates` (needs the fake clock), the answer of a city whose entry is true waits until Santa
+// has reached the city (not an express delivery); the flight is made fast by advancing the clock.
+// With `clock`, the pause after every answer is fast-forwarded too.
+async function playGame(page, rights, lates = [], { clock = false } = {}) {
   for (let city = 1; city <= rights.length; city++) {
     await expect(page.locator('#scoreboard-city')).toContainText('Ciudad ' + city + '/6');
     await expect(page.locator('#options button:enabled')).toHaveCount(4);
@@ -119,6 +127,9 @@ async function playGame(page, rights, lates = []) {
     if (!rights[city - 1]) {
       await page.locator('#button-next').click();
     }
+    if (clock) {
+      await page.clock.runFor(ADVANCE_MS);
+    }
   }
 }
 
@@ -127,9 +138,9 @@ const SIX_RIGHT = [true, true, true, true, true, true];
 test('a game with six express deliveries ends with five stars and no script errors', async ({ page }) => {
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
-  await startGame(page);
+  await startGameWithClock(page);
 
-  await playGame(page, SIX_RIGHT);
+  await playGame(page, SIX_RIGHT, [], { clock: true });
 
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('#result-title')).toHaveText('¡Nivel superado!');
@@ -141,9 +152,9 @@ test('a game with six express deliveries ends with five stars and no script erro
 });
 
 test('a game with three gifts ends with one star and the way to the next one', async ({ page }) => {
-  await startGame(page);
+  await startGameWithClock(page);
 
-  await playGame(page, [false, false, false, true, true, true]);
+  await playGame(page, [false, false, false, true, true, true], [], { clock: true });
 
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('#result-title')).toHaveText('¡Nivel superado!');
@@ -153,9 +164,9 @@ test('a game with three gifts ends with one star and the way to the next one', a
 });
 
 test('a game with two gifts shows five empty stars and that one gift was missing', async ({ page }) => {
-  await startGame(page);
+  await startGameWithClock(page);
 
-  await playGame(page, [false, false, false, false, true, true]);
+  await playGame(page, [false, false, false, false, true, true], [], { clock: true });
 
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('#result-title')).toHaveText('A Papá Noel le han faltado regalos. ¡Inténtalo otra vez!');
@@ -167,13 +178,13 @@ test('a game with two gifts shows five empty stars and that one gift was missing
 });
 
 test('a failed game after a passed one shows five empty stars and the gifts missing', async ({ page }) => {
-  await startGame(page);
-  await playGame(page, SIX_RIGHT);
+  await startGameWithClock(page);
+  await playGame(page, SIX_RIGHT, [], { clock: true });
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await page.locator('#button-again').click();
   await expect(page.locator('#options button')).toHaveCount(4);
 
-  await playGame(page, [false, false, false, false, false, false]);
+  await playGame(page, [false, false, false, false, false, false], [], { clock: true });
 
   await expect(page.locator('#screen-result')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator('#result-stars')).toBeVisible();
@@ -185,12 +196,8 @@ test('a failed game after a passed one shows five empty stars and the gifts miss
 // The late answers need the fake clock, installed before the page loads. The pauses and notices
 // after an answer are fast-forwarded too.
 async function playWithClock(page, rights, lates) {
-  await page.clock.install();
-  await startGame(page);
-  await playGame(page, rights, lates);
-  for (let i = 0; i < 40 && !(await page.locator('#screen-result').isVisible()); i++) {
-    await page.clock.runFor(1000);
-  }
+  await startGameWithClock(page);
+  await playGame(page, rights, lates, { clock: true });
   await expect(page.locator('#screen-result')).toBeVisible();
 }
 
